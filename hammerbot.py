@@ -90,12 +90,62 @@ async def  clearError(ctx, error):
     await ctx.send(message)
 
 
+@bot.command(name='!randomciv', help='Returns a random AoE2 civ. [arg1] = flank or pocket or number, [arg2] = number')
+@commands.cooldown(1, 10, commands.BucketType.user)
+async def randomCiv(ctx, arg1=None, arg2=None):
+    reponse = ''
+    age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Indians', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles']
+    pocket_civs = []
+    flank_civs =[]
+    if (arg1 == None) and (arg2 == None):
+        response = random.choice(age_civs)
+    elif arg1.isnumeric():
+        for i in range(int(arg1)):
+            if i == 0:
+                response = random.choice(age_civs)
+            else:
+                response += "\n" + random.choice(age_civs)
+    elif (arg1.lower() == 'flank'):
+        if arg2 != None:
+            if arg2.isnumeric():
+                for i in range(int(arg2)):
+                    if i == 0:
+                        response = random.choice(age_civs)
+                    else:
+                        response += "\n" + random.choice(age_civs)
+            else:
+                response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
+        else:
+            response = random.choice(age_civs)
+    elif (arg1.lower() == 'pocket'):
+        if arg2 != None:
+            if arg2.isnumeric():
+                for i in range(int(arg2)):
+                    if i == 0:
+                        response = random.choice(age_civs)
+                    else:
+                        response += "\n" + random.choice(age_civs)
+            else:
+                response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
+        else:
+            response = random.choice(age_civs)
+    else:
+        response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
+    await ctx.send(response)
+@randomCiv.error
+async def  clearError(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        return  # Return because we don't want to show an error for every command not found
+    elif isinstance(error, commands.CommandOnCooldown):
+        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
+    await ctx.send(message)
+
 
 
 @bot.event
 async def on_ready():
-    feedChannel = int(os.getenv('BOT_FEED_LOG'))
-    await bot.get_channel(feedChannel).send("HammerBot is online!")
+    # feedChannel = int(os.getenv('BOT_FEED_LOG'))
+    # await bot.get_channel(feedChannel).send("HammerBot is online!")
     game = discord.Game("with Aoe2 data")
     await bot.change_presence(activity=game)
 
