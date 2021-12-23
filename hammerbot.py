@@ -30,7 +30,6 @@ async def  clearError(ctx, error):
         message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
     await ctx.send(message)
 
-bot = commands.Bot(command_prefix='')
 @bot.command(name='13', help='Returns AoE2 taunt #13.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def isp(ctx):
@@ -44,7 +43,6 @@ async def  clearError(ctx, error):
         message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
     await ctx.send(message)
 
-bot = commands.Bot(command_prefix='')
 @bot.command(name='age?', help='Returns AoE2 taunt #30.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def questionableAge(ctx):
