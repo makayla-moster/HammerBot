@@ -30,6 +30,34 @@ async def  clearError(ctx, error):
         message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
     await ctx.send(message)
 
+bot = commands.Bot(command_prefix='')
+@bot.command(name='13', help='Returns AoE2 taunt #13.')
+@commands.cooldown(1, 30, commands.BucketType.user)
+async def isp(ctx):
+    response = "Sure, blame it on your ISP."
+    await ctx.send(response)
+@isp.error
+async def  clearError(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        return  # Return because we don't want to show an error for every command not found
+    elif isinstance(error, commands.CommandOnCooldown):
+        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
+    await ctx.send(message)
+
+bot = commands.Bot(command_prefix='')
+@bot.command(name='age?', help='Returns AoE2 taunt #30.')
+@commands.cooldown(1, 30, commands.BucketType.user)
+async def questionableAge(ctx):
+    response = "Well, duh."
+    await ctx.send(response)
+@questionableAge.error
+async def  clearError(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        return  # Return because we don't want to show an error for every command not found
+    elif isinstance(error, commands.CommandOnCooldown):
+        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
+    await ctx.send(message)
+
 @bot.command(name='14', help='Returns AoE2 taunt #14.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def startTheGame(ctx):
