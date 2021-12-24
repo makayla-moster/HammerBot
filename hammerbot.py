@@ -193,22 +193,33 @@ async def techTree(ctx, arg1, arg2, arg3=None, arg4=None, arg5=None):
         else:
             response = "Please ensure the civ name is spelled correctly with capitalization."
     await ctx.send(response)
-# @monkNoise.error
-# async def  clearError(ctx, error):
-#     if isinstance(error, commands.CommandNotFound):
-#         return  # Return because we don't want to show an error for every command not found
-#     elif isinstance(error, commands.CommandOnCooldown):
-#         message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
-#     await ctx.send(message)
+@techTree.error
+async def  clearError(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        return  # Return because we don't want to show an error for every command not found
+    elif isinstance(error, commands.CommandOnCooldown):
+        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
+    await ctx.send(message)
 
 
+@bot.command(name='!help', help='Returns commands, their syntax, and uses.')
+@commands.cooldown(1, 10, commands.BucketType.user)
+async def helpUser(ctx):
+    response = "command: 30 \nsyntax: 30 \nReturns AoE2 taunt #30.\n\n\
+command: 14 \nsyntax: 14 \nReturns AoE2 taunt #14.\n\n\
+command: 13 \nsyntax: 13 \nReturns AoE2 taunt #13.\n\n\
+command: age? \nsyntax: age? \nReturns 'Well, duh.'\n\n\
+command: !randomciv \nsyntax: !randomciv arg1 arg2 ([arg1] = flank or pocket or number, [arg2] = number) \nReturns random Aoe2 civ(s).\n\n\
+command: !civ \nsyntax: !civ arg1 ([arg1] = civ name) \nReturns AoE2 civ tech tree information.\n\n\
+command: !is \nsyntax: !is arg1 arg2 ([arg1] = civ name(s) joined with a '+', [arg2] = tech tree upgrade name) \nReturns information about civ(s)."
+    await ctx.send(response)
 
 
 @bot.event
 async def on_ready():
     # feedChannel = int(os.getenv('BOT_FEED_LOG'))
     # await bot.get_channel(feedChannel).send("HammerBot is online!")
-    game = discord.Game("with Aoe2 data")
+    game = discord.Game("with AoE2 data")
     await bot.change_presence(activity=game)
 
 bot.run(TOKEN)
