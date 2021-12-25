@@ -9,6 +9,7 @@ import logging
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD = os.getenv('DISCORD_GUILD')
+LUKE = os.getenv('LUKE_ID')
 
 logger = logging.getLogger('discord')
 logger.setLevel(logging.WARNING)
@@ -97,8 +98,26 @@ async def randomCiv(ctx, arg1=None, arg2=None):
     age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Indians', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles']
     pocket_civs = []
     flank_civs =[]
-    if (arg1 == None) and (arg2 == None):
+    username = ctx.message.author.id
+    if str(username) == str(LUKE):
+        if arg1 != None and arg1.isnumeric():
+            for i in range(int(arg1)):
+                if i == 0:
+                    response = "Incas"
+                else:
+                    response += "\n" + "Incas"
+        elif arg2 != None and arg2.isnumeric():
+            for i in range(int(arg2)):
+                if i == 0:
+                    response = "Incas"
+                else:
+                    response += "\n" + "Incas"
+        else:
+            response = "Incas"
+    elif (arg1 == None) and (arg2 == None):
         response = random.choice(age_civs)
+    elif arg1 == 'Lucas' or arg1 == "Luke" or arg1 == "divas" or arg1 == "Divas":
+        response = "Incas"
     elif arg1.isnumeric():
         for i in range(int(arg1)):
             if i == 0:
@@ -141,7 +160,7 @@ async def  clearError(ctx, error):
     await ctx.send(message)
 
 
-@bot.command(name='!is', help='Returns techTree data.')
+@bot.command(name='!does', help='Returns techTree data.')
 async def techTree(ctx, arg1, arg2, arg3=None, arg4=None, arg5=None):
     age_civs = ['britons', 'byzantines', 'celts', 'chinese', 'franks', 'goths', 'japanese', 'mongols', 'persians', 'saracens', 'teutons', 'turks', 'vikings', 'aztecs', 'huns', 'koreans', 'mayans', 'spanish', 'incas', 'indians', 'italians', 'magyars', 'slavs', 'berbers', 'ethiopians', 'malians', 'portuguese', 'burmese', 'khmer', 'malay', 'vietnamese', 'bulgarians', 'cumans', 'lithuanians', 'tatars', 'burgundians', 'sicilians', 'bohemians', 'poles']
 
@@ -212,8 +231,15 @@ async def helpUser(ctx):
     embed.add_field(name="age?", value="[`age?`], Returns 'Well, duh.'", inline=True)
     embed.add_field(name="!randomciv", value="[`!randomciv flank/pocket/number number`], Returns random Aoe2 civ(s).", inline=True)
     embed.add_field(name="!civ", value="[`!civ civName`], Returns random Aoe2 civ(s).", inline=True)
-    embed.add_field(name="!is", value="[`!is civName(+civNames) upgradeName`], Returns information about civ(s).", inline=True)
+    embed.add_field(name="!does", value="[`!is civName(+civNames) upgradeName`], Returns information about civ(s).", inline=True)
     await ctx.send(embed=embed)
+
+
+@bot.command(name='!is', help='Redirects to !does.')
+@commands.cooldown(1, 10, commands.BucketType.user)
+async def techTreeRedirect(ctx):
+    response = "Please use !does instead."
+    await ctx.send(response)
 
 
 @bot.event
