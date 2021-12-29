@@ -5,6 +5,11 @@ import random
 from dotenv import load_dotenv
 from discord.ext import commands
 import logging
+from age_player import *
+import csv
+import requests
+import sys
+
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -93,7 +98,7 @@ async def  clearError(ctx, error):
 
 @bot.command(name='!randomciv', help='Returns a random AoE2 civ. [arg1] = flank or pocket or number, [arg2] = number')
 @commands.cooldown(1, 10, commands.BucketType.user)
-async def randomCiv(ctx, arg1=None, arg2=None):
+async def randomCiv(ctx, arg1=None, arg2=None, arg3=None):
     reponse = ''
     age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Indians', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles']
     pocket_civs = []
@@ -106,6 +111,39 @@ async def randomCiv(ctx, arg1=None, arg2=None):
                     response = "Incas"
                 else:
                     response += "\n" + "Incas"
+        elif arg1 != None and arg1 == "r":
+            if arg2 == None:
+                response = random.choice(age_civs)
+            elif arg2.isnumeric():
+                for i in range(int(arg2)):
+                    if i == 0:
+                        response = random.choice(age_civs)
+                    else:
+                        response += "\n" + random.choice(age_civs)
+            elif (arg2.lower() == 'flank'):
+                if arg3 != None:
+                    if arg3.isnumeric():
+                        for i in range(int(arg3)):
+                            if i == 0:
+                                response = random.choice(age_civs)
+                            else:
+                                response += "\n" + random.choice(age_civs)
+                    else:
+                        response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
+                else:
+                    response = random.choice(age_civs)
+            elif (arg2.lower() == 'pocket'):
+                if arg3 != None:
+                    if arg3.isnumeric():
+                        for i in range(int(arg3)):
+                            if i == 0:
+                                response = random.choice(age_civs)
+                            else:
+                                response += "\n" + random.choice(age_civs)
+                    else:
+                        response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
+                else:
+                    response = random.choice(age_civs)
         elif arg2 != None and arg2.isnumeric():
             for i in range(int(arg2)):
                 if i == 0:
@@ -240,6 +278,88 @@ async def helpUser(ctx):
 async def techTreeRedirect(ctx):
     response = "Please use !does instead."
     await ctx.send(response)
+
+# @bot.command(name='!match', help='TBD')
+# @commands.cooldown(1, 10, commands.BucketType.user)
+# async def match(ctx):
+#     url = f"https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591" #313591 5001328
+#     resp = requests.get(url).json()
+#     lastmatch = resp['last_match']
+#     playerName = resp['name']
+#     players = []
+#     team1 = []
+#     team2 = []
+#     hammerTeam1 = False
+#     hammerTeam2 = False
+#     team1players = ''
+#     team2players = ''
+#     response = None
+#     print(players)
+#
+#     players = getPlayerIDs()
+#     for player in players:
+#         player.info()
+#         if player.team == 1:
+#             team1.append(player)
+#         elif player.team == 2:
+#             team2.append(player)
+#         if (player.name == playerName) and player.team == 1:
+#             hammerTeam1 = True
+#         elif (player.name == playerName) and player.team == 2:
+#             hammerTeam2 = True
+#     count = len(players)
+#     i = 0
+#     if hammerTeam1 == True:
+#         for i in range(count // 2):
+#             player1 = team1[i]
+#             if i == 0:
+#                 team1players = str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ)
+#             else:
+#                 team1players += str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ)
+#             player2 = team2[i]
+#             if i == 0:
+#                 team2players = str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ)
+#             else:
+#                 team2players += str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ)
+#         response = team1players + " -- VS -- "  + team2players + " on " + str(player1.map)
+#     elif hammerTeam2 == True:
+#         for i in range(count // 2):
+#             player1 = team2[i]
+#             if i == 0:
+#                 team1players = str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ) + " "
+#             else:
+#                 team1players += str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ) + " "
+#             player2 = team1[i]
+#             if i == 0:
+#                 team2players = str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ) + " "
+#             else:
+#                 team2players += str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ) + " "
+#         response = team1players + " -- VS -- "  + team2players + " on " + str(player1.map)
+#     else:
+#         for i in range(count // 2):
+#             player1 = team1[i]
+#             if i == 0:
+#                 team1players = str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ) + " "
+#             else:
+#                 team1players += str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ) + " "
+#             player2 = team2[i]
+#             if i == 0:
+#                 team2players = str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ)  + " "
+#             else:
+#                 team2players += str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ) + " "
+#         response = team1players + " -- VS -- " + team2players + " on " + str(player1.map)
+#     await ctx.send(response)
+# @match.after_invoke
+# async def cleanup(ctx):
+#     players = []
+#     team1 = []
+#     team2 = []
+#     hammerTeam1 = False
+#     hammerTeam2 = False
+#     team1players = ''
+#     team2players = ''
+#     response = None
+#     await bot.after_invoke(ctx)
 
 
 @bot.event
