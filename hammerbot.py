@@ -219,7 +219,7 @@ async def techTree(ctx, arg1, arg2, arg3=None, arg4=None, arg5=None):
         elif not bool:
             response = arg1 + " do not have " + arg2
         else:
-            response = "Error!"
+            response = f"Error!"
     else:
         arg1 = arg1.split("+")
 
@@ -246,9 +246,9 @@ async def techTree(ctx, arg1, arg2, arg3=None, arg4=None, arg5=None):
                         else:
                             response += "\n" + arg1[i] + " do not have " + arg2
                     else:
-                        response = "Error!"
+                        response = f"Error!"
         else:
-            response = "Please ensure the civ name is spelled correctly with capitalization."
+            response = f"Please ensure the civ name is spelled correctly with capitalization."
     await ctx.send(response)
 @techTree.error
 async def  clearError(ctx, error):
@@ -294,7 +294,7 @@ async def match(ctx):
     team1players = ''
     team2players = ''
     response = None
-    print(players)
+    # print(players)
 
     players = getPlayerIDs()
     for player in players:
@@ -313,14 +313,14 @@ async def match(ctx):
         for i in range(count // 2):
             player1 = team1[i]
             if i == 0:
-                team1players = str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ)
+                team1players = str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ) + " "
             else:
-                team1players += str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ)
+                team1players += str(player1.color) + " " + str(player1.name) + " [" + str(player1.country) + " " + str(player1.tg_rating) + " " + str(player1.rating) + "] playing as " + str(player1.civ) + " "
             player2 = team2[i]
             if i == 0:
-                team2players = str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ)
+                team2players = str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ) + " "
             else:
-                team2players += str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ)
+                team2players += str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ) + " "
         response = team1players + " -- VS -- "  + team2players + " on " + str(player1.map)
     elif hammerTeam2 == True:
         for i in range(count // 2):
@@ -347,19 +347,8 @@ async def match(ctx):
                 team2players = str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ)  + " "
             else:
                 team2players += str(player2.color) + " " + str(player2.name) + " [" + str(player2.country) + " " + str(player2.tg_rating) + " " + str(player2.rating) + "] playing as " + str(player2.civ) + " "
-        response = team1players + " -- VS -- " + team2players + " on " + str(player1.map)
+        response = team1players + " -- VS -- " + team2players + "on " + str(player1.map)
     await ctx.send(response)
-# @match.after_invoke
-# async def cleanup(ctx):
-#     players = []
-#     team1 = []
-#     team2 = []
-#     hammerTeam1 = False
-#     hammerTeam2 = False
-#     team1players = ''
-#     team2players = ''
-#     response = None
-#     await bot.after_invoke(ctx)
 
 
 @bot.event
