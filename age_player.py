@@ -64,6 +64,7 @@ class Player:
 
 
 def getPlayerIDs():
+    players = []
     for player in lastmatch['players']:
         # profileIDs.append(player['profile_id'])
         if player['color'] == 1:
@@ -81,7 +82,7 @@ def getPlayerIDs():
         elif player['color'] == 7:
             color = ':white_circle:'
         else:
-            color = ':orange_circle'
+            color = ':orange_circle:'
         mapNum = lastmatch['map_type']
         civNum = player['civ']
         players.append(Player(player['profile_id'], player['team'], color, player['name'], civ_by_id[str(civNum)], name_by_id[str(mapNum)]))
