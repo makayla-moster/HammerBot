@@ -3,10 +3,10 @@ import requests
 import sys
 
 # while True:
-url = f"https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591" #313591 5001328
-resp = requests.get(url).json()
-lastmatch = resp['last_match']
-playerName = resp['name']
+# url = f"https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591" #313591 5001328
+# resp = requests.get(url).json()
+# lastmatch = resp['last_match']
+# playerName = resp['name']
 
 url2 = f"https://aoe2.net/api/strings?game=aoe2de&language=en"
 resps = requests.get(url2).json()
@@ -77,7 +77,9 @@ class Player:
         return ("Name: " + str(self.name) + "\n\tCountry: " + str(self.country) + "\tTG ELO:" + str(self.tg_rating) + "\tELO: " + str(self.rating) + '\tTEAM: ' + str(self.team) + '\n')
 
 
-def getPlayerIDs():
+def getPlayerIDs(resp):
+    lastmatch = resp['last_match']
+    playerName = resp['name']
     players = []
     for player in lastmatch['players']:
         # profileIDs.append(player['profile_id'])

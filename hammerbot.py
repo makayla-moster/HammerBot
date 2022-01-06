@@ -321,9 +321,11 @@ async def techTreeRedirect(ctx):
 
 @tasks.loop(seconds=15)
 async def get_json_info():
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession() as session: #313591
         async with session.get('https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591', timeout = 15) as r:
             r = await r.json(content_type=None)
+            # print(r['last_match'])
+            # print("\n\n")
             await session.close()
             return r
 
@@ -338,6 +340,7 @@ async def match(ctx):
             # resp = resp.json(content_type=None)['last_match']
     resp = await get_json_info()
     # print(resp)
+    # print("\n\n")
     # resp = resp['last_match']
 
     # resp = resp.json(content_type=None)['last_match']
@@ -353,7 +356,7 @@ async def match(ctx):
     response = None
     # print(players)
 
-    players = getPlayerIDs()
+    players = getPlayerIDs(resp)
     for player in players:
         player.info()
         if player.team == 1:
@@ -464,4 +467,5 @@ async def on_ready():
     game = discord.Game("with AoE2 data")
     await bot.change_presence(activity=game)
 
+get_json_info.start()
 bot.run(TOKEN)
