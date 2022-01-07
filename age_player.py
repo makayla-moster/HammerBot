@@ -1,6 +1,9 @@
 import csv
 import requests
 import sys
+import aiohttp
+import asyncio
+import discord
 
 # while True:
 # url = f"https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591" #313591 5001328
@@ -26,7 +29,7 @@ hammerTeam1 = False
 hammerTeam2 = False
 
 class Player:
-    def __init__(self, id, team, color, name, civ, game, map): #, map, game):
+    def __init__(self, id, team, color, name, civ, game, map):
         self.id = id
         self.team = team
         self.color = color
@@ -39,7 +42,6 @@ class Player:
         self.civ = civ
         self.map = map
         self.game = game
-        # self.server = server
 
     def info(self):
         player_url = f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=4"
@@ -76,7 +78,6 @@ class Player:
     @property
     def print_info(self):
         return ("Name: " + str(self.name) + "\n\tCountry: " + str(self.country) + "\tTG ELO:" + str(self.tg_rating) + "\tELO: " + str(self.rating) + '\tTEAM: ' + str(self.team) + '\n')
-
 
 def getPlayerIDs(resp):
     lastmatch = resp['last_match']

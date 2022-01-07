@@ -201,7 +201,7 @@ async def  clearError(ctx, error):
 
 @bot.command(name='!whichciv', help = 'Returns which civ has the stated technology(ies).')
 async def civTech(ctx, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
-    
+
     if arg5 is not None:
         arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title() + " " + arg5.title()
         response = techTreeDict[arg1]
@@ -233,7 +233,14 @@ async def civTech(ctx, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
 
     await ctx.send(", ".join(response))
 
-
+@bot.command(name='!contributors', help = 'Returns a list of HammerBot contributors.')
+async def contribute(ctx):
+    embed=discord.Embed(title="HammerBot Contributors", description="List of HammerBot Contributors", color=0xd5d341)
+    embed.add_field(name="@BSHammer", value="\u200b", inline=True)
+    embed.add_field(name="@quela", value="\u200b", inline=True)
+    embed.add_field(name="@harristotle", value="\u200b", inline=True)
+    embed.add_field(name="@Rangebro", value="\u200b", inline=True)
+    await ctx.send(embed=embed)
 
 @bot.command(name='!does', help='Returns if a civ(s) has a technology.')
 async def techTree(ctx, arg1, arg2, arg3=None, arg4=None, arg5=None):
