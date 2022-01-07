@@ -26,7 +26,7 @@ hammerTeam1 = False
 hammerTeam2 = False
 
 class Player:
-    def __init__(self, id, team, color, name, civ, map, game):
+    def __init__(self, id, team, color, name, civ, game, map): #, map, game):
         self.id = id
         self.team = team
         self.color = color
@@ -39,6 +39,7 @@ class Player:
         self.civ = civ
         self.map = map
         self.game = game
+        # self.server = server
 
     def info(self):
         player_url = f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=4"
@@ -102,5 +103,5 @@ def getPlayerIDs(resp):
         mapNum = lastmatch['map_type']
         civNum = player['civ']
         game = lastmatch['game_type']
-        players.append(Player(player['profile_id'], player['team'], color, player['name'], civ_by_id[str(civNum)], name_by_id[str(mapNum)], game_by_id[str(game)]))
+        players.append(Player(player['profile_id'], player['team'], color, player['name'], civ_by_id[str(civNum)], game_by_id[str(game)], name_by_id[str(mapNum)])) #, name_by_id[str(mapNum)], game_by_id[str(game)
     return players

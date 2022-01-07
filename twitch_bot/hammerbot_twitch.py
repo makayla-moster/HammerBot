@@ -1,7 +1,9 @@
 # bot.py
 import os # for importing env vars for the bot to use
+from dotenv import load_dotenv
 from twitchio.ext import commands
 
+load_dotenv()
 
 class Bot(commands.Bot):
 
@@ -9,7 +11,7 @@ class Bot(commands.Bot):
         # Initialise our Bot with our access token, prefix and a list of channels to join on boot...
         # prefix can be a callable, which returns a list of strings or a string...
         # initial_channels can also be a callable which returns a list of strings...
-        super().__init__(token='CLIENT_ID', prefix='!', initial_channels=['bshammer'])
+        super().__init__(token='ACCESS_TOKEN', prefix='?', initial_channels=['...'])
 
     async def event_ready(self):
         # Notify us when everything is ready!
