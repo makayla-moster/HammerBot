@@ -1,15 +1,8 @@
 # bot.py
-import os
-import discord
-import random
+import os, discord, random, logging
+import csv, sys, aiohttp, asyncio
 from dotenv import load_dotenv
-import logging
 from age_player import *
-import csv
-import requests
-import sys
-import aiohttp
-import asyncio
 from discord.ext import tasks, commands
 from techTreeInfo import *
 
@@ -27,9 +20,14 @@ logger.addHandler(handler)
 
 
 bot = commands.Bot(command_prefix='')
+
 @bot.command(name='30', help='Returns AoE2 taunt #30.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def monkNoise(ctx):
+    """
+    Command: 30
+    Returns: The age taunt #30. (Wololo!)
+    """
     response = "Wololo!"
     await ctx.send(response)
 @monkNoise.error
@@ -43,6 +41,10 @@ async def  clearError(ctx, error):
 @bot.command(name='13', help='Returns AoE2 taunt #13.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def isp(ctx):
+    """
+    Command: 13
+    Returns: The age2 taunt #13. (Sure, blame it on your ISP.)
+    """
     response = "Sure, blame it on your ISP."
     await ctx.send(response)
 @isp.error
@@ -56,6 +58,10 @@ async def  clearError(ctx, error):
 @bot.command(name='age?', help='Returns AoE2 taunt #30.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def questionableAge(ctx):
+    """
+    Command: age?
+    Returns: The phrase "Well, duh."
+    """
     response = "Well, duh."
     await ctx.send(response)
 @questionableAge.error
@@ -69,6 +75,10 @@ async def  clearError(ctx, error):
 @bot.command(name='14', help='Returns AoE2 taunt #14.')
 @commands.cooldown(1, 30, commands.BucketType.user)
 async def startTheGame(ctx):
+    """
+    Command: 14
+    Returns: The age2 taunt #14. (Start the game already!)
+    """
     response = "Start the game already!"
     await ctx.send(response)
 @startTheGame.error
@@ -83,6 +93,10 @@ async def  clearError(ctx, error):
 @bot.command(name='!civ', help='Returns AoE2 civ tech tree information.')
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def civInfo(ctx, arg):
+    """
+    Command: !civ [civname]
+    Returns: The aoe2 tech tree link for that civ.
+    """
     age_civs = ['britons', 'byzantines', 'celts', 'chinese', 'franks', 'goths', 'japanese', 'mongols', 'persians', 'saracens', 'teutons', 'turks', 'vikings', 'aztecs', 'huns', 'koreans', 'mayans', 'spanish', 'incas', 'indians', 'italians', 'magyars', 'slavs', 'berbers', 'ethiopians', 'malians', 'portuguese', 'burmese', 'khmer', 'malay', 'vietnamese', 'bulgarians', 'cumans', 'lithuanians', 'tatars', 'burgundians', 'sicilians', 'bohemians', 'poles']
     if arg.lower() in age_civs:
         response = "https://aoe2techtree.net/#" + str(arg.lower())
@@ -101,6 +115,16 @@ async def  clearError(ctx, error):
 @bot.command(name='!randomciv', help='Returns a random AoE2 civ.')
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def randomCiv(ctx, arg1=None, arg2=None, arg3=None):
+    """
+    Command: !randomciv [optional (number/flank/pocket)] [optional (number)]
+    Returns: !randomciv                     returns one random civ out of the 39
+             !randomciv [number]            returns [number] of civs
+             !randomciv [flank]             returns one flank civ
+             !randomciv [flank] [number]    returns [number] flank civs
+             !randomciv [pocket]            returns one pocket civ
+             !randomciv [pocket] [number]   returns [number] pocket civs
+             If command caller is Luke, will only return Incas unless overridden with !randomciv [r].
+    """
     reponse = ''
     age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Indians', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles']
     pocket_civs = []
@@ -201,6 +225,13 @@ async def  clearError(ctx, error):
 
 @bot.command(name='!whichciv', help = 'Returns which civ has the stated technology(ies).')
 async def civTech(ctx, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
+    """
+    Command: !whichciv [technology1 (+technology)] [(optional)technology2] [(optional)technology3] [(optional)technology4] [(optional)technology5]
+    Returns: A list of civs that have that technology.
+             !whichciv [tech1+tech2]            returns all civs that have those techs (allows to search for multiple techs)
+             !whichciv [tech1]                  returns all civs that have that tech
+             !whichciv [techpart1] [techpart2]  returns all civs with that tech (accounts for spaces in tech name)
+    """
 
     if arg5 is not None:
         arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title() + " " + arg5.title()
@@ -235,16 +266,25 @@ async def civTech(ctx, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
 
 @bot.command(name='!contributors', help = 'Returns a list of HammerBot contributors.')
 async def contribute(ctx):
+    """
+    Command: !contributors
+    Returns: An embed of the list of contributors to HammerBot.
+    """
     embed=discord.Embed(title="HammerBot Contributors", description="List of HammerBot Contributors", color=0xd5d341)
-    embed.add_field(name="@BSHammer", value="\u200b", inline=True)
-    embed.add_field(name="@quela", value="\u200b", inline=True)
-    embed.add_field(name="@harristotle", value="\u200b", inline=True)
-    embed.add_field(name="@Rangebro", value="\u200b", inline=True)
+    embed.add_field(name="BSHammer", value="\u200b", inline=True)
+    embed.add_field(name="quela", value="\u200b", inline=True)
+    embed.add_field(name="harristotle", value="\u200b", inline=True)
+    embed.add_field(name="Rangebro", value="\u200b", inline=True)
     await ctx.send(embed=embed)
 
 @bot.command(name='!does', help='Returns if a civ(s) has a technology.')
 async def techTree(ctx, arg1, arg2, arg3=None, arg4=None, arg5=None):
-
+    """
+    Command: !does [civName] [techName]
+    Returns: !does [civ] [tech]                     returns whether the civ has the tech
+             !does [civ1+civ2] [tech]               returns whether the civs have the tech
+             !does [civ] [techpart1] [techpart2]    returns whether the civ has the tech
+    """
 
     if arg1.lower() in age_civs:
         if arg5 is not None:
@@ -304,6 +344,10 @@ async def  clearError(ctx, error):
 @bot.command(name='!help', help='Returns commands, their syntax, and uses.')
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def helpUser(ctx):
+    """
+    Command: !help
+    Returns: An embed of all the commands and how to call them.
+    """
     embed=discord.Embed(title="Commands", description="Command Help", color=0xd5d341)
     embed.add_field(name="13", value="[`13`], Returns AoE2 taunt #13.", inline=True)
     embed.add_field(name="14", value="[`14`], Returns AoE2 taunt #14", inline=True)
@@ -319,11 +363,18 @@ async def helpUser(ctx):
 @bot.command(name='!is', help='Redirects to !does.')
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def techTreeRedirect(ctx):
+    """
+    Command: !is
+    Returns: Redirects user to the !does command due to renaming.
+    """
     response = "Please use !does instead."
     await ctx.send(response)
 
 @tasks.loop(seconds=75)
 async def get_json_info():
+    """
+    Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
+    """
     async with aiohttp.ClientSession() as session:
         async with session.get('https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591') as r:
             r = await r.json(content_type=None)
@@ -333,6 +384,10 @@ async def get_json_info():
 @bot.command(name='!match', help="Returns BSHammer's current match information")
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def match(ctx):
+    """
+    Command: !match
+    Returns: Both teams, each player has a color, civ, and ELOs, also returns map, game type, and server.
+    """
     resp = await get_json_info()
     lastmatch = resp['last_match']
     playerName = resp['name']
