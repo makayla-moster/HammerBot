@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 from age_player import *
 from discord.ext import tasks, commands
 from techTreeInfo import *
+import numpy as np
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -111,18 +112,58 @@ async def  clearError(ctx, error):
         message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
     await ctx.send(message)
 
+@bot.command(name='!teamciv', help="Returns a team of civs.")
+@commands.cooldown(1, 10, commands.BucketType.user)
+async def teamRandomCiv(ctx, arg1=None):
+    user_arg = int(arg1)
+    flanksum = 0
+    pocketsum = 0
+    for item in civ_score_dict:
+        flanksum += civ_score_dict[item][0]
+        pocketsum += civ_score_dict[item][1]
+    flankavg = flanksum/39
+    pocketavg = pocketsum/39
+
+
+    def random_civ_position(position, amount, uniform_size, b1):
+        # position: flank = 0, pocket = 1
+        b0_values = [flankavg, pocketavg]
+        result = []
+        for i in range(amount):
+            random_civs = []
+            for i in range(uniform_size):
+                random_civs.append(age_civs[random.randint(0, 38)].title())
+
+            total_score = 0
+            for item in random_civs:
+                total_score += civ_score_dict[item][position]
+
+            weights = []
+            b0 = (-b0_values[position]+0)*b1
+
+            for item in random_civs:
+                p = 1/ (1 + np.exp( -(b0 + b1*civ_score_dict[item][position]) ))
+                weights.append(p)
+            result.append(random.choices(random_civs, weights, k = 1)[0])
+
+        return result
+
+    if (user_arg == None) or user_arg == 2:
+        response = f"{random_civ_position(0, 1, 5, 2)[0]}, {random_civ_position(1, 1, 5, 2)[0]}"
+    elif user_arg == 3:
+        response = f"Flanks: {', '.join(random_civ_position(0, 2, 5, 2))}\nPocket: {random_civ_position(1, 1, 5, 2)[0]}"
+    else:
+        response = f"Flanks: {', '.join(random_civ_position(0, 2, 5, 2))}\nPockets: {', '.join(random_civ_position(1, 2, 5, 2))}"
+
+    await ctx.send(response)
 
 @bot.command(name='!randomciv', help='Returns a random AoE2 civ.')
 @commands.cooldown(1, 10, commands.BucketType.user)
-async def randomCiv(ctx, arg1=None, arg2=None, arg3=None):
+async def randomCiv(ctx, arg1=None, arg2=None):
     """
-    Command: !randomciv [optional (number/flank/pocket)] [optional (number)]
+    Command: !randomciv [optional (number)]
     Returns: !randomciv                     returns one random civ out of the 39
              !randomciv [number]            returns [number] of civs
-             !randomciv [flank]             returns one flank civ
-             !randomciv [flank] [number]    returns [number] flank civs
-             !randomciv [pocket]            returns one pocket civ
-             !randomciv [pocket] [number]   returns [number] pocket civs
              If command caller is Luke, will only return Incas unless overridden with !randomciv [r].
     """
     reponse = ''
@@ -146,30 +187,6 @@ async def randomCiv(ctx, arg1=None, arg2=None, arg3=None):
                         response = random.choice(age_civs)
                     else:
                         response += "\n" + random.choice(age_civs)
-            elif (arg2.lower() == 'flank'):
-                if arg3 != None:
-                    if arg3.isnumeric():
-                        for i in range(int(arg3)):
-                            if i == 0:
-                                response = random.choice(age_civs)
-                            else:
-                                response += "\n" + random.choice(age_civs)
-                    else:
-                        response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
-                else:
-                    response = random.choice(age_civs)
-            elif (arg2.lower() == 'pocket'):
-                if arg3 != None:
-                    if arg3.isnumeric():
-                        for i in range(int(arg3)):
-                            if i == 0:
-                                response = random.choice(age_civs)
-                            else:
-                                response += "\n" + random.choice(age_civs)
-                    else:
-                        response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
-                else:
-                    response = random.choice(age_civs)
         elif arg2 != None and arg2.isnumeric():
             for i in range(int(arg2)):
                 if i == 0:
@@ -178,7 +195,7 @@ async def randomCiv(ctx, arg1=None, arg2=None, arg3=None):
                     response += "\n" + "Incas"
         else:
             response = "Incas"
-    elif (arg1 == None) and (arg2 == None):
+    elif (arg1 == None):
         response = random.choice(age_civs)
     elif arg1 == 'Lucas' or arg1 == "Luke" or arg1 == "divas" or arg1 == "Divas":
         response = "Incas"
@@ -188,32 +205,8 @@ async def randomCiv(ctx, arg1=None, arg2=None, arg3=None):
                 response = random.choice(age_civs)
             else:
                 response += "\n" + random.choice(age_civs)
-    elif (arg1.lower() == 'flank'):
-        if arg2 != None:
-            if arg2.isnumeric():
-                for i in range(int(arg2)):
-                    if i == 0:
-                        response = random.choice(age_civs)
-                    else:
-                        response += "\n" + random.choice(age_civs)
-            else:
-                response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
-        else:
-            response = random.choice(age_civs)
-    elif (arg1.lower() == 'pocket'):
-        if arg2 != None:
-            if arg2.isnumeric():
-                for i in range(int(arg2)):
-                    if i == 0:
-                        response = random.choice(age_civs)
-                    else:
-                        response += "\n" + random.choice(age_civs)
-            else:
-                response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
-        else:
-            response = random.choice(age_civs)
     else:
-        response = "Not in correct format. !randomciv [optional (flank/pocket/number)] [optional (number)]"
+        response = "Not in correct format. !randomciv [(optional) number]"
     await ctx.send(response)
 @randomCiv.error
 async def  clearError(ctx, error):
@@ -497,6 +490,8 @@ async def match(ctx):
                             team2players += f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
                     response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
     await ctx.send(response)
+
+
 
 
 @bot.event
