@@ -115,7 +115,15 @@ async def  clearError(ctx, error):
 @bot.command(name='!teamciv', help="Returns a team of civs.")
 @commands.cooldown(1, 10, commands.BucketType.user)
 async def teamRandomCiv(ctx, arg1=None):
-    user_arg = int(arg1)
+    """
+    Command: !teamciv
+    Returns: !teamciv                       Returns 2 balanced civs 
+             !teamciv [(optional) number]   Returns [number] balanced civs for a team.
+    """
+    if arg1 != None:
+        user_arg = int(arg1)
+    else:
+        user_arg = 2
     flanksum = 0
     pocketsum = 0
     for item in civ_score_dict:
