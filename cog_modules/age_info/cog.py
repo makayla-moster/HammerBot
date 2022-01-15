@@ -257,7 +257,6 @@ class AgeCommands(commands.Cog):
         """
         resp = await get_json_info()
         lastmatch = resp['last_match']
-        playerName = resp['name']
         players = []
         team1 = []
         team2 = []
@@ -267,102 +266,44 @@ class AgeCommands(commands.Cog):
         team2players = ''
         response = None
         server = lastmatch['server']
-        map = lastmatch['map_type']
-        # print(players)
 
-        players = getPlayerIDs(resp)
+        players = await getPlayerIDs(resp)
+
         for player in players:
-            player.info()
+            await player.info()
             if player.team == 1:
                 team1.append(player)
             elif player.team == 2:
                 team2.append(player)
-            if (player.name == playerName) and player.team == 1:
-                hammerTeam1 = True
-            elif (player.name == playerName) and player.team == 2:
-                hammerTeam2 = True
+
         count = len(players)
         i = 0
         if (player.game == "1v1 Empire Wars") or (player.game == "Team Empire Wars"):
-            if hammerTeam1 == True:
-                for i in range(count // 2):
-                    player1 = team1[i]
-                    if i == 0:
-                        team1players = f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
-                    else:
-                        team1players += f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
-                    player2 = team2[i]
-                    if i == 0:
-                        team2players = f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
-                    else:
-                        team2players += f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
-                response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
-            elif hammerTeam2 == True:
-                for i in range(count // 2):
-                    player1 = team2[i]
-                    if i == 0:
-                        team1players = f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
-                    else:
-                        team1players += f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
-                    player2 = team1[i]
-                    if i == 0:
-                        team2players = f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
-                    else:
-                        team2players += f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
-                response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
-            else:
-                for i in range(count // 2):
-                    player1 = team1[i]
-                    if i == 0:
-                        team1players = f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
-                    else:
-                        team1players += f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
-                    player2 = team2[i]
-                    if i == 0:
-                        team2players = f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
-                    else:
-                        team2players += f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
-                response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
+            for i in range(count // 2):
+                player1 = team1[i]
+                if i == 0:
+                    team1players = f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
+                else:
+                    team1players += f"{player1.color} {player1.name} [{player1.country} {player1.ew_tg_rating} {player1.ew_rating}] as {player1.civ} "
+                player2 = team2[i]
+                if i == 0:
+                    team2players = f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
+                else:
+                    team2players += f"{player2.color} {player2.name} [{player2.country} {player2.ew_tg_rating} {player2.ew_rating}] as {player2.civ} "
+            response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
         else:
-                    if hammerTeam1 == True:
-                        for i in range(count // 2):
-                            player1 = team1[i]
-                            if i == 0:
-                                team1players = f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
-                            else:
-                                team1players += f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
-                            player2 = team2[i]
-                            if i == 0:
-                                team2players = f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
-                            else:
-                                team2players += f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
-                        response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
-                    elif hammerTeam2 == True:
-                        for i in range(count // 2):
-                            player1 = team2[i]
-                            if i == 0:
-                                team1players = f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
-                            else:
-                                team1players += f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
-                            player2 = team1[i]
-                            if i == 0:
-                                team2players = f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
-                            else:
-                                team2players += f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
-                        response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
-                    else:
-                        for i in range(count // 2):
-                            player1 = team1[i]
-                            if i == 0:
-                                team1players = f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
-                            else:
-                                team1players += f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
-                            player2 = team2[i]
-                            if i == 0:
-                                team2players = f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
-                            else:
-                                team2players += f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
-                        response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
+            for i in range(count // 2):
+                player1 = team1[i]
+                if i == 0:
+                    team1players = f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
+                else:
+                    team1players += f"{player1.color} {player1.name} [{player1.country} {player1.tg_rating} {player1.rating}] as {player1.civ} "
+                player2 = team2[i]
+                if i == 0:
+                    team2players = f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
+                else:
+                    team2players += f"{player2.color} {player2.name} [{player2.country} {player2.tg_rating} {player2.rating}] as {player2.civ} "
+            response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
         await ctx.send(response)
 
 get_json_info.start()
