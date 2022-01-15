@@ -22,74 +22,9 @@ logger.addHandler(handler)
 
 bot = commands.Bot(command_prefix='')
 
-@bot.command(name='30', help='Returns AoE2 taunt #30.')
-@commands.cooldown(1, 30, commands.BucketType.user)
-async def monkNoise(ctx):
-    """
-    Command: 30
-    Returns: The age taunt #30. (Wololo!)
-    """
-    response = "Wololo!"
-    await ctx.send(response)
-@monkNoise.error
-async def  clearError(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        return  # Return because we don't want to show an error for every command not found
-    elif isinstance(error, commands.CommandOnCooldown):
-        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
-    await ctx.send(message)
-
-@bot.command(name='13', help='Returns AoE2 taunt #13.')
-@commands.cooldown(1, 30, commands.BucketType.user)
-async def isp(ctx):
-    """
-    Command: 13
-    Returns: The age2 taunt #13. (Sure, blame it on your ISP.)
-    """
-    response = "Sure, blame it on your ISP."
-    await ctx.send(response)
-@isp.error
-async def  clearError(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        return  # Return because we don't want to show an error for every command not found
-    elif isinstance(error, commands.CommandOnCooldown):
-        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
-    await ctx.send(message)
-
-@bot.command(name='age?', help='Returns AoE2 taunt #30.')
-@commands.cooldown(1, 30, commands.BucketType.user)
-async def questionableAge(ctx):
-    """
-    Command: age?
-    Returns: The phrase "Well, duh."
-    """
-    response = "Well, duh."
-    await ctx.send(response)
-@questionableAge.error
-async def  clearError(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        return  # Return because we don't want to show an error for every command not found
-    elif isinstance(error, commands.CommandOnCooldown):
-        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
-    await ctx.send(message)
-
-@bot.command(name='14', help='Returns AoE2 taunt #14.')
-@commands.cooldown(1, 30, commands.BucketType.user)
-async def startTheGame(ctx):
-    """
-    Command: 14
-    Returns: The age2 taunt #14. (Start the game already!)
-    """
-    response = "Start the game already!"
-    await ctx.send(response)
-@startTheGame.error
-async def  clearError(ctx, error):
-    if isinstance(error, commands.CommandNotFound):
-        return  # Return because we don't want to show an error for every command not found
-    elif isinstance(error, commands.CommandOnCooldown):
-        message = f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds."
-    await ctx.send(message)
-
+for folder in os.listdir("cog_modules"):
+    if os.path.exists(os.path.join("cog_modules", folder, "cog.py")):
+        bot.load_extension(f"cog_modules.{folder}.cog")
 
 @bot.command(name='!civ', help='Returns AoE2 civ tech tree information.')
 @commands.cooldown(1, 10, commands.BucketType.user)
@@ -117,7 +52,7 @@ async def  clearError(ctx, error):
 async def teamRandomCiv(ctx, arg1=None):
     """
     Command: !teamciv
-    Returns: !teamciv                       Returns 2 balanced civs 
+    Returns: !teamciv                       Returns 2 balanced civs
              !teamciv [(optional) number]   Returns [number] balanced civs for a team.
     """
     if arg1 != None:
@@ -350,6 +285,7 @@ async def helpUser(ctx):
     Returns: An embed of all the commands and how to call them.
     """
     embed=discord.Embed(title="Commands", description="Command Help", color=0xd5d341)
+    embed.add_field(name="11", value="[`11`], Returns AoE2 taunt #11.", inline=True)
     embed.add_field(name="13", value="[`13`], Returns AoE2 taunt #13.", inline=True)
     embed.add_field(name="14", value="[`14`], Returns AoE2 taunt #14", inline=True)
     embed.add_field(name="30", value="[`30`], Returns AoE2 taunt #30.", inline=True)
