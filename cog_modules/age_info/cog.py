@@ -36,11 +36,11 @@ class AgeCommands(commands.Cog):
         Command: !civ [civname]
         Returns: The aoe2 tech tree link for that civ.
         """
-        age_civs = ['britons', 'byzantines', 'celts', 'chinese', 'franks', 'goths', 'japanese', 'mongols', 'persians', 'saracens', 'teutons', 'turks', 'vikings', 'aztecs', 'huns', 'koreans', 'mayans', 'spanish', 'incas', 'indians', 'italians', 'magyars', 'slavs', 'berbers', 'ethiopians', 'malians', 'portuguese', 'burmese', 'khmer', 'malay', 'vietnamese', 'bulgarians', 'cumans', 'lithuanians', 'tatars', 'burgundians', 'sicilians', 'bohemians', 'poles']
+
         if arg.lower() in age_civs:
             response = "https://aoe2techtree.net/#" + str(arg.lower())
         else:
-            response = arg + " is not a current AoE 2 civ."
+            response = arg.title() + " is not a current AoE 2 civ."
         await ctx.send(response)
 
 
