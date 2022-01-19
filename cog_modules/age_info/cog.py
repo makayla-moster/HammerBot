@@ -231,6 +231,7 @@ class AgeCommands(commands.Cog):
         if error == True:
             await ctx.send(embed=message)
         else:
+            response.sort()
             await ctx.send(", ".join(response))
 
     @commands.command(name='!does', help='Returns if a civ(s) has a technology.')
@@ -358,8 +359,6 @@ class AgeCommands(commands.Cog):
         else:
             response = discord.Embed(title="Invalid Input", description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
             await ctx.send(embed=response)
-
-            
 get_json_info.start()
 def setup(bot: commands.Bot):
     bot.add_cog(AgeCommands(bot))
