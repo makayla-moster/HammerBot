@@ -22,12 +22,39 @@ async def get_json_info():
             await session.close()
             return r
 
+@tasks.loop(seconds=90)
+async def get_1v1_player_json():
+    """
+    Helper function for pulling the top 10,000 AoE2 players' info.
+    """
+    async with aiohttp.ClientSession() as session:
+        async with session.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=10000') as r:
+            r = await r.json(content_type=None)
+            await sesson.close()
+            return r
 
 class AgeCommands(commands.Cog):
     """Commands for age of empires calls by players."""
 
     def __init__(self, bot: commands.Bot):
         self.bot = bot
+
+    # @commands.command(name='!rank', help='Returns player 1v1 ranking')
+    # async def rank1v1(self, ctx: commands.Context, arg1=None):
+    #     """
+    #     Command: !rank [player name (optional)]
+    #     Returns: 1v1 rank of player
+    #     """
+    #
+    #     response = await get_1v1_player_json()
+    #
+    #     # rankings_1v1 = response['leaderboard']
+    #     #
+    #     # if arg1 == None:
+    #     #     print(rankings_1v1['name'])
+    #
+    #     await ctx.send("Finished")
+
 
     @commands.command(name='!civ', help='Returns AoE2 civ tech tree information.')
     @commands.cooldown(1, 10, commands.BucketType.user)
