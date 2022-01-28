@@ -28,6 +28,7 @@ class ErrorHandler(commands.Cog):
         elif isinstance(error, commands.UserInputError):
             message = discord.Embed(title='Input Error', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
         else:
+            print(error)
             message = discord.Embed(title="Tell @quela about this", description="If you are seeing this, something has gone horribly wrong.", color = discord.Color.red())
 
         await ctx.send(embed=message)
