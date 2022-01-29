@@ -83,19 +83,23 @@ class AgeCommands(commands.Cog):
         message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
         rankings_1v1 = response['leaderboard']
         rankings_tg = tg_response['leaderboard']
+        rank_1v1 = 'Not Found'
+        rank_tg = "Not Found"
 
         if arg1 == None:
             for i in range(len(rankings_1v1)):
                 if rankings_1v1[i]['name'] == 'BSHammer':
                     rank_1v1 = rankings_1v1[i]['rating']
+                if rankings_tg[i]['name'] == 'BSHammer':
                     rank_tg = rankings_tg[i]['rating']
-            message = discord.Embed(title=f"BSHammer's Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+            message = discord.Embed(title=f"BSHammer's Random Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
         else:
             for i in range(len(rankings_1v1)):
                 if rankings_1v1[i]['name'] == arg1:
                     rank_1v1 = rankings_1v1[i]['rating']
+                if rankings_tg[i]['name'] == arg1:
                     rank_tg = rankings_tg[i]['rating']
-            message = discord.Embed(title=f"{arg1}'s Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+            message = discord.Embed(title=f"{arg1}'s Random Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
 
         await ctx.send(embed=message)
 
@@ -108,27 +112,29 @@ class AgeCommands(commands.Cog):
         response = await get_1v1_ew_player_json()
         tg_response = await get_tg_ew_player_json()
         # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.greyple())
+        message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
         rankings_1v1 = response['leaderboard']
         rankings_tg = tg_response['leaderboard']
 
-        rank_1v1 = 0
-        rank_tg = 0
+        rank_1v1 = 'Not Found'
+        rank_tg = "Not Found"
 
         if arg1 == None:
             for i in range(len(rankings_1v1)):
                 if rankings_1v1[i]['name'] == 'BSHammer':
                     rank_1v1 = rankings_1v1[i]['rating']
+                if rankings_tg[i]['name'] == 'BSHammer':
                     rank_tg = rankings_tg[i]['rating']
             # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(title=f"BSHammer's Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.greyple())
+            message = discord.Embed(title=f"BSHammer's Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
         else:
             for i in range(len(rankings_1v1)):
                 if rankings_1v1[i]['name'] == arg1:
                     rank_1v1 = rankings_1v1[i]['rating']
+                if rankings_tg[i]['name'] == arg1:
                     rank_tg = rankings_tg[i]['rating']
             # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(title=f"{arg1}'s Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.greyple())
+            message = discord.Embed(title=f"{arg1}'s Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
 
         await ctx.send(embed=message)
 
