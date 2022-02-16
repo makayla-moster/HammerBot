@@ -26,6 +26,8 @@ class ServiceCommands(commands.Cog):
         embed.add_field(name="!civ", value="[`!civ civName`], Returns AoE2 civ tech tree information.", inline=True)
         embed.add_field(name="!does", value="[`!does civName(+civNames) upgradeName`], Returns information about if a civ(s) has a technology.", inline=True)
         embed.add_field(name="!match", value="[`!match`], Returns information about BSHammer's current game.", inline=True)
+        embed.add_field(name="!rank", value="[`!rank (playerName)`], Returns information about BSHammer's or PlayerName's RM ranks.", inline=True)
+        embed.add_field(name="!rankew", value="[`!rankew (playerName)`], Returns information about BSHammer's or PlayerName's EW ranks.", inline=True)
         await ctx.send(embed=embed)
 
     @commands.command(name='!contributors')
