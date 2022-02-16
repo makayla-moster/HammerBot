@@ -187,7 +187,12 @@ class AgeCommands(commands.Cog):
 
             return result
 
-        if arg1.isnumeric() == True:
+        if arg1 == None:
+            user_arg = 2
+        else:
+            user_arg = int(arg1)
+
+        if user_arg != None:
             if arg1 != None:
                 user_arg = int(arg1)
             else:
