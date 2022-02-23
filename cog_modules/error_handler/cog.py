@@ -27,7 +27,7 @@ class ErrorHandler(commands.Cog):
             message = discord.Embed(title="Too Many Arguments", description="You have too many arguments for the command. Please try again with less arguments.", color = discord.Color.red())
         elif isinstance(error, commands.UserInputError):
             message = discord.Embed(title='Input Error', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
-        elif isinstance(error, commands.ClientConnectorError):
+        elif isinstance(error, commands.CommandInvokeError):
             message = discord.Embed(title='Client Connection Error', description="There was a problem with the API Client. Aoe2.net is down.", color = discord.Color.red())
         else:
             print(error)
