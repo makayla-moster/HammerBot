@@ -1,5 +1,4 @@
 .env
-/__pycache__
-__pycache__/
-twitch_bot/
 .DS_Store
+twitch_bot/
+__pycache__/
