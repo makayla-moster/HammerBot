@@ -31,6 +31,9 @@ async def get_1v1_player_json():
         async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=10000') as r:
             r = await r.json(content_type=None)
             await session2.close()
+            f = open("Leaderboard1v1PlayerData_1_10000.json", "w")
+            json.dump(r, f)
+            f.close()
             return r
 
 @tasks.loop(seconds=120)
@@ -100,10 +103,14 @@ class AgeCommands(commands.Cog):
         Command: !rank [player name (optional)]
         Returns: 1v1 & tg ranks of player
         """
+
+        f = open("Leaderboard1v1PlayerData_1_10000.json", "r")
+        response1 = json.loads(f.read())
+
         response = await get_1v1_player_json()
         tg_response = await get_tg_player_json()
         message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
-        rankings_1v1 = response['leaderboard']
+        rankings_1v1 = response1['leaderboard']
         rankings_tg = tg_response['leaderboard']
         rank_1v1 = 'Not Found'
         rank_tg = "Not Found"
@@ -160,40 +167,40 @@ class AgeCommands(commands.Cog):
 
         await ctx.send(embed=message)
 
-        @commands.command(name='!rankdm', help='Returns player 1v1 ranking')
-        async def rankdm(self, ctx: commands.Context, arg1=None):
-            """
-            Command: !rankdm [player name (optional)]
-            Returns: 1v1 & tg dm ranks of player
-            """
-            response = await get_1v1_dm_player_json()
-            tg_response = await get_tg_dm_player_json()
-            # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-            message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
-            rankings_1v1 = response['leaderboard']
-            rankings_tg = tg_response['leaderboard']
+    @commands.command(name='!rankdm', help='Returns player 1v1 ranking')
+    async def rankdm(self, ctx: commands.Context, arg1=None):
+        """
+        Command: !rankdm [player name (optional)]
+        Returns: 1v1 & tg dm ranks of player
+        """
+        response = await get_1v1_dm_player_json()
+        tg_response = await get_tg_dm_player_json()
+        # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
+        message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
+        rankings_1v1 = response['leaderboard']
+        rankings_tg = tg_response['leaderboard']
 
-            rank_1v1 = 'Not Found'
-            rank_tg = "Not Found"
+        rank_1v1 = 'Not Found'
+        rank_tg = "Not Found"
 
-            if arg1 == None:
-                for i in range(len(rankings_1v1)):
-                    if rankings_1v1[i]['name'] == 'BSHammer':
-                        rank_1v1 = rankings_1v1[i]['rating']
-                    if rankings_tg[i]['name'] == 'BSHammer':
-                        rank_tg = rankings_tg[i]['rating']
-                # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-                message = discord.Embed(title=f"BSHammer's Death Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
-            else:
-                for i in range(len(rankings_1v1)):
-                    if rankings_1v1[i]['name'] == arg1:
-                        rank_1v1 = rankings_1v1[i]['rating']
-                    if rankings_tg[i]['name'] == arg1:
-                        rank_tg = rankings_tg[i]['rating']
-                # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-                message = discord.Embed(title=f"{arg1}'s Death Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+        if arg1 == None:
+            for i in range(len(rankings_1v1)):
+                if rankings_1v1[i]['name'] == 'BSHammer':
+                    rank_1v1 = rankings_1v1[i]['rating']
+                if rankings_tg[i]['name'] == 'BSHammer':
+                    rank_tg = rankings_tg[i]['rating']
+            # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
+            message = discord.Embed(title=f"BSHammer's Death Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+        else:
+            for i in range(len(rankings_1v1)):
+                if rankings_1v1[i]['name'] == arg1:
+                    rank_1v1 = rankings_1v1[i]['rating']
+                if rankings_tg[i]['name'] == arg1:
+                    rank_tg = rankings_tg[i]['rating']
+            # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
+            message = discord.Embed(title=f"{arg1}'s Death Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
 
-            await ctx.send(embed=message)
+        await ctx.send(embed=message)
 
 
     @commands.command(name='!civ', help='Returns AoE2 civ tech tree information.')
