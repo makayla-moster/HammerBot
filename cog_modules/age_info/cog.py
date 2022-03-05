@@ -110,7 +110,7 @@ class AgeCommands(commands.Cog):
         response = await get_1v1_player_json()
         tg_response = await get_tg_player_json()
         message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
-        rankings_1v1 = response1['leaderboard']
+        rankings_1v1 = response['leaderboard']
         rankings_tg = tg_response['leaderboard']
         rank_1v1 = 'Not Found'
         rank_tg = "Not Found"
