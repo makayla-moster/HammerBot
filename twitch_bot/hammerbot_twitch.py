@@ -1,5 +1,6 @@
 # bot.py
-import os # for importing env vars for the bot to use
+import os  # for importing env vars for the bot to use
+
 from dotenv import load_dotenv
 from twitchio.ext import commands
 

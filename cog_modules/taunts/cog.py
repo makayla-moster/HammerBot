@@ -1,6 +1,8 @@
 import os
+
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
-from discord.ext import tasks, commands
+
 
 class Taunts(commands.Cog):
     """Replies with taunts from AoE2"""
@@ -17,7 +19,7 @@ class Taunts(commands.Cog):
         response = "Wololo!"
         await ctx.send(response)
 
-    @commands.command(name='14', help='Returns AoE2 taunt #14.')
+    @commands.command(name="14", help="Returns AoE2 taunt #14.")
     # @commands.cooldown(1, 30, commands.BucketType.user)
     async def startTheGame(self, ctx: commands.Context):
         """
@@ -27,9 +29,9 @@ class Taunts(commands.Cog):
         response = "Start the game already!"
         await ctx.send(response)
 
-    @commands.command(name='13', help='Returns AoE2 taunt #13.')
+    @commands.command(name="13", help="Returns AoE2 taunt #13.")
     # @commands.cooldown(1, 30, commands.BucketType.user)
-    async def isp(self, ctx:commands.Context):
+    async def isp(self, ctx: commands.Context):
         """
         Command: 13
         Returns: The age2 taunt #13. (Sure, blame it on your ISP.)
@@ -37,7 +39,7 @@ class Taunts(commands.Cog):
         response = "Sure, blame it on your ISP."
         await ctx.send(response)
 
-    @commands.command(name='age?', help='Returns AoE2 taunt #30.')
+    @commands.command(name="age?", help="Returns AoE2 taunt #30.")
     # @commands.cooldown(1, 30, commands.BucketType.user)
     async def questionableAge(self, ctx: commands.Context):
         """
@@ -55,6 +57,7 @@ class Taunts(commands.Cog):
         """
         response = "🤣"
         await ctx.send(response)
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(Taunts(bot))
