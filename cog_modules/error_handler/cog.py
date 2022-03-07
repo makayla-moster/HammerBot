@@ -1,5 +1,16 @@
 from discord.ext import tasks, commands
 import aiohttp, asyncio, discord
+import ast
+import traceback
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+ERROR_CHANNEL_ID = int(os.getenv('ERROR_CHANNEL_ID'))
+
+
+def format_exception(e: Exception) -> str:
+    return "".join(traceback.format_exception(type(e), e, e.__traceback__, 4))
 
 class ErrorHandler(commands.Cog):
     """A cog for global error handling."""
@@ -30,8 +41,22 @@ class ErrorHandler(commands.Cog):
         elif isinstance(error, commands.CommandInvokeError):
             message = discord.Embed(title='Client Connection Error', description="There was a problem with the API Client. Aoe2.net might be down.", color = discord.Color.red())
         else:
-            print(error)
+            error_nice = format_exception(error)
+            print(error_nice)
             message = discord.Embed(title="Tell @quela about this", description="If you are seeing this, something has gone horribly wrong.", color = discord.Color.red())
+
+            # log error in error channel
+            debug_info = (
+                f"```\n{ctx.author} {ctx.author.id}: {ctx.message.content}"[:200]
+                + "```"
+                + f"```py\n{error_nice.replace('```', '｀｀｀')}"[: 2000 - 206]
+                + "```"
+            )
+
+            error_channel = self.bot.get_channel(ERROR_CHANNEL_ID)
+
+            if error_channel is not None:
+                await error_channel.send(debug_info)
 
         await ctx.send(embed=message)
 
