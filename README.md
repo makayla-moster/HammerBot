@@ -23,4 +23,4 @@ After forking the repository:
 1. `git clone` HammerBot, and `cd` into the `HammerBot` directory
 2. Make a new file called `.env` and fill in the fields based off the `.env.example` file
 3. Use (poetry)[https://python-poetry.org] to install the necessary dependencies with `poetry install`
-4. Run Hammerbot with either `poetry run python3 hammerbot.py`(mac/linux) or `poetry run py hammerbot.py` (windows)
+4. Run HammerBot with either `poetry run python3 hammerbot.py`(mac/linux) or `poetry run py hammerbot.py` (windows)
