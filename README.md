@@ -16,7 +16,7 @@ If you'd like to contribute code to HammerBot, please:
 2. Make any contributions in your fork       
 3. Create a [pull request](https://github.com/makayla-moster/HammerBot/pulls)
 
-Your pull request will then be reviewed.
+Your pull request will then be reviewed. Please read the [Contributing Guidelines](https://github.com/makayla-moster/HammerBot/blob/main/CONTRIBUTING.md) before creating your first pull request.
 
 ### Setting Up HammerBot
 After forking the repository:
