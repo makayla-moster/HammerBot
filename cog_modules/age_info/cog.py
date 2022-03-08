@@ -1,15 +1,25 @@
-import os, discord, random, logging
-import csv, sys, aiohttp, asyncio, json
-from dotenv import load_dotenv
-from age_player import *
-from discord.ext import tasks, commands
-from techTreeInfo import *
+import asyncio
+import csv
+import json
+import logging
+import os
+import random
+import sys
+
+import aiohttp
+import discord
 import numpy as np
+from discord.ext import commands, tasks
+from dotenv import load_dotenv
+
+from age_player import *
+from techTreeInfo import *
 
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
-GUILD = os.getenv('DISCORD_GUILD')
-LUKE = os.getenv('LUKE_ID')
+TOKEN = os.getenv("DISCORD_TOKEN")
+GUILD = os.getenv("DISCORD_GUILD")
+LUKE = os.getenv("LUKE_ID")
+
 
 @tasks.loop(seconds=75)
 async def get_json_info():
@@ -17,10 +27,11 @@ async def get_json_info():
     Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
     """
     async with aiohttp.ClientSession() as session:
-        async with session.get('https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591') as r:
+        async with session.get("https://aoe2.net/api/player/lastmatch?game=aoe2de&profile_id=313591") as r:
             r = await r.json(content_type=None)
             await session.close()
             return r
+
 
 @tasks.loop(seconds=120)
 async def get_1v1_player_json():
@@ -28,7 +39,7 @@ async def get_1v1_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=10000') as r:
+        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             f = open("Leaderboard1v1PlayerData_1_10000.json", "w")
@@ -36,16 +47,18 @@ async def get_1v1_player_json():
             f.close()
             return r
 
+
 @tasks.loop(seconds=120)
 async def get_tg_player_json():
     """
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=4&start=1&count=10000') as r:
+        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=4&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
+
 
 @tasks.loop(seconds=120)
 async def get_1v1_ew_player_json():
@@ -53,10 +66,11 @@ async def get_1v1_ew_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=13&start=1&count=10000') as r:
+        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=13&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
+
 
 @tasks.loop(seconds=120)
 async def get_tg_ew_player_json():
@@ -64,10 +78,11 @@ async def get_tg_ew_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=14&start=1&count=10000') as r:
+        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=14&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
+
 
 @tasks.loop(seconds=120)
 async def get_1v1_dm_player_json():
@@ -75,10 +90,11 @@ async def get_1v1_dm_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000') as r:
+        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
+
 
 @tasks.loop(seconds=120)
 async def get_tg_dm_player_json():
@@ -86,10 +102,11 @@ async def get_tg_dm_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get('https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000') as r:
+        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
+
 
 class AgeCommands(commands.Cog):
     """Commands for age of empires calls by players."""
@@ -97,7 +114,7 @@ class AgeCommands(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(name='!rank', help='Returns player 1v1 ranking')
+    @commands.command(name="!rank", help="Returns player 1v1 ranking")
     async def rank1v1(self, ctx: commands.Context, arg1=None):
         """
         Command: !rank [player name (optional)]
@@ -109,30 +126,38 @@ class AgeCommands(commands.Cog):
 
         response = await get_1v1_player_json()
         tg_response = await get_tg_player_json()
-        message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
-        rankings_1v1 = response['leaderboard']
-        rankings_tg = tg_response['leaderboard']
-        rank_1v1 = 'Not Found'
+        message = discord.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=discord.Color.blurple())
+        rankings_1v1 = response["leaderboard"]
+        rankings_tg = tg_response["leaderboard"]
+        rank_1v1 = "Not Found"
         rank_tg = "Not Found"
 
         if arg1 == None:
             for i in range(len(rankings_1v1)):
-                if rankings_1v1[i]['name'] == 'BSHammer':
-                    rank_1v1 = rankings_1v1[i]['rating']
-                if rankings_tg[i]['name'] == 'BSHammer':
-                    rank_tg = rankings_tg[i]['rating']
-            message = discord.Embed(title=f"BSHammer's Random Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+                if rankings_1v1[i]["name"] == "BSHammer":
+                    rank_1v1 = rankings_1v1[i]["rating"]
+                if rankings_tg[i]["name"] == "BSHammer":
+                    rank_tg = rankings_tg[i]["rating"]
+            message = discord.Embed(
+                title=f"BSHammer's Random Match Ranks",
+                description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
+                color=discord.Color.blurple(),
+            )
         else:
             for i in range(len(rankings_1v1)):
-                if rankings_1v1[i]['name'] == arg1:
-                    rank_1v1 = rankings_1v1[i]['rating']
-                if rankings_tg[i]['name'] == arg1:
-                    rank_tg = rankings_tg[i]['rating']
-            message = discord.Embed(title=f"{arg1}'s Random Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+                if rankings_1v1[i]["name"] == arg1:
+                    rank_1v1 = rankings_1v1[i]["rating"]
+                if rankings_tg[i]["name"] == arg1:
+                    rank_tg = rankings_tg[i]["rating"]
+            message = discord.Embed(
+                title=f"{arg1}'s Random Match Ranks",
+                description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
+                color=discord.Color.blurple(),
+            )
 
         await ctx.send(embed=message)
 
-    @commands.command(name='!rankew', help='Returns player 1v1 ranking')
+    @commands.command(name="!rankew", help="Returns player 1v1 ranking")
     async def rankew(self, ctx: commands.Context, arg1=None):
         """
         Command: !rankew [player name (optional)]
@@ -141,33 +166,41 @@ class AgeCommands(commands.Cog):
         response = await get_1v1_ew_player_json()
         tg_response = await get_tg_ew_player_json()
         # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
-        rankings_1v1 = response['leaderboard']
-        rankings_tg = tg_response['leaderboard']
+        message = discord.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=discord.Color.blurple())
+        rankings_1v1 = response["leaderboard"]
+        rankings_tg = tg_response["leaderboard"]
 
-        rank_1v1 = 'Not Found'
+        rank_1v1 = "Not Found"
         rank_tg = "Not Found"
 
         if arg1 == None:
             for i in range(len(rankings_1v1)):
-                if rankings_1v1[i]['name'] == 'BSHammer':
-                    rank_1v1 = rankings_1v1[i]['rating']
-                if rankings_tg[i]['name'] == 'BSHammer':
-                    rank_tg = rankings_tg[i]['rating']
+                if rankings_1v1[i]["name"] == "BSHammer":
+                    rank_1v1 = rankings_1v1[i]["rating"]
+                if rankings_tg[i]["name"] == "BSHammer":
+                    rank_tg = rankings_tg[i]["rating"]
             # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(title=f"BSHammer's Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+            message = discord.Embed(
+                title=f"BSHammer's Empire Wars Ranks",
+                description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
+                color=discord.Color.blurple(),
+            )
         else:
             for i in range(len(rankings_1v1)):
-                if rankings_1v1[i]['name'] == arg1:
-                    rank_1v1 = rankings_1v1[i]['rating']
-                if rankings_tg[i]['name'] == arg1:
-                    rank_tg = rankings_tg[i]['rating']
+                if rankings_1v1[i]["name"] == arg1:
+                    rank_1v1 = rankings_1v1[i]["rating"]
+                if rankings_tg[i]["name"] == arg1:
+                    rank_tg = rankings_tg[i]["rating"]
             # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(title=f"{arg1}'s Empire Wars Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+            message = discord.Embed(
+                title=f"{arg1}'s Empire Wars Ranks",
+                description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
+                color=discord.Color.blurple(),
+            )
 
         await ctx.send(embed=message)
 
-    @commands.command(name='!rankdm', help='Returns player 1v1 ranking')
+    @commands.command(name="!rankdm", help="Returns player 1v1 ranking")
     async def rankdm(self, ctx: commands.Context, arg1=None):
         """
         Command: !rankdm [player name (optional)]
@@ -176,34 +209,41 @@ class AgeCommands(commands.Cog):
         response = await get_1v1_dm_player_json()
         tg_response = await get_tg_dm_player_json()
         # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = discord.Embed(title='Rank Not Found', description=f"{arg1} Rank Not Found", color = discord.Color.blurple())
-        rankings_1v1 = response['leaderboard']
-        rankings_tg = tg_response['leaderboard']
+        message = discord.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=discord.Color.blurple())
+        rankings_1v1 = response["leaderboard"]
+        rankings_tg = tg_response["leaderboard"]
 
-        rank_1v1 = 'Not Found'
+        rank_1v1 = "Not Found"
         rank_tg = "Not Found"
 
         if arg1 == None:
             for i in range(len(rankings_1v1)):
-                if rankings_1v1[i]['name'] == 'BSHammer':
-                    rank_1v1 = rankings_1v1[i]['rating']
-                if rankings_tg[i]['name'] == 'BSHammer':
-                    rank_tg = rankings_tg[i]['rating']
+                if rankings_1v1[i]["name"] == "BSHammer":
+                    rank_1v1 = rankings_1v1[i]["rating"]
+                if rankings_tg[i]["name"] == "BSHammer":
+                    rank_tg = rankings_tg[i]["rating"]
             # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(title=f"BSHammer's Death Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+            message = discord.Embed(
+                title=f"BSHammer's Death Match Ranks",
+                description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
+                color=discord.Color.blurple(),
+            )
         else:
             for i in range(len(rankings_1v1)):
-                if rankings_1v1[i]['name'] == arg1:
-                    rank_1v1 = rankings_1v1[i]['rating']
-                if rankings_tg[i]['name'] == arg1:
-                    rank_tg = rankings_tg[i]['rating']
+                if rankings_1v1[i]["name"] == arg1:
+                    rank_1v1 = rankings_1v1[i]["rating"]
+                if rankings_tg[i]["name"] == arg1:
+                    rank_tg = rankings_tg[i]["rating"]
             # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(title=f"{arg1}'s Death Match Ranks", description=f"1v1: {rank_1v1}\nTG: {rank_tg}", color = discord.Color.blurple())
+            message = discord.Embed(
+                title=f"{arg1}'s Death Match Ranks",
+                description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
+                color=discord.Color.blurple(),
+            )
 
         await ctx.send(embed=message)
 
-
-    @commands.command(name='!civ', help='Returns AoE2 civ tech tree information.')
+    @commands.command(name="!civ", help="Returns AoE2 civ tech tree information.")
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def civInfo(self, ctx: commands.Context, arg):
         """
@@ -215,11 +255,14 @@ class AgeCommands(commands.Cog):
             response = "https://aoe2techtree.net/#" + str(arg.lower())
             await ctx.send(response)
         else:
-            message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+            message = discord.Embed(
+                title="Invalid Input",
+                description="There was a problem with your input. Please check your input and try again.",
+                color=discord.Color.red(),
+            )
             await ctx.send(embed=message)
 
-
-    @commands.command(name='!teamciv', help="Returns a team of civs.")
+    @commands.command(name="!teamciv", help="Returns a team of civs.")
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def teamRandomCiv(self, ctx: commands.Context, arg1=None):
         """
@@ -242,12 +285,12 @@ class AgeCommands(commands.Cog):
                     total_score += civ_score_dict[item][position]
 
                 weights = []
-                b0 = (-b0_values[position]+0)*b1
+                b0 = (-b0_values[position] + 0) * b1
 
                 for item in random_civs:
-                    p = 1/ (1 + np.exp( -(b0 + b1*civ_score_dict[item][position]) ))
+                    p = 1 / (1 + np.exp(-(b0 + b1 * civ_score_dict[item][position])))
                     weights.append(p)
-                result.append(random.choices(random_civs, weights, k = 1)[0])
+                result.append(random.choices(random_civs, weights, k=1)[0])
 
             return result
 
@@ -266,23 +309,27 @@ class AgeCommands(commands.Cog):
             for item in civ_score_dict:
                 flanksum += civ_score_dict[item][0]
                 pocketsum += civ_score_dict[item][1]
-            flankavg = flanksum/39
-            pocketavg = pocketsum/39
+            flankavg = flanksum / 39
+            pocketavg = pocketsum / 39
 
             if (user_arg == None) or user_arg == 2:
                 response = f"{random_civ_position(0, 1, 5, 2)[0]}, {random_civ_position(1, 1, 5, 2)[0]}"
             elif user_arg == 3:
-                response = f"Flanks: {', '.join(random_civ_position(0, 2, 5, 2))}\nPocket: {random_civ_position(1, 1, 5, 2)[0]}"
+                response = (
+                    f"Flanks: {', '.join(random_civ_position(0, 2, 5, 2))}\nPocket: {random_civ_position(1, 1, 5, 2)[0]}"
+                )
             else:
                 response = f"Flanks: {', '.join(random_civ_position(0, 2, 5, 2))}\nPockets: {', '.join(random_civ_position(1, 2, 5, 2))}"
             await ctx.send(response)
         else:
-            message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+            message = discord.Embed(
+                title="Invalid Input",
+                description="There was a problem with your input. Please check your input and try again.",
+                color=discord.Color.red(),
+            )
             await ctx.send(embed=message)
 
-
-
-    @commands.command(name='!randomciv', help='Returns a random AoE2 civ.')
+    @commands.command(name="!randomciv", help="Returns a random AoE2 civ.")
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def randomCiv(self, ctx: commands.Context, arg1=None, arg2=None):
         """
@@ -292,10 +339,10 @@ class AgeCommands(commands.Cog):
                  If command caller is Luke, will only return Incas unless overridden with !randomciv [r].
         """
         error = False
-        reponse = ''
+        reponse = ""
         # age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Indians', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles']
         pocket_civs = []
-        flank_civs =[]
+        flank_civs = []
         username = ctx.message.author.id
         if str(username) == str(LUKE):
             if arg1 != None and arg1.isnumeric():
@@ -321,9 +368,9 @@ class AgeCommands(commands.Cog):
                         response += "\n" + "Incas"
             else:
                 response = "Incas"
-        elif (arg1 == None):
+        elif arg1 == None:
             response = random.choice(age_civs).title()
-        elif arg1 == 'Lucas' or arg1 == "Luke" or arg1 == "divas" or arg1 == "Divas":
+        elif arg1 == "Lucas" or arg1 == "Luke" or arg1 == "divas" or arg1 == "Divas":
             response = "Incas"
         elif arg1.isnumeric():
             for i in range(int(arg1)):
@@ -333,15 +380,18 @@ class AgeCommands(commands.Cog):
                     response += "\n" + random.choice(age_civs).title()
         else:
             error = True
-            message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+            message = discord.Embed(
+                title="Invalid Input",
+                description="There was a problem with your input. Please check your input and try again.",
+                color=discord.Color.red(),
+            )
 
         if error == True:
             await ctx.send(embed=message)
         else:
             await ctx.send(response)
 
-
-    @commands.command(name='!whichciv', help = 'Returns which civ has the stated technology(ies).')
+    @commands.command(name="!whichciv", help="Returns which civ has the stated technology(ies).")
     async def civTech(self, ctx: commands.Context, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
         """
         Command: !whichciv [technology1 (+technology)] [(optional)technology2] [(optional)technology3] [(optional)technology4] [(optional)technology5]
@@ -357,7 +407,11 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
 
         elif arg4 is not None:
             arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title()
@@ -365,7 +419,11 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
 
         elif arg3 is not None:
             arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title()
@@ -373,7 +431,11 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
 
         elif arg2 is not None:
             arg1 = arg1.title() + " " + arg2.title()
@@ -381,14 +443,18 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
 
-        elif '+' in arg1:
+        elif "+" in arg1:
             arg1 = arg1.split("+")
             try:
-                for i in range(len(arg1)-1):
+                for i in range(len(arg1) - 1):
                     tech = arg1[int(i)]
-                    tech2 = arg1[int(i+1)]
+                    tech2 = arg1[int(i + 1)]
                     if i == 0:
                         list1 = techTreeDict[tech.title()]
                         list2 = techTreeDict[tech2.title()]
@@ -399,13 +465,21 @@ class AgeCommands(commands.Cog):
                 response = list3
             except:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
         else:
             try:
                 response = techTreeDict[arg1.title()]
             except:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
 
         if error == True:
             await ctx.send(embed=message)
@@ -413,7 +487,7 @@ class AgeCommands(commands.Cog):
             response.sort()
             await ctx.send(", ".join(response))
 
-    @commands.command(name='!does', help='Returns if a civ(s) has a technology.')
+    @commands.command(name="!does", help="Returns if a civ(s) has a technology.")
     async def techTree(self, ctx: commands.Context, arg1, arg2, arg3=None, arg4=None, arg5=None):
         """
         Command: !does [civName] [techName]
@@ -438,7 +512,7 @@ class AgeCommands(commands.Cog):
                 response = arg1.title() + " do not have " + arg2.title()
             else:
                 response = f"Error!"
-        elif '+' in arg1:
+        elif "+" in arg1:
             arg1 = arg1.split("+")
 
             if arg5 is not None:
@@ -447,7 +521,6 @@ class AgeCommands(commands.Cog):
                 arg2 = arg2.title() + " " + arg3.title() + " " + arg4.title()
             elif arg3 is not None:
                 arg2 = arg2.title() + " " + arg3.title()
-
 
             if len(arg1) > 0:
                 for i in range(len(arg1)):
@@ -467,17 +540,25 @@ class AgeCommands(commands.Cog):
                             response = f"Error!"
             else:
                 error = True
-                message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+                message = discord.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=discord.Color.red(),
+                )
         else:
             error = True
-            message = discord.Embed(title='Invalid Input', description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+            message = discord.Embed(
+                title="Invalid Input",
+                description="There was a problem with your input. Please check your input and try again.",
+                color=discord.Color.red(),
+            )
 
         if error == True:
             await ctx.send(embed=message)
         else:
             await ctx.send(response)
 
-    @commands.command(name='!match', help="Returns BSHammer's current match information")
+    @commands.command(name="!match", help="Returns BSHammer's current match information")
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def match(self, ctx: commands.Context, arg1=None):
         """
@@ -486,16 +567,16 @@ class AgeCommands(commands.Cog):
         """
         if arg1 == None:
             resp = await get_json_info()
-            lastmatch = resp['last_match']
+            lastmatch = resp["last_match"]
             players = []
             team1 = []
             team2 = []
             hammerTeam1 = False
             hammerTeam2 = False
-            team1players = ''
-            team2players = ''
+            team1players = ""
+            team2players = ""
             response = None
-            server = lastmatch['server']
+            server = lastmatch["server"]
 
             players = await getPlayerIDs(resp)
 
@@ -536,14 +617,20 @@ class AgeCommands(commands.Cog):
                 response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
             await ctx.send(response)
         else:
-            response = discord.Embed(title="Invalid Input", description="There was a problem with your input. Please check your input and try again.", color = discord.Color.red())
+            response = discord.Embed(
+                title="Invalid Input",
+                description="There was a problem with your input. Please check your input and try again.",
+                color=discord.Color.red(),
+            )
             await ctx.send(embed=response)
+
 
 get_json_info.start()
 get_1v1_player_json.start()
 get_tg_player_json.start()
 get_1v1_ew_player_json.start()
 get_tg_ew_player_json.start()
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(AgeCommands(bot))
