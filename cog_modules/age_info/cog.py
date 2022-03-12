@@ -108,6 +108,8 @@ async def get_tg_dm_player_json():
             return r
 
 
+
+
 class AgeCommands(commands.Cog):
     """Commands for age of empires calls by players."""
 
