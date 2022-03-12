@@ -7,6 +7,41 @@ import discord
 import requests
 from discord.ext import commands, tasks
 
+async def getPlayerInfo(self, client_sesh: aiohttp.ClientSession) -> dict:
+    r = await client_sesh.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=4")
+    return await r.json(content_type=None)
+
+async def getPlayer1v1Info(self, client_sesh: aiohttp.ClientSession) -> dict:
+    r = await client_sesh.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=3")
+    return await r.json(content_type=None)
+
+async def getPlayerTGRating(self, client_sesh: aiohttp.ClientSession) -> dict:
+    r = await client_sesh.get(f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=4&profile_id={self.id}&count=1")
+    return await r.json(content_type=None)
+
+async def getPlayer1v1Rating(self, client_sesh: aiohttp.ClientSession) -> dict:
+    r = await client_sesh.get(f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=3&profile_id={self.id}&count=1")
+    return await r.json(content_type=None)
+
+async def getPlayerEWTGRating(self, client_sesh: aiohttp.ClientSession) -> dict:
+    r = await client_sesh.get(f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=14&profile_id={self.id}&count=1")
+    return await r.json(content_type=None)
+
+async def getPlayerEW1v1Rating(self, client_sesh: aiohttp.ClientSession) -> dict:
+    r = await client_sesh.get(f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=13&profile_id={self.id}&count=1")
+    return await r.json(content_type=None)
+
+async def getAllOfTheInfo(self):
+    async with aiohttp.ClientSession() as client_sesh:
+        responses: List[dict] = await asyncio.gather(
+        getPlayerInfo(self, client_sesh),
+        getPlayer1v1Info(self, client_sesh),
+        getPlayerTGRating(self, client_sesh),
+        getPlayer1v1Rating(self, client_sesh),
+        getPlayerEWTGRating(self, client_sesh),
+        getPlayerEW1v1Rating(self, client_sesh)
+        )
+        return responses
 
 async def get_json_info2():
     """
@@ -14,78 +49,6 @@ async def get_json_info2():
     """
     async with aiohttp.ClientSession() as session:
         async with session.get("https://aoe2.net/api/strings?game=aoe2de&language=en") as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayerURLInfo(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=4") as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayer1v1Info(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=3") as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayerEW1v1Info(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=13") as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayerEWInfo(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=14") as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayerTGRate(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(
-            f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=4&profile_id={self.id}&count=1"
-        ) as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayer1v1Rate(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(
-            f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=3&profile_id={self.id}&count=1"
-        ) as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayerTGEWRate(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(
-            f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=14&profile_id={self.id}&count=1"
-        ) as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-async def getPlayer1v1EWRate(self):
-    async with aiohttp.ClientSession() as session:
-        async with session.get(
-            f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=13&profile_id={self.id}&count=1"
-        ) as r:
             r = await r.json(content_type=None)
             await session.close()
             return r
@@ -107,12 +70,15 @@ class Player:
         self.game = game
 
     async def info(self):
-        player_tg = await getPlayerURLInfo(self)
-        player_1v1 = await getPlayer1v1Info(self)
-        player_tg_rate = await getPlayerTGRate(self)
-        player_1v1_rate = await getPlayer1v1Rate(self)
-        player_tg_ew_rate = await getPlayerTGEWRate(self)
-        player_1v1_ew_rate = await getPlayer1v1EWRate(self)
+        responses = await getAllOfTheInfo(self)
+
+        player_tg = responses[0]
+        player_1v1 = responses[1]
+        player_tg_rate = responses[2]
+        player_1v1_rate = responses[3]
+        player_tg_ew_rate = responses[4]
+        player_1v1_ew_rate = responses[5]
+
 
         if len(player_tg["leaderboard"]) > 0:
             playerLeaderboard = player_tg["leaderboard"][0]
