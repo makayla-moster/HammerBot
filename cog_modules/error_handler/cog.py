@@ -73,7 +73,7 @@ class ErrorHandler(commands.Cog):
         elif isinstance(error, commands.CommandInvokeError):
             message = discord.Embed(
                 title="Command Error",
-                description="There was a problem with the command. Check your input or aoe2.net.ß",
+                description="There was a problem with the command. Check your input or aoe2.net.",
                 color=discord.Color.red(),
             )
         else:
