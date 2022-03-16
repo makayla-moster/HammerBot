@@ -487,7 +487,7 @@ class AgeCommands(commands.Cog):
             response.sort()
             await ctx.send(", ".join(response))
 
-    @commands.command(name="!does", , aliases=['!do', '!doeshave'] help="Returns if a civ(s) has a technology.")
+    @commands.command(name="!does", aliases=['!do', '!doeshave'], help="Returns if a civ(s) has a technology.")
     async def techTree(self, ctx: commands.Context, arg1, arg2, arg3=None, arg4=None, arg5=None):
         """
         Command: !does [civName] [techName]
@@ -558,7 +558,7 @@ class AgeCommands(commands.Cog):
         else:
             await ctx.send(response)
 
-    @commands.command(name="!match", , aliases=['!game'] help="Returns BSHammer's current match information")
+    @commands.command(name="!match", aliases=['!game'], help="Returns BSHammer's current match information")
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def match(self, ctx: commands.Context, arg1=None):
         """
