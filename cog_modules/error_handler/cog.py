@@ -72,8 +72,8 @@ class ErrorHandler(commands.Cog):
             )
         elif isinstance(error, commands.CommandInvokeError):
             message = discord.Embed(
-                title="Client Connection Error",
-                description="There was a problem with the API Client. Aoe2.net might be down.",
+                title="Command Error",
+                description="There was a problem with the command. Check your input or aoe2.net.ß",
                 color=discord.Color.red(),
             )
         else:
