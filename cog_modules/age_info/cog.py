@@ -391,7 +391,7 @@ class AgeCommands(commands.Cog):
         else:
             await ctx.send(response)
 
-    @commands.command(name="!whichciv", help="Returns which civ has the stated technology(ies).")
+    @commands.command(name="!whichciv", aliases=['!which', '!wc'], help="Returns which civ has the stated technology(ies).")
     async def civTech(self, ctx: commands.Context, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
         """
         Command: !whichciv [technology1 (+technology)] [(optional)technology2] [(optional)technology3] [(optional)technology4] [(optional)technology5]
@@ -487,7 +487,7 @@ class AgeCommands(commands.Cog):
             response.sort()
             await ctx.send(", ".join(response))
 
-    @commands.command(name="!does", help="Returns if a civ(s) has a technology.")
+    @commands.command(name="!does", , aliases=['!do', '!doeshave'] help="Returns if a civ(s) has a technology.")
     async def techTree(self, ctx: commands.Context, arg1, arg2, arg3=None, arg4=None, arg5=None):
         """
         Command: !does [civName] [techName]
@@ -558,7 +558,7 @@ class AgeCommands(commands.Cog):
         else:
             await ctx.send(response)
 
-    @commands.command(name="!match", help="Returns BSHammer's current match information")
+    @commands.command(name="!match", , aliases=['!game'] help="Returns BSHammer's current match information")
     @commands.cooldown(1, 10, commands.BucketType.user)
     async def match(self, ctx: commands.Context, arg1=None):
         """
