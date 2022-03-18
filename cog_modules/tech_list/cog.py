@@ -111,7 +111,7 @@ class TechListCommand(commands.Cog):
             elif arg1.lower() == "e3":
                 embed = disnake.Embed(
                     title="'E' Units",
-                    description="Units that start with E. See !units e and !units e2 for more.",
+                    description="Units that start with E. See `!units e` and `!units e2` for more.",
                     color=0xD5D341,
                 )
                 embed.add_field(name="Elite War Elephant", value="Unique Unit", inline=True)
