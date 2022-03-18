@@ -6,10 +6,10 @@ import os
 import random
 import sys
 
-import disnake
-from disnake.ext import commands, tasks
 import aiohttp
+import disnake
 import numpy as np
+from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
 from age_player import *

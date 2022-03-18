@@ -1,6 +1,5 @@
 import os
 
-
 import disnake
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv

@@ -3,8 +3,8 @@ import csv
 import sys
 
 import aiohttp
-import requests
 import disnake
+import requests
 from disnake.ext import commands, tasks
 
 
