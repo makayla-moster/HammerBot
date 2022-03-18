@@ -11,7 +11,7 @@ class ServiceCommands(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(name="!help", aliases=['!commands', '!command', '!commandlist'])
+    @commands.command(name="!help", aliases=["!commands", "!command", "!commandlist"])
     # @commands.cooldown(1, 10, commands.BucketType.user)
     async def helpUser(self, ctx: commands.Context):
         """
@@ -48,7 +48,9 @@ class ServiceCommands(commands.Cog):
             value="[`!rankdm (playerName)`], Returns information about BSHammer's or PlayerName's DM ranks.",
             inline=True,
         )
-        embed.add_field(name="!unit", value="[`!unit letter`], Returns a list of units starting with a single letter.", inline=True)
+        embed.add_field(
+            name="!unit", value="[`!unit letter`], Returns a list of units starting with a single letter.", inline=True
+        )
         await ctx.send(embed=embed)
 
     @commands.command(name="!contributors")
