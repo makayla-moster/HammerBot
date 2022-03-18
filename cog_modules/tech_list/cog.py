@@ -48,7 +48,7 @@ class TechListCommand(commands.Cog):
             elif arg1.lower() == "e":
                 embed = disnake.Embed(
                     title="'E' Units",
-                    description="Units that start with E. See !units e2 and !units e3 for more.",
+                    description="Units that start with E. See `!units e2` and `!units e3` for more.",
                     color=0xD5D341,
                 )
                 embed.add_field(name="Eagle Scout", value="Infantry Unit", inline=True)
@@ -80,7 +80,7 @@ class TechListCommand(commands.Cog):
             elif arg1.lower() == "e2":
                 embed = disnake.Embed(
                     title="'E' Units",
-                    description="Units that start with E. See !units e and !units e3 for more.",
+                    description="Units that start with E. See `!units e` and `!units e3` for more.",
                     color=0xD5D341,
                 )
                 embed.add_field(name="Elite Karambit Warrior", value="Unique Unit", inline=True)
