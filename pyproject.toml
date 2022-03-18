@@ -8,18 +8,18 @@ profile = "black"
 line_length = 127
 
 [tool.poetry]
-name = "hammerbot"
+name = "HammerBot"
 version = "0.0.0"
 description = "A Discord bot made for Age of Empires 2 Discord servers."
 authors = ["Your Name <you@example.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-"discord.py" = "^1.7.3"
-aiohttp = "3.7.4"
+aiohttp = "^3.7.4"
 python-dotenv = "^0.19.2"
 twitchio = "^2.2.0"
 numpy = "^1.22.2"
+disnake = "^2.4.0"
 
 [tool.poetry.dev-dependencies]
 black = "^22.1.0"

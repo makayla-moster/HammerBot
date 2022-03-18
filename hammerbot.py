@@ -5,8 +5,8 @@ import os
 import random
 
 import aiohttp
-import discord
-from discord.ext import commands, tasks
+import disnake
+from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -23,7 +23,7 @@ for folder in os.listdir("cog_modules"):
 
 @bot.event
 async def on_ready():
-    game = discord.Game("with AoE2 data")
+    game = disnake.Game("with AoE2 data")
     await bot.change_presence(activity=game)
 
 

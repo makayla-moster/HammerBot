@@ -4,8 +4,8 @@ import os
 import traceback
 
 import aiohttp
-import discord
-from discord.ext import commands, tasks
+import disnake
+from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -29,60 +29,60 @@ class ErrorHandler(commands.Cog):
         if isinstance(error, commands.CommandNotFound):
             return
         elif isinstance(error, commands.CommandOnCooldown):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Command on Cooldown",
                 description=f"This command is on cooldown. Please try again after {round(error.retry_after, 1)} seconds.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.MissingPermissions):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Missing Permissions",
                 description="You are missing the required permissions to run this command.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.BadArgument):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Bad Argument",
                 description="You have input an invalid parameter for this command.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.ExpectedClosingQuoteError):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Missing Quotes",
                 description="Quotes are required for multi-word arguments for this command.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.ArgumentParsingError):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Argument Error",
                 description="Looks like that argument didn't work. Please try again with a different one.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.TooManyArguments):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Too Many Arguments",
                 description="You have too many arguments for the command. Please try again with less arguments.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.UserInputError):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Input Error",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         elif isinstance(error, commands.CommandInvokeError):
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Command Error",
                 description="There was a problem with the command. Check your input or aoe2.net.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
         else:
             error_nice = format_exception(error)
             print(error_nice)
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Tell @quela about this",
                 description="If you are seeing this, something has gone horribly wrong.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
 
             # log error in error channel

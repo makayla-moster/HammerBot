@@ -1,7 +1,8 @@
 import os
 
-import discord
-from discord.ext import commands, tasks
+
+import disnake
+from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
 
@@ -18,7 +19,7 @@ class ServiceCommands(commands.Cog):
         Command: !help
         Returns: An embed of all the commands and how to call them.
         """
-        embed = discord.Embed(title="Commands", description="Command Help", color=0xD5D341)
+        embed = disnake.Embed(title="Commands", description="Command Help", color=0xD5D341)
         embed.add_field(name="11", value="[`11`], Returns AoE2 taunt #11.", inline=True)
         embed.add_field(name="13", value="[`13`], Returns AoE2 taunt #13.", inline=True)
         embed.add_field(name="14", value="[`14`], Returns AoE2 taunt #14", inline=True)
@@ -51,7 +52,7 @@ class ServiceCommands(commands.Cog):
         Command: !contributors
         Returns: An embed of the list of contributors to HammerBot.
         """
-        embed = discord.Embed(title="HammerBot Contributors", description="List of HammerBot Contributors", color=0xD5D341)
+        embed = disnake.Embed(title="HammerBot Contributors", description="List of HammerBot Contributors", color=0xD5D341)
         embed.add_field(name="BSHammer", value="\u200b", inline=True)
         embed.add_field(name="quela", value="\u200b", inline=True)
         embed.add_field(name="harristotle", value="\u200b", inline=True)

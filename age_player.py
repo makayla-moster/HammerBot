@@ -3,9 +3,9 @@ import csv
 import sys
 
 import aiohttp
-import discord
 import requests
-from discord.ext import commands, tasks
+import disnake
+from disnake.ext import commands, tasks
 
 
 async def getPlayerInfo(self, client_sesh: aiohttp.ClientSession) -> dict:

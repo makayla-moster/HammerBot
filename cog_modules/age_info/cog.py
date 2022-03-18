@@ -6,10 +6,10 @@ import os
 import random
 import sys
 
+import disnake
+from disnake.ext import commands, tasks
 import aiohttp
-import discord
 import numpy as np
-from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
 from age_player import *
@@ -126,7 +126,7 @@ class AgeCommands(commands.Cog):
 
         response = await get_1v1_player_json()
         tg_response = await get_tg_player_json()
-        message = discord.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=discord.Color.blurple())
+        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=disnake.Color.blurple())
         rankings_1v1 = response["leaderboard"]
         rankings_tg = tg_response["leaderboard"]
         rank_1v1 = "Not Found"
@@ -138,10 +138,10 @@ class AgeCommands(commands.Cog):
                     rank_1v1 = rankings_1v1[i]["rating"]
                 if rankings_tg[i]["name"] == "BSHammer":
                     rank_tg = rankings_tg[i]["rating"]
-            message = discord.Embed(
+            message = disnake.Embed(
                 title=f"BSHammer's Random Match Ranks",
                 description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
-                color=discord.Color.blurple(),
+                color=disnake.Color.blurple(),
             )
         else:
             for i in range(len(rankings_1v1)):
@@ -149,10 +149,10 @@ class AgeCommands(commands.Cog):
                     rank_1v1 = rankings_1v1[i]["rating"]
                 if rankings_tg[i]["name"] == arg1:
                     rank_tg = rankings_tg[i]["rating"]
-            message = discord.Embed(
+            message = disnake.Embed(
                 title=f"{arg1}'s Random Match Ranks",
                 description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
-                color=discord.Color.blurple(),
+                color=disnake.Color.blurple(),
             )
 
         await ctx.send(embed=message)
@@ -165,8 +165,8 @@ class AgeCommands(commands.Cog):
         """
         response = await get_1v1_ew_player_json()
         tg_response = await get_tg_ew_player_json()
-        # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = discord.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=discord.Color.blurple())
+        # message = disnake.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
+        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=disnake.Color.blurple())
         rankings_1v1 = response["leaderboard"]
         rankings_tg = tg_response["leaderboard"]
 
@@ -180,10 +180,10 @@ class AgeCommands(commands.Cog):
                 if rankings_tg[i]["name"] == "BSHammer":
                     rank_tg = rankings_tg[i]["rating"]
             # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(
+            message = disnake.Embed(
                 title=f"BSHammer's Empire Wars Ranks",
                 description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
-                color=discord.Color.blurple(),
+                color=disnake.Color.blurple(),
             )
         else:
             for i in range(len(rankings_1v1)):
@@ -192,10 +192,10 @@ class AgeCommands(commands.Cog):
                 if rankings_tg[i]["name"] == arg1:
                     rank_tg = rankings_tg[i]["rating"]
             # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(
+            message = disnake.Embed(
                 title=f"{arg1}'s Empire Wars Ranks",
                 description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
-                color=discord.Color.blurple(),
+                color=disnake.Color.blurple(),
             )
 
         await ctx.send(embed=message)
@@ -208,8 +208,8 @@ class AgeCommands(commands.Cog):
         """
         response = await get_1v1_dm_player_json()
         tg_response = await get_tg_dm_player_json()
-        # message = discord.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = discord.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=discord.Color.blurple())
+        # message = disnake.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
+        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=disnake.Color.blurple())
         rankings_1v1 = response["leaderboard"]
         rankings_tg = tg_response["leaderboard"]
 
@@ -223,10 +223,10 @@ class AgeCommands(commands.Cog):
                 if rankings_tg[i]["name"] == "BSHammer":
                     rank_tg = rankings_tg[i]["rating"]
             # message = f'BSHammer EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(
+            message = disnake.Embed(
                 title=f"BSHammer's Death Match Ranks",
                 description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
-                color=discord.Color.blurple(),
+                color=disnake.Color.blurple(),
             )
         else:
             for i in range(len(rankings_1v1)):
@@ -235,10 +235,10 @@ class AgeCommands(commands.Cog):
                 if rankings_tg[i]["name"] == arg1:
                     rank_tg = rankings_tg[i]["rating"]
             # message = f'{arg1} EW Ranks:\n\t1v1: {rank_1v1}\n\tTG: {rank_tg}'
-            message = discord.Embed(
+            message = disnake.Embed(
                 title=f"{arg1}'s Death Match Ranks",
                 description=f"1v1: {rank_1v1}\nTG: {rank_tg}",
-                color=discord.Color.blurple(),
+                color=disnake.Color.blurple(),
             )
 
         await ctx.send(embed=message)
@@ -255,10 +255,10 @@ class AgeCommands(commands.Cog):
             response = "https://aoe2techtree.net/#" + str(arg.lower())
             await ctx.send(response)
         else:
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Invalid Input",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
             await ctx.send(embed=message)
 
@@ -322,10 +322,10 @@ class AgeCommands(commands.Cog):
                 response = f"Flanks: {', '.join(random_civ_position(0, 2, 5, 2))}\nPockets: {', '.join(random_civ_position(1, 2, 5, 2))}"
             await ctx.send(response)
         else:
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Invalid Input",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
             await ctx.send(embed=message)
 
@@ -380,10 +380,10 @@ class AgeCommands(commands.Cog):
                     response += "\n" + random.choice(age_civs).title()
         else:
             error = True
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Invalid Input",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
 
         if error == True:
@@ -407,10 +407,10 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
 
         elif arg4 is not None:
@@ -419,10 +419,10 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
 
         elif arg3 is not None:
@@ -431,10 +431,10 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
 
         elif arg2 is not None:
@@ -443,10 +443,10 @@ class AgeCommands(commands.Cog):
                 response = techTreeDict[arg1]
             except:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
 
         elif "+" in arg1:
@@ -465,20 +465,20 @@ class AgeCommands(commands.Cog):
                 response = list3
             except:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
         else:
             try:
                 response = techTreeDict[arg1.title()]
             except:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
 
         if error == True:
@@ -540,17 +540,17 @@ class AgeCommands(commands.Cog):
                             response = f"Error!"
             else:
                 error = True
-                message = discord.Embed(
+                message = disnake.Embed(
                     title="Invalid Input",
                     description="There was a problem with your input. Please check your input and try again.",
-                    color=discord.Color.red(),
+                    color=disnake.Color.red(),
                 )
         else:
             error = True
-            message = discord.Embed(
+            message = disnake.Embed(
                 title="Invalid Input",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
 
         if error == True:
@@ -617,10 +617,10 @@ class AgeCommands(commands.Cog):
                 response = f"{team1players}-- VS -- {team2players}playing {player1.game} on {player1.map}\nServer: {server}"
             await ctx.send(response)
         else:
-            response = discord.Embed(
+            response = disnake.Embed(
                 title="Invalid Input",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=discord.Color.red(),
+                color=disnake.Color.red(),
             )
             await ctx.send(embed=response)
 
