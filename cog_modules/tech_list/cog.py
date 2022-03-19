@@ -3,6 +3,7 @@ import os
 import disnake
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
+
 from techTreeInfo import *
 
 
@@ -10,15 +11,15 @@ class TechListCommand(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(name="!units", aliases=["!unitlist", "!unit"], help= "Returns an alphabetical list of unit names.")
+    @commands.command(name="!units", aliases=["!unitlist", "!unit"], help="Returns an alphabetical list of unit names.")
     async def listUnits(self, ctx: commands.Context, arg1=None, arg2=None, arg3=None, arg4=None):
         if arg1 != None:
-            if arg1.lower() == 'a':
+            if arg1.lower() == "a":
                 embed = disnake.Embed(title="'A' Units", description="Units that start with A.", color=0xD5D341)
                 embed.add_field(name="Arambai", value="Unique Unit", inline=True)
                 embed.add_field(name="Arbalester", value="Archer Unit", inline=True)
                 embed.add_field(name="Archer", value="Archer Unit", inline=True)
-            elif arg1.lower() == 'b':
+            elif arg1.lower() == "b":
                 embed = disnake.Embed(title="'B' Units", description="Units that start with B.", color=0xD5D341)
                 embed.add_field(name="Ballista Elephant", value="Unique Unit", inline=True)
                 embed.add_field(name="Battering Ram", value="Siege Unit", inline=True)
@@ -26,7 +27,7 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Berserk", value="Unique Unit", inline=True)
                 embed.add_field(name="Bombard Cannon", value="Siege Unit", inline=True)
                 embed.add_field(name="Boyar", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'c':
+            elif arg1.lower() == "c":
                 embed = disnake.Embed(title="'C' Units", description="Units that start with C.", color=0xD5D341)
                 embed.add_field(name="Camel Archer", value="Unique Unit", inline=True)
                 embed.add_field(name="Camel Rider", value="Calvary Unit", inline=True)
@@ -42,12 +43,16 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Conquistador", value="Unique Unit", inline=True)
                 embed.add_field(name="Coustillier", value="Unique Unit", inline=True)
                 embed.add_field(name="Crossbowman", value="Archer Unit", inline=True)
-            elif arg1.lower() == 'd':
+            elif arg1.lower() == "d":
                 embed = disnake.Embed(title="'D' Units", description="Units that start with D.", color=0xD5D341)
                 embed.add_field(name="Demolition Raft", value="Warship Unit", inline=True)
                 embed.add_field(name="Demolition Ship", value="Warship Unit", inline=True)
-            elif arg1.lower() == 'e':
-                embed = disnake.Embed(title="'E' Units", description="Units that start with E. See !units e2 and !units e3 for more.", color=0xD5D341)
+            elif arg1.lower() == "e":
+                embed = disnake.Embed(
+                    title="'E' Units",
+                    description="Units that start with E. See !units e2 and !units e3 for more.",
+                    color=0xD5D341,
+                )
                 embed.add_field(name="Eagle Scout", value="Infantry Unit", inline=True)
                 embed.add_field(name="Eagle Warrior", value="Infantry Unit", inline=True)
                 embed.add_field(name="Elephant Archer", value="Unique Unit", inline=True)
@@ -74,8 +79,12 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Elite Janissary", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite Kamayuk", value="Unique Unit", inline=True)
                 # breaks here, need pagination
-            elif arg1.lower() == 'e2':
-                embed = disnake.Embed(title="'E' Units", description="Units that start with E. See !units e and !units e3 for more.", color=0xD5D341)
+            elif arg1.lower() == "e2":
+                embed = disnake.Embed(
+                    title="'E' Units",
+                    description="Units that start with E. See !units e and !units e3 for more.",
+                    color=0xD5D341,
+                )
                 embed.add_field(name="Elite Karambit Warrior", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite Keshik", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite Kipchak", value="Unique Unit", inline=True)
@@ -101,12 +110,16 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Elite Teutonic Knight", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite Throwing Axeman", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite Turtle Ship", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'e3':
-                embed = disnake.Embed(title="'E' Units", description="Units that start with E. See !units e and !units e2 for more.", color=0xD5D341)
+            elif arg1.lower() == "e3":
+                embed = disnake.Embed(
+                    title="'E' Units",
+                    description="Units that start with E. See !units e and !units e2 for more.",
+                    color=0xD5D341,
+                )
                 embed.add_field(name="Elite War Elephant", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite War Wagon", value="Unique Unit", inline=True)
                 embed.add_field(name="Elite Woad Raider", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'f':
+            elif arg1.lower() == "f":
                 embed = disnake.Embed(title="'F' Units", description="Units that start with F.", color=0xD5D341)
                 embed.add_field(name="Fast Fire Ship", value="Warship Unit", inline=True)
                 embed.add_field(name="Fire Galley", value="Warship Unit", inline=True)
@@ -114,14 +127,14 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Fishing Ship", value="Economic Unit", inline=True)
                 embed.add_field(name="Flaming Camel", value="Unique Unit", inline=True)
                 embed.add_field(name="Flemish Militia", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'g':
+            elif arg1.lower() == "g":
                 embed = disnake.Embed(title="'G' Units", description="Units that start with G.", color=0xD5D341)
                 embed.add_field(name="Galleon", value="Warship Unit", inline=True)
                 embed.add_field(name="Galley", value="Warship Unit", inline=True)
                 embed.add_field(name="Gbeto", value="Unique Unit", inline=True)
                 embed.add_field(name="Genitour", value="Unique Unit", inline=True)
                 embed.add_field(name="Genoese Crossbowman", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'h':
+            elif arg1.lower() == "h":
                 embed = disnake.Embed(title="'H' Units", description="Units that start with H.", color=0xD5D341)
                 embed.add_field(name="Halberdier", value="Infantry Unit", inline=True)
                 embed.add_field(name="Hand Cannoneer", value="Archer Unit", inline=True)
@@ -132,15 +145,15 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Houfnice", value="Unique Unit", inline=True)
                 embed.add_field(name="Huskarl", value="Unique Unit", inline=True)
                 embed.add_field(name="Hussar", value="Cavalry Unit", inline=True)
-            elif arg1.lower() == 'i':
+            elif arg1.lower() == "i":
                 embed = disnake.Embed(title="'I' Units", description="Units that start with I.", color=0xD5D341)
                 embed.add_field(name="Imperial Camel Rider", value="Unique Unit", inline=True)
                 embed.add_field(name="Imperial Skirmisher", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'j':
+            elif arg1.lower() == "j":
                 embed = disnake.Embed(title="'J' Units", description="Units that start with J.", color=0xD5D341)
                 embed.add_field(name="Jaguar Warrior", value="Unique Unit", inline=True)
                 embed.add_field(name="Janissary", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'k':
+            elif arg1.lower() == "k":
                 embed = disnake.Embed(title="'K' Units", description="Units that start with K.", color=0xD5D341)
                 embed.add_field(name="Kamayuk", value="Unique Unit", inline=True)
                 embed.add_field(name="Karambit Warrior", value="Unique Unit", inline=True)
@@ -149,14 +162,14 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Knight", value="Cavalry Unit", inline=True)
                 embed.add_field(name="Konnik", value="Unique Unit", inline=True)
                 # embed.add_field(name="Konnik (Dismounted)", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'l':
+            elif arg1.lower() == "l":
                 embed = disnake.Embed(title="'L' Units", description="Units that start with L.", color=0xD5D341)
                 embed.add_field(name="Leitis", value="Unique Unit", inline=True)
                 embed.add_field(name="Light Cavalry", value="Cavalry Unit", inline=True)
                 embed.add_field(name="Long Swordsman", value="Infantry Unit", inline=True)
                 embed.add_field(name="Longboat", value="Unique Unit", inline=True)
                 embed.add_field(name="Longbowman", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'm':
+            elif arg1.lower() == "m":
                 embed = disnake.Embed(title="'M' Units", description="Units that start with M.", color=0xD5D341)
                 embed.add_field(name="Magyar Huszar", value="Unique Unit", inline=True)
                 embed.add_field(name="Mameluke", value="Unique Unit", inline=True)
@@ -166,21 +179,21 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Militia", value="Infantry Unit", inline=True)
                 embed.add_field(name="Missionary", value="Unique Unit", inline=True)
                 embed.add_field(name="Monk", value="Monk Unit", inline=True)
-            elif arg1.lower() == 'o':
+            elif arg1.lower() == "o":
                 embed = disnake.Embed(title="'O' Units", description="Units that start with O.", color=0xD5D341)
                 embed.add_field(name="Obuch", value="Unique Unit", inline=True)
                 embed.add_field(name="Onager", value="Siege Unit", inline=True)
                 embed.add_field(name="Organ Gun", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'p':
+            elif arg1.lower() == "p":
                 embed = disnake.Embed(title="'P' Units", description="Units that start with P.", color=0xD5D341)
                 embed.add_field(name="Paladin", value="Cavalry Unit", inline=True)
                 embed.add_field(name="Petard", value="Petard Unit", inline=True)
                 embed.add_field(name="Pikeman", value="Infantry Unit", inline=True)
                 embed.add_field(name="Plumed Archer", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'r':
+            elif arg1.lower() == "r":
                 embed = disnake.Embed(title="'R' Units", description="Units that start with R.", color=0xD5D341)
                 embed.add_field(name="Rattan Archer", value="Unique Unit", inline=True)
-            elif arg1.lower() == 's':
+            elif arg1.lower() == "s":
                 embed = disnake.Embed(title="'S' Units", description="Units that start with S.", color=0xD5D341)
                 embed.add_field(name="Samurai", value="Unique Unit", inline=True)
                 embed.add_field(name="Scorpion", value="Siege Unit", inline=True)
@@ -194,7 +207,7 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Slinger", value="Unique Unit", inline=True)
                 embed.add_field(name="Spearman", value="Infantry Unit", inline=True)
                 embed.add_field(name="Steppe Lancer", value="Cavalry Unit", inline=True)
-            elif arg1.lower() == 't':
+            elif arg1.lower() == "t":
                 embed = disnake.Embed(title="'T' Units", description="Units that start with T.", color=0xD5D341)
                 embed.add_field(name="Tarkan", value="Unique Unit", inline=True)
                 embed.add_field(name="Teutonic Knight", value="Unique Unit", inline=True)
@@ -205,17 +218,17 @@ class TechListCommand(commands.Cog):
                 embed.add_field(name="Trebuchet", value="Siege Unit", inline=True)
                 embed.add_field(name="Turtle Ship", value="Unique Unit", inline=True)
                 embed.add_field(name="Two-Handed Swordsman", value="Infantry Unit", inline=True)
-            elif arg1.lower() == 'v':
+            elif arg1.lower() == "v":
                 embed = disnake.Embed(title="'V' Units", description="Units that start with V.", color=0xD5D341)
                 embed.add_field(name="Villager", value="Economic Unit", inline=True)
-            elif arg1.lower() == 'w':
+            elif arg1.lower() == "w":
                 embed = disnake.Embed(title="'W' Units", description="Units that start with W.", color=0xD5D341)
                 embed.add_field(name="War Elephant", value="Unique Unit", inline=True)
                 embed.add_field(name="War Galley", value="Warship Unit", inline=True)
                 embed.add_field(name="War Wagon", value="Unique Unit", inline=True)
                 embed.add_field(name="Winged Hussar", value="Unique Unit", inline=True)
                 embed.add_field(name="Woad Raider", value="Unique Unit", inline=True)
-            elif arg1.lower() == 'x':
+            elif arg1.lower() == "x":
                 embed = disnake.Embed(title="'X' Units", description="Units that start with X.", color=0xD5D341)
                 embed.add_field(name="Xolotl Warrior", value="Cavalry Unit", inline=True)
             else:
@@ -226,15 +239,25 @@ class TechListCommand(commands.Cog):
                 elif arg2 != None:
                     arg1 = arg1.lower() + " " + arg2.lower()
 
-                embed = disnake.Embed(title=f"'{arg1.upper()}' Units", description=f"Units that start with {arg1.upper()}.", color=0xD5D341)
+                embed = disnake.Embed(
+                    title=f"'{arg1.upper()}' Units", description=f"Units that start with {arg1.upper()}.", color=0xD5D341
+                )
                 tempDict = {}
                 for key in unitList:
                     if key.lower().startswith(arg1.lower()):
                         tempDict[key] = unitList[key]
                 if len(tempDict) == 0:
-                    embed = disnake.Embed(title=f"There are no '{arg1.upper()}' Units", description=f"No units that start with {arg1.upper()}.", color=0xD5D341)
+                    embed = disnake.Embed(
+                        title=f"There are no '{arg1.upper()}' Units",
+                        description=f"No units that start with {arg1.upper()}.",
+                        color=0xD5D341,
+                    )
                 elif len(tempDict) > 25:
-                    embed = disnake.Embed(title=f"There are too many '{arg1.upper()}' Units", description=f"Please refine your search.", color=0xD5D341)
+                    embed = disnake.Embed(
+                        title=f"There are too many '{arg1.upper()}' Units",
+                        description=f"Please refine your search.",
+                        color=0xD5D341,
+                    )
                 else:
                     for key in tempDict:
                         embed.add_field(name=f"{key}", value=f"{unitList[key][0]}", inline=True)
@@ -243,7 +266,6 @@ class TechListCommand(commands.Cog):
             embed.add_field(name="Search for a Unit with !unit <letter>", value="Example usage: !unit a", inline=True)
 
         await ctx.send(embed=embed)
-
 
 
 def setup(bot: commands.Bot):

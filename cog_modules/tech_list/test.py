@@ -1,8 +1,5 @@
-unitList = {
-"Arambai": ["Unique Unit"],
-"Arbalester": ["Unique Unit"]
-}
+unitList = {"Arambai": ["Unique Unit"], "Arbalester": ["Unique Unit"]}
 
 for key in unitList:
-    if key.lower().startswith('a'):
+    if key.lower().startswith("a"):
         print(key)
