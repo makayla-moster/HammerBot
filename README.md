@@ -4,6 +4,7 @@ HammerBot is a discord bot built for an Age of Empire II streamer's discord serv
 
 It's a small side project that will be updated periodically.
 
+![GitHub top language](https://img.shields.io/github/languages/top/makayla-moster/HammerBot?style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/makayla-moster/HammerBot?style=flat-square)
 
 ## Contributing to HammerBot
 
