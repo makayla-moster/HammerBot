@@ -1,9 +1,13 @@
 ![](.github/images/HammerBot_Header_noborder.png)
-
+<div align="center">
+  
 ![GitHub Contributors](https://img.shields.io/github/contributors/makayla-moster/HammerBot.svg?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/makayla-moster/HammerBot?style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/makayla-moster/HammerBot?style=flat-square) ![License](https://img.shields.io/github/license/makayla-moster/HammerBot.svg?style=flat-square) 
+  
+</div>
 
 HammerBot is a discord bot built for an Age of Empire II streamer's discord server. HammerBot features Age of Empires II specific commands, such as `!whichciv <techName>` which returns a list of civs that get that specific technology in-game.  
 
+  
 Specific features include:
 - Team civilization randomizer for 2v2s, 3v3s, and 4v4s that takes into account pocket or flank positions
 - Finding out if a civilization has a specific technology or unit
@@ -14,10 +18,23 @@ Specific features include:
 
 ![](.github/images/Packages_Header_2.png)
 ---
-<!-- ## Python Packages & Software -->
+<!-- ## Python Packages & Software -->        
 ![Python Package](https://img.shields.io/badge/made%20with-python%203.9+-blue.svg?style=flat-square&logo=Python)
 
 HammerBot is built with [Disnake](https://github.com/DisnakeDev/disnake), an API wrapper for Discord.
+
+Other packages/libraries used inclue:
+- asyncio
+- aiohttp
+- poetry
+
+HammerBot currently has a very simple setup, where all features are split into their own cogs. 
+
+We currently have cogs for:  
+- Age of Empires 2 player info
+- Age of Empires 2 taunts
+- Error handling
+- Bot services (help and info commands)
 
 <!-- ## Contributing to HammerBot --> 
 ![](.github/images/Contributing_Header-02.png)
