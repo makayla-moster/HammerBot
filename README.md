@@ -1,4 +1,4 @@
-# HammerBot
+![](.github/images/HammerBot_Header_noborder.png)
 
 ![GitHub Contributors](https://img.shields.io/github/contributors/makayla-moster/HammerBot.svg?style=flat-square) ![GitHub top language](https://img.shields.io/github/languages/top/makayla-moster/HammerBot?style=flat-square) ![GitHub issues](https://img.shields.io/github/issues/makayla-moster/HammerBot?style=flat-square) ![License](https://img.shields.io/github/license/makayla-moster/HammerBot.svg?style=flat-square) 
 
