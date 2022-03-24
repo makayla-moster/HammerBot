@@ -11,6 +11,16 @@ class Taunts(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
+
+    @commands.command(name="28")
+    async def otherguy_28(self, ctx: commands.Context):
+        """
+        Command: 28
+        Returns: The age taunt #28. (Yeah, well, you should see the other guy.)
+        """
+        response = "Yeah, well, you should see the other guy."
+        await ctx.send(response)
+
     @commands.command(name="30")
     async def monk_30(self, ctx: commands.Context):
         """
