@@ -18,6 +18,7 @@ class Taunts(commands.Cog):
         Returns: The age taunt #1. (Yes.)
         """
         response = "Yes."
+        await ctx.send(response)
 
     @commands.command(name="2")
     async def no_2(self, ctx: commands.Context):
@@ -26,6 +27,7 @@ class Taunts(commands.Cog):
         Returns: The age taunt #2. (No.)
         """
         response = "No."
+        await ctx.send(response)
 
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
