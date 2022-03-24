@@ -11,7 +11,6 @@ class Taunts(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
         """
