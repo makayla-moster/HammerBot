@@ -6119,5 +6119,5 @@ techList = {
     "Crenellations": ["Unique Tech"],
     "Artillery": ["Unique Tech"],
     "Paper Money": ["Unique Tech"],
-    "Berserkergang": ["Unique Tech"]
+    "Berserkergang": ["Unique Tech"],
 }

@@ -278,7 +278,9 @@ class TechListCommand(commands.Cog):
                 arg1 = arg1.lower() + " " + arg2.lower()
 
             embed = disnake.Embed(
-                title=f"'{arg1.upper()}' Techs", description=f"Researchable techs that start with {arg1.upper()}.", color=0xD5D341
+                title=f"'{arg1.upper()}' Techs",
+                description=f"Researchable techs that start with {arg1.upper()}.",
+                color=0xD5D341,
             )
             tempDict = {}
             for key in techList:
@@ -300,10 +302,13 @@ class TechListCommand(commands.Cog):
                 for key in tempDict:
                     embed.add_field(name=f"{key}", value=f"{techList[key][0]}", inline=True)
         else:
-            embed = disnake.Embed(title="Tech Dictionary", description="Search for researchable technology names alphabetically.", color=0xD5D341)
+            embed = disnake.Embed(
+                title="Tech Dictionary", description="Search for researchable technology names alphabetically.", color=0xD5D341
+            )
             embed.add_field(name="Search for a Tech with !techs <letter>", value="Example usage: !techs a", inline=True)
 
         await ctx.send(embed=embed)
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(TechListCommand(bot))
