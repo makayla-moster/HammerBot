@@ -24,32 +24,38 @@ class ServiceCommands(commands.Cog):
         embed.add_field(name="14", value="[`14`], Returns AoE2 taunt #14", inline=True)
         embed.add_field(name="30", value="[`30`], Returns AoE2 taunt #30.", inline=True)
         embed.add_field(name="age?", value="[`age?`], Returns 'Well, duh.'", inline=True)
-        embed.add_field(name="!randomciv", value="[`!randomciv number`], Returns random Aoe2 civ(s).", inline=True)
-        embed.add_field(name="!teamciv", value="[`!teamciv (number)`], Returns a team of Aoe2 civ(s).", inline=True)
-        embed.add_field(name="!civ", value="[`!civ civName`], Returns AoE2 civ tech tree information.", inline=True)
+        embed.add_field(name="!randomciv", value="[`!randomciv <number>`], Returns random Aoe2 civ(s).", inline=True)
+        embed.add_field(name="!teamciv", value="[`!teamciv <number>`], Returns a team of Aoe2 civ(s).", inline=True)
+        embed.add_field(name="!civ", value="[`!civ <civName>`], Returns AoE2 civ tech tree information.", inline=True)
         embed.add_field(
             name="!does",
-            value="[`!does civName(+civNames) upgradeName`], Returns information about if a civ(s) has a technology.",
+            value="[`!does civName<+civNames> <techName>`], Returns information about if a civ(s) has a technology.",
             inline=True,
         )
         embed.add_field(name="!match", value="[`!match`], Returns information about BSHammer's current game.", inline=True)
         embed.add_field(
             name="!rank",
-            value="[`!rank (playerName)`], Returns information about BSHammer's or PlayerName's RM ranks.",
+            value="[`!rank <playerName>`], Returns information about BSHammer's or PlayerName's RM ranks.",
             inline=True,
         )
         embed.add_field(
             name="!rankew",
-            value="[`!rankew (playerName)`], Returns information about BSHammer's or PlayerName's EW ranks.",
+            value="[`!rankew <playerName>`], Returns information about BSHammer's or PlayerName's EW ranks.",
             inline=True,
         )
         embed.add_field(
             name="!rankdm",
-            value="[`!rankdm (playerName)`], Returns information about BSHammer's or PlayerName's DM ranks.",
+            value="[`!rankdm <playerName>`], Returns information about BSHammer's or PlayerName's DM ranks.",
             inline=True,
         )
         embed.add_field(
-            name="!unit", value="[`!unit letter`], Returns a list of units starting with a single letter.", inline=True
+            name="!unit", value="[`!unit <letter>`], Returns a list of units starting with a single letter.", inline=True
+        )
+        embed.add_field(
+            name="!tech", value="[`!tech <letter>`], Returns a list of researchable techs starting with a single letter.", inline=True
+        )
+        embed.add_field(
+            name="!buildings", value="[`!buildings <letter>`], Returns a list of buildings starting with a single letter.", inline=True
         )
         await ctx.send(embed=embed)
 

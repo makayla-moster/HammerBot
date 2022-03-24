@@ -288,7 +288,7 @@ class TechListCommand(commands.Cog):
                     tempDict[key] = techList[key]
             if len(tempDict) == 0:
                 embed = disnake.Embed(
-                    title=f"There are no '{arg1.upper()}' Techss",
+                    title=f"There are no '{arg1.upper()}' Techs",
                     description=f"No researchable techs that start with {arg1.upper()}.",
                     color=0xD5D341,
                 )
@@ -306,6 +306,48 @@ class TechListCommand(commands.Cog):
                 title="Tech Dictionary", description="Search for researchable technology names alphabetically.", color=0xD5D341
             )
             embed.add_field(name="Search for a Tech with !techs <letter>", value="Example usage: !techs a", inline=True)
+
+        await ctx.send(embed=embed)
+
+    @commands.command(name="!buildings", aliases=["!buildinglist", "!build", "!building"], help="Returns an alphabetical list of building names.")
+    async def listTechs(self, ctx: commands.Context, arg1=None, arg2=None, arg3=None, arg4=None):
+        if arg1 != None:
+            if arg4 != None:
+                arg1 = arg1.lower() + " " + arg2.lower() + " " + arg3.lower() + " " + arg4.lower()
+            elif arg3 != None:
+                arg1 = arg1.lower() + " " + arg2.lower() + " " + arg3.lower()
+            elif arg2 != None:
+                arg1 = arg1.lower() + " " + arg2.lower()
+
+            embed = disnake.Embed(
+                title=f"'{arg1.upper()}' Buildings",
+                description=f"Buildings that start with {arg1.upper()}.",
+                color=0xD5D341,
+            )
+            tempDict = {}
+            for key in buildingList:
+                if key.lower().startswith(arg1.lower()):
+                    tempDict[key] = buildingList[key]
+            if len(tempDict) == 0:
+                embed = disnake.Embed(
+                    title=f"There are no '{arg1.upper()}' Buildings",
+                    description=f"No buildings that start with {arg1.upper()}.",
+                    color=0xD5D341,
+                )
+            elif len(tempDict) > 25:
+                embed = disnake.Embed(
+                    title=f"There are too many '{arg1.upper()}' Buildings",
+                    description=f"Please refine your search.",
+                    color=0xD5D341,
+                )
+            else:
+                for key in tempDict:
+                    embed.add_field(name=f"{key}", value=f"{buildingList[key][0]}", inline=True)
+        else:
+            embed = disnake.Embed(
+                title="Building Dictionary", description="Search for building names alphabetically.", color=0xD5D341
+            )
+            embed.add_field(name="Search for a Building with !buildings <letter>", value="Example usage: !buildings a", inline=True)
 
         await ctx.send(embed=embed)
 

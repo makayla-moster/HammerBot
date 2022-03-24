@@ -11,6 +11,22 @@ class Taunts(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
+    @commands.command(name="1")
+    async def yes_1(self, ctx: commands.Context):
+        """
+        Command: 1
+        Returns: The age taunt #1. (Yes.)
+        """
+        response = "Yes."
+
+    @commands.command(name="2")
+    async def no_2(self, ctx: commands.Context):
+        """
+        Command: 2
+        Returns: The age taunt #2. (No.)
+        """
+        response = "No."
+
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
         """
