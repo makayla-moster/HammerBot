@@ -6159,5 +6159,5 @@ buildingList = {
     "Donjon": ["Defensive Building"],
     "House": ["Misc. Building"],
     "Monastery": ["Misc. Building"],
-    "Wonder": ["Misc. Building"]
+    "Wonder": ["Misc. Building"],
 }

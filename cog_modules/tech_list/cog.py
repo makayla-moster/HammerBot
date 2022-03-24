@@ -309,7 +309,11 @@ class TechListCommand(commands.Cog):
 
         await ctx.send(embed=embed)
 
-    @commands.command(name="!buildings", aliases=["!buildinglist", "!build", "!building"], help="Returns an alphabetical list of building names.")
+    @commands.command(
+        name="!buildings",
+        aliases=["!buildinglist", "!build", "!building"],
+        help="Returns an alphabetical list of building names.",
+    )
     async def listTechs(self, ctx: commands.Context, arg1=None, arg2=None, arg3=None, arg4=None):
         if arg1 != None:
             if arg4 != None:
@@ -347,7 +351,9 @@ class TechListCommand(commands.Cog):
             embed = disnake.Embed(
                 title="Building Dictionary", description="Search for building names alphabetically.", color=0xD5D341
             )
-            embed.add_field(name="Search for a Building with !buildings <letter>", value="Example usage: !buildings a", inline=True)
+            embed.add_field(
+                name="Search for a Building with !buildings <letter>", value="Example usage: !buildings a", inline=True
+            )
 
         await ctx.send(embed=embed)
 

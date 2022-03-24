@@ -52,10 +52,14 @@ class ServiceCommands(commands.Cog):
             name="!unit", value="[`!unit <letter>`], Returns a list of units starting with a single letter.", inline=True
         )
         embed.add_field(
-            name="!tech", value="[`!tech <letter>`], Returns a list of researchable techs starting with a single letter.", inline=True
+            name="!tech",
+            value="[`!tech <letter>`], Returns a list of researchable techs starting with a single letter.",
+            inline=True,
         )
         embed.add_field(
-            name="!buildings", value="[`!buildings <letter>`], Returns a list of buildings starting with a single letter.", inline=True
+            name="!buildings",
+            value="[`!buildings <letter>`], Returns a list of buildings starting with a single letter.",
+            inline=True,
         )
         await ctx.send(embed=embed)
 
