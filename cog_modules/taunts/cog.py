@@ -86,6 +86,14 @@ class Taunts(commands.Cog):
         response = "🤣"
         await ctx.send(response)
 
+    @commands.command(name="!gg")
+    async def gg(self, ctx: commands.Context):
+        """
+        Command: :gg:
+        Returns: The server GG emote.
+        """
+        response = ":gg:"
+        await ctx.send(response)
 
 def setup(bot: commands.Bot):
     bot.add_cog(Taunts(bot))
