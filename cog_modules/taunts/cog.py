@@ -95,5 +95,6 @@ class Taunts(commands.Cog):
         response = ":gg:"
         await ctx.send(response)
 
+
 def setup(bot: commands.Bot):
     bot.add_cog(Taunts(bot))
