@@ -314,7 +314,7 @@ class TechListCommand(commands.Cog):
         aliases=["!buildinglist", "!build", "!building"],
         help="Returns an alphabetical list of building names.",
     )
-    async def listTechs(self, ctx: commands.Context, arg1=None, arg2=None, arg3=None, arg4=None):
+    async def listBuildings(self, ctx: commands.Context, arg1=None, arg2=None, arg3=None, arg4=None):
         if arg1 != None:
             if arg4 != None:
                 arg1 = arg1.lower() + " " + arg2.lower() + " " + arg3.lower() + " " + arg4.lower()
