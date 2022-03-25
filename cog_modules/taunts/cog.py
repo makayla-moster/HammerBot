@@ -92,7 +92,7 @@ class Taunts(commands.Cog):
         Command: :gg:
         Returns: The server GG emote.
         """
-        response = ":gg:"
+        response = "<:gg:861701719050551307>"
         await ctx.send(response)
 
 
