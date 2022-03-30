@@ -58,6 +58,15 @@ async def getAllOfTheInfo(self):
         )
         return responses
 
+async def get_backup_info():
+    """
+    Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
+    """
+    async with aiohttp.ClientSession() as session2:
+        async with session2.get("https://aoe2.net/api/player/matches?game=aoe2de&profile_id=313591&count=1") as r:
+            r = await r.json(content_type=None)
+            await session2.close()
+            return r
 
 async def get_json_info2():
     """
@@ -68,6 +77,8 @@ async def get_json_info2():
             r = await r.json(content_type=None)
             await session.close()
             return r
+
+
 
 
 class Player:
@@ -119,23 +130,29 @@ class Player:
 async def getInfo():
     # this function only needs to be called once... all info never changes
     resps = await get_json_info2()
+    resp = await get_backup_info()
     mapType = resps["map_type"]
     civTypes = resps["civ"]
     gameTypes = resps["game_type"]
+    playerInfo = resp[0]["players"]
+
 
     name_by_id = dict([(str(p["id"]), p["string"]) for p in mapType])
     civ_by_id = dict([(str(p["id"]), p["string"]) for p in civTypes])
     game_by_id = dict([(str(p["id"]), p["string"]) for p in gameTypes])
-    return name_by_id, civ_by_id, game_by_id
+    return name_by_id, civ_by_id, game_by_id, playerInfo
+
 
 
 async def getPlayerIDs(resp):
-    name_by_id, civ_by_id, game_by_id = await getInfo()
+    name_by_id, civ_by_id, game_by_id, playerInfo = await getInfo()
 
     lastmatch = resp["last_match"]
     playerName = resp["name"]
+    playerId = resp["profile_id"]
     players = []
 
+    count = 0
     for player in lastmatch["players"]:
         if player["color"] == 1:
             color = ":blue_circle:"
@@ -156,15 +173,22 @@ async def getPlayerIDs(resp):
         mapNum = lastmatch["map_type"]
         civNum = player["civ"]
         game = lastmatch["game_type"]
+
+        if player["name"] == None:
+            name = playerInfo[count]["name"]
+        else:
+            name = player["name"]
+
         players.append(
             Player(
                 player["profile_id"],
                 player["team"],
                 color,
-                player["name"],
+                name,
                 civ_by_id[str(civNum)],
                 game_by_id[str(game)],
                 name_by_id[str(mapNum)],
             )
         )
+        count += 1
     return players
