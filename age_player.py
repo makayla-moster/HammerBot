@@ -58,6 +58,7 @@ async def getAllOfTheInfo(self):
         )
         return responses
 
+
 async def get_backup_info():
     """
     Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
@@ -68,6 +69,7 @@ async def get_backup_info():
             await session2.close()
             return r
 
+
 async def get_json_info2():
     """
     Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
@@ -77,8 +79,6 @@ async def get_json_info2():
             r = await r.json(content_type=None)
             await session.close()
             return r
-
-
 
 
 class Player:
@@ -136,12 +136,10 @@ async def getInfo():
     gameTypes = resps["game_type"]
     playerInfo = resp[0]["players"]
 
-
     name_by_id = dict([(str(p["id"]), p["string"]) for p in mapType])
     civ_by_id = dict([(str(p["id"]), p["string"]) for p in civTypes])
     game_by_id = dict([(str(p["id"]), p["string"]) for p in gameTypes])
     return name_by_id, civ_by_id, game_by_id, playerInfo
-
 
 
 async def getPlayerIDs(resp):
