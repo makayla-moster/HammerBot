@@ -7,6 +7,7 @@ import disnake
 import requests
 from disnake.ext import commands, tasks
 
+
 async def getPlayerInfo(self, client_sesh: aiohttp.ClientSession) -> dict:
     r = await client_sesh.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=4")
     return await r.json(content_type=None)
@@ -56,6 +57,7 @@ async def getAllOfTheInfo(self):
             getPlayerEW1v1Rating(self, client_sesh),
         )
         return responses
+
 
 class Player:
     def __init__(self, id, team, color, name, civ, game, map):

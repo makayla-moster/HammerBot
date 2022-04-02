@@ -17,12 +17,14 @@ async def get_backup_info(client_sesh: aiohttp.ClientSession) -> dict:
     r = await client_sesh.get("https://aoe2.net/api/player/matches?game=aoe2de&profile_id=313591&count=1")
     return await r.json(content_type=None)
 
+
 async def get_json_info2(client_sesh: aiohttp.ClientSession) -> dict:
     """
     Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
     """
     r = await client_sesh.get("https://aoe2.net/api/strings?game=aoe2de&language=en")
     return await r.json(content_type=None)
+
 
 async def getMatchInfo():
     async with aiohttp.ClientSession() as client_sesh:
@@ -31,6 +33,7 @@ async def getMatchInfo():
             get_json_info2(client_sesh),
         )
         return responses
+
 
 async def getInfo():
     # this function only needs to be called once... all info never changes
@@ -46,6 +49,7 @@ async def getInfo():
     civ_by_id = dict([(str(p["id"]), p["string"]) for p in civTypes])
     game_by_id = dict([(str(p["id"]), p["string"]) for p in gameTypes])
     return name_by_id, civ_by_id, game_by_id, playerInfo
+
 
 async def getPlayerIDs(resp):
     name_by_id, civ_by_id, game_by_id, playerInfo = await getInfo()
