@@ -7,140 +7,45 @@ import disnake
 import requests
 from disnake.ext import commands, tasks
 
+from PlayerClass import *
 
-async def getPlayerInfo(self, client_sesh: aiohttp.ClientSession) -> dict:
-    r = await client_sesh.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=4")
+
+async def get_backup_info(client_sesh: aiohttp.ClientSession) -> dict:
+    """
+    Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
+    """
+    r = await client_sesh.get("https://aoe2.net/api/player/matches?game=aoe2de&profile_id=313591&count=1")
     return await r.json(content_type=None)
 
-
-async def getPlayer1v1Info(self, client_sesh: aiohttp.ClientSession) -> dict:
-    r = await client_sesh.get(f"https://aoe2.net/api/leaderboard?game=aoe2de&profile_id={self.id}&leaderboard_id=3")
+async def get_json_info2(client_sesh: aiohttp.ClientSession) -> dict:
+    """
+    Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
+    """
+    r = await client_sesh.get("https://aoe2.net/api/strings?game=aoe2de&language=en")
     return await r.json(content_type=None)
 
-
-async def getPlayerTGRating(self, client_sesh: aiohttp.ClientSession) -> dict:
-    r = await client_sesh.get(
-        f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=4&profile_id={self.id}&count=1"
-    )
-    return await r.json(content_type=None)
-
-
-async def getPlayer1v1Rating(self, client_sesh: aiohttp.ClientSession) -> dict:
-    r = await client_sesh.get(
-        f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=3&profile_id={self.id}&count=1"
-    )
-    return await r.json(content_type=None)
-
-
-async def getPlayerEWTGRating(self, client_sesh: aiohttp.ClientSession) -> dict:
-    r = await client_sesh.get(
-        f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=14&profile_id={self.id}&count=1"
-    )
-    return await r.json(content_type=None)
-
-
-async def getPlayerEW1v1Rating(self, client_sesh: aiohttp.ClientSession) -> dict:
-    r = await client_sesh.get(
-        f"https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=13&profile_id={self.id}&count=1"
-    )
-    return await r.json(content_type=None)
-
-
-async def getAllOfTheInfo(self):
+async def getMatchInfo():
     async with aiohttp.ClientSession() as client_sesh:
         responses: List[dict] = await asyncio.gather(
-            getPlayerInfo(self, client_sesh),
-            getPlayer1v1Info(self, client_sesh),
-            getPlayerTGRating(self, client_sesh),
-            getPlayer1v1Rating(self, client_sesh),
-            getPlayerEWTGRating(self, client_sesh),
-            getPlayerEW1v1Rating(self, client_sesh),
+            get_backup_info(client_sesh),
+            get_json_info2(client_sesh),
         )
         return responses
 
-
-async def get_backup_info():
-    """
-    Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
-    """
-    async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/player/matches?game=aoe2de&profile_id=313591&count=1") as r:
-            r = await r.json(content_type=None)
-            await session2.close()
-            return r
-
-
-async def get_json_info2():
-    """
-    Helper function for pulling the last AoE2 match played by BSHammer. Is looped every 75 seconds to have up-to-date json info.
-    """
-    async with aiohttp.ClientSession() as session:
-        async with session.get("https://aoe2.net/api/strings?game=aoe2de&language=en") as r:
-            r = await r.json(content_type=None)
-            await session.close()
-            return r
-
-
-class Player:
-    def __init__(self, id, team, color, name, civ, game, map):
-        self.id = id
-        self.team = team
-        self.color = color
-        self.name = name
-        self.country = "--"
-        self.tg_rating = 0
-        self.rating = 0
-        self.ew_tg_rating = 0
-        self.ew_rating = 0
-        self.civ = civ
-        self.map = map
-        self.game = game
-
-    async def info(self):
-        responses = await getAllOfTheInfo(self)
-
-        player_tg = responses[0]
-        player_1v1 = responses[1]
-        player_tg_rate = responses[2]
-        player_1v1_rate = responses[3]
-        player_tg_ew_rate = responses[4]
-        player_1v1_ew_rate = responses[5]
-
-        if len(player_tg["leaderboard"]) > 0:
-            playerLeaderboard = player_tg["leaderboard"][0]
-            self.country = playerLeaderboard["country"]
-
-        if len(player_1v1["leaderboard"]) > 0:
-            playerLeaderboard = player_1v1["leaderboard"][0]
-            self.country = playerLeaderboard["country"]
-
-        if len(player_1v1_rate) > 0:
-            self.rating = player_1v1_rate[0]["rating"]
-
-        if len(player_tg_rate) > 0:
-            self.tg_rating = player_tg_rate[0]["rating"]
-
-        if len(player_1v1_ew_rate) > 0:
-            self.ew_rating = player_1v1_ew_rate[0]["rating"]
-
-        if len(player_tg_ew_rate) > 0:
-            self.ew_tg_rating = player_tg_ew_rate[0]["rating"]
-
-
 async def getInfo():
     # this function only needs to be called once... all info never changes
-    resps = await get_json_info2()
-    resp = await get_backup_info()
+    responses = await getMatchInfo()
+    resp = responses[0][0]
+    resps = responses[1]
     mapType = resps["map_type"]
     civTypes = resps["civ"]
     gameTypes = resps["game_type"]
-    playerInfo = resp[0]["players"]
+    playerInfo = resp["players"]
 
     name_by_id = dict([(str(p["id"]), p["string"]) for p in mapType])
     civ_by_id = dict([(str(p["id"]), p["string"]) for p in civTypes])
     game_by_id = dict([(str(p["id"]), p["string"]) for p in gameTypes])
     return name_by_id, civ_by_id, game_by_id, playerInfo
-
 
 async def getPlayerIDs(resp):
     name_by_id, civ_by_id, game_by_id, playerInfo = await getInfo()
