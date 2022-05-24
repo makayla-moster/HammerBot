@@ -17,21 +17,21 @@ for item in directory["units_buildings"]:
 json_dict = {}
 
 for key, value in unit_building_dict.items():
-    json_dict[value.get_name()] = {"cost": value.get_cost(),
-    "attack" : value.get_attack(),
-    "melee_armor": value.get_melee_armor(),
-    "pierce_armor": value.get_pierce_armor(),
-    "hit_points": value.get_hit_points(),
-    "los": value.get_los()}
+    json_dict[value.get_name()] = {
+        "cost": value.get_cost(),
+        "attack": value.get_attack(),
+        "melee_armor": value.get_melee_armor(),
+        "pierce_armor": value.get_pierce_armor(),
+        "hit_points": value.get_hit_points(),
+        "los": value.get_los(),
+    }
 
 # Serializing json
-json_object = json.dumps(json_dict, indent = 4)
+json_object = json.dumps(json_dict, indent=4)
 
 # Writing to sample.json
 with open("unit_building.json", "w") as outfile:
     outfile.write(json_object)
-
-
 
 
 # # save obj to file
