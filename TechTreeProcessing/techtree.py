@@ -3,17 +3,18 @@
 # -*- coding: utf-8 -*-
 
 import csv
-# import requests
-import sys
 import json
 
-with open('techtree.json') as fp:
+# import requests
+import sys
+
+with open("techtree.json") as fp:
     techtree = json.load(fp)
 
-with open('directory.json') as fp:
+with open("directory.json") as fp:
     directory = json.load(fp)
 
-civs = list(techtree['civ_names'].keys())
+civs = list(techtree["civ_names"].keys())
 master_dict = {}
 
 
@@ -24,32 +25,32 @@ unique_dict = {}
 
 
 for c in civs:
-    for x in techtree['techtrees'][c]['units']:
-        name = directory['units_buildings'][str(x)]['localised_name']
+    for x in techtree["techtrees"][c]["units"]:
+        name = directory["units_buildings"][str(x)]["localised_name"]
         unit_dict[name] = x
 
 for c in civs:
-    for x in techtree['techtrees'][c]['buildings']:
-        name = directory['units_buildings'][str(x)]['localised_name']
+    for x in techtree["techtrees"][c]["buildings"]:
+        name = directory["units_buildings"][str(x)]["localised_name"]
         building_dict[name] = x
 
 for c in civs:
-    for x in techtree['techtrees'][c]['techs']:
-        name = directory['techs'][str(x)]['localised_name']
+    for x in techtree["techtrees"][c]["techs"]:
+        name = directory["techs"][str(x)]["localised_name"]
         tech_dict[name] = x
 
 for c in civs:
-    x = techtree['techtrees'][c]['unique']["castleAgeUniqueUnit"]
-    name = directory['units_buildings'][str(x)]['localised_name']
+    x = techtree["techtrees"][c]["unique"]["castleAgeUniqueUnit"]
+    name = directory["units_buildings"][str(x)]["localised_name"]
     master_dict[name] = [c]
-    x = techtree['techtrees'][c]['unique']["imperialAgeUniqueUnit"]
-    name = directory['units_buildings'][str(x)]['localised_name']
+    x = techtree["techtrees"][c]["unique"]["imperialAgeUniqueUnit"]
+    name = directory["units_buildings"][str(x)]["localised_name"]
     master_dict[name] = [c]
-    x = techtree['techtrees'][c]['unique']["castleAgeUniqueTech"]
-    name = directory['techs'][str(x)]['localised_name']
+    x = techtree["techtrees"][c]["unique"]["castleAgeUniqueTech"]
+    name = directory["techs"][str(x)]["localised_name"]
     master_dict[name] = [c]
-    x = techtree['techtrees'][c]['unique']["imperialAgeUniqueTech"]
-    name = directory['techs'][str(x)]['localised_name']
+    x = techtree["techtrees"][c]["unique"]["imperialAgeUniqueTech"]
+    name = directory["techs"][str(x)]["localised_name"]
     master_dict[name] = [c]
 
 
