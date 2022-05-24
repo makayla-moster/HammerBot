@@ -62,10 +62,9 @@ for item in tech_dict.keys():
     master_dict[item] = []
 
 
-for key in unit_dict:
-    pay = unit_dict[key]
+for key,unit in unit_dict.items()
     for c in civs:
-        if pay in techtree["techtrees"][c]["units"]:
+        if unit in techtree["techtrees"][c]["units"]:
             master_dict[key].append(c)
 
 for key in building_dict:
@@ -79,12 +78,3 @@ for key in tech_dict:
     for c in civs:
         if pay in techtree["techtrees"][c]["techs"]:
             master_dict[key].append(c)
-
-
-print(master_dict)
-# civ_input = "Huns"
-# item_input = "Elite Tarkan"
-#
-# bool = civ_input in master_dict[item_input]
-#
-# print(bool)
