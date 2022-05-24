@@ -1,5 +1,6 @@
 import json
 import pickle
+
 from unit_building_class import unit_building
 
 # json obtained from
@@ -12,7 +13,6 @@ unit_building_dict = {}
 for item in directory["units_buildings"]:
     unit_building_obj = unit_building(directory["units_buildings"][item])
     unit_building_dict[unit_building_obj.get_name()] = unit_building_obj
-
 
 json_dict = {}
 
