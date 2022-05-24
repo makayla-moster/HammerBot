@@ -1,10 +1,10 @@
 import os
-
+import json
 import disnake
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
-import ObjectStatistics
+from techTreeInfo import *
 
 
 class StatCommands(commands.Cog):
@@ -20,7 +20,7 @@ class StatCommands(commands.Cog):
         Command: !stat
         Returns: Redirects user to the !does command due to renaming.
         """
-        print("here 1")
+
         if arg5 is not None:
             arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title() + " " + arg5.title()
             try:
@@ -69,30 +69,32 @@ class StatCommands(commands.Cog):
                     color=disnake.Color.red(),
                 )
 
-        print("here 2")
-        unit_building = unit_building_dict[arg1]
-        print("here 2.5")
-        cost = unit_building.get_cost()
 
+        unit_building = unit_building_dict[arg1.title()]
+        cost = unit_building["cost"]
         costString = ""
 
         if cost[0] != 0:
             costString += f"Food: {cost[0]}, "
-        elif cost[1] != 0:
+        if cost[1] != 0:
             costString += f"Wood: {cost[1]}, "
-        elif cost[2] != 0:
+        if cost[2] != 0:
             costString += f"Gold: {cost[2]}, "
-        elif cost[3] != 0:
-            costString += f" Stone: {cost[3]}"
-        print("here 3")
+        if cost[3] != 0:
+            costString += f" Stone: {cost[3]}, "
+
+        if costString != "":
+            costString2 = costString[:-2]
+        else:
+            costString2 = "No resources needed."
 
         embed = disnake.Embed(title=f"Stats for {arg1}", description=f"Information about {arg1}.", color=0xD5D341)
-        embed.add_field(name="Cost", value=costString, inline=True)
-        embed.add_field(name="Attack", value=f"{unit_building.get_atttack}", inline=True)
-        embed.add_field(name="Melee Armor", value=f"{unit_building.get_melee_armor}", inline=True)
-        embed.add_field(name="Pierce Armor", value=f"{unit_building.get_pierce_armor}", inline=True)
-        embed.add_field(name="Hit Points", value=f"{unit_building.get_hit_points}", inline=True)
-        embed.add_field(name="Line of Sight", value=f"{unit_building.get_los}", inline=True)
+        embed.add_field(name="Cost", value=costString2, inline=True)
+        embed.add_field(name="Attack", value=f"{unit_building['attack']}", inline=True)
+        embed.add_field(name="Melee Armor", value=f"{unit_building['melee_armor']}", inline=True)
+        embed.add_field(name="Pierce Armor", value=f"{unit_building['pierce_armor']}", inline=True)
+        embed.add_field(name="Hit Points", value=f"{unit_building['hit_points']}", inline=True)
+        embed.add_field(name="Line of Sight", value=f"{unit_building['los']}", inline=True)
         await ctx.send(embed=embed)
 
 
