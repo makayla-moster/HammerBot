@@ -1,5 +1,4 @@
 techTreeDict = {
-    {
         "Jaguar Warrior": ["Aztecs"],
         "Elite Jaguar Warrior": ["Aztecs"],
         "Atlatl": ["Aztecs"],
@@ -6131,7 +6130,6 @@ techTreeDict = {
             "Vietnamese",
         ],
     }
-}
 
 
 age_civs = [
