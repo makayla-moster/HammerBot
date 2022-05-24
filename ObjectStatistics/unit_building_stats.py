@@ -1,12 +1,12 @@
 import json
 import pickle
+
 from unit_building_class import unit_building
 
 # json obtained from
 # https://github.com/SiegeEngineers/halfon/blob/master/data/units_buildings_techs.de.json
 with open("directory.json") as fp:
     directory = json.load(fp)
-
 
 
 x = "4"
