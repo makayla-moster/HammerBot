@@ -3,8 +3,8 @@ techTreeDict = {
         "Elite Jaguar Warrior": ["Aztecs"],
         "Atlatl": ["Aztecs"],
         "Garland Wars": ["Aztecs"],
-        "Ratha (Ranged)": ["Bengalis"],
-        "Elite Ratha (Ranged)": ["Bengalis"],
+        "Ratha": ["Bengalis"],
+        "Elite Ratha": ["Bengalis"],
         "Paiks": ["Bengalis"],
         "Mahayana": ["Bengalis"],
         "Camel Archer": ["Berbers"],
@@ -604,7 +604,7 @@ techTreeDict = {
             "Vietnamese",
             "Vikings",
         ],
-        "Villager (Male)": [
+        "Villager": [
             "Aztecs",
             "Bengalis",
             "Berbers",
@@ -868,7 +868,7 @@ techTreeDict = {
             "Vietnamese",
             "Vikings",
         ],
-        "Trebuchet (Packed)": [
+        "Trebuchet": [
             "Aztecs",
             "Bengalis",
             "Berbers",
