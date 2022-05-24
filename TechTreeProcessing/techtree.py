@@ -62,9 +62,10 @@ for item in tech_dict.keys():
     master_dict[item] = []
 
 
-for key,unit in unit_dict.items()
+for key in unit_dict:
+    pay = unit_dict[key]
     for c in civs:
-        if unit in techtree["techtrees"][c]["units"]:
+        if pay in techtree["techtrees"][c]["units"]:
             master_dict[key].append(c)
 
 for key in building_dict:
