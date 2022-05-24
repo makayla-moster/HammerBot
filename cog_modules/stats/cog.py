@@ -1,5 +1,6 @@
-import os
 import json
+import os
+
 import disnake
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
@@ -68,7 +69,6 @@ class StatCommands(commands.Cog):
                     description="There was a problem with your input. Please check your input and try again.",
                     color=disnake.Color.red(),
                 )
-
 
         unit_building = unit_building_dict[arg1.title()]
         cost = unit_building["cost"]

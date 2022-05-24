@@ -6571,10819 +6571,2249 @@ buildingList = {
 
 unit_building_dict = {
     "Moveable Map Revealer": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 2
+        "los": 2,
     },
-    "Legionary": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 75,
-        "los": 5
-    },
-    "": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 2
-    },
-    "Archer": {
-        "cost": [
-            0,
-            25,
-            45,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 6
-    },
-    "Hand Cannoneer": {
-        "cost": [
-            45,
-            0,
-            50,
-            0
-        ],
-        "attack": 17,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 40,
-        "los": 9
-    },
-    "Elite Skirmisher": {
-        "cost": [
-            25,
-            35,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 35,
-        "los": 7
-    },
-    "Skirmisher": {
-        "cost": [
-            25,
-            35,
-            0,
-            0
-        ],
-        "attack": 2,
-        "melee_armor": 0,
-        "pierce_armor": 3,
-        "hit_points": 30,
-        "los": 6
-    },
-    "Longbowman": {
-        "cost": [
-            0,
-            35,
-            40,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 35,
-        "los": 7
-    },
-    "Archery Range": {
-        "cost": [
-            0,
-            175,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 1,
-        "pierce_armor": 8,
-        "hit_points": 1500,
-        "los": 6
-    },
-    "Mangudai": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 60,
-        "los": 6
-    },
-    "Barracks": {
-        "cost": [
-            0,
-            175,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 1,
-        "pierce_armor": 8,
-        "hit_points": 1500,
-        "los": 6
-    },
-    "Fishing Ship": {
-        "cost": [
-            0,
-            75,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 60,
-        "los": 5
-    },
-    "Junk": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 7
-    },
-    "Trade Cog": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 80,
-        "los": 6
-    },
-    "Blacksmith": {
-        "cost": [
-            0,
-            150,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 1,
-        "pierce_armor": 8,
-        "hit_points": 1800,
-        "los": 6
-    },
-    "War Galley": {
-        "cost": [
-            0,
-            90,
-            30,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 135,
-        "los": 8
-    },
-    "Crossbowman": {
-        "cost": [
-            0,
-            25,
-            45,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 35,
-        "los": 7
-    },
-    "Teutonic Knight": {
-        "cost": [
-            85,
-            0,
-            40,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 7,
-        "pierce_armor": 2,
-        "hit_points": 80,
-        "los": 3
-    },
-    "Monastery": {
-        "cost": [
-            0,
-            175,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 2100,
-        "los": 6
-    },
-    "Fortress": {
-        "cost": [
-            0,
-            600,
-            0,
-            600
-        ],
-        "attack": 12,
-        "melee_armor": 8,
-        "pierce_armor": 11,
-        "hit_points": 4800,
-        "los": 14
-    },
+    "Legionary": {"cost": [60, 0, 30, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 75, "los": 5},
+    "": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 2},
+    "Archer": {"cost": [0, 25, 45, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 6},
+    "Hand Cannoneer": {"cost": [45, 0, 50, 0], "attack": 17, "melee_armor": 1, "pierce_armor": 0, "hit_points": 40, "los": 9},
+    "Elite Skirmisher": {"cost": [25, 35, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 4, "hit_points": 35, "los": 7},
+    "Skirmisher": {"cost": [25, 35, 0, 0], "attack": 2, "melee_armor": 0, "pierce_armor": 3, "hit_points": 30, "los": 6},
+    "Longbowman": {"cost": [0, 35, 40, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 35, "los": 7},
+    "Archery Range": {"cost": [0, 175, 0, 0], "attack": 0, "melee_armor": 1, "pierce_armor": 8, "hit_points": 1500, "los": 6},
+    "Mangudai": {"cost": [0, 55, 65, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 60, "los": 6},
+    "Barracks": {"cost": [0, 175, 0, 0], "attack": 0, "melee_armor": 1, "pierce_armor": 8, "hit_points": 1500, "los": 6},
+    "Fishing Ship": {"cost": [0, 75, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 4, "hit_points": 60, "los": 5},
+    "Junk": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 7},
+    "Trade Cog": {"cost": [0, 100, 50, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 6, "hit_points": 80, "los": 6},
+    "Blacksmith": {"cost": [0, 150, 0, 0], "attack": 0, "melee_armor": 1, "pierce_armor": 8, "hit_points": 1800, "los": 6},
+    "War Galley": {"cost": [0, 90, 30, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 6, "hit_points": 135, "los": 8},
+    "Crossbowman": {"cost": [0, 25, 45, 0], "attack": 5, "melee_armor": 0, "pierce_armor": 0, "hit_points": 35, "los": 7},
+    "Teutonic Knight": {"cost": [85, 0, 40, 0], "attack": 14, "melee_armor": 7, "pierce_armor": 2, "hit_points": 80, "los": 3},
+    "Monastery": {"cost": [0, 175, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 7, "hit_points": 2100, "los": 6},
+    "Fortress": {"cost": [0, 600, 0, 600], "attack": 12, "melee_armor": 8, "pierce_armor": 11, "hit_points": 4800, "los": 14},
     "Battering Ram": {
-        "cost": [
-            0,
-            160,
-            75,
-            0
-        ],
+        "cost": [0, 160, 75, 0],
         "attack": 2,
         "melee_armor": -3,
         "pierce_armor": 180,
         "hit_points": 175,
-        "los": 3
+        "los": 3,
     },
     "Bombard Cannon": {
-        "cost": [
-            0,
-            225,
-            225,
-            0
-        ],
+        "cost": [0, 225, 225, 0],
         "attack": 40,
         "melee_armor": 2,
         "pierce_armor": 5,
         "hit_points": 80,
-        "los": 14
+        "los": 14,
     },
-    "Knight": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 100,
-        "los": 4
-    },
-    "Cavalry Archer": {
-        "cost": [
-            0,
-            40,
-            60,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 5
-    },
-    "Cataphract": {
-        "cost": [
-            70,
-            0,
-            75,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 110,
-        "los": 4
-    },
-    "Huskarl": {
-        "cost": [
-            80,
-            0,
-            40,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 60,
-        "los": 3
-    },
+    "Knight": {"cost": [60, 0, 75, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 2, "hit_points": 100, "los": 4},
+    "Cavalry Archer": {"cost": [0, 40, 60, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 5},
+    "Cataphract": {"cost": [70, 0, 75, 0], "attack": 9, "melee_armor": 2, "pierce_armor": 1, "hit_points": 110, "los": 4},
+    "Huskarl": {"cost": [80, 0, 40, 0], "attack": 10, "melee_armor": 0, "pierce_armor": 6, "hit_points": 60, "los": 3},
     "Trebuchet": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 200,
         "melee_armor": 1,
         "pierce_armor": 150,
         "hit_points": 150,
-        "los": 19
+        "los": 19,
     },
-    "Dock": {
-        "cost": [
-            0,
-            150,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 1800,
-        "los": 6
-    },
-    "Janissary": {
-        "cost": [
-            60,
-            0,
-            55,
-            0
-        ],
-        "attack": 17,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 35,
-        "los": 10
-    },
-    "Wild Boar": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 4
-    },
-    "Siege Workshop": {
-        "cost": [
-            0,
-            200,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 9,
-        "hit_points": 1800,
-        "los": 6
-    },
-    "Farm": {
-        "cost": [
-            0,
-            60,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 480,
-        "los": 1
-    },
+    "Dock": {"cost": [0, 150, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 1800, "los": 6},
+    "Janissary": {"cost": [60, 0, 55, 0], "attack": 17, "melee_armor": 1, "pierce_armor": 0, "hit_points": 35, "los": 10},
+    "Wild Boar": {"cost": [0, 0, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 4},
+    "Siege Workshop": {"cost": [0, 200, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 9, "hit_points": 1800, "los": 6},
+    "Farm": {"cost": [0, 60, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 480, "los": 1},
     "Royal Janissary": {
-        "cost": [
-            60,
-            0,
-            55,
-            0
-        ],
+        "cost": [60, 0, 55, 0],
         "attack": 22,
         "melee_armor": 2,
         "pierce_armor": 0,
         "hit_points": 55,
-        "los": 10
+        "los": 10,
     },
-    "Fish (Perch)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Fisherman": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Forage Bush": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Dolphin": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
+    "Fish (Perch)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Fisherman": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Forage Bush": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Dolphin": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
     "Fortified Gate (up.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
+        "cost": [0, 0, 0, 30],
         "attack": 0,
         "melee_armor": 6,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 6
+        "los": 6,
     },
-    "Gate (up.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
-        "attack": 0,
-        "melee_armor": 6,
-        "pierce_armor": 6,
-        "hit_points": 1375,
-        "los": 6
-    },
-    "Deer": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 5,
-        "los": 0
-    },
-    "Gold Mine": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Fortified Gate": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
-        "attack": 0,
-        "melee_armor": 6,
-        "pierce_armor": 0,
-        "hit_points": 4000,
-        "los": 6
-    },
-    "Mill": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 1000,
-        "los": 6
-    },
-    "Shore Fish": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "House": {
-        "cost": [
-            0,
-            25,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 900,
-        "los": 2
-    },
-    "Town Center": {
-        "cost": [
-            0,
-            275,
-            0,
-            100
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 2400,
-        "los": 8
-    },
-    "Palisade Wall": {
-        "cost": [
-            0,
-            3,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 5,
-        "hit_points": 150,
-        "los": 2
-    },
-    "Chu Ko Nu": {
-        "cost": [
-            0,
-            40,
-            35,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 45,
-        "los": 6
-    },
-    "Militia": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 40,
-        "los": 4
-    },
-    "Man-at-Arms": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 45,
-        "los": 4
-    },
-    "Heavy Swordsman": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 4
-    },
-    "Long Swordsman": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 60,
-        "los": 4
-    },
-    "Gate": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 6,
-        "pierce_armor": 6,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Watch Tower": {
-        "cost": [
-            0,
-            50,
-            0,
-            125
-        ],
-        "attack": 5,
-        "melee_armor": 1,
-        "pierce_armor": 7,
-        "hit_points": 850,
-        "los": 10
-    },
-    "Castle": {
-        "cost": [
-            0,
-            0,
-            0,
-            650
-        ],
-        "attack": 11,
-        "melee_armor": 8,
-        "pierce_armor": 11,
-        "hit_points": 4800,
-        "los": 11
-    },
-    "Villager (Male)": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Market": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1800,
-        "los": 6
-    },
+    "Gate (up.)": {"cost": [0, 0, 0, 30], "attack": 0, "melee_armor": 6, "pierce_armor": 6, "hit_points": 1375, "los": 6},
+    "Deer": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 5, "los": 0},
+    "Gold Mine": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Fortified Gate": {"cost": [0, 0, 0, 30], "attack": 0, "melee_armor": 6, "pierce_armor": 0, "hit_points": 4000, "los": 6},
+    "Mill": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 1000, "los": 6},
+    "Shore Fish": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "House": {"cost": [0, 25, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 900, "los": 2},
+    "Town Center": {"cost": [0, 275, 0, 100], "attack": 0, "melee_armor": 0, "pierce_armor": 7, "hit_points": 2400, "los": 8},
+    "Palisade Wall": {"cost": [0, 3, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 5, "hit_points": 150, "los": 2},
+    "Chu Ko Nu": {"cost": [0, 40, 35, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 0, "hit_points": 45, "los": 6},
+    "Militia": {"cost": [60, 0, 20, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 1, "hit_points": 40, "los": 4},
+    "Man-at-Arms": {"cost": [60, 0, 20, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 1, "hit_points": 45, "los": 4},
+    "Heavy Swordsman": {"cost": [65, 0, 25, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 4},
+    "Long Swordsman": {"cost": [60, 0, 20, 0], "attack": 9, "melee_armor": 1, "pierce_armor": 1, "hit_points": 60, "los": 4},
+    "Gate": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 6, "pierce_armor": 6, "hit_points": 1, "los": 0},
+    "Watch Tower": {"cost": [0, 50, 0, 125], "attack": 5, "melee_armor": 1, "pierce_armor": 7, "hit_points": 850, "los": 10},
+    "Castle": {"cost": [0, 0, 0, 650], "attack": 11, "melee_armor": 8, "pierce_armor": 11, "hit_points": 4800, "los": 11},
+    "Villager (Male)": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Market": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1800, "los": 6},
     "Fortified Gate (down.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
+        "cost": [0, 0, 0, 30],
         "attack": 0,
         "melee_armor": 6,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 6
+        "los": 6,
     },
-    "Stable": {
-        "cost": [
-            0,
-            175,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 2100,
-        "los": 6
-    },
-    "Gate (down.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
-        "attack": 0,
-        "melee_armor": 6,
-        "pierce_armor": 6,
-        "hit_points": 1375,
-        "los": 6
-    },
-    "Dire Wolf": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 100,
-        "los": 3
-    },
-    "Spearman": {
-        "cost": [
-            35,
-            25,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 45,
-        "los": 4
-    },
-    "Hawk": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
-    "Stone Mine": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Leif Erikson": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 11,
-        "melee_armor": 2,
-        "pierce_armor": 8,
-        "hit_points": 320,
-        "los": 9
-    },
+    "Stable": {"cost": [0, 175, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 2100, "los": 6},
+    "Gate (down.)": {"cost": [0, 0, 0, 30], "attack": 0, "melee_armor": 6, "pierce_armor": 6, "hit_points": 1375, "los": 6},
+    "Dire Wolf": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 100, "los": 3},
+    "Spearman": {"cost": [35, 25, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 45, "los": 4},
+    "Hawk": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
+    "Stone Mine": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Leif Erikson": {"cost": [0, 100, 50, 0], "attack": 11, "melee_armor": 2, "pierce_armor": 8, "hit_points": 320, "los": 9},
     "Trade Workshop": {
-        "cost": [
-            0,
-            150,
-            0,
-            0
-        ],
+        "cost": [0, 150, 0, 0],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 7,
         "hit_points": 20000,
-        "los": 6
+        "los": 6,
     },
-    "Flare": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 6
-    },
-    "Stoertebeker": {
-        "cost": [
-            0,
-            90,
-            65,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 6,
-        "hit_points": 220,
-        "los": 6
-    },
-    "Stone Wall": {
-        "cost": [
-            0,
-            0,
-            0,
-            5
-        ],
-        "attack": 0,
-        "melee_armor": 8,
-        "pierce_armor": 10,
-        "hit_points": 900,
-        "los": 2
-    },
-    "Builder": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
+    "Flare": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 6},
+    "Stoertebeker": {"cost": [0, 90, 65, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 6, "hit_points": 220, "los": 6},
+    "Stone Wall": {"cost": [0, 0, 0, 5], "attack": 0, "melee_armor": 8, "pierce_armor": 10, "hit_points": 900, "los": 2},
+    "Builder": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
     "Fortified Palisade Wall": {
-        "cost": [
-            0,
-            3,
-            0,
-            0
-        ],
+        "cost": [0, 3, 0, 0],
         "attack": 0,
         "melee_armor": 2,
         "pierce_armor": 5,
         "hit_points": 300,
-        "los": 2
+        "los": 2,
     },
-    "Forager": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Hunter": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Lumberjack": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Stone Miner": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Monk": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 11
-    },
-    "Wolf": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
+    "Forager": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Hunter": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Lumberjack": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Stone Miner": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Monk": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 11},
+    "Wolf": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
     "Trade Cart (Empty)": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
+        "cost": [0, 100, 50, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 70,
-        "los": 7
+        "los": 7,
     },
-    "Rubble 1 x 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 10,
-        "los": -1
-    },
-    "Rubble 2 x 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 10,
-        "los": -1
-    },
-    "Rubble 3 x 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 10,
-        "los": -1
-    },
-    "Rubble 4 x 4": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 10,
-        "los": -1
-    },
-    "Rubble 6 x 6": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": -1
-    },
-    "Rubble 8 x 8": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 10,
-        "los": -1
-    },
-    "Fortified Wall": {
-        "cost": [
-            0,
-            0,
-            0,
-            5
-        ],
-        "attack": 0,
-        "melee_armor": 12,
-        "pierce_armor": 12,
-        "hit_points": 3000,
-        "los": 2
-    },
-    "Repairer": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Relic Cart": {
-        "cost": [
-            0,
-            0,
-            50,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 1
-    },
+    "Rubble 1 x 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 10, "los": -1},
+    "Rubble 2 x 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 10, "los": -1},
+    "Rubble 3 x 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 10, "los": -1},
+    "Rubble 4 x 4": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 10, "los": -1},
+    "Rubble 6 x 6": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": -1},
+    "Rubble 8 x 8": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 10, "los": -1},
+    "Fortified Wall": {"cost": [0, 0, 0, 5], "attack": 0, "melee_armor": 12, "pierce_armor": 12, "hit_points": 3000, "los": 2},
+    "Repairer": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Relic Cart": {"cost": [0, 0, 50, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 1},
     "Richard the Lionheart": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
+        "cost": [60, 0, 75, 0],
         "attack": 14,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 220,
-        "los": 5
+        "los": 5,
     },
     "The Black Prince": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
+        "cost": [60, 0, 75, 0],
         "attack": 12,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 370,
-        "los": 4
+        "los": 4,
     },
-    "Friar Tuck": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 4,
-        "hit_points": 60,
-        "los": 11
-    },
+    "Friar Tuck": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 4, "hit_points": 60, "los": 11},
     "Sheriff of Nottingham": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
+        "cost": [60, 0, 20, 0],
         "attack": 9,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 90,
-        "los": 4
+        "los": 4,
     },
-    "Charlemagne": {
-        "cost": [
-            55,
-            0,
-            25,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 200,
-        "los": 5
-    },
-    "Roland": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 150,
-        "los": 4
-    },
-    "Belisarius": {
-        "cost": [
-            70,
-            0,
-            75,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 210,
-        "los": 4
-    },
+    "Charlemagne": {"cost": [55, 0, 25, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 200, "los": 5},
+    "Roland": {"cost": [60, 0, 75, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 2, "hit_points": 150, "los": 4},
+    "Belisarius": {"cost": [70, 0, 75, 0], "attack": 9, "melee_armor": 2, "pierce_armor": 1, "hit_points": 210, "los": 4},
     "Theodoric the Goth": {
-        "cost": [
-            80,
-            0,
-            40,
-            0
-        ],
+        "cost": [80, 0, 40, 0],
         "attack": 10,
         "melee_armor": 2,
         "pierce_armor": 4,
         "hit_points": 450,
-        "los": 3
+        "los": 3,
     },
-    "Aethelfrith": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 140,
-        "los": 3
-    },
-    "Siegfried": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 240,
-        "los": 5
-    },
-    "Erik the Red": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 440,
-        "los": 3
-    },
-    "Tamerlane": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 350,
-        "los": 6
-    },
-    "King Arthur": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 270,
-        "los": 5
-    },
-    "Lancelot": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 3,
-        "hit_points": 240,
-        "los": 5
-    },
-    "Gawain": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 180,
-        "los": 4
-    },
-    "Mordred": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 4,
-        "pierce_armor": 5,
-        "hit_points": 240,
-        "los": 5
-    },
-    "Archbishop": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 70,
-        "los": 11
-    },
-    "Condottiero": {
-        "cost": [
-            50,
-            0,
-            35,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 80,
-        "los": 6
-    },
-    "Slinger": {
-        "cost": [
-            30,
-            0,
-            40,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 40,
-        "los": 7
-    },
-    "Flamethrower": {
-        "cost": [
-            0,
-            130,
-            50,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 160,
-        "los": 7
-    },
-    "Fire Tower": {
-        "cost": [
-            0,
-            0,
-            125,
-            100
-        ],
-        "attack": 7,
-        "melee_armor": 3,
-        "pierce_armor": 9,
-        "hit_points": 2250,
-        "los": 6
-    },
-    "Vlad Dracula": {
-        "cost": [
-            50,
-            0,
-            80,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 6,
-        "pierce_armor": 2,
-        "hit_points": 210,
-        "los": 5
-    },
-    "Kitabatake": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 350,
-        "los": 4
-    },
-    "Minamoto": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 200,
-        "los": 4
-    },
+    "Aethelfrith": {"cost": [65, 0, 25, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 0, "hit_points": 140, "los": 3},
+    "Siegfried": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 1, "pierce_armor": 0, "hit_points": 240, "los": 5},
+    "Erik the Red": {"cost": [65, 0, 25, 0], "attack": 9, "melee_armor": 0, "pierce_armor": 1, "hit_points": 440, "los": 3},
+    "Tamerlane": {"cost": [0, 55, 65, 0], "attack": 6, "melee_armor": 1, "pierce_armor": 1, "hit_points": 350, "los": 6},
+    "King Arthur": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 2, "pierce_armor": 2, "hit_points": 270, "los": 5},
+    "Lancelot": {"cost": [60, 0, 75, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 3, "hit_points": 240, "los": 5},
+    "Gawain": {"cost": [60, 0, 75, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 180, "los": 4},
+    "Mordred": {"cost": [60, 0, 75, 0], "attack": 14, "melee_armor": 4, "pierce_armor": 5, "hit_points": 240, "los": 5},
+    "Archbishop": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 2, "hit_points": 70, "los": 11},
+    "Condottiero": {"cost": [50, 0, 35, 0], "attack": 10, "melee_armor": 1, "pierce_armor": 0, "hit_points": 80, "los": 6},
+    "Slinger": {"cost": [30, 0, 40, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 0, "hit_points": 40, "los": 7},
+    "Flamethrower": {"cost": [0, 130, 50, 0], "attack": 4, "melee_armor": 2, "pierce_armor": 2, "hit_points": 160, "los": 7},
+    "Fire Tower": {"cost": [0, 0, 125, 100], "attack": 7, "melee_armor": 3, "pierce_armor": 9, "hit_points": 2250, "los": 6},
+    "Vlad Dracula": {"cost": [50, 0, 80, 0], "attack": 16, "melee_armor": 6, "pierce_armor": 2, "hit_points": 210, "los": 5},
+    "Kitabatake": {"cost": [60, 0, 30, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 0, "hit_points": 350, "los": 4},
+    "Minamoto": {"cost": [60, 0, 30, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 0, "hit_points": 200, "los": 4},
     "Alexander Nevski": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
+        "cost": [60, 0, 75, 0],
         "attack": 12,
         "melee_armor": 8,
         "pierce_armor": 6,
         "hit_points": 230,
-        "los": 4
+        "los": 4,
     },
-    "El Cid": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 330,
-        "los": 5
-    },
-    "Fish Trap": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 1
-    },
-    "Robin Hood": {
-        "cost": [
-            0,
-            35,
-            40,
-            0
-        ],
-        "attack": 11,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 110,
-        "los": 7
-    },
-    "Tree": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 3
-    },
-    "Rabid Wolf": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 6
-    },
-    "Vasco da Gama": {
-        "cost": [
-            0,
-            90,
-            40,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 350,
-        "los": 9
-    },
+    "El Cid": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 2, "pierce_armor": 1, "hit_points": 330, "los": 5},
+    "Fish Trap": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 1},
+    "Robin Hood": {"cost": [0, 35, 40, 0], "attack": 11, "melee_armor": 0, "pierce_armor": 1, "hit_points": 110, "los": 7},
+    "Tree": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 3},
+    "Rabid Wolf": {"cost": [50, 0, 0, 0], "attack": 5, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 6},
+    "Vasco da Gama": {"cost": [0, 90, 40, 0], "attack": 18, "melee_armor": 0, "pierce_armor": 8, "hit_points": 350, "los": 9},
     "Trade Cart (Full)": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
+        "cost": [0, 100, 50, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 70,
-        "los": 7
+        "los": 7,
     },
-    "VMDL": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
+    "VMDL": {"cost": [0, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
     "Imperial Camel Rider": {
-        "cost": [
-            55,
-            0,
-            60,
-            0
-        ],
+        "cost": [55, 0, 60, 0],
         "attack": 8,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 140,
-        "los": 5
+        "los": 5,
     },
-    "University": {
-        "cost": [
-            0,
-            200,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 2100,
-        "los": 6
-    },
-    "Farmer": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
+    "University": {"cost": [0, 200, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 2100, "los": 6},
+    "Farmer": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
     "Alaric the Goth": {
-        "cost": [
-            80,
-            0,
-            40,
-            0
-        ],
+        "cost": [80, 0, 40, 0],
         "attack": 14,
         "melee_armor": 1,
         "pierce_armor": 6,
         "hit_points": 350,
-        "los": 5
+        "los": 5,
     },
-    "King Bela IV": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Aqueduct": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 100,
-        "hit_points": 1600,
-        "los": 5
-    },
-    "Woad Raider": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 65,
-        "los": 3
-    },
-    "Guard Tower": {
-        "cost": [
-            0,
-            50,
-            0,
-            125
-        ],
-        "attack": 7,
-        "melee_armor": 2,
-        "pierce_armor": 8,
-        "hit_points": 1500,
-        "los": 10
-    },
-    "Keep": {
-        "cost": [
-            0,
-            50,
-            0,
-            125
-        ],
-        "attack": 8,
-        "melee_armor": 3,
-        "pierce_armor": 9,
-        "hit_points": 2250,
-        "los": 10
-    },
+    "King Bela IV": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Aqueduct": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 100, "hit_points": 1600, "los": 5},
+    "Woad Raider": {"cost": [65, 0, 25, 0], "attack": 10, "melee_armor": 0, "pierce_armor": 1, "hit_points": 65, "los": 3},
+    "Guard Tower": {"cost": [0, 50, 0, 125], "attack": 7, "melee_armor": 2, "pierce_armor": 8, "hit_points": 1500, "los": 10},
+    "Keep": {"cost": [0, 50, 0, 125], "attack": 8, "melee_armor": 3, "pierce_armor": 9, "hit_points": 2250, "los": 10},
     "Bombard Tower": {
-        "cost": [
-            0,
-            0,
-            100,
-            125
-        ],
+        "cost": [0, 0, 100, 125],
         "attack": 120,
         "melee_armor": 3,
         "pierce_armor": 9,
         "hit_points": 2220,
-        "los": 10
+        "los": 10,
     },
-    "War Elephant": {
-        "cost": [
-            170,
-            0,
-            85,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 1,
-        "pierce_armor": 2,
-        "hit_points": 450,
-        "los": 4
-    },
-    "Cracks": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Pile of Stone": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Longboat": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 130,
-        "los": 8
-    },
+    "War Elephant": {"cost": [170, 0, 85, 0], "attack": 15, "melee_armor": 1, "pierce_armor": 2, "hit_points": 450, "los": 4},
+    "Cracks": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Pile of Stone": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Longboat": {"cost": [0, 100, 50, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 6, "hit_points": 130, "los": 8},
     "Amphitheatre": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 8
+        "los": 8,
     },
-    "Pile of Gold": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Pile of Wood": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Pile of Food": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
+    "Pile of Gold": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Pile of Wood": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Pile of Food": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
     "Colosseum": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
-    "Test String": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Centurion": {
-        "cost": [
-            70,
-            0,
-            75,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 150,
-        "los": 5
-    },
-    "Wonder": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 4800,
-        "los": 8
-    },
-    "Dead Fish Trap": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": -1
-    },
-    "Scorpion": {
-        "cost": [
-            0,
-            75,
-            75,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 40,
-        "los": 9
-    },
-    "Mangonel": {
-        "cost": [
-            0,
-            160,
-            135,
-            0
-        ],
-        "attack": 40,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 50,
-        "los": 9
-    },
-    "Throwing Axeman": {
-        "cost": [
-            55,
-            0,
-            25,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 60,
-        "los": 5
-    },
-    "Mameluke": {
-        "cost": [
-            55,
-            0,
-            85,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 65,
-        "los": 5
-    },
-    "Cavalier": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 120,
-        "los": 4
-    },
-    "Tree TD": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 1
-    },
-    "Monk with Relic": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 9
-    },
-    "British Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Byzantine Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Chinese Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Frankish Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Samurai": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 70,
-        "los": 4
-    },
-    "Gothic Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Villager (Female)": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Japanese Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Persian Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Saracen Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Teutonic Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Turkish Relic": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 7
-    },
-    "Bandit": {
-        "cost": [
-            300,
-            0,
-            0,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Grass Patch, Green": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Bush A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Seagulls": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
-    "Bonfire": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Llama": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 7,
-        "los": 3
-    },
-    "Black Tile": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Cuauhtemoc": {
-        "cost": [
-            20,
-            0,
-            50,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 2,
-        "pierce_armor": 6,
-        "hit_points": 100,
-        "los": 6
-    },
+    "Test String": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Centurion": {"cost": [70, 0, 75, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 1, "hit_points": 150, "los": 5},
+    "Wonder": {"cost": [0, 1000, 1000, 1000], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 4800, "los": 8},
+    "Dead Fish Trap": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": -1},
+    "Scorpion": {"cost": [0, 75, 75, 0], "attack": 12, "melee_armor": 0, "pierce_armor": 7, "hit_points": 40, "los": 9},
+    "Mangonel": {"cost": [0, 160, 135, 0], "attack": 40, "melee_armor": 0, "pierce_armor": 6, "hit_points": 50, "los": 9},
+    "Throwing Axeman": {"cost": [55, 0, 25, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 60, "los": 5},
+    "Mameluke": {"cost": [55, 0, 85, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 0, "hit_points": 65, "los": 5},
+    "Cavalier": {"cost": [60, 0, 75, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 120, "los": 4},
+    "Tree TD": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 1},
+    "Monk with Relic": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 9},
+    "British Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Byzantine Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Chinese Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Frankish Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Samurai": {"cost": [60, 0, 30, 0], "attack": 10, "melee_armor": 1, "pierce_armor": 1, "hit_points": 70, "los": 4},
+    "Gothic Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Villager (Female)": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Japanese Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Persian Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Saracen Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Teutonic Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Turkish Relic": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 7},
+    "Bandit": {"cost": [300, 0, 0, 0], "attack": 10, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Grass Patch, Green": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Bush A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Seagulls": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
+    "Bonfire": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Llama": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 7, "los": 3},
+    "Black Tile": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Cuauhtemoc": {"cost": [20, 0, 50, 0], "attack": 18, "melee_armor": 2, "pierce_armor": 6, "hit_points": 100, "los": 6},
     "Monk with Turkish Relic": {
-        "cost": [
-            200,
-            0,
-            0,
-            0
-        ],
+        "cost": [200, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 30,
-        "los": 6
+        "los": 6,
     },
-    "Mountain 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Mountain 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Camel Rider": {
-        "cost": [
-            55,
-            0,
-            60,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 100,
-        "los": 5
-    },
+    "Mountain 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Mountain 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Camel Rider": {"cost": [55, 0, 60, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 100, "los": 5},
     "Heavy Camel Rider": {
-        "cost": [
-            55,
-            0,
-            60,
-            0
-        ],
+        "cost": [55, 0, 60, 0],
         "attack": 7,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 120,
-        "los": 5
+        "los": 5,
     },
     "Trebuchet (Packed)": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 200,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 150,
-        "los": 19
+        "los": 19,
     },
-    "Flowers 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Flowers 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Flowers 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Flowers 4": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Path 4": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Path 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Path 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Path 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Ruins": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Flowers 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Flowers 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Flowers 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Flowers 4": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Path 4": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Path 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Path 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Path 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Ruins": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Tree (Bamboo Forest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 20,
-        "los": 0
+        "los": 0,
     },
-    "Tree (Oak)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree (Pine Forest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree (Palm Forest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Dead Farm": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": -1
-    },
-    "Pikeman": {
-        "cost": [
-            35,
-            25,
-            0,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 55,
-        "los": 4
-    },
-    "Halberdier": {
-        "cost": [
-            35,
-            25,
-            0,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 60,
-        "los": 4
-    },
-    "Norse Warrior": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 60,
-        "los": 4
-    },
-    "City Wall": {
-        "cost": [
-            0,
-            0,
-            0,
-            10
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 100,
-        "hit_points": 3200,
-        "los": 5
-    },
-    "Sea Rocks 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Sea Rocks 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Tree A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree D": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree E": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree F": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree G": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree H": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree I": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree J": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree K": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree L": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree (Oak Forest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 0
-    },
-    "Tree (Snow Pine)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree (Jungle)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Stump": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Henry the Lion": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 200,
-        "los": 4
-    },
+    "Tree (Oak)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree (Pine Forest)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree (Palm Forest)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Dead Farm": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": -1},
+    "Pikeman": {"cost": [35, 25, 0, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 0, "hit_points": 55, "los": 4},
+    "Halberdier": {"cost": [35, 25, 0, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 60, "los": 4},
+    "Norse Warrior": {"cost": [60, 0, 20, 0], "attack": 9, "melee_armor": 0, "pierce_armor": 1, "hit_points": 60, "los": 4},
+    "City Wall": {"cost": [0, 0, 0, 10], "attack": 0, "melee_armor": 0, "pierce_armor": 100, "hit_points": 3200, "los": 5},
+    "Sea Rocks 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Sea Rocks 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Tree A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree D": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree E": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree F": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree G": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree H": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree I": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree J": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree K": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree L": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree (Oak Forest)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 0},
+    "Tree (Snow Pine)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree (Jungle)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Stump": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Henry the Lion": {"cost": [70, 0, 60, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 200, "los": 4},
     "Cannon Galleon": {
-        "cost": [
-            0,
-            200,
-            150,
-            0
-        ],
+        "cost": [0, 200, 150, 0],
         "attack": 35,
         "melee_armor": 0,
         "pierce_armor": 6,
         "hit_points": 120,
-        "los": 15
+        "los": 15,
     },
-    "Capped Ram": {
-        "cost": [
-            0,
-            160,
-            75,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": -3,
-        "pierce_armor": 190,
-        "hit_points": 200,
-        "los": 3
-    },
-    "Charles Martel": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 180,
-        "los": 8
-    },
+    "Capped Ram": {"cost": [0, 160, 75, 0], "attack": 3, "melee_armor": -3, "pierce_armor": 190, "hit_points": 200, "los": 3},
+    "Charles Martel": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 1, "pierce_armor": 0, "hit_points": 180, "los": 8},
     "Francisco de Orellana": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
+        "cost": [60, 0, 70, 0],
         "attack": 22,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 170,
-        "los": 9
+        "los": 9,
     },
-    "Harald Hardrada": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 150,
-        "los": 7
-    },
+    "Harald Hardrada": {"cost": [50, 0, 0, 0], "attack": 13, "melee_armor": 3, "pierce_armor": 3, "hit_points": 150, "los": 7},
     "Gonzalo Pizarro": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
+        "cost": [60, 0, 70, 0],
         "attack": 20,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 150,
-        "los": 9
+        "los": 9,
     },
     "Hrolf the Ganger": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 20,
         "melee_armor": 4,
         "pierce_armor": 4,
         "hit_points": 140,
-        "los": 6
+        "los": 6,
     },
     "Frederick Barbarossa": {
-        "cost": [
-            85,
-            0,
-            40,
-            0
-        ],
+        "cost": [85, 0, 40, 0],
         "attack": 19,
         "melee_armor": 10,
         "pierce_armor": 2,
         "hit_points": 170,
-        "los": 5
+        "los": 5,
     },
-    "Joan the Maid": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 100,
-        "los": 6
-    },
-    "William Wallace": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 5,
-        "pierce_armor": 5,
-        "hit_points": 400,
-        "los": 6
-    },
-    "King": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Prithviraj": {
-        "cost": [
-            0,
-            40,
-            65,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 0,
-        "hit_points": 180,
-        "los": 6
-    },
+    "Joan the Maid": {"cost": [50, 0, 0, 0], "attack": 4, "melee_armor": 1, "pierce_armor": 1, "hit_points": 100, "los": 6},
+    "William Wallace": {"cost": [50, 0, 0, 0], "attack": 20, "melee_armor": 5, "pierce_armor": 5, "hit_points": 400, "los": 6},
+    "King": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Prithviraj": {"cost": [0, 40, 65, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 0, "hit_points": 180, "los": 6},
     "Francesco Sforza": {
-        "cost": [
-            50,
-            0,
-            35,
-            0
-        ],
+        "cost": [50, 0, 35, 0],
         "attack": 12,
         "melee_armor": 1,
         "pierce_armor": 3,
         "hit_points": 200,
-        "los": 6
+        "los": 6,
     },
-    "Petard": {
-        "cost": [
-            65,
-            0,
-            20,
-            0
-        ],
-        "attack": 25,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Hussar": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 75,
-        "los": 4
-    },
-    "Galleon": {
-        "cost": [
-            0,
-            90,
-            30,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 165,
-        "los": 9
-    },
+    "Petard": {"cost": [65, 0, 20, 0], "attack": 25, "melee_armor": 0, "pierce_armor": 2, "hit_points": 50, "los": 4},
+    "Hussar": {"cost": [80, 0, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 2, "hit_points": 75, "los": 4},
+    "Galleon": {"cost": [0, 90, 30, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 8, "hit_points": 165, "los": 9},
     "Town Center (Packed)": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 100,
         "hit_points": 1950,
-        "los": 6
+        "los": 6,
     },
     "Poenari Castle": {
-        "cost": [
-            0,
-            0,
-            0,
-            1200
-        ],
+        "cost": [0, 0, 0, 1200],
         "attack": 13,
         "melee_armor": 8,
         "pierce_armor": 11,
         "hit_points": 6000,
-        "los": 11
+        "los": 11,
     },
-    "Port": {
-        "cost": [
-            0,
-            800,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 100,
-        "hit_points": 600,
-        "los": 8
-    },
-    "Scout Cavalry": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 45,
-        "los": 4
-    },
-    "Great Fish (Marlin)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Ataulf": {
-        "cost": [
-            80,
-            0,
-            40,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 4,
-        "hit_points": 320,
-        "los": 3
-    },
-    "Fish (Dorado)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Fish (Salmon)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Fish (Tuna)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Fish (Snapper)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Loot": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Port": {"cost": [0, 800, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 100, "hit_points": 600, "los": 8},
+    "Scout Cavalry": {"cost": [80, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 2, "hit_points": 45, "los": 4},
+    "Great Fish (Marlin)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Ataulf": {"cost": [80, 0, 40, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 4, "hit_points": 320, "los": 3},
+    "Fish (Dorado)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Fish (Salmon)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Fish (Tuna)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Fish (Snapper)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Loot": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Two-Handed Swordsman": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
+        "cost": [60, 0, 20, 0],
         "attack": 12,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 60,
-        "los": 5
+        "los": 5,
     },
     "Heavy Cavalry Archer": {
-        "cost": [
-            0,
-            40,
-            60,
-            0
-        ],
+        "cost": [0, 40, 60, 0],
         "attack": 7,
         "melee_armor": 1,
         "pierce_armor": 0,
         "hit_points": 60,
-        "los": 6
+        "los": 6,
     },
-    "Bear": {
-        "cost": [
-            100,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 10
-    },
-    "Arbalester": {
-        "cost": [
-            0,
-            25,
-            45,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 40,
-        "los": 7
-    },
+    "Bear": {"cost": [100, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 10},
+    "Arbalester": {"cost": [0, 25, 45, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 40, "los": 7},
     "Heavy Crossbowman": {
-        "cost": [
-            0,
-            45,
-            45,
-            0
-        ],
+        "cost": [0, 45, 45, 0],
         "attack": 10,
         "melee_armor": 1,
         "pierce_armor": 4,
         "hit_points": 50,
-        "los": 8
+        "los": 8,
     },
-    "Torch A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
+    "Torch A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
     "Demolition Ship": {
-        "cost": [
-            0,
-            70,
-            50,
-            0
-        ],
+        "cost": [0, 70, 50, 0],
         "attack": 110,
         "melee_armor": 0,
         "pierce_armor": 3,
         "hit_points": 60,
-        "los": 6
+        "los": 6,
     },
     "Heavy Demolition Ship": {
-        "cost": [
-            0,
-            70,
-            50,
-            0
-        ],
+        "cost": [0, 70, 50, 0],
         "attack": 140,
         "melee_armor": 0,
         "pierce_armor": 5,
         "hit_points": 70,
-        "los": 6
+        "los": 6,
     },
-    "Fire Ship": {
-        "cost": [
-            0,
-            75,
-            45,
-            0
-        ],
-        "attack": 2,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 120,
-        "los": 5
-    },
-    "Elite Longbowman": {
-        "cost": [
-            0,
-            35,
-            40,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 40,
-        "los": 8
-    },
+    "Fire Ship": {"cost": [0, 75, 45, 0], "attack": 2, "melee_armor": 0, "pierce_armor": 6, "hit_points": 120, "los": 5},
+    "Elite Longbowman": {"cost": [0, 35, 40, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 1, "hit_points": 40, "los": 8},
     "Elite Throwing Axeman": {
-        "cost": [
-            55,
-            0,
-            25,
-            0
-        ],
+        "cost": [55, 0, 25, 0],
         "attack": 8,
         "melee_armor": 1,
         "pierce_armor": 0,
         "hit_points": 70,
-        "los": 6
+        "los": 6,
     },
-    "Fast Fire Ship": {
-        "cost": [
-            0,
-            75,
-            45,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 140,
-        "los": 6
-    },
-    "Elite Longboat": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 160,
-        "los": 9
-    },
+    "Fast Fire Ship": {"cost": [0, 75, 45, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 8, "hit_points": 140, "los": 6},
+    "Elite Longboat": {"cost": [0, 100, 50, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 8, "hit_points": 160, "los": 9},
     "Elite Woad Raider": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
+        "cost": [65, 0, 25, 0],
         "attack": 13,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 80,
-        "los": 5
+        "los": 5,
     },
-    "Galley": {
-        "cost": [
-            0,
-            90,
-            30,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 120,
-        "los": 7
-    },
-    "Heavy Scorpion": {
-        "cost": [
-            0,
-            75,
-            75,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 50,
-        "los": 9
-    },
-    "Transport Ship": {
-        "cost": [
-            0,
-            125,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 4,
-        "pierce_armor": 8,
-        "hit_points": 100,
-        "los": 5
-    },
-    "Light Cavalry": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 60,
-        "los": 4
-    },
-    "Siege Ram": {
-        "cost": [
-            0,
-            160,
-            75,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": -3,
-        "pierce_armor": 195,
-        "hit_points": 270,
-        "los": 3
-    },
-    "Onager": {
-        "cost": [
-            0,
-            160,
-            135,
-            0
-        ],
-        "attack": 50,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 60,
-        "los": 10
-    },
+    "Galley": {"cost": [0, 90, 30, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 6, "hit_points": 120, "los": 7},
+    "Heavy Scorpion": {"cost": [0, 75, 75, 0], "attack": 16, "melee_armor": 0, "pierce_armor": 8, "hit_points": 50, "los": 9},
+    "Transport Ship": {"cost": [0, 125, 0, 0], "attack": 0, "melee_armor": 4, "pierce_armor": 8, "hit_points": 100, "los": 5},
+    "Light Cavalry": {"cost": [80, 0, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 2, "hit_points": 60, "los": 4},
+    "Siege Ram": {"cost": [0, 160, 75, 0], "attack": 4, "melee_armor": -3, "pierce_armor": 195, "hit_points": 270, "los": 3},
+    "Onager": {"cost": [0, 160, 135, 0], "attack": 50, "melee_armor": 0, "pierce_armor": 7, "hit_points": 60, "los": 10},
     "Elite Cataphract": {
-        "cost": [
-            70,
-            0,
-            75,
-            0
-        ],
+        "cost": [70, 0, 75, 0],
         "attack": 12,
         "melee_armor": 2,
         "pierce_armor": 1,
         "hit_points": 150,
-        "los": 5
+        "los": 5,
     },
     "Elite Teutonic Knight": {
-        "cost": [
-            85,
-            0,
-            40,
-            0
-        ],
+        "cost": [85, 0, 40, 0],
         "attack": 17,
         "melee_armor": 10,
         "pierce_armor": 2,
         "hit_points": 100,
-        "los": 5
+        "los": 5,
     },
-    "Elite Huskarl": {
-        "cost": [
-            80,
-            0,
-            40,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 70,
-        "los": 5
-    },
-    "Elite Mameluke": {
-        "cost": [
-            55,
-            0,
-            85,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 80,
-        "los": 5
-    },
+    "Elite Huskarl": {"cost": [80, 0, 40, 0], "attack": 12, "melee_armor": 0, "pierce_armor": 8, "hit_points": 70, "los": 5},
+    "Elite Mameluke": {"cost": [55, 0, 85, 0], "attack": 10, "melee_armor": 1, "pierce_armor": 0, "hit_points": 80, "los": 5},
     "Elite Janissary": {
-        "cost": [
-            60,
-            0,
-            55,
-            0
-        ],
+        "cost": [60, 0, 55, 0],
         "attack": 22,
         "melee_armor": 2,
         "pierce_armor": 0,
         "hit_points": 40,
-        "los": 10
+        "los": 10,
     },
     "Elite War Elephant": {
-        "cost": [
-            170,
-            0,
-            85,
-            0
-        ],
+        "cost": [170, 0, 85, 0],
         "attack": 20,
         "melee_armor": 1,
         "pierce_armor": 3,
         "hit_points": 600,
-        "los": 5
+        "los": 5,
     },
-    "Elite Chu Ko Nu": {
-        "cost": [
-            0,
-            40,
-            35,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 6
-    },
-    "Elite Samurai": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 80,
-        "los": 5
-    },
-    "Elite Mangudai": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 60,
-        "los": 6
-    },
-    "Lumber Camp": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 1000,
-        "los": 6
-    },
-    "Champion": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 70,
-        "los": 5
-    },
-    "Paladin": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 3,
-        "hit_points": 160,
-        "los": 5
-    },
-    "Gold Miner": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Genitour": {
-        "cost": [
-            40,
-            35,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 50,
-        "los": 5
-    },
-    "Mining Camp": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 1000,
-        "los": 6
-    },
-    "Siege Onager": {
-        "cost": [
-            0,
-            160,
-            135,
-            0
-        ],
-        "attack": 75,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 70,
-        "los": 10
-    },
-    "Shepherd": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 4
-    },
-    "Sheep": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 7,
-        "los": 3
-    },
-    "Elite Genitour": {
-        "cost": [
-            40,
-            35,
-            0,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 55,
-        "los": 6
-    },
-    "Outpost": {
-        "cost": [
-            0,
-            25,
-            0,
-            5
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Cathedral": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 2000,
-        "los": 8
-    },
-    "Flag A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag D": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag E": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Bridge A--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 6
-    },
+    "Elite Chu Ko Nu": {"cost": [0, 40, 35, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 6},
+    "Elite Samurai": {"cost": [60, 0, 30, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 1, "hit_points": 80, "los": 5},
+    "Elite Mangudai": {"cost": [0, 55, 65, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 0, "hit_points": 60, "los": 6},
+    "Lumber Camp": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 1000, "los": 6},
+    "Champion": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 1, "pierce_armor": 1, "hit_points": 70, "los": 5},
+    "Paladin": {"cost": [60, 0, 75, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 3, "hit_points": 160, "los": 5},
+    "Gold Miner": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Genitour": {"cost": [40, 35, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 4, "hit_points": 50, "los": 5},
+    "Mining Camp": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 1000, "los": 6},
+    "Siege Onager": {"cost": [0, 160, 135, 0], "attack": 75, "melee_armor": 0, "pierce_armor": 8, "hit_points": 70, "los": 10},
+    "Shepherd": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 4},
+    "Sheep": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 7, "los": 3},
+    "Elite Genitour": {"cost": [40, 35, 0, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 4, "hit_points": 55, "los": 6},
+    "Outpost": {"cost": [0, 25, 0, 5], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Cathedral": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 2000, "los": 8},
+    "Flag A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag D": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag E": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Bridge A--Top": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 6},
     "Bridge A--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge A--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Bridge B--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 6
-    },
+    "Bridge B--Top": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 6},
     "Bridge B--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge B--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Rock 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Pavilion A": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Pavilion C": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 4
-    },
-    "Pavilion B": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 4
-    },
-    "Joan of Arc": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 17,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 200,
-        "los": 6
-    },
+    "Rock 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Pavilion A": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Pavilion C": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 4},
+    "Pavilion B": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 4},
+    "Joan of Arc": {"cost": [50, 0, 0, 0], "attack": 17, "melee_armor": 2, "pierce_armor": 2, "hit_points": 200, "los": 6},
     "Frankish Paladin": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 15,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 175,
-        "los": 6
+        "los": 6,
     },
-    "Sieur de Metz": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 120,
-        "los": 4
-    },
-    "Sieur Bertrand": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 120,
-        "los": 4
-    },
+    "Sieur de Metz": {"cost": [70, 0, 60, 0], "attack": 15, "melee_armor": 2, "pierce_armor": 2, "hit_points": 120, "los": 4},
+    "Sieur Bertrand": {"cost": [70, 0, 60, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 120, "los": 4},
     "Temple of Heaven": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 2800,
-        "los": 8
+        "los": 8,
     },
     "Duke D'Alen\u00e7on": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
+        "cost": [70, 0, 60, 0],
         "attack": 16,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 150,
-        "los": 5
+        "los": 5,
     },
-    "Penguin": {
-        "cost": [
-            512,
-            0,
-            0,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 4,
-        "pierce_armor": 4,
-        "hit_points": 64,
-        "los": 6
-    },
-    "La Hire": {
-        "cost": [
-            50,
-            0,
-            10,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 200,
-        "los": 4
-    },
-    "Lord de Graville": {
-        "cost": [
-            0,
-            25,
-            40,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 60,
-        "los": 6
-    },
+    "Penguin": {"cost": [512, 0, 0, 0], "attack": 16, "melee_armor": 4, "pierce_armor": 4, "hit_points": 64, "los": 6},
+    "La Hire": {"cost": [50, 0, 10, 0], "attack": 18, "melee_armor": 2, "pierce_armor": 1, "hit_points": 200, "los": 4},
+    "Lord de Graville": {"cost": [0, 25, 40, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 0, "hit_points": 60, "los": 6},
     "Jean de Lorrain": {
-        "cost": [
-            0,
-            125,
-            125,
-            0
-        ],
+        "cost": [0, 125, 125, 0],
         "attack": 100,
         "melee_armor": 5,
         "pierce_armor": 10,
         "hit_points": 75,
-        "los": 16
+        "los": 16,
     },
     "Constable Richemont": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
+        "cost": [70, 0, 60, 0],
         "attack": 15,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 250,
-        "los": 4
+        "los": 4,
     },
-    "Guy Josselyne": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 190,
-        "los": 4
-    },
-    "Jean Bureau": {
-        "cost": [
-            0,
-            125,
-            125,
-            0
-        ],
-        "attack": 40,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 60,
-        "los": 12
-    },
+    "Guy Josselyne": {"cost": [70, 0, 60, 0], "attack": 14, "melee_armor": 3, "pierce_armor": 3, "hit_points": 190, "los": 4},
+    "Jean Bureau": {"cost": [0, 125, 125, 0], "attack": 40, "melee_armor": 0, "pierce_armor": 2, "hit_points": 60, "los": 12},
     "Sir John Fastolf": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
+        "cost": [70, 0, 60, 0],
         "attack": 17,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 200,
-        "los": 4
+        "los": 4,
     },
-    "Mosque": {
-        "cost": [
-            0,
-            500,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 1000,
-        "pierce_armor": 0,
-        "hit_points": 600,
-        "los": 8
-    },
-    "Gate (hori.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
-        "attack": 0,
-        "melee_armor": 6,
-        "pierce_armor": 6,
-        "hit_points": 1375,
-        "los": 6
-    },
+    "Mosque": {"cost": [0, 500, 0, 0], "attack": 0, "melee_armor": 1000, "pierce_armor": 0, "hit_points": 600, "los": 8},
+    "Gate (hori.)": {"cost": [0, 0, 0, 30], "attack": 0, "melee_armor": 6, "pierce_armor": 6, "hit_points": 1375, "los": 6},
     "Fortified Gate (hori.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
+        "cost": [0, 0, 0, 30],
         "attack": 0,
         "melee_armor": 6,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 6
+        "los": 6,
     },
-    "Gate (vert.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
-        "attack": 0,
-        "melee_armor": 6,
-        "pierce_armor": 6,
-        "hit_points": 1375,
-        "los": 6
-    },
+    "Gate (vert.)": {"cost": [0, 0, 0, 30], "attack": 0, "melee_armor": 6, "pierce_armor": 6, "hit_points": 1375, "los": 6},
     "Fortified Gate (vert.)": {
-        "cost": [
-            0,
-            0,
-            0,
-            30
-        ],
+        "cost": [0, 0, 0, 30],
         "attack": 0,
         "melee_armor": 6,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 6
+        "los": 6,
     },
     "Reynald de Chatillon": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 16,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 250,
-        "los": 6
+        "los": 6,
     },
     "Master of the Templar": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 15,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 250,
-        "los": 6
+        "los": 6,
     },
     "Bad Neighbor": {
-        "cost": [
-            0,
-            250,
-            125,
-            0
-        ],
+        "cost": [0, 250, 125, 0],
         "attack": 200,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 300,
-        "los": 21
+        "los": 21,
     },
     "God's Own Sling": {
-        "cost": [
-            0,
-            250,
-            125,
-            0
-        ],
+        "cost": [0, 250, 125, 0],
         "attack": 200,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 300,
-        "los": 21
+        "los": 21,
     },
     "The Accursed Tower": {
-        "cost": [
-            0,
-            0,
-            0,
-            150
-        ],
+        "cost": [0, 0, 0, 150],
         "attack": 8,
         "melee_armor": 4,
         "pierce_armor": 7,
         "hit_points": 3500,
-        "los": 14
+        "los": 14,
     },
     "The Tower of Flies": {
-        "cost": [
-            0,
-            0,
-            0,
-            150
-        ],
+        "cost": [0, 0, 0, 150],
         "attack": 8,
         "melee_armor": 4,
         "pierce_armor": 7,
         "hit_points": 1900,
-        "los": 7
+        "los": 7,
     },
     "Archer of the Eyes": {
-        "cost": [
-            0,
-            30,
-            30,
-            0
-        ],
+        "cost": [0, 30, 30, 0],
         "attack": 7,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 55,
-        "los": 6
+        "los": 6,
     },
     "Piece of the True Cross": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 30,
-        "los": 7
+        "los": 7,
     },
     "Pyramid": {
-        "cost": [
-            0,
-            1000,
-            2000,
-            1000
-        ],
+        "cost": [0, 1000, 2000, 1000],
         "attack": 0,
         "melee_armor": 100,
         "pierce_armor": 100,
         "hit_points": 8000,
-        "los": 8
+        "los": 8,
     },
     "Dome of the Rock": {
-        "cost": [
-            0,
-            1000,
-            2000,
-            1000
-        ],
+        "cost": [0, 1000, 2000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 8
+        "los": 8,
     },
     "Elite Cannon Galleon": {
-        "cost": [
-            0,
-            200,
-            150,
-            0
-        ],
+        "cost": [0, 200, 150, 0],
         "attack": 45,
         "melee_armor": 0,
         "pierce_armor": 8,
         "hit_points": 150,
-        "los": 17
+        "los": 17,
     },
-    "Berserk": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 54,
-        "los": 3
-    },
-    "Elite Berserk": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 62,
-        "los": 5
-    },
+    "Berserk": {"cost": [65, 0, 25, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 1, "hit_points": 54, "los": 3},
+    "Elite Berserk": {"cost": [65, 0, 25, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 1, "hit_points": 62, "los": 5},
     "Great Pyramid": {
-        "cost": [
-            0,
-            1000,
-            2000,
-            1000
-        ],
+        "cost": [0, 1000, 2000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 8
+        "los": 8,
     },
-    "Subotai": {
-        "cost": [
-            0,
-            40,
-            50,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 250,
-        "los": 6
-    },
-    "Hunting Wolf": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 100,
-        "los": 3
-    },
-    "Kushluk": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
-        "attack": 17,
-        "melee_armor": 4,
-        "pierce_armor": 2,
-        "hit_points": 275,
-        "los": 4
-    },
-    "Topa Yupanqui": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 250,
-        "los": 6
-    },
-    "Shah": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Cow A": {
-        "cost": [
-            35,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 14,
-        "los": 3
-    },
-    "Saboteur": {
-        "cost": [
-            0,
-            70,
-            50,
-            0
-        ],
-        "attack": 100,
-        "melee_armor": 1,
-        "pierce_armor": 3,
-        "hit_points": 45,
-        "los": 6
-    },
-    "Ornlu the Wolf": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 400,
-        "los": 3
-    },
-    "Cactus": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Skeleton": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Rugs": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Yurt A": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt B": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt C": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt D": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt E": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt F": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt G": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Yurt H": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Nine Bands": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Shipwreck A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Shipwreck B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Crater": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Jaguar Warrior": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 65,
-        "los": 3
-    },
+    "Subotai": {"cost": [0, 40, 50, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 250, "los": 6},
+    "Hunting Wolf": {"cost": [50, 0, 0, 0], "attack": 8, "melee_armor": 2, "pierce_armor": 2, "hit_points": 100, "los": 3},
+    "Kushluk": {"cost": [60, 0, 70, 0], "attack": 17, "melee_armor": 4, "pierce_armor": 2, "hit_points": 275, "los": 4},
+    "Topa Yupanqui": {"cost": [60, 0, 30, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 2, "hit_points": 250, "los": 6},
+    "Shah": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Cow A": {"cost": [35, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 14, "los": 3},
+    "Saboteur": {"cost": [0, 70, 50, 0], "attack": 100, "melee_armor": 1, "pierce_armor": 3, "hit_points": 45, "los": 6},
+    "Ornlu the Wolf": {"cost": [50, 0, 0, 0], "attack": 20, "melee_armor": 0, "pierce_armor": 2, "hit_points": 400, "los": 3},
+    "Cactus": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Skeleton": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Rugs": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Yurt A": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt B": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt C": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt D": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt E": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt F": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt G": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Yurt H": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Nine Bands": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Shipwreck A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Shipwreck B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Crater": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Jaguar Warrior": {"cost": [60, 0, 30, 0], "attack": 10, "melee_armor": 1, "pierce_armor": 1, "hit_points": 65, "los": 3},
     "Elite Jaguar Warrior": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
+        "cost": [60, 0, 30, 0],
         "attack": 12,
         "melee_armor": 2,
         "pierce_armor": 1,
         "hit_points": 75,
-        "los": 5
+        "los": 5,
     },
-    "Ice, Navigable": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Ice, Navigable": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "God's Own Sling (Packed)": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 1,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 150,
-        "los": 18
+        "los": 18,
     },
     "Bad Neighbor (Packed)": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 1,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 150,
-        "los": 18
+        "los": 18,
     },
-    "Genghis Khan": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 25,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 300,
-        "los": 4
-    },
+    "Genghis Khan": {"cost": [0, 55, 65, 0], "attack": 25, "melee_armor": 2, "pierce_armor": 2, "hit_points": 300, "los": 4},
     "Emperor in a Barrel": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
+        "cost": [0, 100, 50, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 100,
-        "los": 7
+        "los": 7,
     },
-    "Bamboo Stump": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
+    "Bamboo Stump": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
     "Bridge A--Cracked": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge A--Broken Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge A--Broken Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge B--Cracked": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge B--Broken Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge B--Broken Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Mountain 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Mountain 4": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Cobra Car": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 10,
-        "pierce_armor": 10,
-        "hit_points": 500,
-        "los": 12
-    },
-    "Cusi Yupanqui": {
-        "cost": [
-            20,
-            0,
-            50,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 3,
-        "hit_points": 255,
-        "los": 7
-    },
-    "Eagle Scout": {
-        "cost": [
-            20,
-            0,
-            50,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 50,
-        "los": 5
-    },
+    "Mountain 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Mountain 4": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Cobra Car": {"cost": [0, 0, 0, 0], "attack": 10, "melee_armor": 10, "pierce_armor": 10, "hit_points": 500, "los": 12},
+    "Cusi Yupanqui": {"cost": [20, 0, 50, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 3, "hit_points": 255, "los": 7},
+    "Eagle Scout": {"cost": [20, 0, 50, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 2, "hit_points": 50, "los": 5},
     "Elite Eagle Warrior": {
-        "cost": [
-            20,
-            0,
-            50,
-            0
-        ],
+        "cost": [20, 0, 50, 0],
         "attack": 9,
         "melee_armor": 0,
         "pierce_armor": 4,
         "hit_points": 60,
-        "los": 6
+        "los": 6,
     },
-    "Eagle Warrior": {
-        "cost": [
-            20,
-            0,
-            50,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 3,
-        "hit_points": 55,
-        "los": 6
-    },
-    "Tarkan": {
-        "cost": [
-            60,
-            0,
-            60,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 3,
-        "hit_points": 100,
-        "los": 5
-    },
-    "Elite Tarkan": {
-        "cost": [
-            60,
-            0,
-            60,
-            0
-        ],
-        "attack": 11,
-        "melee_armor": 1,
-        "pierce_armor": 4,
-        "hit_points": 150,
-        "los": 7
-    },
-    "Burned building": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plumed Archer": {
-        "cost": [
-            0,
-            55,
-            55,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 50,
-        "los": 6
-    },
+    "Eagle Warrior": {"cost": [20, 0, 50, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 3, "hit_points": 55, "los": 6},
+    "Tarkan": {"cost": [60, 0, 60, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 3, "hit_points": 100, "los": 5},
+    "Elite Tarkan": {"cost": [60, 0, 60, 0], "attack": 11, "melee_armor": 1, "pierce_armor": 4, "hit_points": 150, "los": 7},
+    "Burned building": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plumed Archer": {"cost": [0, 55, 55, 0], "attack": 5, "melee_armor": 0, "pierce_armor": 1, "hit_points": 50, "los": 6},
     "Elite Plumed Archer": {
-        "cost": [
-            0,
-            55,
-            55,
-            0
-        ],
+        "cost": [0, 55, 55, 0],
         "attack": 5,
         "melee_armor": 0,
         "pierce_armor": 2,
         "hit_points": 65,
-        "los": 6
+        "los": 6,
     },
-    "Conquistador": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 55,
-        "los": 8
-    },
+    "Conquistador": {"cost": [60, 0, 70, 0], "attack": 16, "melee_armor": 2, "pierce_armor": 2, "hit_points": 55, "los": 8},
     "Elite Conquistador": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
+        "cost": [60, 0, 70, 0],
         "attack": 18,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 70,
-        "los": 9
+        "los": 9,
     },
-    "Missionary": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 9
-    },
-    "Attila the Hun": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 350,
-        "los": 5
-    },
-    "Canoe": {
-        "cost": [
-            0,
-            60,
-            20,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 70,
-        "los": 8
-    },
-    "Bleda the Hun": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 210,
-        "los": 5
-    },
-    "Pope Leo I": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 4,
-        "hit_points": 60,
-        "los": 11
-    },
+    "Missionary": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 9},
+    "Attila the Hun": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 2, "pierce_armor": 2, "hit_points": 350, "los": 5},
+    "Canoe": {"cost": [0, 60, 20, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 6, "hit_points": 70, "los": 8},
+    "Bleda the Hun": {"cost": [60, 0, 20, 0], "attack": 13, "melee_armor": 2, "pierce_armor": 2, "hit_points": 210, "los": 5},
+    "Pope Leo I": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 4, "hit_points": 60, "los": 11},
     "Scythian Wild Woman": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 4,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 100,
-        "los": 6
+        "los": 6,
     },
-    "Sea Tower": {
-        "cost": [
-            0,
-            100,
-            0,
-            100
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 500,
-        "los": 10
-    },
-    "Sea Wall": {
-        "cost": [
-            0,
-            5,
-            0,
-            5
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 300,
-        "los": 2
-    },
+    "Sea Tower": {"cost": [0, 100, 0, 100], "attack": 7, "melee_armor": 0, "pierce_armor": 6, "hit_points": 500, "los": 10},
+    "Sea Wall": {"cost": [0, 5, 0, 5], "attack": 0, "melee_armor": 0, "pierce_armor": 6, "hit_points": 300, "los": 2},
     "Palisade Gate (up.)": {
-        "cost": [
-            0,
-            30,
-            0,
-            0
-        ],
+        "cost": [0, 30, 0, 0],
         "attack": 0,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 240,
-        "los": 6
+        "los": 6,
     },
-    "Palisade Gate": {
-        "cost": [
-            0,
-            30,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 0,
-        "hit_points": 240,
-        "los": 6
-    },
+    "Palisade Gate": {"cost": [0, 30, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 0, "hit_points": 240, "los": 6},
     "Palisade Gate (down.)": {
-        "cost": [
-            0,
-            30,
-            0,
-            0
-        ],
+        "cost": [0, 30, 0, 0],
         "attack": 0,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 240,
-        "los": 6
+        "los": 6,
     },
     "Palisade Gate (hori.)": {
-        "cost": [
-            0,
-            30,
-            0,
-            0
-        ],
+        "cost": [0, 30, 0, 0],
         "attack": 0,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 240,
-        "los": 6
+        "los": 6,
     },
     "Palisade Gate (vert.)": {
-        "cost": [
-            0,
-            30,
-            0,
-            0
-        ],
+        "cost": [0, 30, 0, 0],
         "attack": 0,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 240,
-        "los": 6
+        "los": 6,
     },
-    "Iron Boar": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 350,
-        "los": 4
-    },
-    "Jaguar": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
-    "Horse A": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Macaw": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
-    "Plant": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Sign": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Grave": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Head": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Javelina": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 4
-    },
+    "Iron Boar": {"cost": [0, 0, 0, 0], "attack": 12, "melee_armor": 3, "pierce_armor": 3, "hit_points": 350, "los": 4},
+    "Jaguar": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
+    "Horse A": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
+    "Macaw": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
+    "Plant": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Sign": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Grave": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Head": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Javelina": {"cost": [0, 0, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 4},
     "El Cid Campeador": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 15,
         "melee_armor": 2,
         "pierce_armor": 3,
         "hit_points": 430,
-        "los": 6
+        "los": 6,
     },
-    "Amazon Warrior": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 45,
-        "los": 3
-    },
+    "Amazon Warrior": {"cost": [60, 0, 30, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 0, "hit_points": 45, "los": 3},
     "Monument": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 1000,
         "pierce_armor": 0,
         "hit_points": 9999,
-        "los": 4
+        "los": 4,
     },
-    "War Wagon": {
-        "cost": [
-            0,
-            125,
-            60,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 0,
-        "pierce_armor": 3,
-        "hit_points": 150,
-        "los": 7
-    },
+    "War Wagon": {"cost": [0, 125, 60, 0], "attack": 9, "melee_armor": 0, "pierce_armor": 3, "hit_points": 150, "los": 7},
     "Elite War Wagon": {
-        "cost": [
-            0,
-            125,
-            60,
-            0
-        ],
+        "cost": [0, 125, 60, 0],
         "attack": 9,
         "melee_armor": 0,
         "pierce_armor": 4,
         "hit_points": 200,
-        "los": 8
+        "los": 8,
     },
-    "Turtle Ship": {
-        "cost": [
-            0,
-            190,
-            180,
-            0
-        ],
-        "attack": 50,
-        "melee_armor": 6,
-        "pierce_armor": 5,
-        "hit_points": 200,
-        "los": 8
-    },
+    "Turtle Ship": {"cost": [0, 190, 180, 0], "attack": 50, "melee_armor": 6, "pierce_armor": 5, "hit_points": 200, "los": 8},
     "Elite Turtle Ship": {
-        "cost": [
-            0,
-            190,
-            180,
-            0
-        ],
+        "cost": [0, 190, 180, 0],
         "attack": 50,
         "melee_armor": 8,
         "pierce_armor": 6,
         "hit_points": 300,
-        "los": 8
+        "los": 8,
     },
-    "Turkey": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 7,
-        "los": 3
-    },
-    "Wild Horse": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 5,
-        "los": 2
-    },
-    "Map Revealer": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "King Sancho": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Rock (Stone)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 200,
-        "los": 0
-    },
-    "King Alfonso": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Rock (Gold)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 200,
-        "los": 0
-    },
-    "Imam": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 4,
-        "pierce_armor": 4,
-        "hit_points": 45,
-        "los": 11
-    },
+    "Turkey": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 7, "los": 3},
+    "Wild Horse": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 5, "los": 2},
+    "Map Revealer": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "King Sancho": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Rock (Stone)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 200, "los": 0},
+    "King Alfonso": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Rock (Gold)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 200, "los": 0},
+    "Imam": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 4, "pierce_armor": 4, "hit_points": 45, "los": 11},
     "Admiral Yi Sun-shin": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 75,
         "melee_armor": 6,
         "pierce_armor": 6,
         "hit_points": 600,
-        "los": 12
+        "los": 12,
     },
-    "Nobunaga": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 190,
-        "los": 4
-    },
-    "Donkey": {
-        "cost": [
-            100,
-            0,
-            50,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 70,
-        "los": 6
-    },
-    "Henry V": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 5,
-        "pierce_armor": 4,
-        "hit_points": 240,
-        "los": 5
-    },
+    "Nobunaga": {"cost": [60, 0, 30, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 0, "hit_points": 190, "los": 4},
+    "Donkey": {"cost": [100, 0, 50, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 70, "los": 6},
+    "Henry V": {"cost": [60, 0, 75, 0], "attack": 16, "melee_armor": 5, "pierce_armor": 4, "hit_points": 240, "los": 5},
     "William the Conqueror": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 15,
         "melee_armor": 4,
         "pierce_armor": 4,
         "hit_points": 250,
-        "los": 6
+        "los": 6,
     },
-    "Amazon Archer": {
-        "cost": [
-            0,
-            50,
-            50,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 45,
-        "los": 6
-    },
-    "ES Flag": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Scythian Scout": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 8,
-        "hit_points": 90,
-        "los": 4
-    },
+    "Amazon Archer": {"cost": [0, 50, 50, 0], "attack": 5, "melee_armor": 0, "pierce_armor": 1, "hit_points": 45, "los": 6},
+    "ES Flag": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Scythian Scout": {"cost": [80, 0, 0, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 8, "hit_points": 90, "los": 4},
     "Torch A (Convertable)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 4
+        "los": 4,
     },
-    "Old Stone Head": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Roman Ruins": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Hay Stack": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Broken Cart": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Flower Bed": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Old Stone Head": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Roman Ruins": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Hay Stack": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Broken Cart": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Flower Bed": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Furious the Monkey Boy": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 99,
         "melee_armor": 99,
         "pierce_armor": 99,
         "hit_points": 9,
-        "los": 12
+        "los": 12,
     },
-    "Stormy Dog": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
+    "Stormy Dog": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
     "Genoese Crossbowman": {
-        "cost": [
-            0,
-            45,
-            40,
-            0
-        ],
+        "cost": [0, 45, 40, 0],
         "attack": 6,
         "melee_armor": 1,
         "pierce_armor": 0,
         "hit_points": 45,
-        "los": 8
+        "los": 8,
     },
     "Elite Genoese Crossbowman": {
-        "cost": [
-            0,
-            45,
-            40,
-            0
-        ],
+        "cost": [0, 45, 40, 0],
         "attack": 6,
         "melee_armor": 1,
         "pierce_armor": 0,
         "hit_points": 50,
-        "los": 8
+        "los": 8,
     },
-    "Magyar Huszar": {
-        "cost": [
-            80,
-            0,
-            10,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 70,
-        "los": 5
-    },
+    "Magyar Huszar": {"cost": [80, 0, 10, 0], "attack": 9, "melee_armor": 0, "pierce_armor": 2, "hit_points": 70, "los": 5},
     "Elite Magyar Huszar": {
-        "cost": [
-            80,
-            0,
-            10,
-            0
-        ],
+        "cost": [80, 0, 10, 0],
         "attack": 10,
         "melee_armor": 0,
         "pierce_armor": 2,
         "hit_points": 85,
-        "los": 6
+        "los": 6,
     },
     "Quimper Cathedral": {
-        "cost": [
-            0,
-            1000,
-            2000,
-            1000
-        ],
+        "cost": [0, 1000, 2000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 8
+        "los": 8,
     },
-    "Elephant Archer": {
-        "cost": [
-            90,
-            0,
-            70,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 230,
-        "los": 7
-    },
+    "Elephant Archer": {"cost": [90, 0, 70, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 2, "hit_points": 230, "los": 7},
     "Elite Elephant Archer": {
-        "cost": [
-            90,
-            0,
-            70,
-            0
-        ],
+        "cost": [90, 0, 70, 0],
         "attack": 7,
         "melee_armor": 0,
         "pierce_armor": 2,
         "hit_points": 280,
-        "los": 7
+        "los": 7,
     },
-    "Boyar": {
-        "cost": [
-            50,
-            0,
-            80,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 4,
-        "pierce_armor": 2,
-        "hit_points": 100,
-        "los": 5
-    },
-    "Elite Boyar": {
-        "cost": [
-            50,
-            0,
-            80,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 8,
-        "pierce_armor": 3,
-        "hit_points": 130,
-        "los": 5
-    },
-    "Kamayuk": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 70,
-        "los": 4
-    },
-    "Elite Kamayuk": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 80,
-        "los": 5
-    },
-    "Wild Camel": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 5,
-        "los": 2
-    },
+    "Boyar": {"cost": [50, 0, 80, 0], "attack": 12, "melee_armor": 4, "pierce_armor": 2, "hit_points": 100, "los": 5},
+    "Elite Boyar": {"cost": [50, 0, 80, 0], "attack": 14, "melee_armor": 8, "pierce_armor": 3, "hit_points": 130, "los": 5},
+    "Kamayuk": {"cost": [60, 0, 30, 0], "attack": 7, "melee_armor": 1, "pierce_armor": 0, "hit_points": 70, "los": 4},
+    "Elite Kamayuk": {"cost": [60, 0, 30, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 0, "hit_points": 80, "los": 5},
+    "Wild Camel": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 5, "los": 2},
     "Siege Tower": {
-        "cost": [
-            0,
-            200,
-            160,
-            0
-        ],
+        "cost": [0, 200, 160, 0],
         "attack": 0,
         "melee_armor": -2,
         "pierce_armor": 100,
         "hit_points": 220,
-        "los": 8
+        "los": 8,
     },
-    "Heavy Pikeman": {
-        "cost": [
-            35,
-            25,
-            0,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 4
-    },
+    "Heavy Pikeman": {"cost": [35, 25, 0, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 4},
     "Eastern Swordsman": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
+        "cost": [60, 0, 20, 0],
         "attack": 9,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 60,
-        "los": 4
+        "los": 4,
     },
-    "Waterfall (Overlay)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Camel": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
+    "Waterfall (Overlay)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Camel": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
     "Arch of Constantine": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
-    "Rain": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Flag F": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Smoke": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
+    "Rain": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Flag F": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Smoke": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
     "Wooden Bridge A--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Wooden Bridge A--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Wooden Bridge A--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Wooden Bridge B--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Wooden Bridge B--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Wooden Bridge B--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Impaled Corpse": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 2
-    },
-    "Quarry": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Lumber": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Goods": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Vulture": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
-    "Rock 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Queen": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Sanyogita": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Prithvi": {
-        "cost": [
-            0,
-            25,
-            45,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 90,
-        "los": 7
-    },
-    "Chand Bardai": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 4,
-        "pierce_armor": 4,
-        "hit_points": 70,
-        "los": 8
-    },
-    "Saladin": {
-        "cost": [
-            55,
-            0,
-            85,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 150,
-        "los": 5
-    },
-    "Khosrau": {
-        "cost": [
-            110,
-            0,
-            80,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 370,
-        "los": 7
-    },
-    "Jarl": {
-        "cost": [
-            60,
-            0,
-            60,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 140,
-        "los": 7
-    },
+    "Impaled Corpse": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 2},
+    "Quarry": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Lumber": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Goods": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Vulture": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
+    "Rock 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Queen": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Sanyogita": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Prithvi": {"cost": [0, 25, 45, 0], "attack": 7, "melee_armor": 1, "pierce_armor": 0, "hit_points": 90, "los": 7},
+    "Chand Bardai": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 4, "pierce_armor": 4, "hit_points": 70, "los": 8},
+    "Saladin": {"cost": [55, 0, 85, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 0, "hit_points": 150, "los": 5},
+    "Khosrau": {"cost": [110, 0, 80, 0], "attack": 14, "melee_armor": 0, "pierce_armor": 4, "hit_points": 370, "los": 7},
+    "Jarl": {"cost": [60, 0, 60, 0], "attack": 18, "melee_armor": 1, "pierce_armor": 1, "hit_points": 140, "los": 7},
     "Sogdian Cataphract": {
-        "cost": [
-            75,
-            0,
-            50,
-            0
-        ],
+        "cost": [75, 0, 50, 0],
         "attack": 12,
         "melee_armor": 0,
         "pierce_armor": 5,
         "hit_points": 110,
-        "los": 5
+        "los": 5,
     },
-    "Barrels": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Barrels": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Alfred the Alpaca": {
-        "cost": [
-            512,
-            0,
-            0,
-            0
-        ],
+        "cost": [512, 0, 0, 0],
         "attack": 120,
         "melee_armor": 20,
         "pierce_armor": 20,
         "hit_points": 120,
-        "los": 6
+        "los": 6,
     },
-    "Elephant": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 4
-    },
-    "Dragon Ship": {
-        "cost": [
-            0,
-            180,
-            180,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 2,
-        "pierce_armor": 8,
-        "hit_points": 150,
-        "los": 6
-    },
-    "Flame 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flame 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flame 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flame 4": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Osman": {
-        "cost": [
-            0,
-            40,
-            65,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 180,
-        "los": 6
-    },
-    "Organ Gun": {
-        "cost": [
-            0,
-            80,
-            70,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 2,
-        "pierce_armor": 4,
-        "hit_points": 60,
-        "los": 9
-    },
-    "Elite Organ Gun": {
-        "cost": [
-            0,
-            80,
-            70,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 2,
-        "pierce_armor": 6,
-        "hit_points": 70,
-        "los": 9
-    },
-    "Caravel": {
-        "cost": [
-            0,
-            90,
-            43,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 130,
-        "los": 9
-    },
-    "Elite Caravel": {
-        "cost": [
-            0,
-            90,
-            43,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 8,
-        "hit_points": 150,
-        "los": 9
-    },
-    "Camel Archer": {
-        "cost": [
-            0,
-            50,
-            60,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 55,
-        "los": 5
-    },
+    "Elephant": {"cost": [0, 0, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 4},
+    "Dragon Ship": {"cost": [0, 180, 180, 0], "attack": 4, "melee_armor": 2, "pierce_armor": 8, "hit_points": 150, "los": 6},
+    "Flame 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flame 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flame 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flame 4": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Osman": {"cost": [0, 40, 65, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 2, "hit_points": 180, "los": 6},
+    "Organ Gun": {"cost": [0, 80, 70, 0], "attack": 16, "melee_armor": 2, "pierce_armor": 4, "hit_points": 60, "los": 9},
+    "Elite Organ Gun": {"cost": [0, 80, 70, 0], "attack": 20, "melee_armor": 2, "pierce_armor": 6, "hit_points": 70, "los": 9},
+    "Caravel": {"cost": [0, 90, 43, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 8, "hit_points": 130, "los": 9},
+    "Elite Caravel": {"cost": [0, 90, 43, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 8, "hit_points": 150, "los": 9},
+    "Camel Archer": {"cost": [0, 50, 60, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 1, "hit_points": 55, "los": 5},
     "Elite Camel Archer": {
-        "cost": [
-            0,
-            50,
-            60,
-            0
-        ],
+        "cost": [0, 50, 60, 0],
         "attack": 8,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 60,
-        "los": 5
+        "los": 5,
     },
-    "Gbeto": {
-        "cost": [
-            50,
-            0,
-            40,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 35,
-        "los": 6
-    },
-    "Elite Gbeto": {
-        "cost": [
-            50,
-            0,
-            40,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 45,
-        "los": 7
-    },
-    "Shotel Warrior": {
-        "cost": [
-            50,
-            0,
-            30,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 45,
-        "los": 3
-    },
+    "Gbeto": {"cost": [50, 0, 40, 0], "attack": 10, "melee_armor": 0, "pierce_armor": 0, "hit_points": 35, "los": 6},
+    "Elite Gbeto": {"cost": [50, 0, 40, 0], "attack": 13, "melee_armor": 0, "pierce_armor": 0, "hit_points": 45, "los": 7},
+    "Shotel Warrior": {"cost": [50, 0, 30, 0], "attack": 16, "melee_armor": 0, "pierce_armor": 0, "hit_points": 45, "los": 3},
     "Elite Shotel Warrior": {
-        "cost": [
-            50,
-            0,
-            30,
-            0
-        ],
+        "cost": [50, 0, 30, 0],
         "attack": 18,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 50,
-        "los": 3
+        "los": 3,
     },
-    "Zebra": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 5,
-        "los": 2
-    },
-    "Feitoria": {
-        "cost": [
-            0,
-            0,
-            250,
-            250
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 2700,
-        "los": 6
-    },
-    "Priest": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 30,
-        "los": 11
-    },
-    "Ostrich": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 5,
-        "los": 2
-    },
-    "Stork": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
-    "Lion": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
-    "Crocodile": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
-    "Grass Patch, Dry": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Zebra": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 5, "los": 2},
+    "Feitoria": {"cost": [0, 0, 250, 250], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 2700, "los": 6},
+    "Priest": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 30, "los": 11},
+    "Ostrich": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 5, "los": 2},
+    "Stork": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
+    "Lion": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
+    "Crocodile": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
+    "Grass Patch, Dry": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Musa ibn Nusayr": {
-        "cost": [
-            0,
-            50,
-            60,
-            0
-        ],
+        "cost": [0, 50, 60, 0],
         "attack": 18,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 230,
-        "los": 5
+        "los": 5,
     },
-    "Sundjata": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 3,
-        "hit_points": 290,
-        "los": 4
-    },
+    "Sundjata": {"cost": [80, 0, 0, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 3, "hit_points": 290, "los": 4},
     "Tariq ibn Ziyad": {
-        "cost": [
-            60,
-            50,
-            0,
-            0
-        ],
+        "cost": [60, 50, 0, 0],
         "attack": 15,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 170,
-        "los": 6
+        "los": 6,
     },
     "Richard de Clare": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
+        "cost": [80, 0, 0, 0],
         "attack": 10,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 200,
-        "los": 4
+        "los": 4,
     },
-    "Tristan": {
-        "cost": [
-            80,
-            0,
-            10,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 140,
-        "los": 6
-    },
-    "Princess Yodit": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Henry II": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 120,
-        "los": 5
-    },
-    "Mountain 5": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Mountain 6": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Mountain 7": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Mountain 8": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Snow Mountain 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Snow Mountain 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Snow Mountain 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Rock Formation 1": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Rock Formation 2": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Rock Formation 3": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Tree (Dragon)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree (Baobab)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Bush B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Bush C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Falcon": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
-    "Fruit Bush": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Goat": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 7,
-        "los": 3
-    },
-    "Fence": {
-        "cost": [
-            0,
-            1,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 5,
-        "hit_points": 1,
-        "los": 2
-    },
-    "Tree (Acacia)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Yekuno Amlak": {
-        "cost": [
-            40,
-            0,
-            20,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 120,
-        "los": 3
-    },
-    "Yodit": {
-        "cost": [
-            50,
-            0,
-            25,
-            0
-        ],
-        "attack": 17,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 170,
-        "los": 6
-    },
-    "Itzcoatl": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 300,
-        "los": 5
-    },
-    "Mustafa Pasha": {
-        "cost": [
-            60,
-            0,
-            55,
-            0
-        ],
-        "attack": 25,
-        "melee_armor": 2,
-        "pierce_armor": 0,
-        "hit_points": 180,
-        "los": 10
-    },
-    "Pacal II": {
-        "cost": [
-            0,
-            50,
-            50,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 190,
-        "los": 6
-    },
-    "Babur": {
-        "cost": [
-            55,
-            0,
-            60,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 300,
-        "los": 5
-    },
+    "Tristan": {"cost": [80, 0, 10, 0], "attack": 14, "melee_armor": 0, "pierce_armor": 2, "hit_points": 140, "los": 6},
+    "Princess Yodit": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Henry II": {"cost": [60, 0, 20, 0], "attack": 16, "melee_armor": 2, "pierce_armor": 2, "hit_points": 120, "los": 5},
+    "Mountain 5": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Mountain 6": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Mountain 7": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Mountain 8": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Snow Mountain 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Snow Mountain 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Snow Mountain 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Rock Formation 1": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Rock Formation 2": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Rock Formation 3": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Tree (Dragon)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree (Baobab)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Bush B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Bush C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Falcon": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
+    "Fruit Bush": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Goat": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 7, "los": 3},
+    "Fence": {"cost": [0, 1, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 5, "hit_points": 1, "los": 2},
+    "Tree (Acacia)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Yekuno Amlak": {"cost": [40, 0, 20, 0], "attack": 20, "melee_armor": 1, "pierce_armor": 1, "hit_points": 120, "los": 3},
+    "Yodit": {"cost": [50, 0, 25, 0], "attack": 17, "melee_armor": 0, "pierce_armor": 0, "hit_points": 170, "los": 6},
+    "Itzcoatl": {"cost": [60, 0, 30, 0], "attack": 18, "melee_armor": 2, "pierce_armor": 1, "hit_points": 300, "los": 5},
+    "Mustafa Pasha": {"cost": [60, 0, 55, 0], "attack": 25, "melee_armor": 2, "pierce_armor": 0, "hit_points": 180, "los": 10},
+    "Pacal II": {"cost": [0, 50, 50, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 2, "hit_points": 190, "los": 6},
+    "Babur": {"cost": [55, 0, 60, 0], "attack": 15, "melee_armor": 0, "pierce_armor": 0, "hit_points": 300, "los": 5},
     "Abraha Elephant": {
-        "cost": [
-            200,
-            0,
-            75,
-            0
-        ],
+        "cost": [200, 0, 75, 0],
         "attack": 25,
         "melee_armor": 1,
         "pierce_armor": 3,
         "hit_points": 750,
-        "los": 5
+        "los": 5,
     },
     "Guglielmo Embriaco": {
-        "cost": [
-            0,
-            50,
-            50,
-            0
-        ],
+        "cost": [0, 50, 50, 0],
         "attack": 16,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 170,
-        "los": 8
+        "los": 8,
     },
-    "Su Dingfang": {
-        "cost": [
-            0,
-            40,
-            35,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 200,
-        "los": 6
-    },
-    "Pachacuti": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 230,
-        "los": 5
-    },
-    "Huayna Capac": {
-        "cost": [
-            30,
-            0,
-            40,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 190,
-        "los": 7
-    },
-    "Miklos Toldi": {
-        "cost": [
-            80,
-            0,
-            10,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 4,
-        "hit_points": 285,
-        "los": 6
-    },
-    "Little John": {
-        "cost": [
-            35,
-            25,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 120,
-        "los": 4
-    },
+    "Su Dingfang": {"cost": [0, 40, 35, 0], "attack": 14, "melee_armor": 0, "pierce_armor": 0, "hit_points": 200, "los": 6},
+    "Pachacuti": {"cost": [60, 0, 30, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 2, "hit_points": 230, "los": 5},
+    "Huayna Capac": {"cost": [30, 0, 40, 0], "attack": 10, "melee_armor": 0, "pierce_armor": 0, "hit_points": 190, "los": 7},
+    "Miklos Toldi": {"cost": [80, 0, 10, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 4, "hit_points": 285, "los": 6},
+    "Little John": {"cost": [35, 25, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 120, "los": 4},
     "Zawisza the Black": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
+        "cost": [80, 0, 0, 0],
         "attack": 17,
         "melee_armor": 1,
         "pierce_armor": 5,
         "hit_points": 240,
-        "los": 4
+        "los": 4,
     },
-    "Sumanguru": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 340,
-        "los": 5
-    },
-    "Storage": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 800,
-        "los": 6
-    },
-    "Hut A": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Hut B": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Hut C": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Hut D": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Hut E": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Hut F": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Hut G": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Granary": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Barricade A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 4
-    },
-    "Animal Skeleton": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Stelae A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Stelae B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Stelae C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Gallow": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Palace": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 4800,
-        "los": 8
-    },
-    "Tent A": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Tent B": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Tent C": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Tent D": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Tent E": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
+    "Sumanguru": {"cost": [60, 0, 20, 0], "attack": 15, "melee_armor": 2, "pierce_armor": 2, "hit_points": 340, "los": 5},
+    "Storage": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 7, "hit_points": 800, "los": 6},
+    "Hut A": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Hut B": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Hut C": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Hut D": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Hut E": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Hut F": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Hut G": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Granary": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Barricade A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 4},
+    "Animal Skeleton": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Stelae A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Stelae B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Stelae C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Gallow": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Palace": {"cost": [0, 1000, 1000, 1000], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 4800, "los": 8},
+    "Tent A": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Tent B": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Tent C": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Tent D": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Tent E": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
     "Fortified Tower": {
-        "cost": [
-            0,
-            0,
-            0,
-            150
-        ],
+        "cost": [0, 0, 0, 150],
         "attack": 8,
         "melee_armor": 4,
         "pierce_armor": 7,
         "hit_points": 1900,
-        "los": 14
+        "los": 14,
     },
-    "Fire Galley": {
-        "cost": [
-            0,
-            75,
-            45,
-            0
-        ],
-        "attack": 1,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 100,
-        "los": 5
-    },
-    "Demolition Raft": {
-        "cost": [
-            0,
-            70,
-            50,
-            0
-        ],
-        "attack": 90,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 45,
-        "los": 6
-    },
-    "Dagnajan": {
-        "cost": [
-            110,
-            0,
-            80,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 7,
-        "hit_points": 930,
-        "los": 7
-    },
-    "Gidajan": {
-        "cost": [
-            50,
-            0,
-            30,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 4,
-        "pierce_armor": 2,
-        "hit_points": 300,
-        "los": 3
-    },
+    "Fire Galley": {"cost": [0, 75, 45, 0], "attack": 1, "melee_armor": 0, "pierce_armor": 4, "hit_points": 100, "los": 5},
+    "Demolition Raft": {"cost": [0, 70, 50, 0], "attack": 90, "melee_armor": 0, "pierce_armor": 2, "hit_points": 45, "los": 6},
+    "Dagnajan": {"cost": [110, 0, 80, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 7, "hit_points": 930, "los": 7},
+    "Gidajan": {"cost": [50, 0, 30, 0], "attack": 18, "melee_armor": 4, "pierce_armor": 2, "hit_points": 300, "los": 3},
     "Ballista Elephant": {
-        "cost": [
-            100,
-            0,
-            80,
-            0
-        ],
+        "cost": [100, 0, 80, 0],
         "attack": 10,
         "melee_armor": 0,
         "pierce_armor": 3,
         "hit_points": 250,
-        "los": 7
+        "los": 7,
     },
     "Elite Ballista Elephant": {
-        "cost": [
-            100,
-            0,
-            80,
-            0
-        ],
+        "cost": [100, 0, 80, 0],
         "attack": 11,
         "melee_armor": 0,
         "pierce_armor": 3,
         "hit_points": 290,
-        "los": 7
+        "los": 7,
     },
-    "Karambit Warrior": {
-        "cost": [
-            25,
-            0,
-            15,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 30,
-        "los": 3
-    },
+    "Karambit Warrior": {"cost": [25, 0, 15, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 1, "hit_points": 30, "los": 3},
     "Elite Karambit Warrior": {
-        "cost": [
-            25,
-            0,
-            15,
-            0
-        ],
+        "cost": [25, 0, 15, 0],
         "attack": 8,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 40,
-        "los": 3
+        "los": 3,
     },
-    "Arambai": {
-        "cost": [
-            0,
-            75,
-            60,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 60,
-        "los": 7
-    },
-    "Elite Arambai": {
-        "cost": [
-            0,
-            75,
-            60,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 65,
-        "los": 7
-    },
-    "Rattan Archer": {
-        "cost": [
-            0,
-            50,
-            45,
-            0
-        ],
-        "attack": 6,
-        "melee_armor": 0,
-        "pierce_armor": 4,
-        "hit_points": 40,
-        "los": 6
-    },
+    "Arambai": {"cost": [0, 75, 60, 0], "attack": 12, "melee_armor": 0, "pierce_armor": 1, "hit_points": 60, "los": 7},
+    "Elite Arambai": {"cost": [0, 75, 60, 0], "attack": 15, "melee_armor": 0, "pierce_armor": 2, "hit_points": 65, "los": 7},
+    "Rattan Archer": {"cost": [0, 50, 45, 0], "attack": 6, "melee_armor": 0, "pierce_armor": 4, "hit_points": 40, "los": 6},
     "Elite Rattan Archer": {
-        "cost": [
-            0,
-            50,
-            45,
-            0
-        ],
+        "cost": [0, 50, 45, 0],
         "attack": 7,
         "melee_armor": 0,
         "pierce_armor": 6,
         "hit_points": 45,
-        "los": 6
+        "los": 6,
     },
     "Battle Elephant": {
-        "cost": [
-            120,
-            0,
-            70,
-            0
-        ],
+        "cost": [120, 0, 70, 0],
         "attack": 12,
         "melee_armor": 1,
         "pierce_armor": 2,
         "hit_points": 250,
-        "los": 4
+        "los": 4,
     },
     "Elite Battle Elephant": {
-        "cost": [
-            120,
-            0,
-            70,
-            0
-        ],
+        "cost": [120, 0, 70, 0],
         "attack": 14,
         "melee_armor": 1,
         "pierce_armor": 3,
         "hit_points": 300,
-        "los": 5
+        "los": 5,
     },
-    "Komodo Dragon": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
-    "Tiger": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
-    "Rhinoceros": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 7,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 4
-    },
-    "Box Turtles": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": 0
-    },
-    "Water Buffalo": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 14,
-        "los": 3
-    },
-    "Tree (Mangrove)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Ninja": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Tree (Rainforest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Rock (Beach)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Rock (Jungle)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Flag G": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag H": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag I": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag J": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
+    "Komodo Dragon": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
+    "Tiger": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
+    "Rhinoceros": {"cost": [0, 0, 0, 0], "attack": 7, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 4},
+    "Box Turtles": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": 0},
+    "Water Buffalo": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 14, "los": 3},
+    "Tree (Mangrove)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Ninja": {"cost": [60, 0, 30, 0], "attack": 9, "melee_armor": 1, "pierce_armor": 1, "hit_points": 50, "los": 4},
+    "Tree (Rainforest)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Rock (Beach)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Rock (Jungle)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Flag G": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag H": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag I": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag J": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
     "Imperial Skirmisher": {
-        "cost": [
-            25,
-            35,
-            0,
-            0
-        ],
+        "cost": [25, 35, 0, 0],
         "attack": 4,
         "melee_armor": 0,
         "pierce_armor": 5,
         "hit_points": 35,
-        "los": 7
+        "los": 7,
     },
-    "Gajah Mada": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 2,
-        "pierce_armor": 0,
-        "hit_points": 425,
-        "los": 5
-    },
-    "Jayanegara": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Raden Wijaya": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 250,
-        "los": 4
-    },
+    "Gajah Mada": {"cost": [60, 0, 20, 0], "attack": 20, "melee_armor": 2, "pierce_armor": 0, "hit_points": 425, "los": 5},
+    "Jayanegara": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Raden Wijaya": {"cost": [60, 0, 75, 0], "attack": 18, "melee_armor": 3, "pierce_armor": 3, "hit_points": 250, "los": 4},
     "Sunda Royal Fighter": {
-        "cost": [
-            30,
-            0,
-            20,
-            0
-        ],
+        "cost": [30, 0, 20, 0],
         "attack": 15,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 90,
-        "los": 3
+        "los": 3,
     },
-    "Suryavarman I": {
-        "cost": [
-            120,
-            0,
-            75,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 1,
-        "pierce_armor": 3,
-        "hit_points": 400,
-        "los": 5
-    },
+    "Suryavarman I": {"cost": [120, 0, 75, 0], "attack": 16, "melee_armor": 1, "pierce_armor": 3, "hit_points": 400, "los": 5},
     "Udayadityavarman I": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 75,
-        "los": 6
+        "los": 6,
     },
-    "Jayaviravarman": {
-        "cost": [
-            30,
-            0,
-            20,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 250,
-        "los": 3
-    },
-    "Bayinnaung": {
-        "cost": [
-            120,
-            0,
-            75,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 1,
-        "pierce_armor": 3,
-        "hit_points": 400,
-        "los": 5
-    },
-    "Tabinshwehti": {
-        "cost": [
-            100,
-            0,
-            80,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 0,
-        "pierce_armor": 3,
-        "hit_points": 450,
-        "los": 7
-    },
-    "Buddha Statue A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Buddha Statue B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Buddha Statue C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Buddha Statue D": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Fern Patch": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Trowulan Gate": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Vases": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Le Loi": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 22,
-        "melee_armor": 2,
-        "pierce_armor": 4,
-        "hit_points": 350,
-        "los": 6
-    },
-    "Le Lai": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 4,
-        "pierce_armor": 4,
-        "hit_points": 400,
-        "los": 5
-    },
-    "Le Trien": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 24,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 460,
-        "los": 6
-    },
-    "Luu Nhan Chu": {
-        "cost": [
-            0,
-            30,
-            30,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 0,
-        "pierce_armor": 2,
-        "hit_points": 60,
-        "los": 6
-    },
-    "Bui Bi": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 4,
-        "pierce_armor": 4,
-        "hit_points": 55,
-        "los": 11
-    },
-    "Dinh Le": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 19,
-        "melee_armor": 2,
-        "pierce_armor": 3,
-        "hit_points": 300,
-        "los": 5
-    },
-    "Wang Tong": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 2,
-        "pierce_armor": 3,
-        "hit_points": 350,
-        "los": 5
-    },
-    "Envoy": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 250,
-        "los": 8
-    },
-    "Rice Farm": {
-        "cost": [
-            0,
-            60,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 480,
-        "los": 1
-    },
-    "Dead Rice Farm": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 0,
-        "los": -1
-    },
-    "Harbor": {
-        "cost": [
-            0,
-            150,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 2000,
-        "los": 10
-    },
-    "Stupa": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Army Tent A": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Army Tent B": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 6
-    },
-    "Army Tent C": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 4
-    },
-    "Army Tent D": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 4
-    },
-    "Army Tent E": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 500,
-        "los": 4
-    },
-    "Pagoda A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Pagoda B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Pagoda C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Bridge C--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 6
-    },
+    "Jayaviravarman": {"cost": [30, 0, 20, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 250, "los": 3},
+    "Bayinnaung": {"cost": [120, 0, 75, 0], "attack": 18, "melee_armor": 1, "pierce_armor": 3, "hit_points": 400, "los": 5},
+    "Tabinshwehti": {"cost": [100, 0, 80, 0], "attack": 15, "melee_armor": 0, "pierce_armor": 3, "hit_points": 450, "los": 7},
+    "Buddha Statue A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Buddha Statue B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Buddha Statue C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Buddha Statue D": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Fern Patch": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Trowulan Gate": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Vases": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Le Loi": {"cost": [50, 0, 0, 0], "attack": 22, "melee_armor": 2, "pierce_armor": 4, "hit_points": 350, "los": 6},
+    "Le Lai": {"cost": [60, 0, 75, 0], "attack": 18, "melee_armor": 4, "pierce_armor": 4, "hit_points": 400, "los": 5},
+    "Le Trien": {"cost": [50, 0, 0, 0], "attack": 24, "melee_armor": 2, "pierce_armor": 2, "hit_points": 460, "los": 6},
+    "Luu Nhan Chu": {"cost": [0, 30, 30, 0], "attack": 12, "melee_armor": 0, "pierce_armor": 2, "hit_points": 60, "los": 6},
+    "Bui Bi": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 4, "pierce_armor": 4, "hit_points": 55, "los": 11},
+    "Dinh Le": {"cost": [60, 0, 75, 0], "attack": 19, "melee_armor": 2, "pierce_armor": 3, "hit_points": 300, "los": 5},
+    "Wang Tong": {"cost": [60, 0, 20, 0], "attack": 18, "melee_armor": 2, "pierce_armor": 3, "hit_points": 350, "los": 5},
+    "Envoy": {"cost": [80, 0, 0, 0], "attack": 12, "melee_armor": 3, "pierce_armor": 3, "hit_points": 250, "los": 8},
+    "Rice Farm": {"cost": [0, 60, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 480, "los": 1},
+    "Dead Rice Farm": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 0, "los": -1},
+    "Harbor": {"cost": [0, 150, 0, 0], "attack": 3, "melee_armor": 3, "pierce_armor": 10, "hit_points": 2000, "los": 10},
+    "Stupa": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Army Tent A": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Army Tent B": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 6},
+    "Army Tent C": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 4},
+    "Army Tent D": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 4},
+    "Army Tent E": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 500, "los": 4},
+    "Pagoda A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Pagoda B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Pagoda C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Bridge C--Top": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 6},
     "Bridge C--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge C--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Bridge D--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 6
-    },
+    "Bridge D--Top": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 6},
     "Bridge D--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge D--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge C--Cracked": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge C--Broken Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge C--Broken Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge D--Cracked": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge D--Broken Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge D--Broken Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Sanchi Stupa": {
-        "cost": [
-            0,
-            1000,
-            2000,
-            1000
-        ],
+        "cost": [0, 1000, 2000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 6,
         "hit_points": 4000,
-        "los": 8
+        "los": 8,
     },
     "Gol Gumbaz": {
-        "cost": [
-            0,
-            1000,
-            2000,
-            1000
-        ],
+        "cost": [0, 1000, 2000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
-    "Barricade B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 4
-    },
-    "Barricade C": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 4
-    },
-    "Barricade D": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 4
-    },
-    "Sharkatzor": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 33,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 600,
-        "los": 11
-    },
-    "Konnik": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 100,
-        "los": 5
-    },
-    "Elite Konnik": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 120,
-        "los": 5
-    },
-    "Keshik": {
-        "cost": [
-            60,
-            0,
-            40,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 1,
-        "pierce_armor": 2,
-        "hit_points": 110,
-        "los": 5
-    },
-    "Elite Keshik": {
-        "cost": [
-            60,
-            0,
-            40,
-            0
-        ],
-        "attack": 11,
-        "melee_armor": 1,
-        "pierce_armor": 3,
-        "hit_points": 140,
-        "los": 5
-    },
-    "Kipchak": {
-        "cost": [
-            0,
-            60,
-            35,
-            0
-        ],
-        "attack": 4,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 40,
-        "los": 6
-    },
-    "Elite Kipchak": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 45,
-        "los": 6
-    },
-    "Leitis": {
-        "cost": [
-            70,
-            0,
-            50,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 100,
-        "los": 5
-    },
-    "Elite Leitis": {
-        "cost": [
-            70,
-            0,
-            50,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 130,
-        "los": 5
-    },
-    "Bactrian Camel": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Ibex": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 5,
-        "los": 2
-    },
-    "Snow Leopard": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 25,
-        "los": 12
-    },
-    "Goose": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 7,
-        "los": 3
-    },
-    "Pig": {
-        "cost": [
-            25,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 7,
-        "los": 3
-    },
+    "Barricade B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 4},
+    "Barricade C": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 4},
+    "Barricade D": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 4},
+    "Sharkatzor": {"cost": [0, 55, 65, 0], "attack": 33, "melee_armor": 1, "pierce_armor": 0, "hit_points": 600, "los": 11},
+    "Konnik": {"cost": [60, 0, 70, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 1, "hit_points": 100, "los": 5},
+    "Elite Konnik": {"cost": [60, 0, 70, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 2, "hit_points": 120, "los": 5},
+    "Keshik": {"cost": [60, 0, 40, 0], "attack": 9, "melee_armor": 1, "pierce_armor": 2, "hit_points": 110, "los": 5},
+    "Elite Keshik": {"cost": [60, 0, 40, 0], "attack": 11, "melee_armor": 1, "pierce_armor": 3, "hit_points": 140, "los": 5},
+    "Kipchak": {"cost": [0, 60, 35, 0], "attack": 4, "melee_armor": 0, "pierce_armor": 0, "hit_points": 40, "los": 6},
+    "Elite Kipchak": {"cost": [0, 0, 0, 0], "attack": 5, "melee_armor": 0, "pierce_armor": 0, "hit_points": 45, "los": 6},
+    "Leitis": {"cost": [70, 0, 50, 0], "attack": 13, "melee_armor": 1, "pierce_armor": 1, "hit_points": 100, "los": 5},
+    "Elite Leitis": {"cost": [70, 0, 50, 0], "attack": 16, "melee_armor": 2, "pierce_armor": 1, "hit_points": 130, "los": 5},
+    "Bactrian Camel": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
+    "Ibex": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 5, "los": 2},
+    "Snow Leopard": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 25, "los": 12},
+    "Goose": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 7, "los": 3},
+    "Pig": {"cost": [25, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 7, "los": 3},
     "Wild Bactrian Camel": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 5,
-        "los": 2
+        "los": 2,
     },
-    "Tree (Oak Autumn)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
+    "Tree (Oak Autumn)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
     "Tree (Oak Autumn Snow)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 20,
-        "los": 0
+        "los": 0,
     },
-    "Tree (Dead)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Krepost": {
-        "cost": [
-            0,
-            0,
-            0,
-            350
-        ],
-        "attack": 10,
-        "melee_armor": 8,
-        "pierce_armor": 11,
-        "hit_points": 2600,
-        "los": 10
-    },
+    "Tree (Dead)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Krepost": {"cost": [0, 0, 0, 350], "attack": 10, "melee_armor": 8, "pierce_armor": 11, "hit_points": 2600, "los": 10},
     "Konnik (Dismounted)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 12,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 45,
-        "los": 3
+        "los": 3,
     },
     "Elite Konnik (Dismounted)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 13,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 50,
-        "los": 3
+        "los": 3,
     },
     "Tokhtamysh Khan": {
-        "cost": [
-            50,
-            0,
-            80,
-            0
-        ],
+        "cost": [50, 0, 80, 0],
         "attack": 19,
         "melee_armor": 7,
         "pierce_armor": 3,
         "hit_points": 230,
-        "los": 5
+        "los": 5,
     },
-    "Flaming Camel": {
-        "cost": [
-            75,
-            0,
-            30,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 55,
-        "los": 4
-    },
-    "Shrine": {
-        "cost": [
-            0,
-            175,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 2100,
-        "los": 6
-    },
-    "Ivaylo": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 120,
-        "los": 5
-    },
+    "Flaming Camel": {"cost": [75, 0, 30, 0], "attack": 20, "melee_armor": 0, "pierce_armor": 0, "hit_points": 55, "los": 4},
+    "Shrine": {"cost": [0, 175, 0, 0], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 2100, "los": 6},
+    "Ivaylo": {"cost": [60, 0, 70, 0], "attack": 13, "melee_armor": 0, "pierce_armor": 1, "hit_points": 120, "los": 5},
     "Tsar Konstantin": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
+        "cost": [60, 0, 70, 0],
         "attack": 14,
         "melee_armor": 3,
         "pierce_armor": 3,
         "hit_points": 300,
-        "los": 5
+        "los": 5,
     },
-    "Kotyan Khan": {
-        "cost": [
-            0,
-            40,
-            50,
-            0
-        ],
-        "attack": 20,
-        "melee_armor": 1,
-        "pierce_armor": 4,
-        "hit_points": 250,
-        "los": 5
-    },
-    "Cuman Chief": {
-        "cost": [
-            70,
-            0,
-            60,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 2,
-        "hit_points": 180,
-        "los": 4
-    },
-    "Girgen Khan": {
-        "cost": [
-            0,
-            40,
-            60,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 170,
-        "los": 8
-    },
-    "Dismantled Cart": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Ox Cart": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 70,
-        "los": 7
-    },
-    "Ox Wagon": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 140,
-        "los": 7
-    },
-    "Khan": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 160,
-        "los": 6
-    },
-    "Urus Khan": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 200,
-        "los": 6
-    },
+    "Kotyan Khan": {"cost": [0, 40, 50, 0], "attack": 20, "melee_armor": 1, "pierce_armor": 4, "hit_points": 250, "los": 5},
+    "Cuman Chief": {"cost": [70, 0, 60, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 2, "hit_points": 180, "los": 4},
+    "Girgen Khan": {"cost": [0, 40, 60, 0], "attack": 10, "melee_armor": 3, "pierce_armor": 3, "hit_points": 170, "los": 8},
+    "Dismantled Cart": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Ox Cart": {"cost": [0, 100, 50, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 70, "los": 7},
+    "Ox Wagon": {"cost": [0, 100, 50, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 140, "los": 7},
+    "Khan": {"cost": [0, 55, 65, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 160, "los": 6},
+    "Urus Khan": {"cost": [0, 0, 0, 0], "attack": 10, "melee_armor": 3, "pierce_armor": 3, "hit_points": 200, "los": 6},
     "Statue (Civilization)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 0
+        "los": 0,
     },
     "Vytautas the Great": {
-        "cost": [
-            0,
-            40,
-            50,
-            0
-        ],
+        "cost": [0, 40, 50, 0],
         "attack": 15,
         "melee_armor": 4,
         "pierce_armor": 5,
         "hit_points": 220,
-        "los": 5
+        "los": 5,
     },
-    "Flag K": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag L": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Flag M": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "FE Flag": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
-    "Invisible Object": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Statue (Column)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Cart": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 70,
-        "los": 7
-    },
-    "Statue (Left)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Statue (Right)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Tree (Cypress)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
+    "Flag K": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag L": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Flag M": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "FE Flag": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
+    "Invisible Object": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Statue (Column)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Cart": {"cost": [0, 100, 50, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 70, "los": 7},
+    "Statue (Left)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Statue (Right)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Tree (Cypress)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
     "Tree (Italian Pine)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 20,
-        "los": 0
+        "los": 0,
     },
-    "Tree (Olive)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Tree (Reeds)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Plant (Jungle)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Tree (Olive)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Tree (Reeds)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Plant (Jungle)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Plant (Underbrush Tropical)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 0
+        "los": 0,
     },
-    "Plant (Underbrush)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plant (Rainforest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Plant (Underbrush)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plant (Rainforest)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Plant (Underbrush Rainforest)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 0
+        "los": 0,
     },
-    "Horse B": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Grass, Green": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Grass, Dry": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plant (Bush, Green)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plant (Bush, Dry)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Horse B": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
+    "Grass, Green": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Grass, Dry": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plant (Bush, Green)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plant (Bush, Dry)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Plant (Shrub, Green)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 0
+        "los": 0,
     },
-    "Plant (Shrub, Dry)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plant (Weeds)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plant (Dead)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Plant (Flowers)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Plant (Shrub, Dry)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plant (Weeds)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plant (Dead)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Plant (Flowers)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Sankore Madrasah": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
     "Tower of London": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
     "Dormition Cathedral": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
-    "Steppe Lancer": {
-        "cost": [
-            70,
-            0,
-            40,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 60,
-        "los": 5
-    },
+    "Steppe Lancer": {"cost": [70, 0, 40, 0], "attack": 9, "melee_armor": 0, "pierce_armor": 1, "hit_points": 60, "los": 5},
     "Elite Steppe Lancer": {
-        "cost": [
-            70,
-            0,
-            40,
-            0
-        ],
+        "cost": [70, 0, 40, 0],
         "attack": 11,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 80,
-        "los": 5
+        "los": 5,
     },
-    "Iroquois Warrior": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 65,
-        "los": 3
-    },
-    "Torch B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 4
-    },
+    "Iroquois Warrior": {"cost": [65, 0, 25, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 1, "hit_points": 65, "los": 3},
+    "Torch B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 4},
     "Torch B (Convertable)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 4
+        "los": 4,
     },
-    "Rock Church": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 9999,
-        "los": 5
-    },
-    "Sea Gate": {
-        "cost": [
-            0,
-            20,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 0,
-        "hit_points": 400,
-        "los": 6
-    },
-    "Chain": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 200,
-        "los": 4
-    },
+    "Rock Church": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 9999, "los": 5},
+    "Sea Gate": {"cost": [0, 20, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 0, "hit_points": 400, "los": 6},
+    "Chain": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 2, "hit_points": 200, "los": 4},
     "Priest with Relic": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
+        "cost": [0, 0, 100, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 30,
-        "los": 9
+        "los": 9,
     },
-    "Bridge E--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 6
-    },
+    "Bridge E--Top": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 6},
     "Bridge E--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge E--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Bridge F--Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1000,
-        "los": 6
-    },
+    "Bridge F--Top": {"cost": [0, 100, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1000, "los": 6},
     "Bridge F--Middle": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge F--Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge E--Cracked": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge E--Broken Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge E--Broken Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge F--Cracked": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge F--Broken Top": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
     "Bridge F--Broken Bottom": {
-        "cost": [
-            0,
-            100,
-            0,
-            0
-        ],
+        "cost": [0, 100, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1000,
-        "los": 6
+        "los": 6,
     },
-    "Paifang Gate": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Nubian Pyramid": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Target A": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 2
-    },
-    "Target B": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 2
-    },
-    "Temple Ruin": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Well": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Paifang Gate": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Nubian Pyramid": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Target A": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 2},
+    "Target B": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 2},
+    "Temple Ruin": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Well": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Mounted Samurai": {
-        "cost": [
-            60,
-            0,
-            70,
-            0
-        ],
+        "cost": [60, 0, 70, 0],
         "attack": 14,
         "melee_armor": 3,
         "pierce_armor": 5,
         "hit_points": 130,
-        "los": 4
+        "los": 4,
     },
-    "Xolotl Warrior": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 100,
-        "los": 4
-    },
-    "Merchant": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Sosso Guard": {
-        "cost": [
-            60,
-            0,
-            30,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 1,
-        "pierce_armor": 2,
-        "hit_points": 95,
-        "los": 3
-    },
-    "Photonman": {
-        "cost": [
-            60,
-            0,
-            55,
-            0
-        ],
-        "attack": 30,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 80,
-        "los": 12
-    },
-    "City Gate": {
-        "cost": [
-            0,
-            0,
-            0,
-            40
-        ],
-        "attack": 0,
-        "melee_armor": 10,
-        "pierce_armor": 0,
-        "hit_points": 5000,
-        "los": 6
-    },
-    "Cow B": {
-        "cost": [
-            35,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 14,
-        "los": 3
-    },
-    "Cow C": {
-        "cost": [
-            35,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 14,
-        "los": 3
-    },
-    "Cow D": {
-        "cost": [
-            35,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 14,
-        "los": 3
-    },
-    "Horse C": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Horse D": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Horse E": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 50,
-        "los": 4
-    },
-    "Butterflies": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 7
-    },
+    "Xolotl Warrior": {"cost": [60, 0, 75, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 2, "hit_points": 100, "los": 4},
+    "Merchant": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 75, "los": 6},
+    "Sosso Guard": {"cost": [60, 0, 30, 0], "attack": 15, "melee_armor": 1, "pierce_armor": 2, "hit_points": 95, "los": 3},
+    "Photonman": {"cost": [60, 0, 55, 0], "attack": 30, "melee_armor": 2, "pierce_armor": 2, "hit_points": 80, "los": 12},
+    "City Gate": {"cost": [0, 0, 0, 40], "attack": 0, "melee_armor": 10, "pierce_armor": 0, "hit_points": 5000, "los": 6},
+    "Cow B": {"cost": [35, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 14, "los": 3},
+    "Cow C": {"cost": [35, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 14, "los": 3},
+    "Cow D": {"cost": [35, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 14, "los": 3},
+    "Horse C": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
+    "Horse D": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
+    "Horse E": {"cost": [50, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 50, "los": 4},
+    "Butterflies": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 7},
     "Aachen Cathedral": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
     "The Middlebrook": {
-        "cost": [
-            0,
-            100,
-            50,
-            0
-        ],
+        "cost": [0, 100, 50, 0],
         "attack": 40,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 350,
-        "los": 16
+        "los": 16,
     },
     "Waterfall (Background)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 0
+        "los": 0,
     },
-    "Coustillier": {
-        "cost": [
-            55,
-            0,
-            55,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 115,
-        "los": 5
-    },
+    "Coustillier": {"cost": [55, 0, 55, 0], "attack": 8, "melee_armor": 2, "pierce_armor": 2, "hit_points": 115, "los": 5},
     "Elite Coustillier": {
-        "cost": [
-            55,
-            0,
-            55,
-            0
-        ],
+        "cost": [55, 0, 55, 0],
         "attack": 11,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 145,
-        "los": 5
+        "los": 5,
     },
-    "Serjeant": {
-        "cost": [
-            60,
-            0,
-            35,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 45,
-        "los": 3
-    },
-    "Elite Serjeant": {
-        "cost": [
-            60,
-            0,
-            35,
-            0
-        ],
-        "attack": 11,
-        "melee_armor": 4,
-        "pierce_armor": 4,
-        "hit_points": 85,
-        "los": 5
-    },
+    "Serjeant": {"cost": [60, 0, 35, 0], "attack": 5, "melee_armor": 2, "pierce_armor": 2, "hit_points": 45, "los": 3},
+    "Elite Serjeant": {"cost": [60, 0, 35, 0], "attack": 11, "melee_armor": 4, "pierce_armor": 4, "hit_points": 85, "los": 5},
     "Flemish Militia (Male)": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 12,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 75,
-        "los": 5
+        "los": 5,
     },
-    "Donjon": {
-        "cost": [
-            0,
-            75,
-            0,
-            175
-        ],
-        "attack": 5,
-        "melee_armor": 1,
-        "pierce_armor": 7,
-        "hit_points": 1250,
-        "los": 10
-    },
+    "Donjon": {"cost": [0, 75, 0, 175], "attack": 5, "melee_armor": 1, "pierce_armor": 7, "hit_points": 1250, "los": 10},
     "Edward Longshanks": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 16,
         "melee_armor": 3,
         "pierce_armor": 3,
         "hit_points": 200,
-        "los": 6
+        "los": 6,
     },
     "Gilbert de Clare": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 11,
         "melee_armor": 3,
         "pierce_armor": 3,
         "hit_points": 150,
-        "los": 6
+        "los": 6,
     },
     "John the Fearless": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 12,
         "melee_armor": 2,
         "pierce_armor": 2,
         "hit_points": 140,
-        "los": 4
+        "los": 4,
     },
-    "Philip the Good": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 175,
-        "los": 4
-    },
-    "Robert Guiscard": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 200,
-        "los": 4
-    },
-    "Roger Bosso": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 220,
-        "los": 6
-    },
-    "Bohemond": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 14,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 250,
-        "los": 6
-    },
+    "Philip the Good": {"cost": [50, 0, 0, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 2, "hit_points": 175, "los": 4},
+    "Robert Guiscard": {"cost": [50, 0, 0, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 2, "hit_points": 200, "los": 4},
+    "Roger Bosso": {"cost": [50, 0, 0, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 220, "los": 6},
+    "Bohemond": {"cost": [50, 0, 0, 0], "attack": 14, "melee_armor": 2, "pierce_armor": 2, "hit_points": 250, "los": 6},
     "Llywelyn ap Gruffydd": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
+        "cost": [65, 0, 25, 0],
         "attack": 14,
         "melee_armor": 2,
         "pierce_armor": 6,
         "hit_points": 250,
-        "los": 4
+        "los": 4,
     },
     "Dafydd ap Gruffydd": {
-        "cost": [
-            65,
-            0,
-            25,
-            0
-        ],
+        "cost": [65, 0, 25, 0],
         "attack": 14,
         "melee_armor": 4,
         "pierce_armor": 2,
         "hit_points": 200,
-        "los": 4
+        "los": 4,
     },
     "Bernard d\u2019Armagnac": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 18,
         "melee_armor": 4,
         "pierce_armor": 2,
         "hit_points": 220,
-        "los": 4
+        "los": 4,
     },
     "Flare A (Permanent)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": -1
+        "los": -1,
     },
     "Warwolf Trebuchet": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 300,
         "melee_armor": 0,
         "pierce_armor": 200,
         "hit_points": 300,
-        "los": 21
+        "los": 21,
     },
     "Warwolf Trebuchet (Packed)": {
-        "cost": [
-            0,
-            200,
-            200,
-            0
-        ],
+        "cost": [0, 200, 200, 0],
         "attack": 300,
         "melee_armor": 2,
         "pierce_armor": 8,
         "hit_points": 300,
-        "los": 21
+        "los": 21,
     },
     "Jacqueline of Hainaut": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 100,
-        "los": 6
+        "los": 6,
     },
     "Flemish Militia (Female)": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 12,
         "melee_armor": 1,
         "pierce_armor": 1,
         "hit_points": 75,
-        "los": 5
+        "los": 5,
     },
-    "Flemish Militia": {
-        "cost": [
-            60,
-            0,
-            25,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 75,
-        "los": 5
-    },
-    "Obuch": {
-        "cost": [
-            55,
-            0,
-            20,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 80,
-        "los": 3
-    },
-    "Elite Obuch": {
-        "cost": [
-            55,
-            0,
-            20,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 95,
-        "los": 3
-    },
-    "Hussite Wagon": {
-        "cost": [
-            0,
-            110,
-            70,
-            0
-        ],
-        "attack": 17,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 200,
-        "los": 8
-    },
+    "Flemish Militia": {"cost": [60, 0, 25, 0], "attack": 12, "melee_armor": 1, "pierce_armor": 1, "hit_points": 75, "los": 5},
+    "Obuch": {"cost": [55, 0, 20, 0], "attack": 8, "melee_armor": 2, "pierce_armor": 2, "hit_points": 80, "los": 3},
+    "Elite Obuch": {"cost": [55, 0, 20, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 2, "hit_points": 95, "los": 3},
+    "Hussite Wagon": {"cost": [0, 110, 70, 0], "attack": 17, "melee_armor": 0, "pierce_armor": 7, "hit_points": 200, "los": 8},
     "Elite Hussite Wagon": {
-        "cost": [
-            0,
-            110,
-            70,
-            0
-        ],
+        "cost": [0, 110, 70, 0],
         "attack": 20,
         "melee_armor": 1,
         "pierce_armor": 10,
         "hit_points": 250,
-        "los": 8
+        "los": 8,
     },
-    "Winged Hussar": {
-        "cost": [
-            80,
-            0,
-            0,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 1,
-        "pierce_armor": 2,
-        "hit_points": 80,
-        "los": 4
-    },
-    "Houfnice": {
-        "cost": [
-            0,
-            225,
-            225,
-            0
-        ],
-        "attack": 50,
-        "melee_armor": 2,
-        "pierce_armor": 6,
-        "hit_points": 90,
-        "los": 14
-    },
-    "Folwark": {
-        "cost": [
-            0,
-            125,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 7,
-        "hit_points": 1000,
-        "los": 6
-    },
-    "Pagan Shrine": {
-        "cost": [
-            0,
-            175,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 2,
-        "pierce_armor": 9,
-        "hit_points": 2100,
-        "los": 6
-    },
-    "Jan Zizka": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 4,
-        "pierce_armor": 1,
-        "hit_points": 230,
-        "los": 4
-    },
-    "Jadwiga": {
-        "cost": [
-            0,
-            0,
-            100,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 1,
-        "pierce_armor": 1,
-        "hit_points": 270,
-        "los": 8
-    },
-    "Tree (Birch)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 20,
-        "los": 0
-    },
-    "Jogaila": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 13,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 240,
-        "los": 5
-    },
-    "Kestutis": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 220,
-        "los": 6
-    },
+    "Winged Hussar": {"cost": [80, 0, 0, 0], "attack": 9, "melee_armor": 1, "pierce_armor": 2, "hit_points": 80, "los": 4},
+    "Houfnice": {"cost": [0, 225, 225, 0], "attack": 50, "melee_armor": 2, "pierce_armor": 6, "hit_points": 90, "los": 14},
+    "Folwark": {"cost": [0, 125, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 7, "hit_points": 1000, "los": 6},
+    "Pagan Shrine": {"cost": [0, 175, 0, 0], "attack": 0, "melee_armor": 2, "pierce_armor": 9, "hit_points": 2100, "los": 6},
+    "Jan Zizka": {"cost": [50, 0, 0, 0], "attack": 16, "melee_armor": 4, "pierce_armor": 1, "hit_points": 230, "los": 4},
+    "Jadwiga": {"cost": [0, 0, 100, 0], "attack": 0, "melee_armor": 1, "pierce_armor": 1, "hit_points": 270, "los": 8},
+    "Tree (Birch)": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 20, "los": 0},
+    "Jogaila": {"cost": [50, 0, 0, 0], "attack": 13, "melee_armor": 2, "pierce_armor": 1, "hit_points": 240, "los": 5},
+    "Kestutis": {"cost": [50, 0, 0, 0], "attack": 16, "melee_armor": 3, "pierce_armor": 3, "hit_points": 220, "los": 6},
     "Crusader Knight": {
-        "cost": [
-            80,
-            0,
-            50,
-            0
-        ],
+        "cost": [80, 0, 50, 0],
         "attack": 18,
         "melee_armor": 4,
         "pierce_armor": 4,
         "hit_points": 100,
-        "los": 5
+        "los": 5,
     },
-    "Algirdas": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 4,
-        "pierce_armor": 2,
-        "hit_points": 240,
-        "los": 5
-    },
+    "Algirdas": {"cost": [50, 0, 0, 0], "attack": 18, "melee_armor": 4, "pierce_armor": 2, "hit_points": 240, "los": 5},
     "Ulrich von Jungingen": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 17,
         "melee_armor": 8,
         "pierce_armor": 6,
         "hit_points": 350,
-        "los": 6
+        "los": 6,
     },
     "Emperor Sigismund": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
+        "cost": [50, 0, 0, 0],
         "attack": 18,
         "melee_armor": 4,
         "pierce_armor": 2,
         "hit_points": 200,
-        "los": 4
+        "los": 4,
     },
     "Dmitry of Moscow": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
+        "cost": [60, 0, 75, 0],
         "attack": 20,
         "melee_armor": 6,
         "pierce_armor": 2,
         "hit_points": 350,
-        "los": 5
+        "los": 5,
     },
     "Mikhail of Tver": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
+        "cost": [60, 0, 75, 0],
         "attack": 14,
         "melee_armor": 3,
         "pierce_armor": 3,
         "hit_points": 200,
-        "los": 5
+        "los": 5,
     },
-    "Young Jadwiga": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 3,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 80,
-        "los": 4
-    },
-    "Urumi Swordsman": {
-        "cost": [
-            65,
-            0,
-            20,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 55,
-        "los": 3
-    },
+    "Young Jadwiga": {"cost": [50, 0, 0, 0], "attack": 3, "melee_armor": 0, "pierce_armor": 0, "hit_points": 80, "los": 4},
+    "Urumi Swordsman": {"cost": [65, 0, 20, 0], "attack": 8, "melee_armor": 1, "pierce_armor": 0, "hit_points": 55, "los": 3},
     "Elite Urumi Swordsman": {
-        "cost": [
-            65,
-            0,
-            20,
-            0
-        ],
+        "cost": [65, 0, 20, 0],
         "attack": 10,
         "melee_armor": 1,
         "pierce_armor": 0,
         "hit_points": 65,
-        "los": 3
+        "los": 3,
     },
-    "Ratha (Melee)": {
-        "cost": [
-            0,
-            60,
-            60,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 105,
-        "los": 6
-    },
+    "Ratha (Melee)": {"cost": [0, 60, 60, 0], "attack": 10, "melee_armor": 2, "pierce_armor": 1, "hit_points": 105, "los": 6},
     "Elite Ratha (Melee)": {
-        "cost": [
-            0,
-            60,
-            60,
-            0
-        ],
+        "cost": [0, 60, 60, 0],
         "attack": 12,
         "melee_armor": 2,
         "pierce_armor": 1,
         "hit_points": 115,
-        "los": 6
+        "los": 6,
     },
-    "Chakram Thrower": {
-        "cost": [
-            65,
-            0,
-            30,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 1,
-        "pierce_armor": 0,
-        "hit_points": 40,
-        "los": 7
-    },
+    "Chakram Thrower": {"cost": [65, 0, 30, 0], "attack": 5, "melee_armor": 1, "pierce_armor": 0, "hit_points": 40, "los": 7},
     "Elite Chakram Thrower": {
-        "cost": [
-            65,
-            0,
-            30,
-            0
-        ],
+        "cost": [65, 0, 30, 0],
         "attack": 6,
         "melee_armor": 1,
         "pierce_armor": 0,
         "hit_points": 50,
-        "los": 8
+        "los": 8,
     },
     "Armored Elephant": {
-        "cost": [
-            130,
-            0,
-            95,
-            0
-        ],
+        "cost": [130, 0, 95, 0],
         "attack": 4,
         "melee_armor": -2,
         "pierce_armor": 140,
         "hit_points": 200,
-        "los": 4
+        "los": 4,
     },
     "Siege Elephant": {
-        "cost": [
-            130,
-            0,
-            95,
-            0
-        ],
+        "cost": [130, 0, 95, 0],
         "attack": 4,
         "melee_armor": -2,
         "pierce_armor": 150,
         "hit_points": 250,
-        "los": 4
+        "los": 4,
     },
-    "Ghulam": {
-        "cost": [
-            30,
-            0,
-            45,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 3,
-        "hit_points": 65,
-        "los": 6
-    },
-    "Elite Ghulam": {
-        "cost": [
-            30,
-            0,
-            45,
-            0
-        ],
-        "attack": 10,
-        "melee_armor": 0,
-        "pierce_armor": 6,
-        "hit_points": 75,
-        "los": 6
-    },
-    "Thirisadai": {
-        "cost": [
-            0,
-            180,
-            60,
-            0
-        ],
-        "attack": 9,
-        "melee_armor": 2,
-        "pierce_armor": 10,
-        "hit_points": 250,
-        "los": 8
-    },
-    "Shrivamsha Rider": {
-        "cost": [
-            70,
-            0,
-            20,
-            0
-        ],
-        "attack": 8,
-        "melee_armor": 0,
-        "pierce_armor": 1,
-        "hit_points": 55,
-        "los": 5
-    },
+    "Ghulam": {"cost": [30, 0, 45, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 3, "hit_points": 65, "los": 6},
+    "Elite Ghulam": {"cost": [30, 0, 45, 0], "attack": 10, "melee_armor": 0, "pierce_armor": 6, "hit_points": 75, "los": 6},
+    "Thirisadai": {"cost": [0, 180, 60, 0], "attack": 9, "melee_armor": 2, "pierce_armor": 10, "hit_points": 250, "los": 8},
+    "Shrivamsha Rider": {"cost": [70, 0, 20, 0], "attack": 8, "melee_armor": 0, "pierce_armor": 1, "hit_points": 55, "los": 5},
     "Elite Shrivamsha Rider": {
-        "cost": [
-            70,
-            0,
-            20,
-            0
-        ],
+        "cost": [70, 0, 20, 0],
         "attack": 11,
         "melee_armor": 0,
         "pierce_armor": 1,
         "hit_points": 70,
-        "los": 6
+        "los": 6,
     },
-    "Caravanserai": {
-        "cost": [
-            0,
-            175,
-            0,
-            50
-        ],
-        "attack": 0,
-        "melee_armor": 3,
-        "pierce_armor": 10,
-        "hit_points": 2700,
-        "los": 6
-    },
-    "Camel Scout": {
-        "cost": [
-            55,
-            0,
-            60,
-            0
-        ],
-        "attack": 2,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 70,
-        "los": 4
-    },
-    "Ratha (Ranged)": {
-        "cost": [
-            0,
-            60,
-            60,
-            0
-        ],
-        "attack": 5,
-        "melee_armor": 2,
-        "pierce_armor": 1,
-        "hit_points": 105,
-        "los": 6
-    },
+    "Caravanserai": {"cost": [0, 175, 0, 50], "attack": 0, "melee_armor": 3, "pierce_armor": 10, "hit_points": 2700, "los": 6},
+    "Camel Scout": {"cost": [55, 0, 60, 0], "attack": 2, "melee_armor": 0, "pierce_armor": 0, "hit_points": 70, "los": 4},
+    "Ratha (Ranged)": {"cost": [0, 60, 60, 0], "attack": 5, "melee_armor": 2, "pierce_armor": 1, "hit_points": 105, "los": 6},
     "Elite Ratha (Ranged)": {
-        "cost": [
-            0,
-            60,
-            60,
-            0
-        ],
+        "cost": [0, 60, 60, 0],
         "attack": 6,
         "melee_armor": 2,
         "pierce_armor": 1,
         "hit_points": 115,
-        "los": 6
+        "los": 6,
     },
-    "Mihira Bhoja": {
-        "cost": [
-            50,
-            0,
-            0,
-            0
-        ],
-        "attack": 16,
-        "melee_armor": 2,
-        "pierce_armor": 5,
-        "hit_points": 280,
-        "los": 6
-    },
-    "Amoghavarsha": {
-        "cost": [
-            65,
-            0,
-            20,
-            0
-        ],
-        "attack": 22,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 250,
-        "los": 6
-    },
-    "Rajendra Chola": {
-        "cost": [
-            60,
-            0,
-            75,
-            0
-        ],
-        "attack": 15,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 350,
-        "los": 5
-    },
+    "Mihira Bhoja": {"cost": [50, 0, 0, 0], "attack": 16, "melee_armor": 2, "pierce_armor": 5, "hit_points": 280, "los": 6},
+    "Amoghavarsha": {"cost": [65, 0, 20, 0], "attack": 22, "melee_armor": 2, "pierce_armor": 2, "hit_points": 250, "los": 6},
+    "Rajendra Chola": {"cost": [60, 0, 75, 0], "attack": 15, "melee_armor": 3, "pierce_armor": 3, "hit_points": 350, "los": 5},
     "General Araiyan": {
-        "cost": [
-            60,
-            0,
-            20,
-            0
-        ],
+        "cost": [60, 0, 20, 0],
         "attack": 19,
         "melee_armor": 4,
         "pierce_armor": 2,
         "hit_points": 290,
-        "los": 5
+        "los": 5,
     },
-    "Young Babur": {
-        "cost": [
-            55,
-            0,
-            60,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 4,
-        "pierce_armor": 2,
-        "hit_points": 140,
-        "los": 5
-    },
-    "Qutlugh": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 200,
-        "los": 6
-    },
-    "Ibrahim Lodi": {
-        "cost": [
-            0,
-            55,
-            65,
-            0
-        ],
-        "attack": 12,
-        "melee_armor": 2,
-        "pierce_armor": 2,
-        "hit_points": 220,
-        "los": 6
-    },
-    "Shaybani Khan": {
-        "cost": [
-            0,
-            40,
-            60,
-            0
-        ],
-        "attack": 18,
-        "melee_armor": 3,
-        "pierce_armor": 3,
-        "hit_points": 400,
-        "los": 6
-    },
+    "Young Babur": {"cost": [55, 0, 60, 0], "attack": 12, "melee_armor": 4, "pierce_armor": 2, "hit_points": 140, "los": 5},
+    "Qutlugh": {"cost": [0, 55, 65, 0], "attack": 18, "melee_armor": 3, "pierce_armor": 3, "hit_points": 200, "los": 6},
+    "Ibrahim Lodi": {"cost": [0, 55, 65, 0], "attack": 12, "melee_armor": 2, "pierce_armor": 2, "hit_points": 220, "los": 6},
+    "Shaybani Khan": {"cost": [0, 40, 60, 0], "attack": 18, "melee_armor": 3, "pierce_armor": 3, "hit_points": 400, "los": 6},
     "Minaret of Jam": {
-        "cost": [
-            0,
-            1000,
-            1000,
-            1000
-        ],
+        "cost": [0, 1000, 1000, 1000],
         "attack": 0,
         "melee_armor": 3,
         "pierce_armor": 10,
         "hit_points": 4800,
-        "los": 8
+        "los": 8,
     },
     "Map Revealer Medium": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": 10
+        "los": 10,
     },
-    "Map Revealer Giant": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 20
-    },
-    "Blocker": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Indian Statues": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Rekha-Deul Temple": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
-    "Indian Ruins": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
-        "attack": 0,
-        "melee_armor": 0,
-        "pierce_armor": 0,
-        "hit_points": 1,
-        "los": 0
-    },
+    "Map Revealer Giant": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 20},
+    "Blocker": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Indian Statues": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Rekha-Deul Temple": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
+    "Indian Ruins": {"cost": [0, 0, 0, 0], "attack": 0, "melee_armor": 0, "pierce_armor": 0, "hit_points": 1, "los": 0},
     "Flare B (Permanent)": {
-        "cost": [
-            0,
-            0,
-            0,
-            0
-        ],
+        "cost": [0, 0, 0, 0],
         "attack": 0,
         "melee_armor": 0,
         "pierce_armor": 0,
         "hit_points": 1,
-        "los": -1
-    }
+        "los": -1,
+    },
 }
