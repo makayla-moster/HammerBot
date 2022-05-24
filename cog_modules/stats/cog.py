@@ -75,20 +75,20 @@ class StatCommands(commands.Cog):
         costString = ""
 
         if cost[0] != 0:
-            costString += f"Food: {cost[0]}, "
+            costString += f"{cost[0]} <:food:978788983377121311> "
         if cost[1] != 0:
-            costString += f"Wood: {cost[1]}, "
+            costString += f"{cost[1]} <:woodAge:978788983435853834> "
         if cost[2] != 0:
-            costString += f"Gold: {cost[2]}, "
+            costString += f"{cost[2]} <:gold:978788983364546581> "
         if cost[3] != 0:
-            costString += f" Stone: {cost[3]}, "
+            costString += f"{cost[3]} <:stone:978788984547315792>: "
 
         if costString != "":
-            costString2 = costString[:-2]
+            costString2 = costString
         else:
             costString2 = "No resources needed."
 
-        embed = disnake.Embed(title=f"Stats for {arg1}", description=f"Information about {arg1}.", color=0xD5D341)
+        embed = disnake.Embed(title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}.", color=0xD5D341)
         embed.add_field(name="Cost", value=costString2, inline=True)
         embed.add_field(name="Attack", value=f"{unit_building['attack']}", inline=True)
         embed.add_field(name="Melee Armor", value=f"{unit_building['melee_armor']}", inline=True)
