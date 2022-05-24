@@ -88,7 +88,9 @@ class StatCommands(commands.Cog):
         else:
             costString2 = "No resources needed."
 
-        embed = disnake.Embed(title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}.", color=0xD5D341)
+        embed = disnake.Embed(
+            title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}.", color=0xD5D341
+        )
         embed.add_field(name="Cost", value=costString2, inline=True)
         embed.add_field(name="Attack", value=f"{unit_building['attack']}", inline=True)
         embed.add_field(name="Melee Armor", value=f"{unit_building['melee_armor']}", inline=True)
