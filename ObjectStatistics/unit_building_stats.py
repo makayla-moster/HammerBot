@@ -60,9 +60,9 @@ x = "4"
 
 obj = unit_building(directory["units_buildings"][x])
 
-print(obj.get_cost())
-
-print(obj)
+# print(obj.get_cost())
+#
+# print(obj)
 
 unit_building_dict = {}
 
@@ -71,4 +71,4 @@ for item in directory["units_buildings"]:
     unit_building_dict[unit_building_obj.get_name()] = unit_building_obj
 
 
-print(unit_building_dict["Man-at-Arms"].get_cost())
+print(unit_building_dict)
