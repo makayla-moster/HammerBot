@@ -185,7 +185,6 @@ class StatCommands(commands.Cog):
             armourString += f"{key} : {get_armours(arg1.title())[key]}, "
         armourString = armourString[:-2]
 
-
         embed = disnake.Embed(
             title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}s.", color=0xD5D341
         )
@@ -203,6 +202,7 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
         embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}", inline=True)
         await ctx.send(embed=embed)
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(StatCommands(bot))
