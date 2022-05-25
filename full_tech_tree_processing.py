@@ -10,7 +10,7 @@ with open("directory.json") as fp:
 EntityId = int
 
 
-def create_localised_name_lookup(category_key: str) -> dict[EntityId, str]:
+def create_localised_name_lookup(category_key: str) -> Dict[EntityId, str]:
     localised_name_lookup = {}
 
     for key, value in directory[category_key].items():
