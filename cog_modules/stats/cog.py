@@ -182,12 +182,12 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']}", inline=True)
         embed.add_field(name="Minimum Range", value=f"{get_range(arg1.title())['Minimum Range']}", inline=True)
         embed.add_field(name="Accuracy", value=f"{get_accuracy(arg1.title())}%", inline=True)
-        embed.add_field(name="Attack Delay", value=f"{get_attackDelay(arg1.title())}", inline=True)
+        embed.add_field(name="Attack Delay", value=f"{get_attackDelay(arg1.title())}s", inline=True)
         embed.add_field(name="Frame Delay", value=f"{get_frameDelay(arg1.title())}", inline=True)
-        embed.add_field(name="Reload Time", value=f"{get_reloadTime(arg1.title())}", inline=True)
+        embed.add_field(name="Reload Time", value=f"{get_reloadTime(arg1.title())}s", inline=True)
         embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())}", inline=True)
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
-        embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}", inline=True)
+        embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}s", inline=True)
         await ctx.send(embed=embed)
 
 
