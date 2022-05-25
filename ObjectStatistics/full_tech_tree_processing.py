@@ -115,3 +115,6 @@ def get_reloadTime(unit):
 
 def get_speed(unit):
     return techtree['data']['units'][localised_unit_building_name_lookup[unit]]['Speed']
+
+
+print(techtree['data']['units'][localised_unit_building_name_lookup["Elite Huskarl"]])
