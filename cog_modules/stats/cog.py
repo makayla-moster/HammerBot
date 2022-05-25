@@ -87,7 +87,7 @@ class StatCommands(commands.Cog):
             costString2 = "No resources needed."
 
         embed = disnake.Embed(
-            title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}s.", color=0xD5D341
+            title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341
         )
         embed.add_field(name="Cost", value=costString2, inline=True)
         embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
@@ -173,28 +173,14 @@ class StatCommands(commands.Cog):
         else:
             costString2 = "No resources needed."
 
-        # attackString = ""
-        #
-        # for key in get_attacks(arg1.title()):
-        #     attackString += f"{key} : {get_attacks(arg1.title())[key]}, "
-        # attackString = attackString[:-2]
-        #
-        # armourString = ""
-        #
-        # for key in get_armours(arg1.title()):
-        #     armourString += f"{key} : {get_armours(arg1.title())[key]}, "
-        # armourString = armourString[:-2]
-
         embed = disnake.Embed(
-            title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}s.", color=0xD5D341
+            title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341
         )
         embed.add_field(name="Cost", value=costString2, inline=True)
-        # embed.add_field(name="Damage", value=attackString, inline=True)
-        # embed.add_field(name="Armour", value=armourString, inline=True)
         for key in get_attacks(arg1.title()):
-            embed.add_field(name=key, value=f"{get_attacks(arg1.title())[key]}", inline=True)
+            embed.add_field(name=f"{key} Damage", value=f"{get_attacks(arg1.title())[key]}", inline=True)
         for key in get_armours(arg1.title()):
-            embed.add_field(name=key, value=f"{get_armours(arg1.title())[key]}", inline=True)
+            embed.add_field(name=f"{key} Armor", value=f"{get_armours(arg1.title())[key]}", inline=True)
 
 
         embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
