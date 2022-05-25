@@ -5,9 +5,8 @@ import disnake
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
-from techTreeInfo import *
-
 from full_tech_tree_processing import *
+from techTreeInfo import *
 
 
 class StatCommands(commands.Cog):
@@ -86,8 +85,6 @@ class StatCommands(commands.Cog):
             costString2 = costString
         else:
             costString2 = "No resources needed."
-
-
 
         embed = disnake.Embed(
             title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}s.", color=0xD5D341
