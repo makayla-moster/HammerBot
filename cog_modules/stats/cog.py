@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 from techTreeInfo import *
 
+from full_tech_tree_processing import *
+
 
 class StatCommands(commands.Cog):
     """Commands for stat commands."""
@@ -14,7 +16,7 @@ class StatCommands(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
-    @commands.command(name="!stats")
+    @commands.command(name="!stats", aliases=["!stat"])
     # @commands.cooldown(1, 10, commands.BucketType.user)
     async def statInfo(self, ctx: commands.Context, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
         """
@@ -70,33 +72,38 @@ class StatCommands(commands.Cog):
                     color=disnake.Color.red(),
                 )
 
-        unit_building = unit_building_dict[arg1.title()]
-        cost = unit_building["cost"]
+        cost = get_cost(arg1.title())
         costString = ""
-
-        if cost[0] != 0:
-            costString += f"{cost[0]} <:food:978788983377121311> "
-        if cost[1] != 0:
-            costString += f"{cost[1]} <:woodAge:978788983435853834> "
-        if cost[2] != 0:
-            costString += f"{cost[2]} <:gold:978788983364546581> "
-        if cost[3] != 0:
-            costString += f"{cost[3]} <:stone:978788984547315792>: "
-
+        if "Food" in cost:
+            costString += f"{cost['Food']} <:food:978788983377121311> "
+        if "Wood" in cost:
+            costString += f"{cost['Wood']} <:woodAge:978788983435853834> "
+        if "Gold" in cost:
+            costString += f"{cost['Gold']} <:gold:978788983364546581> "
+        if "Stone" in cost:
+            costString += f"{cost['Stone']} <:stone:978788984547315792>: "
         if costString != "":
             costString2 = costString
         else:
             costString2 = "No resources needed."
 
+
+
         embed = disnake.Embed(
-            title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}.", color=0xD5D341
+            title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}s.", color=0xD5D341
         )
         embed.add_field(name="Cost", value=costString2, inline=True)
-        embed.add_field(name="Attack", value=f"{unit_building['attack']}", inline=True)
-        embed.add_field(name="Melee Armor", value=f"{unit_building['melee_armor']}", inline=True)
-        embed.add_field(name="Pierce Armor", value=f"{unit_building['pierce_armor']}", inline=True)
-        embed.add_field(name="Hit Points", value=f"{unit_building['hit_points']}", inline=True)
-        embed.add_field(name="Line of Sight", value=f"{unit_building['los']}", inline=True)
+        embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
+        if "Base Melee" in get_attacks(arg1.title()):
+            embed.add_field(name="Attack", value=f"{get_attacks(arg1.title())['Base Melee']}", inline=True)
+        if "Base Pierce" in get_attacks(arg1.title()):
+            embed.add_field(name="Attack", value=f"{get_attacks(arg1.title())['Base Pierce']}", inline=True)
+        embed.add_field(name="Melee Armor", value=f"{get_armours(arg1.title())['Base Melee']}", inline=True)
+        embed.add_field(name="Pierce Armor", value=f"{get_armours(arg1.title())['Base Pierce']}", inline=True)
+        embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']}", inline=True)
+        embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())}", inline=True)
+        embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
+        embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}", inline=True)
         await ctx.send(embed=embed)
 
 
