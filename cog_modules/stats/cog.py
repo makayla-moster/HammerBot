@@ -97,7 +97,7 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Pierce Armor", value=f"{get_armours(arg1.title())['Base Pierce']}", inline=True)
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']}", inline=True)
         # embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())}", inline=True)
-        embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
+        embed.add_field(name="Speed", value=f"{get_speed(arg1.title())} tiles/sec", inline=True)
         # embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}", inline=True)
         await ctx.send(embed=embed)
 
@@ -186,7 +186,7 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Frame Delay", value=f"{get_frameDelay(arg1.title())}", inline=True)
         embed.add_field(name="Reload Time", value=f"{get_reloadTime(arg1.title())}s", inline=True)
         embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())}", inline=True)
-        embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
+        embed.add_field(name="Speed", value=f"{get_speed(arg1.title())} tiles/sec", inline=True)
         embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}s", inline=True)
         await ctx.send(embed=embed)
 
