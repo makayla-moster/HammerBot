@@ -89,9 +89,7 @@ class StatCommands(commands.Cog):
             costString2 = "No resources needed."
 
         embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341)
-        embed.set_thumbnail(
-            url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/Units/{unitNum}.png"
-        )
+        embed.set_thumbnail(url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/Units/{unitNum}.png")
         embed.add_field(name="Cost", value=costString2, inline=True)
         embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
         if "Base Melee" in get_attacks(arg1.title()):
@@ -102,7 +100,7 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Pierce Armor", value=f"{get_armours(arg1.title())['Base Pierce']}", inline=True)
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']} tiles", inline=True)
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())} tiles/sec", inline=True)
-        embed.set_footer(text=f"{ctx.author.name}", icon_url=ctx.author.display_avatar.url)
+        embed.set_footer(text=f'{ctx.author.name}\nFor more information run !advstats {arg1.title()}', icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
     @commands.command(name="!advstats", aliases=["!advstat"])
@@ -178,9 +176,7 @@ class StatCommands(commands.Cog):
         unitNum = localised_unit_building_name_lookup[arg1.title()]
 
         embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341)
-        embed.set_thumbnail(
-            url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/Units/{unitNum}.png"
-        )
+        embed.set_thumbnail(url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/Units/{unitNum}.png")
         embed.add_field(name="Cost", value=costString2, inline=True)
         for key in get_attacks(arg1.title()):
             embed.add_field(name=f"{key} Damage", value=f"{get_attacks(arg1.title())[key]}", inline=True)
@@ -191,13 +187,13 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']} tiles", inline=True)
         embed.add_field(name="Minimum Range", value=f"{get_range(arg1.title())['Minimum Range']} tiles", inline=True)
         embed.add_field(name="Accuracy", value=f"{get_accuracy(arg1.title())}%", inline=True)
-        embed.add_field(name="Attack Delay", value=f"{round(float(get_attackDelay(arg1.title())), 2)}s", inline=True)
+        embed.add_field(name="Attack Delay", value=f"{round(float(get_attackDelay(arg1.title())), 2)} sec", inline=True)
         embed.add_field(name="Frame Delay", value=f"{get_frameDelay(arg1.title())}", inline=True)
-        embed.add_field(name="Reload Time", value=f"{get_reloadTime(arg1.title())}s", inline=True)
+        embed.add_field(name="Reload Time", value=f"{get_reloadTime(arg1.title())} sec", inline=True)
         embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())} tiles", inline=True)
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())} tiles/sec", inline=True)
-        embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}s", inline=True)
-        embed.set_footer(text=f"{ctx.author.name}", icon_url=ctx.author.display_avatar.url)
+        embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())} sec", inline=True)
+        embed.set_footer(text=f'{ctx.author.name}\nFor less information run !stats {arg1.title()}', icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
 
