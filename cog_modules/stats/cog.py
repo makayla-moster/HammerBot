@@ -182,7 +182,6 @@ class StatCommands(commands.Cog):
         for key in get_armours(arg1.title()):
             embed.add_field(name=f"{key} Armor", value=f"{get_armours(arg1.title())[key]}", inline=True)
 
-
         embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']}", inline=True)
         embed.add_field(name="Minimum Range", value=f"{get_range(arg1.title())['Minimum Range']}", inline=True)
