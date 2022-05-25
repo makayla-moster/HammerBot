@@ -86,9 +86,7 @@ class StatCommands(commands.Cog):
         else:
             costString2 = "No resources needed."
 
-        embed = disnake.Embed(
-            title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341
-        )
+        embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341)
         embed.add_field(name="Cost", value=costString2, inline=True)
         embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
         if "Base Melee" in get_attacks(arg1.title()):
@@ -173,9 +171,7 @@ class StatCommands(commands.Cog):
         else:
             costString2 = "No resources needed."
 
-        embed = disnake.Embed(
-            title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341
-        )
+        embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341)
         embed.add_field(name="Cost", value=costString2, inline=True)
         for key in get_attacks(arg1.title()):
             embed.add_field(name=f"{key} Damage", value=f"{get_attacks(arg1.title())[key]}", inline=True)
