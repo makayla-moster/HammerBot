@@ -98,11 +98,106 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Melee Armor", value=f"{get_armours(arg1.title())['Base Melee']}", inline=True)
         embed.add_field(name="Pierce Armor", value=f"{get_armours(arg1.title())['Base Pierce']}", inline=True)
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']}", inline=True)
+        # embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())}", inline=True)
+        embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
+        # embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}", inline=True)
+        await ctx.send(embed=embed)
+
+    @commands.command(name="!advstats", aliases=["!advstat"])
+    async def advstatInfo(self, ctx: commands.Context, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
+        """
+        Command: !advstat
+        Returns: Redirects user to the !does command due to renaming.
+        """
+
+        if arg5 is not None:
+            arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title() + " " + arg5.title()
+            try:
+                response = techTreeDict[arg1]
+            except:
+                error = True
+                message = disnake.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=disnake.Color.red(),
+                )
+
+        elif arg4 is not None:
+            arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title()
+            try:
+                response = techTreeDict[arg1]
+            except:
+                error = True
+                message = disnake.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=disnake.Color.red(),
+                )
+
+        elif arg3 is not None:
+            arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title()
+            try:
+                response = techTreeDict[arg1]
+            except:
+                error = True
+                message = disnake.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=disnake.Color.red(),
+                )
+
+        elif arg2 is not None:
+            arg1 = arg1.title() + " " + arg2.title()
+            try:
+                response = techTreeDict[arg1]
+            except:
+                error = True
+                message = disnake.Embed(
+                    title="Invalid Input",
+                    description="There was a problem with your input. Please check your input and try again.",
+                    color=disnake.Color.red(),
+                )
+
+        cost = get_cost(arg1.title())
+        costString = ""
+        if "Food" in cost:
+            costString += f"{cost['Food']} <:food:978788983377121311> "
+        if "Wood" in cost:
+            costString += f"{cost['Wood']} <:woodAge:978788983435853834> "
+        if "Gold" in cost:
+            costString += f"{cost['Gold']} <:gold:978788983364546581> "
+        if "Stone" in cost:
+            costString += f"{cost['Stone']} <:stone:978788984547315792>: "
+        if costString != "":
+            costString2 = costString
+        else:
+            costString2 = "No resources needed."
+
+        attackString = ""
+
+        for key in get_attacks(arg1.title()):
+            attackString += f"{key} : {get_attacks(arg1.title())[key]}, "
+        attackString = attackString[:-2]
+
+        armourString = ""
+
+        for key in get_armours(arg1.title()):
+            armourString += f"{key} : {get_armours(arg1.title())[key]}, "
+        armourString = armourString[:-2]
+
+
+        embed = disnake.Embed(
+            title=f"Stats for {arg1.title()}", description=f"Information about {arg1.title()}s.", color=0xD5D341
+        )
+        embed.add_field(name="Cost", value=costString2, inline=True)
+        embed.add_field(name="Damage", value=attackString, inline=True)
+        embed.add_field(name="Armour", value=armourString, inline=True)
+        embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title())}", inline=True)
+        embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']}", inline=True)
         embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())}", inline=True)
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())}", inline=True)
         embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}", inline=True)
         await ctx.send(embed=embed)
-
 
 def setup(bot: commands.Bot):
     bot.add_cog(StatCommands(bot))
