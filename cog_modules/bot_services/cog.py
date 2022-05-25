@@ -61,6 +61,7 @@ class ServiceCommands(commands.Cog):
             value="[`!buildings <letter>`], Returns a list of buildings starting with a single letter.",
             inline=True,
         )
+        embed.set_footer(text=f'{ctx.author.name}', icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
     @commands.command(name="!contributors")
@@ -74,6 +75,7 @@ class ServiceCommands(commands.Cog):
         embed.add_field(name="quela", value="\u200b", inline=True)
         embed.add_field(name="harristotle", value="\u200b", inline=True)
         embed.add_field(name="Rangebro", value="\u200b", inline=True)
+        embed.set_footer(text=f'{ctx.author.name}', icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
     @commands.command(name="!is")

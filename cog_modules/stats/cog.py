@@ -97,6 +97,7 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Pierce Armor", value=f"{get_armours(arg1.title())['Base Pierce']}", inline=True)
         embed.add_field(name="Range", value=f"{get_range(arg1.title())['Range']} tiles", inline=True)
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())} tiles/sec", inline=True)
+        embed.set_footer(text=f'{ctx.author.name}', icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
     @commands.command(name="!advstats", aliases=["!advstat"])
@@ -186,6 +187,7 @@ class StatCommands(commands.Cog):
         embed.add_field(name="Line of Sight", value=f"{get_LineOfSight(arg1.title())} tiles", inline=True)
         embed.add_field(name="Speed", value=f"{get_speed(arg1.title())} tiles/sec", inline=True)
         embed.add_field(name="Train Time", value=f"{get_trainTime(arg1.title())}s", inline=True)
+        embed.set_footer(text=f'{ctx.author.name}', icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
 
