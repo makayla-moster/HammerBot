@@ -71,6 +71,10 @@ class StatCommands(commands.Cog):
                     color=disnake.Color.red(),
                 )
 
+        if arg1.title() in localised_tech_name_lookup:
+            unitBuildNum = localised_tech_name_lookup[arg1.title()]
+            entity = "techs"
+            entityDirectory = "Techs"
         if arg1.title() in localised_unit_building_name_lookup:
             unitBuildNum = localised_unit_building_name_lookup[arg1.title()]
             if unitBuildNum in techtree["data"]["units"]:
@@ -79,10 +83,11 @@ class StatCommands(commands.Cog):
             if unitBuildNum in techtree["data"]["buildings"]:
                 entity = "buildings"
                 entityDirectory = "Buildings"
-        if arg1.title() in localised_tech_name_lookup:
-            unitBuildNum = localised_tech_name_lookup[arg1.title()]
-            entity = "techs"
-            entityDirectory = "Techs"
+
+
+
+        print(entity)
+
 
         cost = get_cost(arg1.title(), entity)
         costString = ""
@@ -184,6 +189,10 @@ class StatCommands(commands.Cog):
                     color=disnake.Color.red(),
                 )
 
+        if arg1.title() in localised_tech_name_lookup:
+            unitBuildNum = localised_tech_name_lookup[arg1.title()]
+            entity = "techs"
+            entityDirectory = "Techs"
         if arg1.title() in localised_unit_building_name_lookup:
             unitBuildNum = localised_unit_building_name_lookup[arg1.title()]
             if unitBuildNum in techtree["data"]["units"]:
@@ -192,10 +201,6 @@ class StatCommands(commands.Cog):
             if unitBuildNum in techtree["data"]["buildings"]:
                 entity = "buildings"
                 entityDirectory = "Buildings"
-        if arg1.title() in localised_tech_name_lookup:
-            unitBuildNum = localised_tech_name_lookup[arg1.title()]
-            entity = "techs"
-            entityDirectory = "Techs"
 
 
 
