@@ -6,8 +6,9 @@ from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 
 from full_tech_tree_processing import *
-from techTreeInfo import *
 from techtree_descriptions import *
+from techTreeInfo import *
+
 
 class StatCommands(commands.Cog):
     """Commands for stat commands."""
@@ -101,10 +102,14 @@ class StatCommands(commands.Cog):
         else:
             costString2 = "No resources needed."
 
-        if entity != "techs" and arg1.title()[-1] != 's':
-            embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341)
+        if entity != "techs" and arg1.title()[-1] != "s":
+            embed = disnake.Embed(
+                title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341
+            )
         else:
-            embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}.", color=0xD5D341)
+            embed = disnake.Embed(
+                title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}.", color=0xD5D341
+            )
         embed.set_thumbnail(
             url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
         )
@@ -117,12 +122,16 @@ class StatCommands(commands.Cog):
         else:
             embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title(), entity)}", inline=True)
             if "Base Melee" in get_attacks(arg1.title(), entity):
-                embed.add_field(name="Base Melee Damage", value=f"{get_attacks(arg1.title(), entity)['Base Melee']}", inline=True)
+                embed.add_field(
+                    name="Base Melee Damage", value=f"{get_attacks(arg1.title(), entity)['Base Melee']}", inline=True
+                )
             if "Base Pierce" in get_attacks(arg1.title(), entity):
-                embed.add_field(name="Base Pierce Damage", value=f"{get_attacks(arg1.title(), entity)['Base Pierce']}", inline=True)
+                embed.add_field(
+                    name="Base Pierce Damage", value=f"{get_attacks(arg1.title(), entity)['Base Pierce']}", inline=True
+                )
             embed.add_field(name="Melee Armor", value=f"{get_armours(arg1.title(), entity)['Base Melee']}", inline=True)
             embed.add_field(name="Pierce Armor", value=f"{get_armours(arg1.title(), entity)['Base Pierce']}", inline=True)
-            if get_range(arg1.title(), entity)['Range'] != 0:
+            if get_range(arg1.title(), entity)["Range"] != 0:
                 embed.add_field(name="Range", value=f"{get_range(arg1.title(), entity)['Range']} tiles", inline=True)
             if get_speed(arg1.title(), entity) != 0:
                 embed.add_field(name="Speed", value=f"{get_speed(arg1.title(), entity)} tiles/sec", inline=True)
@@ -200,8 +209,6 @@ class StatCommands(commands.Cog):
                 entity = "buildings"
                 entityDirectory = "Buildings"
 
-
-
         cost = get_cost(arg1.title(), entity)
 
         costString = ""
@@ -218,12 +225,14 @@ class StatCommands(commands.Cog):
         else:
             costString2 = "No resources needed."
 
-
-
-        if entity != "techs" and arg1.title()[-1] != 's':
-            embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341)
+        if entity != "techs" and arg1.title()[-1] != "s":
+            embed = disnake.Embed(
+                title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}s.", color=0xD5D341
+            )
         else:
-            embed = disnake.Embed(title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}.", color=0xD5D341)
+            embed = disnake.Embed(
+                title=f"{arg1.title()} Stats", description=f"Information about {arg1.title()}.", color=0xD5D341
+            )
 
         embed.set_thumbnail(
             url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
@@ -236,30 +245,41 @@ class StatCommands(commands.Cog):
         else:
             embed.add_field(name="Hit Points", value=f"{get_HP(arg1.title(), entity)}", inline=True)
             if "Base Melee" in get_attacks(arg1.title(), entity):
-                embed.add_field(name="Base Melee Damage", value=f"{get_attacks(arg1.title(), entity)['Base Melee']}", inline=True)
+                embed.add_field(
+                    name="Base Melee Damage", value=f"{get_attacks(arg1.title(), entity)['Base Melee']}", inline=True
+                )
             if "Base Pierce" in get_attacks(arg1.title(), entity):
-                embed.add_field(name="Base Pierce Damage", value=f"{get_attacks(arg1.title(), entity)['Base Pierce']}", inline=True)
-
+                embed.add_field(
+                    name="Base Pierce Damage", value=f"{get_attacks(arg1.title(), entity)['Base Pierce']}", inline=True
+                )
 
             if "Base Melee" in get_armours(arg1.title(), entity):
-                embed.add_field(name="Base Melee Armor", value=f"{get_armours(arg1.title(), entity)['Base Melee']}", inline=True)
+                embed.add_field(
+                    name="Base Melee Armor", value=f"{get_armours(arg1.title(), entity)['Base Melee']}", inline=True
+                )
             if "Base Pierce" in get_armours(arg1.title(), entity):
-                embed.add_field(name="Base Pierce Armor", value=f"{get_armours(arg1.title(), entity)['Base Pierce']}", inline=True)
+                embed.add_field(
+                    name="Base Pierce Armor", value=f"{get_armours(arg1.title(), entity)['Base Pierce']}", inline=True
+                )
 
-            if get_range(arg1.title(), entity)['Range'] != 0:
+            if get_range(arg1.title(), entity)["Range"] != 0:
                 embed.add_field(name="Range", value=f"{get_range(arg1.title(), entity)['Range']} tiles", inline=True)
-            if get_range(arg1.title(), entity)['Minimum Range'] != 0:
-                embed.add_field(name="Minimum Range", value=f"{get_range(arg1.title(), entity)['Minimum Range']} tiles", inline=True)
+            if get_range(arg1.title(), entity)["Minimum Range"] != 0:
+                embed.add_field(
+                    name="Minimum Range", value=f"{get_range(arg1.title(), entity)['Minimum Range']} tiles", inline=True
+                )
             for key in get_attacks(arg1.title(), entity):
-                if  key != ("Base Melee") and key != ("Base Pierce"):
+                if key != ("Base Melee") and key != ("Base Pierce"):
                     embed.add_field(name=f"{key} Damage", value=f"{get_attacks(arg1.title(), entity)[key]}", inline=True)
             for key in get_armours(arg1.title(), entity):
-                if  key != ("Anti-Leitis") and key != ("Base Melee") and key != ("Base Pierce"):
+                if key != ("Anti-Leitis") and key != ("Base Melee") and key != ("Base Pierce"):
                     embed.add_field(name=f"{key} Armor", value=f"{get_armours(arg1.title(), entity)[key]}", inline=True)
             if get_attacks(arg1.title(), entity):
                 embed.add_field(name="Accuracy", value=f"{get_accuracy(arg1.title(), entity)}%", inline=True)
                 if entity == "units":
-                    embed.add_field(name="Attack Delay", value=f"{round(float(get_attackDelay(arg1.title(), entity)), 2)} sec", inline=True)
+                    embed.add_field(
+                        name="Attack Delay", value=f"{round(float(get_attackDelay(arg1.title(), entity)), 2)} sec", inline=True
+                    )
                 if entity == "units":
                     embed.add_field(name="Frame Delay", value=f"{get_frameDelay(arg1.title(), entity)}", inline=True)
                 embed.add_field(name="Reload Time", value=f"{get_reloadTime(arg1.title(), entity)} sec", inline=True)
