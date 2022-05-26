@@ -15,6 +15,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 # LUKE = os.getenv('LUKE_ID')
 
 bot = commands.Bot(command_prefix="")
+logging.basicConfig(level=logging.INFO)
 
 for folder in os.listdir("cog_modules"):
     if os.path.exists(os.path.join("cog_modules", folder, "cog.py")):
