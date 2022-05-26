@@ -15,7 +15,9 @@ def create_localised_name_lookup(category_key):
 
     for key, value in directory[category_key].items():
         if value["localised_name"] in localised_name_lookup:
-            localised_name_lookup[value["localised_name"]] = str(min(int(key), int(localised_name_lookup[value["localised_name"]])))
+            localised_name_lookup[value["localised_name"]] = str(
+                min(int(key), int(localised_name_lookup[value["localised_name"]]))
+            )
         else:
             localised_name_lookup[value["localised_name"]] = key
 
