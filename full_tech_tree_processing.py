@@ -14,7 +14,9 @@ def create_localised_name_lookup(category_key):
     localised_name_lookup = {}
 
     for key, value in directory[category_key].items():
-        if key not in localised_name_lookup:
+        if value["localised_name"] in localised_name_lookup:
+            localised_name_lookup[value["localised_name"]] = str(min(int(key), int(localised_name_lookup[value["localised_name"]])))
+        else:
             localised_name_lookup[value["localised_name"]] = key
 
     return localised_name_lookup
@@ -27,7 +29,10 @@ localised_tech_name_lookup = create_localised_name_lookup("techs")
 # but "759" does not exist in the other json
 localised_unit_building_name_lookup["Huskarl"] = "41"
 localised_unit_building_name_lookup["Elite Huskarl"] = "555"
-localised_unit_building_name_lookup["Barracks"] = "12"
+localised_unit_building_name_lookup["Stable"] = "101"
+localised_unit_building_name_lookup["Archery Range"] = "87"
+localised_unit_building_name_lookup["Blacksmith"] = "103"
+localised_unit_building_name_lookup["Monastery"] = "104"
 
 unitClasses = {
     0: "Unused",
