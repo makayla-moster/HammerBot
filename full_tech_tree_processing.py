@@ -140,3 +140,12 @@ def get_speed(unit, type):
         return techtree["data"][type][localised_unit_building_name_lookup[unit]]["Speed"]
     else:
         return 0
+
+def get_upgrade_cost(unitNum):
+    return techtree["data"]["unit_upgrades"][unitNum]["Cost"]
+
+def get_upgrade_researchTime(unitNum):
+    return techtree["data"]["unit_upgrades"][unitNum]["ResearchTime"]
+
+def get_tech_researchTime(techNum):
+    return techtree["data"]["techs"][techNum]["ResearchTime"]
