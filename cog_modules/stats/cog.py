@@ -85,10 +85,7 @@ class StatCommands(commands.Cog):
                 entity = "buildings"
                 entityDirectory = "Buildings"
 
-
-
         print(entity)
-
 
         cost = get_cost(arg1.title(), entity)
         costString = ""
