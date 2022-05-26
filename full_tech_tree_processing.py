@@ -14,17 +14,20 @@ def create_localised_name_lookup(category_key):
     localised_name_lookup = {}
 
     for key, value in directory[category_key].items():
-        localised_name_lookup[value["localised_name"]] = key
+        if key not in localised_name_lookup:
+            localised_name_lookup[value["localised_name"]] = key
 
     return localised_name_lookup
 
 
 localised_unit_building_name_lookup = create_localised_name_lookup("units_buildings")
+localised_tech_name_lookup = create_localised_name_lookup("techs")
 
 # Hardcode a fix for Huskarl because it appears again at "759",
 # but "759" does not exist in the other json
 localised_unit_building_name_lookup["Huskarl"] = "41"
 localised_unit_building_name_lookup["Elite Huskarl"] = "555"
+localised_unit_building_name_lookup["Barracks"] = "12"
 
 unitClasses = {
     0: "Unused",
@@ -68,66 +71,73 @@ unitClasses = {
 }
 
 
-def get_cost(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["Cost"]
+
+def get_cost(unit, type):
+    if type == "techs":
+        return techtree["data"][type][localised_tech_name_lookup[unit]]["Cost"]
+    else:
+        return techtree["data"][type][localised_unit_building_name_lookup[unit]]["Cost"]
 
 
-def get_attacks(unit):
+def get_attacks(unit, type):
     attackDict = {}
-    attacks = techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["Attacks"]
+    attacks = techtree["data"][type][localised_unit_building_name_lookup[unit]]["Attacks"]
     for attackItem in attacks:
         attackDict[unitClasses[attackItem["Class"]]] = attackItem["Amount"]
     return attackDict
 
 
-def get_armours(unit):
+def get_armours(unit, type):
     armourDict = {}
-    armours = techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["Armours"]
+    armours = techtree["data"][type][localised_unit_building_name_lookup[unit]]["Armours"]
     for attackItem in armours:
         armourDict[unitClasses[attackItem["Class"]]] = attackItem["Amount"]
     return armourDict
 
 
-def get_range(unit):
+def get_range(unit, type):
     rangeDict = {}
-    minRange = techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["MinRange"]
-    range = techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["Range"]
+    minRange = techtree["data"][type][localised_unit_building_name_lookup[unit]]["MinRange"]
+    range = techtree["data"][type][localised_unit_building_name_lookup[unit]]["Range"]
     rangeDict["Minimum Range"] = minRange
     rangeDict["Range"] = range
     return rangeDict
 
 
-def get_trainTime(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["TrainTime"]
+def get_trainTime(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["TrainTime"]
 
 
-def get_HP(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["HP"]
+def get_HP(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["HP"]
 
 
-def get_accuracy(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["AccuracyPercent"]
+def get_accuracy(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["AccuracyPercent"]
 
 
-def get_attackDelay(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["AttackDelaySeconds"]
+def get_attackDelay(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["AttackDelaySeconds"]
 
 
-def get_frameDelay(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["FrameDelay"]
+def get_frameDelay(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["FrameDelay"]
 
 
-def get_garrisonCapacity(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["GarrisonCapacity"]
+def get_garrisonCapacity(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["GarrisonCapacity"]
 
 
-def get_LineOfSight(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["LineOfSight"]
+def get_LineOfSight(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["LineOfSight"]
 
 
-def get_reloadTime(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["ReloadTime"]
+def get_reloadTime(unit, type):
+    return techtree["data"][type][localised_unit_building_name_lookup[unit]]["ReloadTime"]
 
 
-def get_speed(unit):
-    return techtree["data"]["units"][localised_unit_building_name_lookup[unit]]["Speed"]
+def get_speed(unit, type):
+    if type == "units":
+        return techtree["data"][type][localised_unit_building_name_lookup[unit]]["Speed"]
+    else:
+        return 0
