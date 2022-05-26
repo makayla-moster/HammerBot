@@ -71,7 +71,6 @@ unitClasses = {
 }
 
 
-
 def get_cost(unit, type):
     if type == "techs":
         return techtree["data"][type][localised_tech_name_lookup[unit]]["Cost"]
