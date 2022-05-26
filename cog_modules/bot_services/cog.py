@@ -61,6 +61,16 @@ class ServiceCommands(commands.Cog):
             value="[`!buildings <letter>`], Returns a list of buildings starting with a single letter.",
             inline=True,
         )
+        embed.add_field(
+            name="!stats",
+            value="[`!stats <unitName>`], Returns basic information about the unit.",
+            inline=True,
+        )
+        embed.add_field(
+            name="!advstats",
+            value="[`!advstats <unitName>`], Returns advanced information about the unit.",
+            inline=True,
+        )
         embed.set_footer(text=f"{ctx.author.name}", icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
