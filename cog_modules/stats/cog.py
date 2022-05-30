@@ -217,7 +217,7 @@ class StatCommands(commands.Cog):
         if "Gold" in cost:
             costString += f"{cost['Gold']} <:gold:978788983364546581> "
         if "Stone" in cost:
-            costString += f"{cost['Stone']} <:stone:978788984547315792>: "
+            costString += f"{cost['Stone']} <:stone:978788984547315792> "
         if costString != "":
             costString2 = costString
         else:
@@ -298,7 +298,7 @@ class StatCommands(commands.Cog):
             if "Gold" in cost:
                 costString += f"{cost['Gold']} <:gold:978788983364546581> "
             if "Stone" in cost:
-                costString += f"{cost['Stone']} <:stone:978788984547315792>: "
+                costString += f"{cost['Stone']} <:stone:978788984547315792> "
             if costString != "":
                 costString2 = costString
             else:
