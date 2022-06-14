@@ -35,6 +35,7 @@ localised_unit_building_name_lookup["Stable"] = "101"
 localised_unit_building_name_lookup["Archery Range"] = "87"
 localised_unit_building_name_lookup["Blacksmith"] = "103"
 localised_unit_building_name_lookup["Monastery"] = "104"
+localised_unit_building_name_lookup["Condottiero"] = "882"
 
 unitClasses = {
     0: "Unused",
