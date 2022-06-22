@@ -85,13 +85,13 @@ class ErrorHandler(commands.Cog):
                 color=disnake.Color.red(),
             )
 
-            # log error in error channel
-            debug_info = (
-                f"```\n{ctx.author} {ctx.author.id}: {ctx.message.content}"[:200]
-                + "```"
-                + f"```py\n{error_nice.replace('```', '｀｀｀')}"[: 2000 - 206]
-                + "```"
-            )
+        # log error in error channel
+        debug_info = (
+            f"```\n{ctx.author} {ctx.author.id}: {ctx.message.content}"[:200]
+            + "```"
+            + f"```py\n{error_nice.replace('```', '｀｀｀')}"[: 2000 - 206]
+            + "```"
+        )
 
         error_channel = self.bot.get_channel(ERROR_CHANNEL_ID)
 
