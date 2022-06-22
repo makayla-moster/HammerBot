@@ -93,10 +93,10 @@ class ErrorHandler(commands.Cog):
                 + "```"
             )
 
-            error_channel = self.bot.get_channel(ERROR_CHANNEL_ID)
+        error_channel = self.bot.get_channel(ERROR_CHANNEL_ID)
 
-            if error_channel is not None:
-                await error_channel.send(debug_info)
+        if error_channel is not None:
+            await error_channel.send(debug_info)
 
         await ctx.send(embed=message)
 
