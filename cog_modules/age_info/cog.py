@@ -2,16 +2,19 @@ import asyncio
 import csv
 import json
 import logging
+from msilib.schema import Error
 import os
 import random
 import sys
-
+import re
 import aiohttp
 import disnake
 import numpy as np
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
-
+from itertools import combinations
+from cog_modules.error_handler import error_helping
+import time
 from age_player import *
 from techTreeInfo import *
 
@@ -120,7 +123,6 @@ class AgeCommands(commands.Cog):
         Command: !rank [player name (optional)]
         Returns: 1v1 & tg ranks of player
         """
-
         f = open("Leaderboard1v1PlayerData_1_10000.json", "r")
         response1 = json.loads(f.read())
 
@@ -392,7 +394,7 @@ class AgeCommands(commands.Cog):
             await ctx.send(response)
 
     @commands.command(name="!whichciv", aliases=["!which", "!wc"], help="Returns which civ has the stated technology(ies).")
-    async def civTech(self, ctx: commands.Context, arg1, arg2=None, arg3=None, arg4=None, arg5=None):
+    async def civTech(self, ctx: commands.Context, *args):
         """
         Command: !whichciv [technology1 (+technology)] [(optional)technology2] [(optional)technology3] [(optional)technology4] [(optional)technology5]
         Returns: A list of civs that have that technology.
@@ -400,92 +402,46 @@ class AgeCommands(commands.Cog):
                  !whichciv [tech1]                  returns all civs that have that tech
                  !whichciv [techpart1] [techpart2]  returns all civs with that tech (accounts for spaces in tech name)
         """
-        error = False
-        if arg5 is not None:
-            arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title() + " " + arg5.title()
-            try:
-                response = techTreeDict[arg1]
-            except:
-                error = True
-                message = disnake.Embed(
-                    title="Invalid Input",
-                    description="There was a problem with your input. Please check your input and try again.",
-                    color=disnake.Color.red(),
-                )
-
-        elif arg4 is not None:
-            arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title() + " " + arg4.title()
-            try:
-                response = techTreeDict[arg1]
-            except:
-                error = True
-                message = disnake.Embed(
-                    title="Invalid Input",
-                    description="There was a problem with your input. Please check your input and try again.",
-                    color=disnake.Color.red(),
-                )
-
-        elif arg3 is not None:
-            arg1 = arg1.title() + " " + arg2.title() + " " + arg3.title()
-            try:
-                response = techTreeDict[arg1]
-            except:
-                error = True
-                message = disnake.Embed(
-                    title="Invalid Input",
-                    description="There was a problem with your input. Please check your input and try again.",
-                    color=disnake.Color.red(),
-                )
-
-        elif arg2 is not None:
-            arg1 = arg1.title() + " " + arg2.title()
-            try:
-                response = techTreeDict[arg1]
-            except:
-                error = True
-                message = disnake.Embed(
-                    title="Invalid Input",
-                    description="There was a problem with your input. Please check your input and try again.",
-                    color=disnake.Color.red(),
-                )
-
-        elif "+" in arg1:
-            arg1 = arg1.split("+")
-            try:
-                for i in range(len(arg1) - 1):
-                    tech = arg1[int(i)]
-                    tech2 = arg1[int(i + 1)]
-                    if i == 0:
-                        list1 = techTreeDict[tech.title()]
-                        list2 = techTreeDict[tech2.title()]
-                    else:
-                        list1 = list3
-                        list2 = techTreeDict[tech2.title()]
-                    list3 = set(list1).intersection(list2)
-                response = list3
-            except:
-                error = True
-                message = disnake.Embed(
-                    title="Invalid Input",
-                    description="There was a problem with your input. Please check your input and try again.",
-                    color=disnake.Color.red(),
-                )
-        else:
-            try:
-                response = techTreeDict[arg1.title()]
-            except:
-                error = True
-                message = disnake.Embed(
-                    title="Invalid Input",
-                    description="There was a problem with your input. Please check your input and try again.",
-                    color=disnake.Color.red(),
-                )
-
-        if error == True:
+        TITLE = "Invalid Input"
+        DESCRIPTION = "There was a problem with your input. Please check your input and try again."
+        message = disnake.Embed(
+                     title=TITLE,
+                     description=DESCRIPTION,
+                     color=disnake.Color.red(),
+                 ) if not args else None
+        error = False if not message else True
+        if error:
+            await ctx.send(embed=message)
+        if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
+            message = disnake.Embed(
+                     title=f"Input is longer than accepted",
+                     description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
+                     color=disnake.Color.red(),
+                 )
             await ctx.send(embed=message)
         else:
-            response.sort()
-            await ctx.send(", ".join(response))
+            technologies = [re.sub(r'[^\w]',' ',tech).strip().title() for tech in args]
+            for r in range(1,len(technologies)):
+                permuted_techs = [' '.join(permuted_strings).strip() for permuted_strings in combinations(technologies,r)]
+                technologies = technologies + permuted_techs
+            technologies = list(set(technologies))
+            responses = {}
+            for tech in technologies:
+                try:
+                    responses[tech] = techTreeDict[tech]
+                except:
+                    continue
+
+            techs = ', '.join(responses.keys())
+            civs =' '.join(list(set.intersection(*map(set,list(responses.values())))))
+            if len(civs) < 1:
+                civs = f"Sorry there are no civs with the unit(s): {techs}"
+            message = disnake.Embed(
+                        title = f'{techs} are found in the following civ(s)',
+                        description= f'{civs}',
+                        color = disnake.Color.green()
+            )
+            await ctx.send(embed=message)
 
     @commands.command(name="!does", aliases=["!do", "!doeshave"], help="Returns if a civ(s) has a technology.")
     async def techTree(self, ctx: commands.Context, arg1, arg2, arg3=None, arg4=None, arg5=None):
