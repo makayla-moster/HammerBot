@@ -2,6 +2,7 @@ import asyncio
 import csv
 import json
 import logging
+from msilib.schema import Error
 import os
 import random
 import sys
@@ -12,6 +13,7 @@ import numpy as np
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
 from itertools import combinations
+from cog_modules.error_handler import error_helping
 import time
 from age_player import *
 from techTreeInfo import *
@@ -410,19 +412,36 @@ class AgeCommands(commands.Cog):
         error = False if not message else True
         if error:
             await ctx.send(embed=message)
-        technologies = [re.sub(r'[^\w]',' ',tech).strip().title() for tech in args]
-        for r in range(1,len(technologies)):
-            permuted_techs = [' '.join(permuted_strings).strip() for permuted_strings in combinations(technologies,r)]
-            technologies = technologies + permuted_techs
-        technologies = list(set(technologies))
-        for tech in technologies:
-            try:
-                response = techTreeDict[tech]
-            except:
-                continue
+        if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
+            message = disnake.Embed(
+                     title=f"Input is longer than accepted",
+                     description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
+                     color=disnake.Color.red(),
+                 )
+            await ctx.send(embed=message)
+        else:
+            technologies = [re.sub(r'[^\w]',' ',tech).strip().title() for tech in args]
+            for r in range(1,len(technologies)):
+                permuted_techs = [' '.join(permuted_strings).strip() for permuted_strings in combinations(technologies,r)]
+                technologies = technologies + permuted_techs
+            technologies = list(set(technologies))
+            responses = {}
+            for tech in technologies:
+                try:
+                    responses[tech] = techTreeDict[tech]
+                except:
+                    continue
 
-            response.sort()
-            await ctx.send(", ".join(response))
+            techs = ', '.join(responses.keys())
+            civs =' '.join(list(set.intersection(*map(set,list(responses.values())))))
+            if len(civs) < 1:
+                civs = f"Sorry there are no civs with the unit(s): {techs}"
+            message = disnake.Embed(
+                        title = f'{techs} are found in the following civ(s)',
+                        description= f'{civs}',
+                        color = disnake.Color.green()
+            )
+            await ctx.send(embed=message)
 
     @commands.command(name="!does", aliases=["!do", "!doeshave"], help="Returns if a civ(s) has a technology.")
     async def techTree(self, ctx: commands.Context, arg1, arg2, arg3=None, arg4=None, arg5=None):
