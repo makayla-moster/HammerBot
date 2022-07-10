@@ -426,7 +426,7 @@ class AgeCommands(commands.Cog):
             await ctx.send(embed=message)
         else:
             technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in args]
-            for r in range(1, len(technologies)):
+            for r in range(1, len(technologies)+1):
                 permuted_techs = [" ".join(permuted_strings).strip() for permuted_strings in combinations(technologies, r)]
                 technologies = technologies + permuted_techs
             technologies = list(set(technologies))
@@ -436,9 +436,10 @@ class AgeCommands(commands.Cog):
                     responses[tech] = techTreeDict[tech]
                 except:
                     continue
-
             techs = ", ".join(responses.keys())
-            civs = " ".join(list(set.intersection(*map(set, list(responses.values())))))
+            civs = list(set.intersection(*map(set, list(responses.values()))))
+            civs.sort()
+            civs = ", ".join(civs)
             if len(civs) < 1:
                 civs = f"Sorry there are no civs with the unit(s): {techs}"
             message = disnake.Embed(
