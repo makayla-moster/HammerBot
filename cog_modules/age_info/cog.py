@@ -426,7 +426,7 @@ class AgeCommands(commands.Cog):
             await ctx.send(embed=message)
         else:
             technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in args]
-            for r in range(1, len(technologies)+1):
+            for r in range(1, len(technologies) + 1):
                 permuted_techs = [" ".join(permuted_strings).strip() for permuted_strings in combinations(technologies, r)]
                 technologies = technologies + permuted_techs
             technologies = list(set(technologies))
