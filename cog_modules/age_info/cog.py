@@ -8,7 +8,6 @@ import re
 import sys
 import time
 from itertools import combinations
-from msilib.schema import Error
 
 import aiohttp
 import disnake
