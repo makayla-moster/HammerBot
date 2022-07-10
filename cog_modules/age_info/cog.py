@@ -2,7 +2,6 @@ import asyncio
 import csv
 import json
 import logging
-from msilib.schema import Error
 import os
 import random
 import sys
