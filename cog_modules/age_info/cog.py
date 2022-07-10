@@ -6,8 +6,6 @@ import os
 import random
 import sys
 import re
-from itertools import chain
-from timeit import timeit
 import aiohttp
 import disnake
 import numpy as np
