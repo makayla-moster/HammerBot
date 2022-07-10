@@ -2,20 +2,22 @@ import asyncio
 import csv
 import json
 import logging
-from msilib.schema import Error
 import os
 import random
-import sys
 import re
+import sys
+import time
+from itertools import combinations
+from msilib.schema import Error
+
 import aiohttp
 import disnake
 import numpy as np
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
-from itertools import combinations
-from cog_modules.error_handler import error_helping
-import time
+
 from age_player import *
+from cog_modules.error_handler import error_helping
 from techTreeInfo import *
 
 load_dotenv()
@@ -404,25 +406,29 @@ class AgeCommands(commands.Cog):
         """
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
-        message = disnake.Embed(
-                     title=TITLE,
-                     description=DESCRIPTION,
-                     color=disnake.Color.red(),
-                 ) if not args else None
+        message = (
+            disnake.Embed(
+                title=TITLE,
+                description=DESCRIPTION,
+                color=disnake.Color.red(),
+            )
+            if not args
+            else None
+        )
         error = False if not message else True
         if error:
             await ctx.send(embed=message)
         if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
             message = disnake.Embed(
-                     title=f"Input is longer than accepted",
-                     description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
-                     color=disnake.Color.red(),
-                 )
+                title=f"Input is longer than accepted",
+                description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
+                color=disnake.Color.red(),
+            )
             await ctx.send(embed=message)
         else:
-            technologies = [re.sub(r'[^\w]',' ',tech).strip().title() for tech in args]
-            for r in range(1,len(technologies)):
-                permuted_techs = [' '.join(permuted_strings).strip() for permuted_strings in combinations(technologies,r)]
+            technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in args]
+            for r in range(1, len(technologies)):
+                permuted_techs = [" ".join(permuted_strings).strip() for permuted_strings in combinations(technologies, r)]
                 technologies = technologies + permuted_techs
             technologies = list(set(technologies))
             responses = {}
@@ -432,14 +438,12 @@ class AgeCommands(commands.Cog):
                 except:
                     continue
 
-            techs = ', '.join(responses.keys())
-            civs =' '.join(list(set.intersection(*map(set,list(responses.values())))))
+            techs = ", ".join(responses.keys())
+            civs = " ".join(list(set.intersection(*map(set, list(responses.values())))))
             if len(civs) < 1:
                 civs = f"Sorry there are no civs with the unit(s): {techs}"
             message = disnake.Embed(
-                        title = f'{techs} are found in the following civ(s)',
-                        description= f'{civs}',
-                        color = disnake.Color.green()
+                title=f"{techs} are found in the following civ(s)", description=f"{civs}", color=disnake.Color.green()
             )
             await ctx.send(embed=message)
 
