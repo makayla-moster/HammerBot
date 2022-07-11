@@ -425,17 +425,19 @@ class AgeCommands(commands.Cog):
             )
             await ctx.send(embed=message)
         else:
-            technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in args]
-            for r in range(1, len(technologies)+1):
-                permuted_techs = [" ".join(permuted_strings).strip() for permuted_strings in combinations(technologies, r)]
-                technologies = technologies + permuted_techs
-            technologies = list(set(technologies))
             responses = {}
-            for tech in technologies:
-                try:
-                    responses[tech] = techTreeDict[tech]
-                except:
-                    continue
+            technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in args]
+            if ' '.join(technologies) not in techTreeDict.keys():
+                for r in range(1, len(technologies)+1):
+                    for permutation in combinations(technologies, r):
+                        tech = ' '.join(permutation).strip()
+                        try:
+                            responses[tech] = techTreeDict[tech]
+                        except:
+                            continue
+            else:
+                tech = ' '.join(technologies)
+                responses[tech] = techTreeDict[tech]
             techs = ", ".join(responses.keys())
             civs = list(set.intersection(*map(set, list(responses.values()))))
             civs.sort()
