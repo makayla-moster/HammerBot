@@ -394,7 +394,8 @@ class AgeCommands(commands.Cog):
         else:
             await ctx.send(response)
 
-    @commands.command(name="!whichciv", aliases=["!which", "!wc"], help="Returns which civ has the stated technology(ies).")
+    @commands.command(name="!whichciv", aliases=["!which", "!wc"], help="Returns which civ has the stated technology(ies)." 
+    "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.")
     async def civTech(self, ctx: commands.Context, *args):
         """
         Command: !whichciv [technology1 (+technology)] [(optional)technology2] [(optional)technology3] [(optional)technology4] [(optional)technology5]
