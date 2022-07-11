@@ -85,6 +85,7 @@ class ServiceCommands(commands.Cog):
         embed.add_field(name="quela", value="\u200b", inline=True)
         embed.add_field(name="harristotle", value="\u200b", inline=True)
         embed.add_field(name="Rangebro", value="\u200b", inline=True)
+        embed.add_field(name="Brandyn", value="\u200b", inline=True)
         embed.set_footer(text=f"{ctx.author.name}", icon_url=ctx.author.display_avatar.url)
         await ctx.send(embed=embed)
 
