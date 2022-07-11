@@ -394,8 +394,12 @@ class AgeCommands(commands.Cog):
         else:
             await ctx.send(response)
 
-    @commands.command(name="!whichciv", aliases=["!which", "!wc"], help="Returns which civ has the stated technology(ies)." 
-    "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.")
+    @commands.command(
+        name="!whichciv",
+        aliases=["!which", "!wc"],
+        help="Returns which civ has the stated technology(ies)."
+        "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
+    )
     async def civTech(self, ctx: commands.Context, *args):
         """
         Command: !whichciv [technology1 (+technology)] [(optional)technology2] [(optional)technology3] [(optional)technology4] [(optional)technology5]
@@ -428,16 +432,16 @@ class AgeCommands(commands.Cog):
         else:
             responses = {}
             technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in args]
-            if ' '.join(technologies) not in techTreeDict.keys():
-                for r in range(1, len(technologies)+1):
+            if " ".join(technologies) not in techTreeDict.keys():
+                for r in range(1, len(technologies) + 1):
                     for permutation in combinations(technologies, r):
-                        tech = ' '.join(permutation).strip()
+                        tech = " ".join(permutation).strip()
                         try:
                             responses[tech] = techTreeDict[tech]
                         except:
                             continue
             else:
-                tech = ' '.join(technologies)
+                tech = " ".join(technologies)
                 responses[tech] = techTreeDict[tech]
             techs = ", ".join(responses.keys())
             civs = list(set.intersection(*map(set, list(responses.values()))))
