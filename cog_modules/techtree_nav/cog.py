@@ -24,6 +24,7 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 GUILD = os.getenv("DISCORD_GUILD")
 LUKE = os.getenv("LUKE_ID")
 
+
 class TechTree_Nav(commands.Cog):
     """Commands for age of empires calls by players."""
 
@@ -53,7 +54,7 @@ class TechTree_Nav(commands.Cog):
         name="!whichciv",
         aliases=["!which", "!wc"],
         help="Returns which civ has the stated technology(ies)."
-             "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
+        "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
     )
     async def civTech(self, ctx: commands.Context, *args):
         """
@@ -63,11 +64,50 @@ class TechTree_Nav(commands.Cog):
                  !whichciv [tech1]                  returns all civs that have that tech
                  !whichciv [techpart1] [techpart2]  returns all civs with that tech (accounts for spaces in tech name)
         """
-        age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians',
-                    'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish',
-                    'Incas', 'Hindustanis', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians',
-                    'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians',
-                    'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles', 'Dravidians', 'Bengalis', 'Gurjaras']
+        age_civs = [
+            "Britons",
+            "Byzantines",
+            "Celts",
+            "Chinese",
+            "Franks",
+            "Goths",
+            "Japanese",
+            "Mongols",
+            "Persians",
+            "Saracens",
+            "Teutons",
+            "Turks",
+            "Vikings",
+            "Aztecs",
+            "Huns",
+            "Koreans",
+            "Mayans",
+            "Spanish",
+            "Incas",
+            "Hindustanis",
+            "Italians",
+            "Magyars",
+            "Slavs",
+            "Berbers",
+            "Ethiopians",
+            "Malians",
+            "Portuguese",
+            "Burmese",
+            "Khmer",
+            "Malay",
+            "Vietnamese",
+            "Bulgarians",
+            "Cumans",
+            "Lithuanians",
+            "Tatars",
+            "Burgundians",
+            "Sicilians",
+            "Bohemians",
+            "Poles",
+            "Dravidians",
+            "Bengalis",
+            "Gurjaras",
+        ]
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
@@ -120,7 +160,7 @@ class TechTree_Nav(commands.Cog):
         name="!whichcivnot",
         aliases=["!whichnot", "!wcn"],
         help="Returns which civ do not have the stated technology(ies)."
-             "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
+        "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
     )
     async def civTechNot(self, ctx: commands.Context, *args):
         """
@@ -130,11 +170,50 @@ class TechTree_Nav(commands.Cog):
                  !whichcivnot [tech1]                  returns all civs that have that tech
                  !whichcivnot [techpart1] [techpart2]  returns all civs with that tech (accounts for spaces in tech name)
         """
-        age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians',
-                    'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish',
-                    'Incas', 'Hindustanis', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians',
-                    'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians',
-                    'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles', 'Dravidians', 'Bengalis', 'Gurjaras']
+        age_civs = [
+            "Britons",
+            "Byzantines",
+            "Celts",
+            "Chinese",
+            "Franks",
+            "Goths",
+            "Japanese",
+            "Mongols",
+            "Persians",
+            "Saracens",
+            "Teutons",
+            "Turks",
+            "Vikings",
+            "Aztecs",
+            "Huns",
+            "Koreans",
+            "Mayans",
+            "Spanish",
+            "Incas",
+            "Hindustanis",
+            "Italians",
+            "Magyars",
+            "Slavs",
+            "Berbers",
+            "Ethiopians",
+            "Malians",
+            "Portuguese",
+            "Burmese",
+            "Khmer",
+            "Malay",
+            "Vietnamese",
+            "Bulgarians",
+            "Cumans",
+            "Lithuanians",
+            "Tatars",
+            "Burgundians",
+            "Sicilians",
+            "Bohemians",
+            "Poles",
+            "Dravidians",
+            "Bengalis",
+            "Gurjaras",
+        ]
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
@@ -181,6 +260,7 @@ class TechTree_Nav(commands.Cog):
                 title=f"{techs} is missing from the following civ(s)", description=f"{civs_not}", color=disnake.Color.green()
             )
             await ctx.send(embed=message)
+
 
 def setup(bot: commands.Bot):
     bot.add_cog(TechTree_Nav(bot))
