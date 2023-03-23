@@ -4,11 +4,11 @@ import os
 import disnake
 from disnake.ext import commands, tasks
 from dotenv import load_dotenv
+from fuzzywuzzy import fuzz
 
 from full_tech_tree_processing import *
 from techtree_descriptions import *
 from techTreeInfo import *
-from fuzzywuzzy import fuzz
 
 
 class StatCommands(commands.Cog):
@@ -217,7 +217,9 @@ class StatCommands(commands.Cog):
                     embed.add_field(name="Accuracy", value=f"{get_accuracy(arg1.title(), entity)}%", inline=True)
                     if entity == "units":
                         embed.add_field(
-                            name="Attack Delay", value=f"{round(float(get_attackDelay(arg1.title(), entity)), 2)} sec", inline=True
+                            name="Attack Delay",
+                            value=f"{round(float(get_attackDelay(arg1.title(), entity)), 2)} sec",
+                            inline=True,
                         )
                     if entity == "units":
                         embed.add_field(name="Frame Delay", value=f"{get_frameDelay(arg1.title(), entity)}", inline=True)
@@ -249,7 +251,8 @@ class StatCommands(commands.Cog):
                 embed.add_field(name="Upgrade Research Time", value=f"{get_upgrade_researchTime(unitBuildNum)}", inline=True)
 
             embed.set_footer(
-                text=f"{ctx.author.name}\nFor less information run !stats {arg1.title()}", icon_url=ctx.author.display_avatar.url
+                text=f"{ctx.author.name}\nFor less information run !stats {arg1.title()}",
+                icon_url=ctx.author.display_avatar.url,
             )
             await ctx.send(embed=embed)
 
