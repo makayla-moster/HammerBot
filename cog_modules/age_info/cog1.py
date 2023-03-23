@@ -43,7 +43,8 @@ async def get_1v1_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=10000") as r:
+        async with session2.get(
+                "https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=3&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             f = open("Leaderboard1v1PlayerData_1_10000.json", "w")
@@ -58,7 +59,8 @@ async def get_tg_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=4&start=1&count=10000") as r:
+        async with session2.get(
+                "https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=4&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
@@ -70,7 +72,8 @@ async def get_1v1_ew_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=13&start=1&count=10000") as r:
+        async with session2.get(
+                "https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=13&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
@@ -82,7 +85,8 @@ async def get_tg_ew_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=14&start=1&count=10000") as r:
+        async with session2.get(
+                "https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=14&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
@@ -94,7 +98,8 @@ async def get_1v1_dm_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000") as r:
+        async with session2.get(
+                "https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
@@ -106,7 +111,8 @@ async def get_tg_dm_player_json():
     Helper function for pulling the top 10,000 AoE2 players' info.
     """
     async with aiohttp.ClientSession() as session2:
-        async with session2.get("https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000") as r:
+        async with session2.get(
+                "https://aoe2.net/api/leaderboard?game=aoe2de&leaderboard_id=1&start=1&count=10000") as r:
             r = await r.json(content_type=None)
             await session2.close()
             return r
@@ -129,7 +135,8 @@ class AgeCommands(commands.Cog):
 
         response = await get_1v1_player_json()
         tg_response = await get_tg_player_json()
-        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=disnake.Color.blurple())
+        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found",
+                                color=disnake.Color.blurple())
         rankings_1v1 = response["leaderboard"]
         rankings_tg = tg_response["leaderboard"]
         rank_1v1 = "Not Found"
@@ -169,7 +176,8 @@ class AgeCommands(commands.Cog):
         response = await get_1v1_ew_player_json()
         tg_response = await get_tg_ew_player_json()
         # message = disnake.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=disnake.Color.blurple())
+        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found",
+                                color=disnake.Color.blurple())
         rankings_1v1 = response["leaderboard"]
         rankings_tg = tg_response["leaderboard"]
 
@@ -212,7 +220,8 @@ class AgeCommands(commands.Cog):
         response = await get_1v1_dm_player_json()
         tg_response = await get_tg_dm_player_json()
         # message = disnake.Embed(title='Rank Not Found', description=f"BSHammer's Rank Not Found")
-        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found", color=disnake.Color.blurple())
+        message = disnake.Embed(title="Rank Not Found", description=f"{arg1} Rank Not Found",
+                                color=disnake.Color.blurple())
         rankings_1v1 = response["leaderboard"]
         rankings_tg = tg_response["leaderboard"]
 
@@ -343,7 +352,7 @@ class AgeCommands(commands.Cog):
         """
         error = False
         reponse = ""
-        # age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Indians', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles']
+        # age_civs = ['Britons', 'Byzantines', 'Celts', 'Chinese', 'Franks', 'Goths', 'Japanese', 'Mongols', 'Persians', 'Saracens', 'Teutons', 'Turks', 'Vikings', 'Aztecs', 'Huns', 'Koreans', 'Mayans', 'Spanish', 'Incas', 'Hindustanis', 'Italians', 'Magyars', 'Slavs', 'Berbers', 'Ethiopians', 'Malians', 'Portuguese', 'Burmese', 'Khmer', 'Malay', 'Vietnamese', 'Bulgarians', 'Cumans', 'Lithuanians', 'Tatars', 'Burgundians', 'Sicilians', 'Bohemians', 'Poles', 'Dravidians', 'Bengalis', 'Gurjaras']
         pocket_civs = []
         flank_civs = []
         username = ctx.message.author.id
@@ -398,7 +407,7 @@ class AgeCommands(commands.Cog):
         name="!whichciv",
         aliases=["!which", "!wc"],
         help="Returns which civ has the stated technology(ies)."
-        "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
+             "Encapsulate technology inside double-quotes if you aren't getting what you're looking for.",
     )
     async def civTech(self, ctx: commands.Context, *args):
         """
