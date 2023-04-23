@@ -43,7 +43,6 @@ class StatCommands(commands.Cog):
             )
             await ctx.send(embed=embed)
         else:
-
             if input in localised_tech_name_lookup:
                 unitBuildNum = localised_tech_name_lookup[input]
                 entity = "techs"
@@ -73,13 +72,9 @@ class StatCommands(commands.Cog):
                 costString2 = "No resources needed."
 
             if entity != "techs" and input[-1] != "s":
-                embed = disnake.Embed(
-                    title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341
-                )
+                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
             else:
-                embed = disnake.Embed(
-                    title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341
-                )
+                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
             embed.set_thumbnail(
                 url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
             )
@@ -92,9 +87,7 @@ class StatCommands(commands.Cog):
             else:
                 embed.add_field(name="Hit Points", value=f"{get_HP(input, entity)}", inline=True)
                 if "Base Melee" in get_attacks(input, entity):
-                    embed.add_field(
-                        name="Base Melee Damage", value=f"{get_attacks(input, entity)['Base Melee']}", inline=True
-                    )
+                    embed.add_field(name="Base Melee Damage", value=f"{get_attacks(input, entity)['Base Melee']}", inline=True)
                 if "Base Pierce" in get_attacks(input, entity):
                     embed.add_field(
                         name="Base Pierce Damage", value=f"{get_attacks(input, entity)['Base Pierce']}", inline=True
@@ -166,13 +159,9 @@ class StatCommands(commands.Cog):
                 costString2 = "No resources needed."
 
             if entity != "techs" and input[-1] != "s":
-                embed = disnake.Embed(
-                    title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341
-                )
+                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
             else:
-                embed = disnake.Embed(
-                    title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341
-                )
+                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
 
             embed.set_thumbnail(
                 url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
@@ -185,18 +174,14 @@ class StatCommands(commands.Cog):
             else:
                 embed.add_field(name="Hit Points", value=f"{get_HP(input, entity)}", inline=True)
                 if "Base Melee" in get_attacks(input, entity):
-                    embed.add_field(
-                        name="Base Melee Damage", value=f"{get_attacks(input, entity)['Base Melee']}", inline=True
-                    )
+                    embed.add_field(name="Base Melee Damage", value=f"{get_attacks(input, entity)['Base Melee']}", inline=True)
                 if "Base Pierce" in get_attacks(input, entity):
                     embed.add_field(
                         name="Base Pierce Damage", value=f"{get_attacks(input, entity)['Base Pierce']}", inline=True
                     )
 
                 if "Base Melee" in get_armours(input, entity):
-                    embed.add_field(
-                        name="Base Melee Armor", value=f"{get_armours(input, entity)['Base Melee']}", inline=True
-                    )
+                    embed.add_field(name="Base Melee Armor", value=f"{get_armours(input, entity)['Base Melee']}", inline=True)
                 if "Base Pierce" in get_armours(input, entity):
                     embed.add_field(
                         name="Base Pierce Armor", value=f"{get_armours(input, entity)['Base Pierce']}", inline=True
