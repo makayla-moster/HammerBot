@@ -51,9 +51,7 @@ class TechTree_Nav(commands.Cog):
             await ctx.send(embed=message)
 
     @commands.command(
-        name="!does",
-        aliases=["!do", "!doeshave"],
-        help="Returns if a civ(s) has a technology. !does [civs] have [techs]"
+        name="!does", aliases=["!do", "!doeshave"], help="Returns if a civ(s) has a technology. !does [civs] have [techs]"
     )
     async def doesCiv(self, ctx: commands.Context, *args):
         age_civs = [
@@ -100,7 +98,7 @@ class TechTree_Nav(commands.Cog):
             "Bengalis",
             "Gurjaras",
         ]
-        response = ''
+        response = ""
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
@@ -125,12 +123,12 @@ class TechTree_Nav(commands.Cog):
         else:
             i = 0
             for i in range(len(args)):
-                if args[i] == 'have':
-                    splitNum = i 
+                if args[i] == "have":
+                    splitNum = i
                 else:
-                    i += 1 
+                    i += 1
             civs = args[:splitNum]
-            techs = args[splitNum + 1:]
+            techs = args[splitNum + 1 :]
             time = 0
             for j in range(len(civs)):
                 if civs[j].title() in age_civs:
@@ -140,12 +138,12 @@ class TechTree_Nav(commands.Cog):
                             if bool:
                                 if time == 0:
                                     response = civs[j].title() + " have " + techs[k].title()
-                                else: 
+                                else:
                                     response += "\n" + civs[j].title() + " have " + techs[k].title()
                             elif not bool:
                                 if time == 0:
                                     response = civs[j].title() + " do not have " + techs[k].title()
-                                else: 
+                                else:
                                     response += "\n" + civs[j].title() + " do not have " + techs[k].title()
                             time += 1
                         else:
@@ -154,7 +152,7 @@ class TechTree_Nav(commands.Cog):
                                 time += 1
                             else:
                                 response += "\n" + techs[k].title() + " was not found, check spelling."
-                            
+
             await ctx.send(response)
 
     @commands.command(
