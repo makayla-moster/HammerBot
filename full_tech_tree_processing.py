@@ -28,7 +28,6 @@ localised_unit_building_name_lookup = create_localised_name_lookup("units_buildi
 localised_tech_name_lookup = create_localised_name_lookup("techs")
 
 
-
 # Hardcode a fix for Huskarl because it appears again at "759",
 # but "759" does not exist in the other json
 localised_unit_building_name_lookup["Huskarl"] = "41"
