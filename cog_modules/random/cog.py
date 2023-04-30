@@ -1,10 +1,11 @@
 import asyncio
+
 import disnake
 import requests
 from disnake.ext import commands
 
-class Random(commands.Cog):
 
+class Random(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
