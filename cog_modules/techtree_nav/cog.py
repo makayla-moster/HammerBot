@@ -51,9 +51,7 @@ class TechTree_Nav(commands.Cog):
             await ctx.send(embed=message)
 
     @commands.command(
-        name="!does",
-        aliases=["!do", "!doeshave"],
-        help="Returns if a civ(s) has a technology. !does [civs] have [techs]"
+        name="!does", aliases=["!do", "!doeshave"], help="Returns if a civ(s) has a technology. !does [civs] have [techs]"
     )
     async def doesCiv(self, ctx: commands.Context, *args):
         age_civs = [
@@ -100,7 +98,7 @@ class TechTree_Nav(commands.Cog):
             "Bengalis",
             "Gurjaras",
         ]
-        response = ''
+        response = ""
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
@@ -125,10 +123,10 @@ class TechTree_Nav(commands.Cog):
         else:
             i = 0
             for i in range(len(args)):
-                if args[i] == 'have':
-                    splitNum = i 
+                if args[i] == "have":
+                    splitNum = i
                 else:
-                    i += 1 
+                    i += 1
             civs = args[:splitNum]
             techlist = args[splitNum + 1:]
             techs = []
