@@ -79,3 +79,5 @@ for key in tech_dict:
     for c in civs:
         if pay in techtree["techtrees"][c]["techs"]:
             master_dict[key].append(c)
+
+print(master_dict)

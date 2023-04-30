@@ -897,7 +897,7 @@
                     "Stone": 5
                 },
                 "GarrisonCapacity": 0,
-                "HP": 900,
+                "HP": 1080,
                 "ID": 117,
                 "LanguageHelpId": 26203,
                 "LanguageNameId": 5203,
@@ -1186,7 +1186,7 @@
                 "internal_name": "WCTW3"
             },
             "236": {
-                "AccuracyPercent": 92,
+                "AccuracyPercent": 100,
                 "Armours": [
                     {
                         "Amount": 0,
@@ -1338,7 +1338,7 @@
                     "Stone": 30
                 },
                 "GarrisonCapacity": 0,
-                "HP": 1375,
+                "HP": 1650,
                 "ID": 487,
                 "LanguageHelpId": 26185,
                 "LanguageNameId": 5185,
@@ -1615,6 +1615,66 @@
                 "ReloadTime": 0,
                 "TrainTime": 120,
                 "internal_name": "FEITO"
+            },
+            "1189": {
+                "AccuracyPercent": 100,
+                "Armours": [
+                    {
+                        "Amount": 0,
+                        "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 11
+                    },
+                    {
+                        "Amount": 3,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 10,
+                        "Class": 3
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 13
+                    },
+                    {
+                        "Amount": 3,
+                        "Class": 31
+                    }
+                ],
+                "Attack": 3,
+                "Attacks": [
+                    {
+                        "Amount": 10,
+                        "Class": 16
+                    },
+                    {
+                        "Amount": 3,
+                        "Class": 3
+                    },
+                    {
+                        "Amount": 10,
+                        "Class": 34
+                    }
+                ],
+                "Cost": {
+                    "Wood": 150
+                },
+                "GarrisonCapacity": 10,
+                "HP": 2000,
+                "ID": 1189,
+                "LanguageHelpId": 26249,
+                "LanguageNameId": 5249,
+                "LineOfSight": 10,
+                "MeleeArmor": 3,
+                "MinRange": 1,
+                "PierceArmor": 10,
+                "Range": 7,
+                "ReloadTime": 3,
+                "TrainTime": 35,
+                "internal_name": "HARBOR"
             },
             "1251": {
                 "AccuracyPercent": 100,
@@ -1923,8 +1983,8 @@
             },
             "9": {
                 "Cost": {
-                    "Food": 500,
-                    "Gold": 450
+                    "Food": 400,
+                    "Gold": 400
                 },
                 "ID": 9,
                 "LanguageHelpId": 28424,
@@ -1935,8 +1995,8 @@
             },
             "10": {
                 "Cost": {
-                    "Gold": 500,
-                    "Wood": 450
+                    "Food": 600,
+                    "Gold": 650
                 },
                 "ID": 10,
                 "LanguageHelpId": 28425,
@@ -2044,7 +2104,7 @@
             "21": {
                 "Cost": {
                     "Food": 500,
-                    "Gold": 500
+                    "Wood": 300
                 },
                 "ID": 21,
                 "LanguageHelpId": 28428,
@@ -2137,15 +2197,15 @@
             },
             "49": {
                 "Cost": {
-                    "Food": 850,
-                    "Gold": 400
+                    "Food": 650,
+                    "Gold": 500
                 },
                 "ID": 49,
                 "LanguageHelpId": 28431,
                 "LanguageNameId": 7431,
                 "Repeatable": true,
                 "ResearchTime": 40,
-                "internal_name": "Viking Berserkergang"
+                "internal_name": "Bogsveigar"
             },
             "50": {
                 "Cost": {
@@ -2209,8 +2269,8 @@
             },
             "59": {
                 "Cost": {
-                    "Gold": 400,
-                    "Wood": 750
+                    "Gold": 300,
+                    "Wood": 550
                 },
                 "ID": 59,
                 "LanguageHelpId": 28059,
@@ -2741,7 +2801,7 @@
             "321": {
                 "Cost": {
                     "Food": 400,
-                    "Gold": 200
+                    "Wood": 200
                 },
                 "ID": 321,
                 "LanguageHelpId": 28322,
@@ -2759,7 +2819,7 @@
                 "LanguageHelpId": 28321,
                 "LanguageNameId": 7321,
                 "Repeatable": false,
-                "ResearchTime": 60,
+                "ResearchTime": 35,
                 "internal_name": "Murder Holes"
             },
             "373": {
@@ -3015,8 +3075,8 @@
             },
             "463": {
                 "Cost": {
-                    "Food": 700,
-                    "Gold": 500
+                    "Food": 600,
+                    "Gold": 450
                 },
                 "ID": 463,
                 "LanguageHelpId": 28312,
@@ -3219,7 +3279,7 @@
             },
             "513": {
                 "Cost": {
-                    "Food": 1200,
+                    "Food": 900,
                     "Gold": 500
                 },
                 "ID": 513,
@@ -3309,7 +3369,7 @@
                 "ID": 574,
                 "LanguageHelpId": 28252,
                 "LanguageNameId": 7252,
-                "Repeatable": true,
+                "Repeatable": false,
                 "ResearchTime": 40,
                 "internal_name": "Ethiopian UT"
             },
@@ -3483,8 +3543,8 @@
             },
             "629": {
                 "Cost": {
-                    "Gold": 350,
-                    "Wood": 600
+                    "Food": 550,
+                    "Wood": 200
                 },
                 "ID": 629,
                 "LanguageHelpId": 28298,
@@ -3598,8 +3658,8 @@
                 "LanguageHelpId": 28403,
                 "LanguageNameId": 7403,
                 "Repeatable": false,
-                "ResearchTime": 35,
-                "internal_name": "Tracking"
+                "ResearchTime": 20,
+                "internal_name": "Supplies"
             },
             "754": {
                 "Cost": {
@@ -3615,8 +3675,8 @@
             },
             "755": {
                 "Cost": {
-                    "Food": 1200,
-                    "Gold": 650
+                    "Food": 200,
+                    "Gold": 150
                 },
                 "ID": 755,
                 "LanguageHelpId": 28343,
@@ -3627,8 +3687,8 @@
             },
             "756": {
                 "Cost": {
-                    "Food": 300,
-                    "Gold": 600
+                    "Food": 400,
+                    "Gold": 300
                 },
                 "ID": 756,
                 "LanguageHelpId": 28344,
@@ -3687,7 +3747,7 @@
             },
             "785": {
                 "Cost": {
-                    "Food": 800,
+                    "Food": 500,
                     "Gold": 450
                 },
                 "ID": 785,
@@ -3699,8 +3759,8 @@
             },
             "831": {
                 "Cost": {
-                    "Food": 350,
-                    "Gold": 250
+                    "Food": 300,
+                    "Gold": 200
                 },
                 "ID": 831,
                 "LanguageHelpId": 28357,
@@ -3747,8 +3807,8 @@
             },
             "835": {
                 "Cost": {
-                    "Food": 200,
-                    "Gold": 400
+                    "Food": 500,
+                    "Gold": 450
                 },
                 "ID": 835,
                 "LanguageHelpId": 28361,
@@ -3768,6 +3828,18 @@
                 "Repeatable": true,
                 "ResearchTime": 60,
                 "internal_name": "Frontier Guards"
+            },
+            "875": {
+                "Cost": {
+                    "Food": 100,
+                    "Gold": 100
+                },
+                "ID": 875,
+                "LanguageHelpId": 28450,
+                "LanguageNameId": 7450,
+                "Repeatable": false,
+                "ResearchTime": 25,
+                "internal_name": "Gambesons"
             }
         },
         "unit_upgrades": {
@@ -3791,8 +3863,8 @@
             },
             "24": {
                 "Cost": {
-                    "Food": 125,
-                    "Gold": 75
+                    "Food": 175,
+                    "Gold": 125
                 },
                 "ID": 901,
                 "ResearchTime": 35,
@@ -3813,7 +3885,7 @@
                     "Gold": 65
                 },
                 "ID": 901,
-                "ResearchTime": 45,
+                "ResearchTime": 40,
                 "internal_name": "Long Swordsman"
             },
             "207": {
@@ -3845,11 +3917,11 @@
             },
             "358": {
                 "Cost": {
-                    "Food": 215,
+                    "Food": 160,
                     "Gold": 90
                 },
                 "ID": 901,
-                "ResearchTime": 45,
+                "ResearchTime": 35,
                 "internal_name": "Pikeman"
             },
             "359": {
@@ -3899,7 +3971,7 @@
                     "Gold": 100
                 },
                 "ID": 901,
-                "ResearchTime": 75,
+                "ResearchTime": 60,
                 "internal_name": "Two-Handed Swordsman"
             },
             "474": {
@@ -3913,8 +3985,8 @@
             },
             "492": {
                 "Cost": {
-                    "Food": 350,
-                    "Gold": 300
+                    "Food": 450,
+                    "Gold": 400
                 },
                 "ID": 901,
                 "ResearchTime": 50,
@@ -3994,8 +4066,8 @@
             },
             "542": {
                 "Cost": {
-                    "Food": 1000,
-                    "Wood": 1100
+                    "Food": 800,
+                    "Wood": 900
                 },
                 "ID": 901,
                 "ResearchTime": 50,
@@ -4114,7 +4186,7 @@
                     "Gold": 350
                 },
                 "ID": 901,
-                "ResearchTime": 100,
+                "ResearchTime": 85,
                 "internal_name": "Champion"
             },
             "569": {
@@ -4254,8 +4326,8 @@
             },
             "875": {
                 "Cost": {
-                    "Food": 1000,
-                    "Gold": 800
+                    "Food": 900,
+                    "Gold": 500
                 },
                 "ID": 901,
                 "ResearchTime": 80,
@@ -4299,8 +4371,8 @@
             },
             "1006": {
                 "Cost": {
-                    "Food": 750,
-                    "Gold": 475
+                    "Food": 700,
+                    "Gold": 525
                 },
                 "ID": 901,
                 "ResearchTime": 60,
@@ -4362,8 +4434,8 @@
             },
             "1128": {
                 "Cost": {
-                    "Food": 1100,
-                    "Gold": 675
+                    "Food": 1000,
+                    "Gold": 750
                 },
                 "ID": 901,
                 "ResearchTime": 65,
@@ -4467,8 +4539,8 @@
             },
             "1659": {
                 "Cost": {
-                    "Food": 1100,
-                    "Gold": 800
+                    "Food": 800,
+                    "Gold": 675
                 },
                 "ID": 901,
                 "ResearchTime": 45,
@@ -4476,8 +4548,8 @@
             },
             "1661": {
                 "Cost": {
-                    "Food": 1100,
-                    "Gold": 800
+                    "Food": 800,
+                    "Gold": 675
                 },
                 "ID": 901,
                 "ResearchTime": 45,
@@ -4512,8 +4584,8 @@
             },
             "1709": {
                 "Cost": {
-                    "Food": 950,
-                    "Gold": 750
+                    "Food": 1100,
+                    "Gold": 800
                 },
                 "ID": 901,
                 "ResearchTime": 140,
@@ -4539,7 +4611,7 @@
             },
             "1746": {
                 "Cost": {
-                    "Food": 650
+                    "Food": 850
                 },
                 "ID": 901,
                 "ResearchTime": 60,
@@ -4547,17 +4619,17 @@
             },
             "1749": {
                 "Cost": {
-                    "Food": 1000,
-                    "Gold": 800
+                    "Food": 950,
+                    "Gold": 575
                 },
                 "ID": 901,
-                "ResearchTime": 80,
-                "internal_name": "Elite Elephant Archer"
+                "ResearchTime": 45,
+                "internal_name": "Elite Ghulam"
             },
             "1753": {
                 "Cost": {
-                    "Food": 800,
-                    "Gold": 600
+                    "Food": 850,
+                    "Gold": 500
                 },
                 "ID": 901,
                 "ResearchTime": 45,
@@ -4571,6 +4643,24 @@
                 "ID": 901,
                 "ResearchTime": 45,
                 "internal_name": "Elite Ratha"
+            },
+            "1787": {
+                "Cost": {
+                    "Food": 160,
+                    "Gold": 90
+                },
+                "ID": 901,
+                "ResearchTime": 35,
+                "internal_name": "Pikeman"
+            },
+            "1788": {
+                "Cost": {
+                    "Food": 300,
+                    "Gold": 600
+                },
+                "ID": 901,
+                "ResearchTime": 50,
+                "internal_name": "Halberdier"
             }
         },
         "units": {
@@ -4736,6 +4826,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
                     }
                 ],
                 "Attack": 3,
@@ -4810,6 +4904,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
                     }
                 ],
                 "Attack": 2,
@@ -4990,6 +5088,10 @@
                     {
                         "Amount": 3,
                         "Class": 20
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -5293,13 +5395,21 @@
                     {
                         "Amount": 14,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
                     "Food": 85,
-                    "Gold": 40
+                    "Gold": 30
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
@@ -5441,6 +5551,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -5515,6 +5633,10 @@
                     {
                         "Amount": 0,
                         "Class": 17
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -5593,6 +5715,14 @@
                     {
                         "Amount": 9,
                         "Class": 32
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -5663,6 +5793,14 @@
                     {
                         "Amount": 6,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -6145,6 +6283,10 @@
                     {
                         "Amount": 0,
                         "Class": 14
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 17
                     }
                 ],
                 "ChargeEvent": 0,
@@ -6411,7 +6553,7 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 30,
+                    "Food": 40,
                     "Gold": 40
                 },
                 "FrameDelay": 14,
@@ -6452,6 +6594,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 8,
@@ -6488,6 +6634,14 @@
                     {
                         "Amount": 9,
                         "Class": 34
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -6540,7 +6694,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 10,
+                "Attack": 11,
                 "AttackDelaySeconds": 0.0,
                 "Attacks": [
                     {
@@ -6552,12 +6706,16 @@
                         "Class": 21
                     },
                     {
-                        "Amount": 10,
+                        "Amount": 11,
                         "Class": 4
                     },
                     {
                         "Amount": 0,
                         "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -6568,7 +6726,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 65,
+                "HP": 70,
                 "ID": 232,
                 "LanguageHelpId": 26113,
                 "LanguageNameId": 5113,
@@ -6636,6 +6794,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -6916,6 +7082,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -6970,6 +7144,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 8,
@@ -6990,6 +7168,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -7056,6 +7242,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -7126,12 +7320,20 @@
                     {
                         "Amount": 10,
                         "Class": 19
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 60,
+                    "Food": 50,
                     "Gold": 30
                 },
                 "FrameDelay": 0,
@@ -7172,6 +7374,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 6,
@@ -7204,6 +7410,14 @@
                     {
                         "Amount": 5,
                         "Class": 34
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -7250,6 +7464,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 7,
@@ -7286,6 +7504,14 @@
                     {
                         "Amount": 9,
                         "Class": 34
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -7553,7 +7779,7 @@
                 "internal_name": "HLBDM"
             },
             "420": {
-                "AccuracyPercent": 50,
+                "AccuracyPercent": 100,
                 "Armours": [
                     {
                         "Amount": 0,
@@ -7576,7 +7802,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 35,
+                "Attack": 50,
                 "AttackDelaySeconds": 0.0,
                 "Attacks": [
                     {
@@ -7584,28 +7810,12 @@
                         "Class": 11
                     },
                     {
-                        "Amount": 15,
-                        "Class": 1
-                    },
-                    {
-                        "Amount": 35,
+                        "Amount": 50,
                         "Class": 4
                     },
                     {
-                        "Amount": 15,
-                        "Class": 15
-                    },
-                    {
-                        "Amount": 15,
-                        "Class": 8
-                    },
-                    {
-                        "Amount": 40,
+                        "Amount": 25,
                         "Class": 20
-                    },
-                    {
-                        "Amount": 4,
-                        "Class": 35
                     }
                 ],
                 "ChargeEvent": 0,
@@ -7808,6 +8018,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -7947,6 +8165,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -8076,7 +8302,7 @@
                 "AttackDelaySeconds": 0.8969999999999999,
                 "Attacks": [
                     {
-                        "Amount": 2,
+                        "Amount": 4,
                         "Class": 27
                     },
                     {
@@ -8090,6 +8316,10 @@
                     {
                         "Amount": 0,
                         "Class": 17
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -8490,6 +8720,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -8620,11 +8858,11 @@
                 "AttackDelaySeconds": 0.0,
                 "Attacks": [
                     {
-                        "Amount": 8,
+                        "Amount": 7,
                         "Class": 11
                     },
                     {
-                        "Amount": 11,
+                        "Amount": 10,
                         "Class": 16
                     },
                     {
@@ -8636,7 +8874,7 @@
                         "Class": 17
                     },
                     {
-                        "Amount": 11,
+                        "Amount": 10,
                         "Class": 34
                     }
                 ],
@@ -8690,7 +8928,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 13,
+                "Attack": 14,
                 "AttackDelaySeconds": 0.0,
                 "Attacks": [
                     {
@@ -8702,12 +8940,16 @@
                         "Class": 21
                     },
                     {
-                        "Amount": 13,
+                        "Amount": 14,
                         "Class": 4
                     },
                     {
                         "Amount": 0,
                         "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -8718,7 +8960,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 80,
+                "HP": 85,
                 "ID": 534,
                 "LanguageHelpId": 26463,
                 "LanguageNameId": 5463,
@@ -8966,6 +9208,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9175,6 +9425,14 @@
                     {
                         "Amount": 10,
                         "Class": 32
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9241,13 +9499,21 @@
                     {
                         "Amount": 17,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
                     "Food": 85,
-                    "Gold": 40
+                    "Gold": 30
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
@@ -9311,6 +9577,14 @@
                     {
                         "Amount": 10,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9365,6 +9639,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 10,
@@ -9389,6 +9667,14 @@
                     {
                         "Amount": 1,
                         "Class": 35
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9537,6 +9823,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9685,12 +9979,20 @@
                     {
                         "Amount": 12,
                         "Class": 19
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 60,
+                    "Food": 50,
                     "Gold": 30
                 },
                 "FrameDelay": 0,
@@ -9767,6 +10069,10 @@
                     {
                         "Amount": 5,
                         "Class": 20
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9903,6 +10209,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -9998,7 +10312,7 @@
                 "internal_name": "SNAGR"
             },
             "691": {
-                "AccuracyPercent": 50,
+                "AccuracyPercent": 100,
                 "Armours": [
                     {
                         "Amount": 0,
@@ -10021,7 +10335,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 45,
+                "Attack": 60,
                 "AttackDelaySeconds": 0.0,
                 "Attacks": [
                     {
@@ -10029,28 +10343,12 @@
                         "Class": 11
                     },
                     {
-                        "Amount": 15,
-                        "Class": 1
-                    },
-                    {
-                        "Amount": 45,
+                        "Amount": 60,
                         "Class": 4
                     },
                     {
-                        "Amount": 15,
-                        "Class": 15
-                    },
-                    {
-                        "Amount": 15,
-                        "Class": 8
-                    },
-                    {
-                        "Amount": 40,
+                        "Amount": 25,
                         "Class": 20
-                    },
-                    {
-                        "Amount": 4,
-                        "Class": 35
                     }
                 ],
                 "ChargeEvent": 0,
@@ -10239,7 +10537,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": 1,
+                        "Amount": 2,
                         "Class": 3
                     },
                     {
@@ -10277,6 +10575,10 @@
                     {
                         "Amount": 10,
                         "Class": 32
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -10295,7 +10597,7 @@
                 "MaxCharge": 0,
                 "MeleeArmor": 1,
                 "MinRange": 0,
-                "PierceArmor": 1,
+                "PierceArmor": 2,
                 "Range": 0,
                 "RechargeRate": 0,
                 "ReloadTime": 2,
@@ -10317,7 +10619,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": 1,
+                        "Amount": 2,
                         "Class": 3
                     },
                     {
@@ -10355,6 +10657,10 @@
                     {
                         "Amount": 10,
                         "Class": 32
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -10373,7 +10679,7 @@
                 "MaxCharge": 0,
                 "MeleeArmor": 2,
                 "MinRange": 0,
-                "PierceArmor": 1,
+                "PierceArmor": 2,
                 "Range": 0,
                 "RechargeRate": 0,
                 "ReloadTime": 2,
@@ -10446,7 +10752,7 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 20,
+                    "Food": 25,
                     "Gold": 50
                 },
                 "FrameDelay": 0,
@@ -10532,7 +10838,7 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 20,
+                    "Food": 25,
                     "Gold": 50
                 },
                 "FrameDelay": 0,
@@ -10618,7 +10924,7 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 20,
+                    "Food": 25,
                     "Gold": 50
                 },
                 "FrameDelay": 0,
@@ -10695,6 +11001,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -10777,6 +11091,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -10977,7 +11299,7 @@
                         "Class": 8
                     },
                     {
-                        "Amount": 2,
+                        "Amount": 1,
                         "Class": 3
                     },
                     {
@@ -11011,6 +11333,10 @@
                     {
                         "Amount": 4,
                         "Class": 17
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -11029,7 +11355,7 @@
                 "MaxCharge": 0,
                 "MeleeArmor": 2,
                 "MinRange": 0,
-                "PierceArmor": 2,
+                "PierceArmor": 1,
                 "Range": 6,
                 "RechargeRate": 0,
                 "ReloadTime": 2.9,
@@ -11089,6 +11415,10 @@
                     {
                         "Amount": 6,
                         "Class": 17
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -11197,7 +11527,7 @@
                         "Class": 19
                     },
                     {
-                        "Amount": 0,
+                        "Amount": -1,
                         "Class": 28
                     },
                     {
@@ -11215,6 +11545,14 @@
                     {
                         "Amount": 9,
                         "Class": 3
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -11267,7 +11605,7 @@
                         "Class": 19
                     },
                     {
-                        "Amount": 0,
+                        "Amount": -1,
                         "Class": 28
                     },
                     {
@@ -11285,6 +11623,14 @@
                     {
                         "Amount": 9,
                         "Class": 3
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -11431,12 +11777,12 @@
                 "ID": 832,
                 "LanguageHelpId": 26732,
                 "LanguageNameId": 5732,
-                "LineOfSight": 8,
+                "LineOfSight": 9,
                 "MaxCharge": 0,
                 "MeleeArmor": 8,
                 "MinRange": 0,
                 "PierceArmor": 6,
-                "Range": 6,
+                "Range": 7,
                 "RechargeRate": 0,
                 "ReloadTime": 6,
                 "Speed": 1.035,
@@ -11655,6 +12001,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -11729,6 +12083,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -11781,7 +12143,7 @@
                         "Class": 5
                     },
                     {
-                        "Amount": -7,
+                        "Amount": -4,
                         "Class": 28
                     },
                     {
@@ -11803,12 +12165,16 @@
                     {
                         "Amount": 0,
                         "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 90,
+                    "Food": 80,
                     "Gold": 70
                 },
                 "FrameDelay": 12,
@@ -11826,7 +12192,7 @@
                 "RechargeRate": 0,
                 "ReloadTime": 2,
                 "Speed": 0.9,
-                "TrainTime": 34,
+                "TrainTime": 32,
                 "Trait": 0,
                 "TraitPiece": 0,
                 "internal_name": "ELEAR"
@@ -11855,7 +12221,7 @@
                         "Class": 5
                     },
                     {
-                        "Amount": -7,
+                        "Amount": -4,
                         "Class": 28
                     },
                     {
@@ -11877,12 +12243,16 @@
                     {
                         "Amount": 0,
                         "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 90,
+                    "Food": 80,
                     "Gold": 70
                 },
                 "FrameDelay": 24,
@@ -11900,7 +12270,7 @@
                 "RechargeRate": 0,
                 "ReloadTime": 2,
                 "Speed": 0.9,
-                "TrainTime": 34,
+                "TrainTime": 32,
                 "Trait": 0,
                 "TraitPiece": 0,
                 "internal_name": "UELEA"
@@ -11947,13 +12317,21 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 50,
-                    "Gold": 80
+                    "Food": 60,
+                    "Gold": 70
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
@@ -12017,13 +12395,21 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 50,
-                    "Gold": 80
+                    "Food": 60,
+                    "Gold": 70
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
@@ -12096,7 +12482,7 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 60,
+                    "Food": 65,
                     "Gold": 30
                 },
                 "FrameDelay": 0,
@@ -12174,7 +12560,7 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 60,
+                    "Food": 65,
                     "Gold": 30
                 },
                 "FrameDelay": 0,
@@ -12276,7 +12662,7 @@
                 "internal_name": "CONDO"
             },
             "1001": {
-                "AccuracyPercent": 50,
+                "AccuracyPercent": 0,
                 "Armours": [
                     {
                         "Amount": 2,
@@ -12303,20 +12689,28 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 16,
+                "Attack": 7,
                 "AttackDelaySeconds": 0.6,
                 "Attacks": [
+                    {
+                        "Amount": 1,
+                        "Class": 1
+                    },
                     {
                         "Amount": 0,
                         "Class": 11
                     },
                     {
-                        "Amount": 16,
+                        "Amount": 7,
                         "Class": 3
                     },
                     {
                         "Amount": 1,
                         "Class": 17
+                    },
+                    {
+                        "Amount": 1,
+                        "Class": 38
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12346,7 +12740,7 @@
                 "internal_name": "ORGAN"
             },
             "1003": {
-                "AccuracyPercent": 50,
+                "AccuracyPercent": 0,
                 "Armours": [
                     {
                         "Amount": 2,
@@ -12373,20 +12767,28 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 20,
+                "Attack": 9,
                 "AttackDelaySeconds": 0.6,
                 "Attacks": [
                     {
-                        "Amount": 0,
+                        "Amount": 1,
+                        "Class": 1
+                    },
+                    {
+                        "Amount": 1,
                         "Class": 11
                     },
                     {
-                        "Amount": 20,
+                        "Amount": 9,
                         "Class": 3
                     },
                     {
                         "Amount": 1,
                         "Class": 17
+                    },
+                    {
+                        "Amount": 1,
+                        "Class": 38
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12593,6 +12995,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 7,
@@ -12625,6 +13031,10 @@
                     {
                         "Amount": 0,
                         "Class": 11
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12683,6 +13093,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 8,
@@ -12715,6 +13129,10 @@
                     {
                         "Amount": 0,
                         "Class": 11
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12773,6 +13191,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
                     }
                 ],
                 "Attack": 3,
@@ -12801,6 +13223,10 @@
                     {
                         "Amount": 2,
                         "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12859,6 +13285,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
                     }
                 ],
                 "Attack": 4,
@@ -12887,6 +13317,10 @@
                     {
                         "Amount": 2,
                         "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12957,6 +13391,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -12967,7 +13409,7 @@
                 },
                 "FrameDelay": 30,
                 "GarrisonCapacity": 0,
-                "HP": 35,
+                "HP": 40,
                 "ID": 1013,
                 "LanguageHelpId": 26140,
                 "LanguageNameId": 5140,
@@ -13027,6 +13469,14 @@
                     {
                         "Amount": 0,
                         "Class": 15
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13037,7 +13487,7 @@
                 },
                 "FrameDelay": 30,
                 "GarrisonCapacity": 0,
-                "HP": 45,
+                "HP": 50,
                 "ID": 1015,
                 "LanguageHelpId": 26141,
                 "LanguageNameId": 5141,
@@ -13077,6 +13527,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 16,
@@ -13093,6 +13547,14 @@
                     {
                         "Amount": 16,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13143,6 +13605,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 18,
@@ -13159,6 +13625,14 @@
                     {
                         "Amount": 18,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13182,7 +13656,7 @@
                 "RechargeRate": 0,
                 "ReloadTime": 2,
                 "Speed": 1.2,
-                "TrainTime": 8,
+                "TrainTime": 4,
                 "Trait": 0,
                 "TraitPiece": 0,
                 "internal_name": "ESHOTEL"
@@ -13380,7 +13854,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": -2,
+                        "Amount": 0,
                         "Class": 8
                     },
                     {
@@ -13392,16 +13866,20 @@
                         "Class": 19
                     },
                     {
-                        "Amount": -2,
+                        "Amount": 0,
                         "Class": 5
                     },
                     {
-                        "Amount": -2,
+                        "Amount": 0,
                         "Class": 20
                     },
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 20,
+                        "Class": 37
                     }
                 ],
                 "Attack": 10,
@@ -13438,6 +13916,14 @@
                     {
                         "Amount": 8,
                         "Class": 34
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13474,7 +13960,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": -2,
+                        "Amount": 0,
                         "Class": 8
                     },
                     {
@@ -13486,16 +13972,20 @@
                         "Class": 19
                     },
                     {
-                        "Amount": -2,
+                        "Amount": 0,
                         "Class": 5
                     },
                     {
-                        "Amount": -2,
+                        "Amount": 0,
                         "Class": 20
                     },
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 20,
+                        "Class": 37
                     }
                 ],
                 "Attack": 11,
@@ -13532,6 +14022,14 @@
                     {
                         "Amount": 8,
                         "Class": 34
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13598,6 +14096,14 @@
                     {
                         "Amount": 7,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13664,6 +14170,14 @@
                     {
                         "Amount": 8,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13750,6 +14264,10 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -13836,6 +14354,10 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14058,12 +14580,20 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 120,
+                    "Food": 110,
                     "Gold": 70
                 },
                 "FrameDelay": 0,
@@ -14132,12 +14662,20 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 120,
+                    "Food": 110,
                     "Gold": 70
                 },
                 "FrameDelay": 0,
@@ -14178,6 +14716,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
                     }
                 ],
                 "Attack": 4,
@@ -14276,6 +14818,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14346,6 +14896,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14416,6 +14974,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14439,7 +15005,7 @@
                 "RechargeRate": 0,
                 "ReloadTime": 1.9,
                 "Speed": 1.4,
-                "TrainTime": 16,
+                "TrainTime": 17,
                 "Trait": 0,
                 "TraitPiece": 0,
                 "internal_name": "KESHIK"
@@ -14486,6 +15052,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14509,7 +15083,7 @@
                 "RechargeRate": 0,
                 "ReloadTime": 1.9,
                 "Speed": 1.4,
-                "TrainTime": 14,
+                "TrainTime": 15,
                 "Trait": 0,
                 "TraitPiece": 0,
                 "internal_name": "EKESHIK"
@@ -14560,6 +15134,10 @@
                     {
                         "Amount": 4,
                         "Class": 3
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14634,6 +15212,10 @@
                     {
                         "Amount": 5,
                         "Class": 3
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14704,6 +15286,14 @@
                     {
                         "Amount": 13,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14774,6 +15364,14 @@
                     {
                         "Amount": 16,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -14992,6 +15590,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15062,6 +15668,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15178,6 +15792,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 20,
@@ -15276,6 +15894,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15312,7 +15938,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": 1,
+                        "Amount": 2,
                         "Class": 3
                     },
                     {
@@ -15342,6 +15968,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15360,7 +15994,7 @@
                 "MaxCharge": 0,
                 "MeleeArmor": 0,
                 "MinRange": 0,
-                "PierceArmor": 1,
+                "PierceArmor": 2,
                 "Range": 1,
                 "RechargeRate": 0,
                 "ReloadTime": 2,
@@ -15408,6 +16042,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15478,6 +16120,14 @@
                     {
                         "Amount": 8,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 1,
@@ -15493,13 +16143,13 @@
                 "LanguageHelpId": 26534,
                 "LanguageNameId": 5534,
                 "LineOfSight": 5,
-                "MaxCharge": 25,
+                "MaxCharge": 20,
                 "MeleeArmor": 2,
                 "MinRange": 0,
                 "PierceArmor": 2,
                 "Range": 0,
                 "RechargeDuration": 40.0,
-                "RechargeRate": 0.625,
+                "RechargeRate": 0.5,
                 "ReloadTime": 1.9,
                 "Speed": 1.35,
                 "TrainTime": 15,
@@ -15549,6 +16199,14 @@
                     {
                         "Amount": 11,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 1,
@@ -15564,13 +16222,13 @@
                 "LanguageHelpId": 26536,
                 "LanguageNameId": 5536,
                 "LineOfSight": 5,
-                "MaxCharge": 30,
+                "MaxCharge": 25,
                 "MeleeArmor": 2,
                 "MinRange": 0,
                 "PierceArmor": 2,
                 "Range": 0,
                 "RechargeDuration": 40.0,
-                "RechargeRate": 0.75,
+                "RechargeRate": 0.625,
                 "ReloadTime": 1.9,
                 "Speed": 1.35,
                 "TrainTime": 14,
@@ -15616,6 +16274,14 @@
                     {
                         "Amount": 5,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15626,7 +16292,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 45,
+                "HP": 50,
                 "ID": 1658,
                 "LanguageHelpId": 26538,
                 "LanguageNameId": 5538,
@@ -15682,6 +16348,14 @@
                     {
                         "Amount": 11,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15748,6 +16422,14 @@
                     {
                         "Amount": 5,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15758,7 +16440,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 45,
+                "HP": 50,
                 "ID": 1660,
                 "LanguageHelpId": 26538,
                 "LanguageNameId": 5538,
@@ -15814,6 +16496,14 @@
                     {
                         "Amount": 11,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -15854,7 +16544,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": 1,
+                        "Amount": 0,
                         "Class": 3
                     },
                     {
@@ -15866,7 +16556,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 12,
+                "Attack": 11,
                 "AttackDelaySeconds": 0.0,
                 "Attacks": [
                     {
@@ -15878,7 +16568,7 @@
                         "Class": 21
                     },
                     {
-                        "Amount": 12,
+                        "Amount": 11,
                         "Class": 4
                     },
                     {
@@ -15905,12 +16595,12 @@
                 "ChargeEvent": 0,
                 "ChargeType": 0,
                 "Cost": {
-                    "Food": 60,
-                    "Gold": 25
+                    "Food": 50,
+                    "Gold": 15
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 75,
+                "HP": 60,
                 "ID": 1699,
                 "LanguageHelpId": 26542,
                 "LanguageNameId": 5542,
@@ -15918,7 +16608,7 @@
                 "MaxCharge": 0,
                 "MeleeArmor": 1,
                 "MinRange": 0,
-                "PierceArmor": 1,
+                "PierceArmor": 0,
                 "Range": 0,
                 "RechargeRate": 0,
                 "ReloadTime": 2,
@@ -15966,6 +16656,14 @@
                     {
                         "Amount": 8,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16032,6 +16730,14 @@
                     {
                         "Amount": 10,
                         "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16254,6 +16960,14 @@
                     {
                         "Amount": 4,
                         "Class": 23
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16401,6 +17115,14 @@
                     {
                         "Amount": 1,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 1,
@@ -16468,6 +17190,14 @@
                     {
                         "Amount": 2,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 1,
@@ -16551,6 +17281,14 @@
                     {
                         "Amount": 0,
                         "Class": 27
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16633,6 +17371,14 @@
                     {
                         "Amount": 0,
                         "Class": 27
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16685,7 +17431,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 5,
+                "Attack": 3,
                 "AttackDelaySeconds": 0.8,
                 "Attacks": [
                     {
@@ -16697,12 +17443,24 @@
                         "Class": 21
                     },
                     {
-                        "Amount": 5,
+                        "Amount": 3,
                         "Class": 4
                     },
                     {
                         "Amount": 0,
-                        "Class": 15
+                        "Class": 1
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 32
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16755,7 +17513,7 @@
                         "Class": 31
                     }
                 ],
-                "Attack": 6,
+                "Attack": 4,
                 "AttackDelaySeconds": 0.8,
                 "Attacks": [
                     {
@@ -16767,12 +17525,24 @@
                         "Class": 21
                     },
                     {
-                        "Amount": 6,
+                        "Amount": 4,
                         "Class": 4
                     },
                     {
+                        "Amount": 1,
+                        "Class": 1
+                    },
+                    {
+                        "Amount": 1,
+                        "Class": 32
+                    },
+                    {
                         "Amount": 0,
-                        "Class": 15
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16851,6 +17621,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16861,7 +17639,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 200,
+                "HP": 180,
                 "ID": 1744,
                 "LanguageHelpId": 26428,
                 "LanguageNameId": 5428,
@@ -16883,7 +17661,7 @@
                 "AccuracyPercent": 100,
                 "Armours": [
                     {
-                        "Amount": 18,
+                        "Amount": 20,
                         "Class": 5
                     },
                     {
@@ -16891,7 +17669,7 @@
                         "Class": 4
                     },
                     {
-                        "Amount": 8,
+                        "Amount": 10,
                         "Class": 8
                     },
                     {
@@ -16899,7 +17677,7 @@
                         "Class": 20
                     },
                     {
-                        "Amount": 2,
+                        "Amount": 0,
                         "Class": 17
                     },
                     {
@@ -16929,6 +17707,14 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -16939,7 +17725,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 250,
+                "HP": 220,
                 "ID": 1746,
                 "LanguageHelpId": 26430,
                 "LanguageNameId": 5430,
@@ -16999,6 +17785,14 @@
                     {
                         "Amount": 2,
                         "Class": 29
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -17009,7 +17803,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 65,
+                "HP": 55,
                 "ID": 1747,
                 "LanguageHelpId": 26431,
                 "LanguageNameId": 5431,
@@ -17069,6 +17863,14 @@
                     {
                         "Amount": 2,
                         "Class": 29
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 30
                     }
                 ],
                 "ChargeEvent": 0,
@@ -17079,7 +17881,7 @@
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
-                "HP": 75,
+                "HP": 65,
                 "ID": 1749,
                 "LanguageHelpId": 26432,
                 "LanguageNameId": 5432,
@@ -17217,13 +18019,21 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 4,
                 "Cost": {
                     "Food": 70,
-                    "Gold": 20
+                    "Gold": 30
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
@@ -17237,9 +18047,9 @@
                 "MinRange": 0,
                 "PierceArmor": 1,
                 "Range": 0,
-                "RechargeDuration": 15.000015000015,
-                "RechargeRate": 0.333333,
-                "ReloadTime": 1.75,
+                "RechargeDuration": 20.0,
+                "RechargeRate": 0.25,
+                "ReloadTime": 2,
                 "Speed": 1.6,
                 "TrainTime": 20,
                 "Trait": 0,
@@ -17288,13 +18098,21 @@
                     {
                         "Amount": 0,
                         "Class": 21
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
                 "ChargeType": 4,
                 "Cost": {
                     "Food": 70,
-                    "Gold": 20
+                    "Gold": 30
                 },
                 "FrameDelay": 0,
                 "GarrisonCapacity": 0,
@@ -17308,9 +18126,9 @@
                 "MinRange": 0,
                 "PierceArmor": 1,
                 "Range": 0,
-                "RechargeDuration": 14.99998928572194,
-                "RechargeRate": 0.466667,
-                "ReloadTime": 1.75,
+                "RechargeDuration": 20.0,
+                "RechargeRate": 0.35,
+                "ReloadTime": 1.9,
                 "Speed": 1.6,
                 "TrainTime": 20,
                 "Trait": 0,
@@ -17335,6 +18153,10 @@
                     {
                         "Amount": 0,
                         "Class": 31
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "Attack": 2,
@@ -17367,6 +18189,14 @@
                     {
                         "Amount": 0,
                         "Class": 34
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 38
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -17449,6 +18279,10 @@
                     {
                         "Amount": 0,
                         "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -17531,6 +18365,10 @@
                     {
                         "Amount": 0,
                         "Class": 27
+                    },
+                    {
+                        "Amount": -3,
+                        "Class": 39
                     }
                 ],
                 "ChargeEvent": 0,
@@ -17558,6 +18396,276 @@
                 "Trait": 8,
                 "TraitPiece": 1740,
                 "internal_name": "ERATHA2"
+            },
+            "1786": {
+                "AccuracyPercent": 100,
+                "Armours": [
+                    {
+                        "Amount": 0,
+                        "Class": 27
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 1
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 3
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 31
+                    }
+                ],
+                "Attack": 3,
+                "AttackDelaySeconds": 0.0,
+                "Attacks": [
+                    {
+                        "Amount": 1,
+                        "Class": 29
+                    },
+                    {
+                        "Amount": 1,
+                        "Class": 21
+                    },
+                    {
+                        "Amount": 15,
+                        "Class": 5
+                    },
+                    {
+                        "Amount": 3,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 15,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 9,
+                        "Class": 16
+                    },
+                    {
+                        "Amount": 12,
+                        "Class": 30
+                    },
+                    {
+                        "Amount": 4,
+                        "Class": 35
+                    },
+                    {
+                        "Amount": 9,
+                        "Class": 34
+                    }
+                ],
+                "ChargeEvent": 0,
+                "ChargeType": 0,
+                "Cost": {
+                    "Food": 35,
+                    "Wood": 25
+                },
+                "FrameDelay": 0,
+                "GarrisonCapacity": 0,
+                "HP": 45,
+                "ID": 1786,
+                "LanguageHelpId": 26078,
+                "LanguageNameId": 5078,
+                "LineOfSight": 4,
+                "MaxCharge": 0,
+                "MeleeArmor": 0,
+                "MinRange": 0,
+                "PierceArmor": 0,
+                "Range": 0,
+                "RechargeRate": 0,
+                "ReloadTime": 3,
+                "Speed": 1,
+                "TrainTime": 22,
+                "Trait": 0,
+                "TraitPiece": 0,
+                "internal_name": "DPKEMN"
+            },
+            "1787": {
+                "AccuracyPercent": 100,
+                "Armours": [
+                    {
+                        "Amount": 0,
+                        "Class": 27
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 1
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 3
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 31
+                    }
+                ],
+                "Attack": 4,
+                "AttackDelaySeconds": 0.0,
+                "Attacks": [
+                    {
+                        "Amount": 1,
+                        "Class": 29
+                    },
+                    {
+                        "Amount": 1,
+                        "Class": 21
+                    },
+                    {
+                        "Amount": 25,
+                        "Class": 5
+                    },
+                    {
+                        "Amount": 4,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 22,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 16,
+                        "Class": 16
+                    },
+                    {
+                        "Amount": 18,
+                        "Class": 30
+                    },
+                    {
+                        "Amount": 11,
+                        "Class": 35
+                    },
+                    {
+                        "Amount": 16,
+                        "Class": 34
+                    }
+                ],
+                "ChargeEvent": 0,
+                "ChargeType": 0,
+                "Cost": {
+                    "Food": 35,
+                    "Wood": 25
+                },
+                "FrameDelay": 0,
+                "GarrisonCapacity": 0,
+                "HP": 55,
+                "ID": 1787,
+                "LanguageHelpId": 26408,
+                "LanguageNameId": 5408,
+                "LineOfSight": 4,
+                "MaxCharge": 0,
+                "MeleeArmor": 0,
+                "MinRange": 0,
+                "PierceArmor": 0,
+                "Range": 0,
+                "RechargeRate": 0,
+                "ReloadTime": 3,
+                "Speed": 1,
+                "TrainTime": 22,
+                "Trait": 0,
+                "TraitPiece": 0,
+                "internal_name": "DISPKM"
+            },
+            "1788": {
+                "AccuracyPercent": 100,
+                "Armours": [
+                    {
+                        "Amount": 0,
+                        "Class": 27
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 1
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 3
+                    },
+                    {
+                        "Amount": 0,
+                        "Class": 31
+                    }
+                ],
+                "Attack": 6,
+                "AttackDelaySeconds": 0.0,
+                "Attacks": [
+                    {
+                        "Amount": 1,
+                        "Class": 29
+                    },
+                    {
+                        "Amount": 1,
+                        "Class": 21
+                    },
+                    {
+                        "Amount": 28,
+                        "Class": 5
+                    },
+                    {
+                        "Amount": 6,
+                        "Class": 4
+                    },
+                    {
+                        "Amount": 32,
+                        "Class": 8
+                    },
+                    {
+                        "Amount": 17,
+                        "Class": 16
+                    },
+                    {
+                        "Amount": 26,
+                        "Class": 30
+                    },
+                    {
+                        "Amount": 11,
+                        "Class": 35
+                    },
+                    {
+                        "Amount": 17,
+                        "Class": 34
+                    }
+                ],
+                "ChargeEvent": 0,
+                "ChargeType": 0,
+                "Cost": {
+                    "Food": 35,
+                    "Wood": 25
+                },
+                "FrameDelay": 0,
+                "GarrisonCapacity": 0,
+                "HP": 60,
+                "ID": 1788,
+                "LanguageHelpId": 26409,
+                "LanguageNameId": 5409,
+                "LineOfSight": 4,
+                "MaxCharge": 0,
+                "MeleeArmor": 0,
+                "MinRange": 0,
+                "PierceArmor": 0,
+                "Range": 0,
+                "RechargeRate": 0,
+                "ReloadTime": 3,
+                "Speed": 1,
+                "TrainTime": 22,
+                "Trait": 0,
+                "TraitPiece": 0,
+                "internal_name": "DHLBDM"
             }
         }
     },
@@ -17662,7 +18770,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 460,
@@ -17811,7 +18920,9 @@
                 438,
                 441,
                 602,
-                608
+                608,
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 833,
@@ -18224,6 +19335,7 @@
                 48,
                 50,
                 51,
+                54,
                 55,
                 63,
                 65,
@@ -18422,7 +19534,8 @@
                 439,
                 441,
                 602,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 685,
@@ -18728,7 +19841,8 @@
                 438,
                 441,
                 602,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 626,
@@ -18831,6 +19945,7 @@
                 45,
                 47,
                 48,
+                54,
                 55,
                 63,
                 64,
@@ -18883,7 +19998,8 @@
                 439,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 464,
@@ -19036,7 +20152,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 482,
@@ -19484,7 +20601,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 831,
@@ -19501,6 +20619,7 @@
                 17,
                 21,
                 24,
+                36,
                 74,
                 75,
                 77,
@@ -19787,7 +20906,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 83,
@@ -20260,7 +21380,6 @@
                 330,
                 331,
                 358,
-                359,
                 420,
                 440,
                 441,
@@ -20512,8 +21631,7 @@
                 439,
                 441,
                 602,
-                608,
-                716
+                608
             ],
             "unique": {
                 "castleAgeUniqueTech": 516,
@@ -20814,6 +21932,7 @@
                 374,
                 375,
                 377,
+                379,
                 408,
                 435,
                 436,
@@ -20822,7 +21941,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 484,
@@ -21128,7 +22248,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 486,
@@ -21520,7 +22641,8 @@
                 584,
                 598,
                 621,
-                792
+                792,
+                1189
             ],
             "monkPrefix": "",
             "techs": [
@@ -21537,6 +22659,7 @@
                 47,
                 48,
                 50,
+                54,
                 55,
                 63,
                 64,
@@ -21586,7 +22709,8 @@
                 439,
                 441,
                 602,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 624,
@@ -22183,7 +23307,8 @@
                 438,
                 441,
                 602,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 488,
@@ -22496,7 +23621,8 @@
                 439,
                 441,
                 602,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 572,
@@ -22652,7 +23778,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 9,
@@ -22754,7 +23881,6 @@
                 47,
                 48,
                 50,
-                54,
                 55,
                 65,
                 67,
@@ -22801,7 +23927,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 756,
@@ -22856,7 +23983,10 @@
                 1105,
                 1258,
                 1660,
-                1661
+                1661,
+                1786,
+                1787,
+                1788
             ]
         },
         "Slavs": {
@@ -22952,7 +24082,8 @@
                 438,
                 441,
                 602,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 455,
@@ -23110,7 +24241,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 492,
@@ -23368,7 +24500,6 @@
                 47,
                 48,
                 50,
-                54,
                 55,
                 63,
                 64,
@@ -23422,7 +24553,8 @@
                 441,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 489,
@@ -23884,7 +25016,8 @@
                 439,
                 602,
                 608,
-                716
+                716,
+                875
             ],
             "unique": {
                 "castleAgeUniqueTech": 463,
