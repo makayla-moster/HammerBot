@@ -130,30 +130,47 @@ class TechTree_Nav(commands.Cog):
                 else:
                     i += 1 
             civs = args[:splitNum]
-            techs = args[splitNum + 1:]
+            techlist = args[splitNum + 1:]
+            techs = []
+            responses = {}
+            technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in techlist]
+            if " ".join(technologies) not in techTreeDict.keys():
+                for r in range(1, len(technologies) + 1):
+                    for permutation in combinations(technologies, r):
+                        tech = " ".join(permutation).strip()
+                        try:
+                            responses[tech] = techTreeDict[tech]
+                        except:
+                            continue
+            else:
+                tech = " ".join(technologies)
+                responses[tech] = techTreeDict[tech]
+            techs = ", ".join(responses.keys())
+            techs2 = techs.split(", ")
+            # print(techs2)
             time = 0
             for j in range(len(civs)):
                 if civs[j].title() in age_civs:
-                    for k in range(len(techs)):
-                        if techs[k].title() in techTreeDict:
-                            bool = civs[j].title() in techTreeDict[techs[k].title()]
+                    for k in range(len(techs2)):
+                        if techs2[k].title() in techTreeDict:
+                            bool = civs[j].title() in techTreeDict[techs2[k].title()]
                             if bool:
                                 if time == 0:
-                                    response = civs[j].title() + " have " + techs[k].title()
+                                    response = civs[j].title() + " have " + techs2[k].title()
                                 else: 
-                                    response += "\n" + civs[j].title() + " have " + techs[k].title()
+                                    response += "\n" + civs[j].title() + " have " + techs2[k].title()
                             elif not bool:
                                 if time == 0:
-                                    response = civs[j].title() + " do not have " + techs[k].title()
+                                    response = civs[j].title() + " do not have " + techs2[k].title()
                                 else: 
-                                    response += "\n" + civs[j].title() + " do not have " + techs[k].title()
+                                    response += "\n" + civs[j].title() + " do not have " + techs2[k].title()
                             time += 1
                         else:
                             if time == 0:
-                                response += techs[k].title() + "was not found, check spelling."
+                                response += techs2[k].title() + " was not found, check spelling."
                                 time += 1
                             else:
-                                response += "\n" + techs[k].title() + " was not found, check spelling."
+                                response += "\n" + techs2[k].title() + " was not found, check spelling."
                             
             await ctx.send(response)
 
