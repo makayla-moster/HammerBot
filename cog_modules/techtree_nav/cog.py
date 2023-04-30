@@ -128,7 +128,7 @@ class TechTree_Nav(commands.Cog):
                 else:
                     i += 1
             civs = args[:splitNum]
-            techlist = args[splitNum + 1:]
+            techlist = args[splitNum + 1 :]
             techs = []
             responses = {}
             technologies = [re.sub(r"[^\w]", " ", tech).strip().title() for tech in techlist]
@@ -155,12 +155,12 @@ class TechTree_Nav(commands.Cog):
                             if bool:
                                 if time == 0:
                                     response = civs[j].title() + " have " + techs2[k].title()
-                                else: 
+                                else:
                                     response += "\n" + civs[j].title() + " have " + techs2[k].title()
                             elif not bool:
                                 if time == 0:
                                     response = civs[j].title() + " do not have " + techs2[k].title()
-                                else: 
+                                else:
                                     response += "\n" + civs[j].title() + " do not have " + techs2[k].title()
                             time += 1
                         else:
@@ -169,7 +169,7 @@ class TechTree_Nav(commands.Cog):
                                 time += 1
                             else:
                                 response += "\n" + techs2[k].title() + " was not found, check spelling."
-                            
+
             await ctx.send(response)
 
     @commands.command(
