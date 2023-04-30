@@ -51,6 +51,113 @@ class TechTree_Nav(commands.Cog):
             await ctx.send(embed=message)
 
     @commands.command(
+        name="!does",
+        aliases=["!do", "!doeshave"],
+        help="Returns if a civ(s) has a technology. !does [civs] have [techs]"
+    )
+    async def doesCiv(self, ctx: commands.Context, *args):
+        age_civs = [
+            "Britons",
+            "Byzantines",
+            "Celts",
+            "Chinese",
+            "Franks",
+            "Goths",
+            "Japanese",
+            "Mongols",
+            "Persians",
+            "Saracens",
+            "Teutons",
+            "Turks",
+            "Vikings",
+            "Aztecs",
+            "Huns",
+            "Koreans",
+            "Mayans",
+            "Spanish",
+            "Incas",
+            "Hindustanis",
+            "Italians",
+            "Magyars",
+            "Slavs",
+            "Berbers",
+            "Ethiopians",
+            "Malians",
+            "Portuguese",
+            "Burmese",
+            "Khmer",
+            "Malay",
+            "Vietnamese",
+            "Bulgarians",
+            "Cumans",
+            "Lithuanians",
+            "Tatars",
+            "Burgundians",
+            "Sicilians",
+            "Bohemians",
+            "Poles",
+            "Dravidians",
+            "Bengalis",
+            "Gurjaras",
+        ]
+        response = ''
+        TITLE = "Invalid Input"
+        DESCRIPTION = "There was a problem with your input. Please check your input and try again."
+        message = (
+            disnake.Embed(
+                title=TITLE,
+                description=DESCRIPTION,
+                color=disnake.Color.red(),
+            )
+            if not args
+            else None
+        )
+        error = False if not message else True
+        if error:
+            await ctx.send(embed=message)
+        if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
+            message = disnake.Embed(
+                title=f"Input is longer than accepted",
+                description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
+                color=disnake.Color.red(),
+            )
+            await ctx.send(embed=message)
+        else:
+            i = 0
+            for i in range(len(args)):
+                if args[i] == 'have':
+                    splitNum = i 
+                else:
+                    i += 1 
+            civs = args[:splitNum]
+            techs = args[splitNum + 1:]
+            time = 0
+            for j in range(len(civs)):
+                if civs[j].title() in age_civs:
+                    for k in range(len(techs)):
+                        if techs[k].title() in techTreeDict:
+                            bool = civs[j].title() in techTreeDict[techs[k].title()]
+                            if bool:
+                                if time == 0:
+                                    response = civs[j].title() + " have " + techs[k].title()
+                                else: 
+                                    response += "\n" + civs[j].title() + " have " + techs[k].title()
+                            elif not bool:
+                                if time == 0:
+                                    response = civs[j].title() + " do not have " + techs[k].title()
+                                else: 
+                                    response += "\n" + civs[j].title() + " do not have " + techs[k].title()
+                            time += 1
+                        else:
+                            if time == 0:
+                                response += techs[k].title() + "was not found, check spelling."
+                                time += 1
+                            else:
+                                response += "\n" + techs[k].title() + " was not found, check spelling."
+                            
+            await ctx.send(response)
+
+    @commands.command(
         name="!whichciv",
         aliases=["!which", "!wc"],
         help="Returns which civ has the stated technology(ies)."
