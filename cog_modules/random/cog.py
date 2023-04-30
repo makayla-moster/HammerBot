@@ -9,6 +9,7 @@ class Random(commands.Cog):
         self.bot = bot
 
     @commands.command(name="!cat", aliases=["!cotd", "!cats"])
+    @commands.cooldown(1, 30, commands.BucketType.user)
     async def cat(self, ctx: commands.Context):
         url = "https://api.thecatapi.com/v1/images/search"
         response = requests.get(url, timeout=5)
