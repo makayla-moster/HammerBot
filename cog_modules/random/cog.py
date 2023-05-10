@@ -3,8 +3,10 @@ import os
 
 import disnake
 import requests
+import random
 from disnake.ext import commands
 from dotenv import load_dotenv
+from gizmopics import *
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
@@ -21,6 +23,15 @@ class Random(commands.Cog):
         response = requests.get(url, timeout=5)
         res = response.json()
         await ctx.send(res[0]["url"])
+
+    @commands.command(name="!gizmo", aliases=["!gismo"])
+    # @commands.cooldown(1, 30, commands.BucketType.user)
+    async def gizmo(self, ctx: commands.Context):
+        num = random.randint(0, len(gizmoPics)-1)
+        info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
+        pic = gizmoPics[num]
+        await ctx.send(info)
+        await ctx.send(pic)
 
 
 def setup(bot: commands.Bot):
