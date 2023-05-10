@@ -25,7 +25,7 @@ class Random(commands.Cog):
         await ctx.send(res[0]["url"])
 
     @commands.command(name="!gizmo", aliases=["!gismo"])
-    # @commands.cooldown(1, 30, commands.BucketType.user)
+    @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo(self, ctx: commands.Context):
         num = random.randint(0, len(gizmoPics)-1)
         info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
