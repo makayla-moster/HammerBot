@@ -1,11 +1,12 @@
 import asyncio
 import os
+import random
 
 import disnake
 import requests
-import random
 from disnake.ext import commands
 from dotenv import load_dotenv
+
 from gizmopics import *
 
 load_dotenv()
@@ -27,7 +28,7 @@ class Random(commands.Cog):
     @commands.command(name="!gizmo", aliases=["!gismo"])
     # @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo(self, ctx: commands.Context):
-        num = random.randint(0, len(gizmoPics)-1)
+        num = random.randint(0, len(gizmoPics) - 1)
         info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
         pic = gizmoPics[num]
         await ctx.send(info)
