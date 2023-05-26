@@ -37,10 +37,13 @@ class Random(commands.Cog):
         pic = gizmoPics[num]
         await ctx.send(info)
         await ctx.send(pic)
+
     @gizmo.error
     async def gizmo_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(f'You can only get 1 picture of Gizmo every 30 seconds. Try again in {round(error.retry_after, 2)} seconds.')
+            await ctx.send(
+                f"You can only get 1 picture of Gizmo every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+            )
 
 
 def setup(bot: commands.Bot):
