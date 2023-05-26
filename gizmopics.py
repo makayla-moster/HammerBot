@@ -39,5 +39,5 @@ gizmoPics = [
     "https://cdn.discordapp.com/attachments/1105932220838989834/1111420173237370921/IMG_2635.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1111420211766239292/IMG_2644.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1111420242577608744/IMG_2643.jpg",
-    "https://cdn.discordapp.com/attachments/1105932220838989834/1111702369256886312/IMG_2647.jpg"
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1111702369256886312/IMG_2647.jpg",
 ]
