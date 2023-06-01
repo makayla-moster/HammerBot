@@ -24,10 +24,13 @@ class Random(commands.Cog):
         response = requests.get(url, timeout=5)
         res = response.json()
         await ctx.send(res[0]["url"])
+
     @cat.error
     async def cat_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(f'You can only get 1 cat picture every 30 seconds. Try again in {round(error.retry_after, 2)} seconds.')
+            await ctx.send(
+                f"You can only get 1 cat picture every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+            )
 
     @commands.command(name="!gizmo", aliases=["!gismo"])
     @commands.cooldown(1, 30, commands.BucketType.user)
