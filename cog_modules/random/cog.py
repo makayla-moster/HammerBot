@@ -31,8 +31,8 @@ class Random(commands.Cog):
             await ctx.send(
                 f"You can only get 1 cat picture every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
-
-    @commands.command(name="!gizmo", aliases=["!gismo"])
+            
+    @commands.command(name="!gizmo", aliases=["!gismo, !gizmø"])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo(self, ctx: commands.Context):
         num = random.randint(0, len(gizmoPics) - 1)
