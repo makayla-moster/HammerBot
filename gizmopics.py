@@ -89,4 +89,15 @@ gizmoPics = [
     "https://cdn.discordapp.com/attachments/1105932220838989834/1130889997717880933/IMG_3376.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1130889997331996682/IMG_3393.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1130889996862242878/IMG_3389.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1131764940252913755/IMG_2145.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137511969964122/IMG_3398.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137511592480858/IMG_3418.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137511290486834/IMG_4686.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137511013658665/IMG_4693.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137510715871322/IMG_4067.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137510300631162/IMG_4078.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137509914751148/IMG_4080.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137509327552662/IMG_4087.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138137508752928788/IMG_4104.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1138269766314889226/IMG_4107.jpg"
 ]
