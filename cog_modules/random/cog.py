@@ -11,7 +11,8 @@ from gizmopics import *
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
-botDMs = os.getenv("DMChannel")
+botDMs = int(os.getenv("DMChannel"))
+botID = int(os.getenv("BOTID"))
 
 
 class Random(commands.Cog):
@@ -61,9 +62,6 @@ class Random(commands.Cog):
                     title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at
                 )
                 await channel.send(embed=newMessage)  # forwards message to channel
-                await message.author.send(
-                    "I am a bot and cannot respond, but I have forwarded your message to the EdASE instructor team."
-                )
         await self.bot.process_commands(message)
 
 
