@@ -62,7 +62,7 @@ class Random(commands.Cog):
                     title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at
                 )
                 await channel.send(embed=newMessage)  # forwards message to channel
-        await self.bot.process_commands(message)
+            await self.bot.process_commands(message)
 
 
 def setup(bot: commands.Bot):
