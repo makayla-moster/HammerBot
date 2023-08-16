@@ -48,18 +48,22 @@ class Random(commands.Cog):
             await ctx.send(
                 f"You can only get 1 picture of Gizmo every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
-    
+
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
     # person who sent the message
     @commands.Cog.listener()
     async def on_message(self, message):
-        if isinstance(message.channel, disnake.DMChannel): # if the message is a DM
-            channel = self.bot.get_channel(botDMs) # get channel to forward message to
-            if message.author.id != botID: # make sure we're not forwarding/sending messages when the bot messages
-                newMessage = disnake.Embed(title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at)
-                await channel.send(embed=newMessage) # forwards message to channel
-                await message.author.send("I am a bot and cannot respond, but I have forwarded your message to the EdASE instructor team.")
+        if isinstance(message.channel, disnake.DMChannel):  # if the message is a DM
+            channel = self.bot.get_channel(botDMs)  # get channel to forward message to
+            if message.author.id != botID:  # make sure we're not forwarding/sending messages when the bot messages
+                newMessage = disnake.Embed(
+                    title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at
+                )
+                await channel.send(embed=newMessage)  # forwards message to channel
+                await message.author.send(
+                    "I am a bot and cannot respond, but I have forwarded your message to the EdASE instructor team."
+                )
         await self.bot.process_commands(message)
 
 
