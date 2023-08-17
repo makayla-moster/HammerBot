@@ -15,6 +15,7 @@ intents = discord.Intents.all()
 bot = commands.Bot(intents=intents, command_prefix="")
 logging.basicConfig(level=logging.INFO)
 
+
 async def load_cogs():
     for folder in os.listdir("cog_modules"):
         if os.path.exists(os.path.join("cog_modules", folder, "cog.py")):
