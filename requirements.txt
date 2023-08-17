@@ -9,7 +9,7 @@ charset-normalizer==2.0.10
 cleo==0.8.1
 clikit==0.6.2
 crashtest==0.3.1
-disnake==2.4.0
+discord.py==2.3.0
 distlib==0.3.4
 filelock==3.4.2
 fuzzywuzzy==0.18.0
