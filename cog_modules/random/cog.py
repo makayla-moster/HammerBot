@@ -2,9 +2,9 @@ import asyncio
 import os
 import random
 
-import disnake
+import discord
 import requests
-from disnake.ext import commands
+from discord.ext import commands
 from dotenv import load_dotenv
 
 from gizmopics import *
@@ -55,15 +55,15 @@ class Random(commands.Cog):
     # person who sent the message
     @commands.Cog.listener()
     async def on_message(self, message):
-        if isinstance(message.channel, disnake.DMChannel):  # if the message is a DM
+        if isinstance(message.channel, discord.DMChannel):  # if the message is a DM
             channel = self.bot.get_channel(botDMs)  # get channel to forward message to
             if message.author.id != botID:  # make sure we're not forwarding/sending messages when the bot messages
-                newMessage = disnake.Embed(
+                newMessage = discord.Embed(
                     title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at
                 )
                 await channel.send(embed=newMessage)  # forwards message to channel
             await self.bot.process_commands(message)
 
 
-def setup(bot: commands.Bot):
-    bot.add_cog(Random(bot))
+async def setup(bot: commands.Bot):
+    await bot.add_cog(Random(bot))

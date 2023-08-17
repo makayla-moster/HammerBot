@@ -1,7 +1,6 @@
 import os
-
-import disnake
-from disnake.ext import commands, tasks
+import discord
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
 
@@ -96,5 +95,5 @@ class Taunts(commands.Cog):
         await ctx.send(response)
 
 
-def setup(bot: commands.Bot):
-    bot.add_cog(Taunts(bot))
+async def setup(bot: commands.Bot):
+    await bot.add_cog(Taunts(bot))

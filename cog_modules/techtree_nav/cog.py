@@ -10,9 +10,9 @@ import time
 from itertools import combinations
 
 import aiohttp
-import disnake
+import discord
 import numpy as np
-from disnake.ext import commands, tasks
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
 
 from age_player import *
@@ -38,15 +38,59 @@ class TechTree_Nav(commands.Cog):
         Command: !civ [civname]
         Returns: The aoe2 tech tree link for that civ.
         """
+        age_civs = [
+            "Britons",
+            "Byzantines",
+            "Celts",
+            "Chinese",
+            "Franks",
+            "Goths",
+            "Japanese",
+            "Mongols",
+            "Persians",
+            "Saracens",
+            "Teutons",
+            "Turks",
+            "Vikings",
+            "Aztecs",
+            "Huns",
+            "Koreans",
+            "Mayans",
+            "Spanish",
+            "Incas",
+            "Hindustanis",
+            "Italians",
+            "Magyars",
+            "Slavs",
+            "Berbers",
+            "Ethiopians",
+            "Malians",
+            "Portuguese",
+            "Burmese",
+            "Khmer",
+            "Malay",
+            "Vietnamese",
+            "Bulgarians",
+            "Cumans",
+            "Lithuanians",
+            "Tatars",
+            "Burgundians",
+            "Sicilians",
+            "Bohemians",
+            "Poles",
+            "Dravidians",
+            "Bengalis",
+            "Gurjaras",
+        ]
 
         if arg.lower() in age_civs:
             response = "https://aoe2techtree.net/#" + str(arg.lower())
             await ctx.send(response)
         else:
-            message = disnake.Embed(
+            message = discord.Embed(
                 title="Invalid Input",
                 description="There was a problem with your input. Please check your input and try again.",
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             await ctx.send(embed=message)
 
@@ -102,10 +146,10 @@ class TechTree_Nav(commands.Cog):
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
-            disnake.Embed(
+            discord.Embed(
                 title=TITLE,
                 description=DESCRIPTION,
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             if not args
             else None
@@ -114,10 +158,10 @@ class TechTree_Nav(commands.Cog):
         if error:
             await ctx.send(embed=message)
         if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
-            message = disnake.Embed(
+            message = discord.Embed(
                 title=f"Input is longer than accepted",
                 description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             await ctx.send(embed=message)
         else:
@@ -233,10 +277,10 @@ class TechTree_Nav(commands.Cog):
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
-            disnake.Embed(
+            discord.Embed(
                 title=TITLE,
                 description=DESCRIPTION,
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             if not args
             else None
@@ -245,10 +289,10 @@ class TechTree_Nav(commands.Cog):
         if error:
             await ctx.send(embed=message)
         if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
-            message = disnake.Embed(
+            message = discord.Embed(
                 title=f"Input is longer than accepted",
                 description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             await ctx.send(embed=message)
         else:
@@ -272,8 +316,8 @@ class TechTree_Nav(commands.Cog):
             civs = ", ".join(civs)
             if len(civs) < 1:
                 civs = f"Sorry there are no civs with: {techs}"
-            message = disnake.Embed(
-                title=f"{techs} are found in the following civ(s)", description=f"{civs}", color=disnake.Color.green()
+            message = discord.Embed(
+                title=f"{techs} are found in the following civ(s)", description=f"{civs}", color=discord.Color.green()
             )
             await ctx.send(embed=message)
 
@@ -339,10 +383,10 @@ class TechTree_Nav(commands.Cog):
         TITLE = "Invalid Input"
         DESCRIPTION = "There was a problem with your input. Please check your input and try again."
         message = (
-            disnake.Embed(
+            discord.Embed(
                 title=TITLE,
                 description=DESCRIPTION,
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             if not args
             else None
@@ -351,10 +395,10 @@ class TechTree_Nav(commands.Cog):
         if error:
             await ctx.send(embed=message)
         if len(args) >= error_helping.MAX_USER_INPUT_WORD_LENGTH:
-            message = disnake.Embed(
+            message = discord.Embed(
                 title=f"Input is longer than accepted",
                 description=f"acceptable amount = {error_helping.MAX_USER_INPUT_WORD_LENGTH}",
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             await ctx.send(embed=message)
         else:
@@ -378,11 +422,11 @@ class TechTree_Nav(commands.Cog):
             civs_not = ", ".join(civs_not)
             if len(civs_not) < 1:
                 civs_not = f"Every civ has: {techs}"
-            message = disnake.Embed(
-                title=f"{techs} is missing from the following civ(s)", description=f"{civs_not}", color=disnake.Color.green()
+            message = discord.Embed(
+                title=f"{techs} is missing from the following civ(s)", description=f"{civs_not}", color=discord.Color.green()
             )
             await ctx.send(embed=message)
 
 
-def setup(bot: commands.Bot):
-    bot.add_cog(TechTree_Nav(bot))
+async def setup(bot: commands.Bot):
+    await bot.add_cog(TechTree_Nav(bot))

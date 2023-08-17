@@ -1,8 +1,8 @@
 import json
 import os
 
-import disnake
-from disnake.ext import commands, tasks
+import discord
+from discord.ext import commands, tasks
 from dotenv import load_dotenv
 from fuzzywuzzy import fuzz
 
@@ -36,10 +36,10 @@ class StatCommands(commands.Cog):
                 fuzzy_search_scores[item] = fuzz.ratio(input, item)
             top3 = sorted(fuzzy_search_scores, key=fuzzy_search_scores.get, reverse=True)[:3]
             error = f"There was an error with your input. Did you mean {top3[0]}, {top3[1]}, or {top3[2]}?"
-            embed = disnake.Embed(
+            embed = discord.Embed(
                 title="Invalid Input",
                 description=error,
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             await ctx.send(embed=embed)
         else:
@@ -72,9 +72,9 @@ class StatCommands(commands.Cog):
                 costString2 = "No resources needed."
 
             if entity != "techs" and input[-1] != "s":
-                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
+                embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
             else:
-                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
+                embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
             embed.set_thumbnail(
                 url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
             )
@@ -122,10 +122,10 @@ class StatCommands(commands.Cog):
                 fuzzy_search_scores[item] = fuzz.ratio(input, item)
             top3 = sorted(fuzzy_search_scores, key=fuzzy_search_scores.get, reverse=True)[:3]
             error = f"There was an error with your input. Did you mean {top3[0]}, {top3[1]}, or {top3[2]}?"
-            embed = disnake.Embed(
+            embed = discord.Embed(
                 title="Invalid Input",
                 description=error,
-                color=disnake.Color.red(),
+                color=discord.Color.red(),
             )
             await ctx.send(embed=embed)
         else:
@@ -159,9 +159,9 @@ class StatCommands(commands.Cog):
                 costString2 = "No resources needed."
 
             if entity != "techs" and input[-1] != "s":
-                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
+                embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
             else:
-                embed = disnake.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
+                embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
 
             embed.set_thumbnail(
                 url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
@@ -243,5 +243,5 @@ class StatCommands(commands.Cog):
             await ctx.send(embed=embed)
 
 
-def setup(bot: commands.Bot):
-    bot.add_cog(StatCommands(bot))
+async def setup(bot: commands.Bot):
+    await bot.add_cog(StatCommands(bot))
