@@ -31,7 +31,7 @@ class Taunts(commands.Cog):
 
     @commands.command(name="3")
     async def no_3(self, ctx: commands.Context):
-        response = f'Sent to "{ctx.author}": 1000 Food'
+        response = f'Sent to "{ctx.message.author}": 1000 Food'
         await ctx.send(response)
 
     @commands.command(name="28")
