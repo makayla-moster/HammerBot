@@ -34,6 +34,21 @@ class Taunts(commands.Cog):
         response = f'Sent to "{ctx.message.author.display_name}": 1000 Food'
         await ctx.send(response)
 
+    @commands.command(name="4")
+    async def no_4(self, ctx: commands.Context):
+        response = f'Sent to "{ctx.message.author.display_name}": 1000 Wood'
+        await ctx.send(response)
+
+    @commands.command(name="5")
+    async def no_5(self, ctx: commands.Context):
+        response = f'Sent to "{ctx.message.author.display_name}": 1000 Gold'
+        await ctx.send(response)
+
+    @commands.command(name="6")
+    async def no_6(self, ctx: commands.Context):
+        response = f'Sent to "{ctx.message.author.display_name}": 1000 Stone'
+        await ctx.send(response)
+
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
         """
