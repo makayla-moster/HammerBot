@@ -29,6 +29,11 @@ class Taunts(commands.Cog):
         response = "No."
         await ctx.send(response)
 
+    @commands.command(name="3")
+    async def no_3(self, ctx: commands.Context):
+        response = f'Sent to "{message.author}": 1000 Food'
+        await ctx.send(response)
+
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
         """
