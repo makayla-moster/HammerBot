@@ -56,7 +56,7 @@ class Random(commands.Cog):
         # num = random.randint(0, len(gizmoPics) - 1)
         # info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
         pic = taoPics[0]
-        await ctx.send(info)
+        # await ctx.send(info)
         await ctx.send(pic)
 
     # Checks to see if someone DMs the bot
