@@ -47,7 +47,7 @@ class Random(commands.Cog):
     async def gizmo_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
             await ctx.send(
-                f"You can only get 1 picture of Gizmo every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+                f"You can only view Gizmo once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
 
     @commands.command(name="!tao", aliases=["!taø"])
@@ -58,6 +58,13 @@ class Random(commands.Cog):
         pic = taoPics[0]
         # await ctx.send(info)
         await ctx.send(pic)
+
+    @tao.error
+    async def tao_error(self, ctx, error):
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.send(
+                f"You can only view Tao once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+            )
 
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
