@@ -62,9 +62,7 @@ class Random(commands.Cog):
     @tao.error
     async def tao_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(
-                f"You can only view Tao once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
-            )
+            await ctx.send(f"You can only view Tao once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds.")
 
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
