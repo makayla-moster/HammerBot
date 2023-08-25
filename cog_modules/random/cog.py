@@ -50,6 +50,15 @@ class Random(commands.Cog):
                 f"You can only get 1 picture of Gizmo every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
 
+    @commands.command(name="!tao", aliases=["!taø"])
+    @commands.cooldown(1, 30, commands.BucketType.user)
+    async def tao(self, ctx: commands.Context):
+        # num = random.randint(0, len(gizmoPics) - 1)
+        # info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
+        pic = taoPics[0]
+        await ctx.send(info)
+        await ctx.send(pic)
+
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
     # person who sent the message
