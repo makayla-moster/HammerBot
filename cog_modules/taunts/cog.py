@@ -100,13 +100,12 @@ class Taunts(commands.Cog):
 
     @commands.command(name="38")
     async def no_38(self, ctx: commands.Context):
-        res = random.choice(['Wood', 'Food', 'Gold', 'Stone'])
+        res = random.choice(["Wood", "Food", "Gold", "Stone"])
         response = f'Sent to "{ctx.message.author.display_name}": {random.randint(-1000,1000)} {res}'
         await ctx.send(response)
 
     @commands.command(name="58")
     async def no_58(self, ctx: commands.Context):
-        
         response = f"Sent {ctx.message.author.display_name}'s lunch money to Gizmo. Rest in pieces, plants."
         await ctx.send(response)
 
