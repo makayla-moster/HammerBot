@@ -133,7 +133,7 @@ gizmoPics = [
     "https://cdn.discordapp.com/attachments/1105932220838989834/1147193494008516618/IMG_4464.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1147193494365020160/IMG_4455.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1147193495145173092/IMG_4457.jpg",
-    "https://cdn.discordapp.com/attachments/1105932220838989834/1147193495732363335/IMG_4463.jpg"
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1147193495732363335/IMG_4463.jpg",
 ]
 
 taoPics = ["https://cdn.discordapp.com/attachments/1105932220838989834/1144676822957695127/image.png"]
