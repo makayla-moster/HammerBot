@@ -150,10 +150,10 @@ class Taunts(commands.Cog):
         num = random.randint(-1000, 1000)
         response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
         if user in resources:
-            resources[user][res] = str(num)
+            serverResources[user][res] = str(num)
         else:
-            resources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
-            resources[user][res] = str(num)
+            serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
+            serverResources[user][res] = str(num)
         await ctx.send(response)
 
     @commands.command(name="58")
