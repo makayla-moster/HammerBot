@@ -52,28 +52,6 @@ class Taunts(commands.Cog):
         response = f'Sent to "{ctx.message.author.display_name}": 1000 Stone'
         await ctx.send(response)
 
-    @commands.command(name="!stockpile")
-    async def stockpile(self, ctx: commands.Context):
-        user = str(ctx.message.author.display_name)
-        food = serverResources[user]["Food"]
-        wood = serverResources[user]["Wood"]
-        gold = serverResources[user]["Gold"]
-        stone = serverResources[user]["Stone"]
-        embed = discord.Embed(
-            title=f"{ctx.message.author.display_name}'s Resource Stockpile",
-            description=f"The amount of resources HammerBot has gifted you.",
-            color=0xD5D341,
-        )
-        embed.add_field(name="Food", value=food + "<:food:978788983377121311>", inline=True)
-        embed.add_field(name="Wood", value=wood + "<:woodAge:978788983435853834>", inline=True)
-        embed.add_field(name="Gold", value=gold + "<:gold:978788983364546581>", inline=True)
-        embed.add_field(name="Stone", value=stone + "<:stone:978788984547315792>", inline=True)
-        embed.set_footer(
-            text=f"{ctx.author.name}\nTo get more resources type `38` in chat.",
-            icon_url=ctx.author.display_avatar.url,
-        )
-        await ctx.send(embed=embed)
-
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
         """
@@ -122,10 +100,60 @@ class Taunts(commands.Cog):
         response = "Well, duh."
         await ctx.send(response)
 
+    @commands.command(name="!stockpile")
+    async def stockpile(self, ctx: commands.Context):
+        user = str(ctx.message.author.name)
+        if user in resources:
+            food = serverResources[user]["Food"]
+            wood = serverResources[user]["Wood"]
+            gold = serverResources[user]["Gold"]
+            stone = serverResources[user]["Stone"]
+            embed = discord.Embed(
+                title=f"{ctx.message.author.display_name}'s Resource Stockpile",
+                description=f"The amount of resources HammerBot has gifted you.",
+                color=0xD5D341,
+            )
+            embed.add_field(name="Food", value=food + "<:food:978788983377121311>", inline=True)
+            embed.add_field(name="Wood", value=wood + "<:woodAge:978788983435853834>", inline=True)
+            embed.add_field(name="Gold", value=gold + "<:gold:978788983364546581>", inline=True)
+            embed.add_field(name="Stone", value=stone + "<:stone:978788984547315792>", inline=True)
+            embed.set_footer(
+                text=f"{ctx.author.display_name}\nTo get more resources type `38` in chat.",
+                icon_url=ctx.author.display_avatar.url,
+            )
+        else: 
+            resources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
+            embed = discord.Embed(
+                title=f"{ctx.message.author.display_name}'s Resource Stockpile",
+                description=f"The amount of resources HammerBot has gifted you.",
+                color=0xD5D341,
+            )
+            embed.add_field(name="Food", value="0" + "<:food:978788983377121311>", inline=True)
+            embed.add_field(name="Wood", value="0" + "<:woodAge:978788983435853834>", inline=True)
+            embed.add_field(name="Gold", value="0" + "<:gold:978788983364546581>", inline=True)
+            embed.add_field(name="Stone", value="0" + "<:stone:978788984547315792>", inline=True)
+            embed.set_footer(
+                text=f"{ctx.author.display_name}\nTo get more resources type `38` in chat.",
+                icon_url=ctx.author.display_avatar.url,
+            )
+
+        await ctx.send(embed=embed)
+
+    @commands.command(name="!printdict")
+    async def printdict(self, ctx: commands.Context):
+        print(resources)
+
     @commands.command(name="38")
     async def no_38(self, ctx: commands.Context):
+        user = str(ctx.message.author.name)
         res = random.choice(["Wood", "Food", "Gold", "Stone"])
-        response = f'Sent to "{ctx.message.author.display_name}": {random.randint(-1000,1000)} {res}'
+        num = random.randint(-1000,1000)
+        response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
+        if user in resources:
+            resources[user][res] = str(num)
+        else:
+            resources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
+            resources[user][res] = str(num)
         await ctx.send(response)
 
     @commands.command(name="58")
