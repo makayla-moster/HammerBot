@@ -53,7 +53,7 @@ class Taunts(commands.Cog):
 
     @commands.command(name="!stockpile")
     async def stockpile(self, ctx: commands.Context):
-        user = ctx.message.author.name
+        user = str(ctx.message.author.display_name)
         food = serverResources[user]["Food"]
         wood = serverResources[user]["Wood"]
         gold = serverResources[user]["Gold"]
