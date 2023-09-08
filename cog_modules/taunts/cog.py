@@ -57,9 +57,13 @@ class Taunts(commands.Cog):
         user = str(ctx.message.author.display_name)
         print(user)
         food = serverResources[user]["Food"]
+        print(food)
         wood = serverResources[user]["Wood"]
+        print(wood)
         gold = serverResources[user]["Gold"]
+        print(gold)
         stone = serverResources[user]["Stone"]
+        print(stone)
         embed = discord.Embed(
             title=f"{ctx.message.author.display_name}'s Resource Stockpile",
             description=f"The amount of resources HammerBot has gifted you.",
