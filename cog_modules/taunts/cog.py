@@ -4,6 +4,7 @@ import random
 import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
+import json
 
 from resources import *
 
@@ -142,6 +143,8 @@ class Taunts(commands.Cog):
     @commands.command(name="!printdict")
     async def printdict(self, ctx: commands.Context):
         print(serverResources)
+        with open('serverResources.json', 'w') as f:
+            json.dump(serverResources, f)
 
     @commands.command(name="38")
     @commands.cooldown(1, 30, commands.BucketType.user)
@@ -152,7 +155,6 @@ class Taunts(commands.Cog):
         response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
         if user in serverResources:
             currentRes = serverResources[user][res]
-            print(currentRes)
             serverResources[user][res] = str(int(currentRes) + int(num))
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
