@@ -143,8 +143,8 @@ class Taunts(commands.Cog):
     @commands.command(name="!printdict")
     async def printdict(self, ctx: commands.Context):
         print(serverResources)
-        with open('serverResources.json', 'w') as f:
-            json.dump(serverResources, f)
+        # with open('serverResources.json', 'w') as f:
+        #     json.dump(serverResources, f)
 
     @commands.command(name="38")
     @commands.cooldown(1, 30, commands.BucketType.user)
