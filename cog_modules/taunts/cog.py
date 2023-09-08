@@ -149,7 +149,7 @@ class Taunts(commands.Cog):
         res = random.choice(["Wood", "Food", "Gold", "Stone"])
         num = random.randint(-1000, 1000)
         response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
-        if user in resources:
+        if user in serverResources:
             serverResources[user][res] = str(num)
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
