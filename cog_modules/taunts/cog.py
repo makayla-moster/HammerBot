@@ -1,10 +1,10 @@
+import json
 import os
 import random
 
 import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
-import json
 
 from resources import *
 
@@ -143,7 +143,7 @@ class Taunts(commands.Cog):
     @commands.command(name="!printdict")
     async def printdict(self, ctx: commands.Context):
         print(serverResources)
-        with open('serverResources.json', 'w') as f:
+        with open("serverResources.json", "w") as f:
             json.dump(serverResources, f)
 
     @commands.command(name="38")
