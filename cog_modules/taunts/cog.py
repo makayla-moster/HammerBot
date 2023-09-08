@@ -152,6 +152,7 @@ class Taunts(commands.Cog):
         response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
         if user in serverResources:
             currentRes = serverResources[user][res]
+            print(currentRes)
             serverResources[user][res] = str(int(currentRes) + int(num))
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
