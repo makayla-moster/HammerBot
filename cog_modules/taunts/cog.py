@@ -103,7 +103,7 @@ class Taunts(commands.Cog):
     @commands.command(name="!stockpile")
     async def stockpile(self, ctx: commands.Context):
         user = str(ctx.message.author.name)
-        if user in resources:
+        if user in serverResources:
             food = serverResources[user]["Food"]
             wood = serverResources[user]["Wood"]
             gold = serverResources[user]["Gold"]
@@ -122,7 +122,7 @@ class Taunts(commands.Cog):
                 icon_url=ctx.author.display_avatar.url,
             )
         else:
-            resources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
+            serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
             embed = discord.Embed(
                 title=f"{ctx.message.author.display_name}'s Resource Stockpile",
                 description=f"The amount of resources HammerBot has gifted you.",
@@ -141,7 +141,7 @@ class Taunts(commands.Cog):
 
     @commands.command(name="!printdict")
     async def printdict(self, ctx: commands.Context):
-        print(resources)
+        print(serverResources)
 
     @commands.command(name="38")
     async def no_38(self, ctx: commands.Context):
