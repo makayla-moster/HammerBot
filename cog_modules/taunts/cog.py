@@ -144,13 +144,15 @@ class Taunts(commands.Cog):
         print(serverResources)
 
     @commands.command(name="38")
+    @commands.cooldown(1, 30, commands.BucketType.user)
     async def no_38(self, ctx: commands.Context):
         user = str(ctx.message.author.name)
         res = random.choice(["Wood", "Food", "Gold", "Stone"])
         num = random.randint(-1000, 1000)
         response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
         if user in serverResources:
-            serverResources[user][res] = str(num)
+            currentRes = serverResources[user][res]
+            serverResources[user][res] = str(int(currentRes) + int(num))
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
             serverResources[user][res] = str(num)
