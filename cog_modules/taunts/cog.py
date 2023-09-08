@@ -158,6 +158,13 @@ class Taunts(commands.Cog):
             serverResources[user][res] = str(num)
         await ctx.send(response)
 
+    @no_38.error
+    async def no_38_error(self, ctx, error):
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.send(
+                f"You can only get resources every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+            )
+
     @commands.command(name="58")
     async def no_58(self, ctx: commands.Context):
         response = f"Sent {ctx.message.author.display_name}'s lunch money to Gizmo. Rest in pieces, plants."
