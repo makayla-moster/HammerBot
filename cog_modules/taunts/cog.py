@@ -4,7 +4,6 @@ import random
 import discord
 from discord.ext import commands, tasks
 from dotenv import load_dotenv
-
 from serverResources import *
 
 
@@ -55,20 +54,23 @@ class Taunts(commands.Cog):
     @commands.command(name="!stockpile")
     async def stockpile(self, ctx: commands.Context):
         user = ctx.message.author.name
-        food = serverResources[user]['Food']
-        wood = serverResources[user]['Wood']
-        gold = serverResources[user]['Gold']
-        stone = serverResources[user]['Stone']
-        embed = discord.Embed(title=f"{ctx.message.author.display_name}'s Resource Stockpile", description=f"The amount of resources HammerBot has gifted you.", color=0xD5D341)
-        embed.add_field(name="Food", value=food+"<:food:978788983377121311>", inline=True)
-        embed.add_field(name="Wood", value=wood+"<:woodAge:978788983435853834>", inline=True)
-        embed.add_field(name="Gold", value=gold+"<:gold:978788983364546581>", inline=True)
-        embed.add_field(name="Stone", value=stone+"<:stone:978788984547315792>", inline=True)
+        food = serverResources[user]["Food"]
+        wood = serverResources[user]["Wood"]
+        gold = serverResources[user]["Gold"]
+        stone = serverResources[user]["Stone"]
+        embed = discord.Embed(
+            title=f"{ctx.message.author.display_name}'s Resource Stockpile",
+            description=f"The amount of resources HammerBot has gifted you.",
+            color=0xD5D341,
+        )
+        embed.add_field(name="Food", value=food + "<:food:978788983377121311>", inline=True)
+        embed.add_field(name="Wood", value=wood + "<:woodAge:978788983435853834>", inline=True)
+        embed.add_field(name="Gold", value=gold + "<:gold:978788983364546581>", inline=True)
+        embed.add_field(name="Stone", value=stone + "<:stone:978788984547315792>", inline=True)
         embed.set_footer(
-                text=f"{ctx.author.name}\nTo get more resources type `38` in chat.",
-                icon_url=ctx.author.display_avatar.url,
-            )
-        
+            text=f"{ctx.author.name}\nTo get more resources type `38` in chat.",
+            icon_url=ctx.author.display_avatar.url,
+        )
 
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
