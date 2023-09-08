@@ -121,7 +121,7 @@ class Taunts(commands.Cog):
                 text=f"{ctx.author.display_name}\nTo get more resources type `38` in chat.",
                 icon_url=ctx.author.display_avatar.url,
             )
-        else: 
+        else:
             resources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
             embed = discord.Embed(
                 title=f"{ctx.message.author.display_name}'s Resource Stockpile",
@@ -147,7 +147,7 @@ class Taunts(commands.Cog):
     async def no_38(self, ctx: commands.Context):
         user = str(ctx.message.author.name)
         res = random.choice(["Wood", "Food", "Gold", "Stone"])
-        num = random.randint(-1000,1000)
+        num = random.randint(-1000, 1000)
         response = f'Sent to "{ctx.message.author.display_name}": {num} {res}'
         if user in resources:
             resources[user][res] = str(num)
