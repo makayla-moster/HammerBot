@@ -162,9 +162,7 @@ class Taunts(commands.Cog):
     @no_38.error
     async def no_38_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(
-                f"You can only get resources every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
-            )
+            await ctx.send(f"You can only get resources every 30 seconds. Try again in {round(error.retry_after, 2)} seconds.")
 
     @commands.command(name="58")
     async def no_58(self, ctx: commands.Context):
