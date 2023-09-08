@@ -55,15 +55,10 @@ class Taunts(commands.Cog):
     @commands.command(name="!stockpile")
     async def stockpile(self, ctx: commands.Context):
         user = str(ctx.message.author.display_name)
-        print(user)
         food = serverResources[user]["Food"]
-        print(food)
         wood = serverResources[user]["Wood"]
-        print(wood)
         gold = serverResources[user]["Gold"]
-        print(gold)
         stone = serverResources[user]["Stone"]
-        print(stone)
         embed = discord.Embed(
             title=f"{ctx.message.author.display_name}'s Resource Stockpile",
             description=f"The amount of resources HammerBot has gifted you.",
@@ -77,6 +72,7 @@ class Taunts(commands.Cog):
             text=f"{ctx.author.name}\nTo get more resources type `38` in chat.",
             icon_url=ctx.author.display_avatar.url,
         )
+        await ctx.send(embed=embed)
 
     @commands.command(name="28")
     async def otherguy_28(self, ctx: commands.Context):
