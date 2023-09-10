@@ -134,6 +134,27 @@ gizmoPics = [
     "https://cdn.discordapp.com/attachments/1105932220838989834/1147193494365020160/IMG_4455.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1147193495145173092/IMG_4457.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1147193495732363335/IMG_4463.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1147919172957913139/IMG_4476.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1147919173310222436/IMG_4479.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1147919173910020158/IMG_4481.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1147919174555930754/IMG_4484.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1148653544224870501/IMG_4504.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1148653544765923399/IMG_4507.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1148653545231495269/IMG_4514.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1148980184205242388/IMG_4526.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1148980184750493829/IMG_4525.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1148980185232855100/IMG_4523.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1149433112875520081/IMG_4549.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1149433113542393877/IMG_4546.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1149433114079269004/IMG_4545.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1149433114729382011/IMG_4539.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150076886706303126/IMG_4618.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150076887629037699/IMG_4608.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150076888014934138/IMG_4602.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150082038322438214/IMG_4601.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150076889218678866/IMG_4597.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150076889935925328/IMG_4575.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1150076890795737149/IMG_2544.jpg"
 ]
 
 taoPics = ["https://cdn.discordapp.com/attachments/1105932220838989834/1144676822957695127/image.png"]
