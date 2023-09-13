@@ -156,7 +156,7 @@ class Taunts(commands.Cog):
         if user in serverResources:
             currentRes = serverResources[user][res]
             serverResources[user][res] = str(int(currentRes) + int(num))
-            response += f"\n You now have ||{serverResources[user][res}|| {res} "
+            response += f"\n You now have ||{serverResources[user][res]}|| {res} "
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
             serverResources[user][res] = str(num)
