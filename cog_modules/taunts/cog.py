@@ -119,7 +119,7 @@ class Taunts(commands.Cog):
             embed.add_field(name="Gold", value=gold + "<:gold:978788983364546581>", inline=True)
             embed.add_field(name="Stone", value=stone + "<:stone:978788984547315792>", inline=True)
             embed.set_footer(
-                text=f"{ctx.author.display_name}\nTo get more resources type `38` in chat.",
+                text=f"{ctx.author.display_name}\nTo get or lose more resources type `38` in chat.",
                 icon_url=ctx.author.display_avatar.url,
             )
         else:
