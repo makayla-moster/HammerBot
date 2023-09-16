@@ -1,5 +1,6 @@
-from collections import Counter
 import pickle
+from collections import Counter
+
 serverResources = {
     "quela": {"Food": "-1068", "Wood": "449", "Gold": "-826", "Stone": "12"},
     "bshammer": {"Food": "-1250", "Wood": "-622", "Gold": "-850", "Stone": "1942"},
@@ -8,7 +9,7 @@ serverResources = {
     ".harristotle": {"Food": "-2241", "Wood": "560", "Gold": "-986", "Stone": "-706"},
 }
 try:
-    with open('gizmoResources','rb') as f:
+    with open("gizmoResources", "rb") as f:
         gizmoResources = pickle.load(f)
 except FileNotFoundError:
     gizmoResources = Counter()
