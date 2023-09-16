@@ -10,6 +10,8 @@ from dotenv import load_dotenv
 from gizmopics import *
 from resources import gizmoResources
 
+import pickle
+
 load_dotenv()
 CATS = os.getenv("x-api-key")
 botDMs = int(os.getenv("DMChannel"))
@@ -42,6 +44,8 @@ class Random(commands.Cog):
         info = f"Gizmo #{num + 1} of {len(gizmoPics)}."
         pic = gizmoPics[num]
         gizmoResources[pic] += 1
+        with open('gizmoResources','wb') as f:
+            pickle.dump(gizmoResources, f)
         most_common = gizmoResources.most_common(1)
         if pic == most_common[0][0]:
             info += f" HammerBot's favorite Gizmo pic! Shown {most_common[0][1]} times."
