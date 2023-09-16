@@ -1,4 +1,5 @@
 from collections import Counter
+
 serverResources = {
     "quela": {"Food": "-1068", "Wood": "449", "Gold": "-826", "Stone": "-148"},
     "bshammer": {"Food": "-463", "Wood": "-622", "Gold": "-388", "Stone": "1093"},
