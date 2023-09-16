@@ -155,6 +155,13 @@ gizmoPics = [
     "https://cdn.discordapp.com/attachments/1105932220838989834/1150076889218678866/IMG_4597.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1150076889935925328/IMG_4575.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1150076890795737149/IMG_2544.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944505872891904/IMG_4660.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944506221006858/IMG_4662.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944506569150514/IMG_4672.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944507017936947/IMG_4676.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944507395411968/IMG_4678.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944507714195576/IMG_4681.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1151944508154593290/IMG_4683.jpg"
 ]
 
 taoPics = ["https://cdn.discordapp.com/attachments/1105932220838989834/1144676822957695127/image.png"]
