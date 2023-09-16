@@ -51,7 +51,7 @@ class Random(commands.Cog):
         elif gizmoResources[pic] == 1:
             info += " First! ^_^"
         else:
-            info += f"Shown {gizmoResources[pic]} times."
+            info += f" Shown {gizmoResources[pic]} times."
         await ctx.send(info)
         await ctx.send(pic)
 
