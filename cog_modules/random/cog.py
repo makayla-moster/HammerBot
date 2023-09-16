@@ -1,5 +1,6 @@
 import asyncio
 import os
+import pickle
 import random
 
 import discord
@@ -9,8 +10,6 @@ from dotenv import load_dotenv
 
 from gizmopics import *
 from resources import gizmoResources
-
-import pickle
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
@@ -44,7 +43,7 @@ class Random(commands.Cog):
         info = f"Gizmo #{num + 1} of {len(gizmoPics)}."
         pic = gizmoPics[num]
         gizmoResources[pic] += 1
-        with open('gizmoResources','wb') as f:
+        with open("gizmoResources", "wb") as f:
             pickle.dump(gizmoResources, f)
         most_common = gizmoResources.most_common(1)
         if pic == most_common[0][0]:
