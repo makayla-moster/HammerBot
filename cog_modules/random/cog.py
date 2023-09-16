@@ -8,6 +8,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from gizmopics import *
+from resources import gizmoResources
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
@@ -38,8 +39,16 @@ class Random(commands.Cog):
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo(self, ctx: commands.Context):
         num = random.randint(0, len(gizmoPics) - 1)
-        info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
+        info = f"Gizmo #{num + 1} of {len(gizmoPics)}."
         pic = gizmoPics[num]
+        gizmoResources[pic] += 1
+        most_common = gizmoResources.most_common(1)
+        if pic == most_common[0][0]:
+            info += f" HammerBot's favorite Gizmo pic! Shown {most_common[0][1]} times."
+        elif gizmoResources[pic] == 1:
+            info += " First! ^_^"
+        else:
+            info += f"Shown {gizmoResources[pic]} times."
         await ctx.send(info)
         await ctx.send(pic)
 
