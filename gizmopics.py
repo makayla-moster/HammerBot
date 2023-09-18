@@ -5,7 +5,7 @@ gizmoPics = [
     "https://cdn.discordapp.com/attachments/1105932220838989834/1105937238124154911/IMG_2434.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1105932514851307530/IMG_2420.jpeg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1105932515291701278/IMG_2413.jpeg",
-    "https://cdn.discordapp.com/attachments/1105932220838989834/1105938814515548220/IMG_1758.jpg",
+    "https://cdn.discordapp.com/attachments/1105932220838989834/1105939040756301864/IMG_1758.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1105939038642372608/70537439627__C6FD10EC-06A5-47DD-83DC-1573F2EECA1E.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1105939040756301864/IMG_1758.jpg",
     "https://cdn.discordapp.com/attachments/1105932220838989834/1105939045466521600/IMG_1748.jpg",
