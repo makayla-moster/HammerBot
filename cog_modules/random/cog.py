@@ -2,6 +2,7 @@ import asyncio
 import os
 import pickle
 import random
+import datetime
 
 import discord
 import requests
@@ -45,8 +46,8 @@ class Random(commands.Cog):
         gizmoResources[pic] += 1
         with open("gizmoResources", "wb") as f:
             pickle.dump(gizmoResources, f)
-        most_common = gizmoResources.most_common(1)
-        if pic == most_common[0][0]:
+        most_common = gizmoResources.most_common(2)
+        if most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
             info += f" HammerBot's favorite Gizmo pic! Shown {most_common[0][1]} times."
         elif gizmoResources[pic] == 1:
             info += " First! ^_^"
@@ -65,10 +66,12 @@ class Random(commands.Cog):
     @commands.command(name="!tao", aliases=["!taø"])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def tao(self, ctx: commands.Context):
-        # num = random.randint(0, len(gizmoPics) - 1)
-        # info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
+        last_update = datetime.datetime.fromisoformat('2023-08-25T12:58:32-04:00')
+        time_delta = datetime.datetime.now(datetime.timezone.utc) - last_update
+        
+        info = f" {str(time_delta)} since a new Tao sighting"
         pic = taoPics[0]
-        # await ctx.send(info)
+        await ctx.send(info)
         await ctx.send(pic)
 
     @tao.error
