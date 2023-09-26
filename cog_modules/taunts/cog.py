@@ -124,6 +124,8 @@ class Taunts(commands.Cog):
             )
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
+            with open("serverResources", "wb") as f:
+                pickle.dump(serverResources, f)
             embed = discord.Embed(
                 title=f"{ctx.message.author.display_name}'s Resource Stockpile",
                 description=f"The amount of resources HammerBot has gifted you.",
@@ -160,6 +162,8 @@ class Taunts(commands.Cog):
         else:
             serverResources[user] = {"Food": "0", "Wood": "0", "Gold": "0", "Stone": "0"}
             serverResources[user][res] = str(num)
+        with open("serverResources", "wb") as f:
+            pickle.dump(serverResources, f)
         await ctx.send(response)
 
     @no_38.error
