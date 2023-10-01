@@ -49,7 +49,7 @@ class Random(commands.Cog):
         if pic == most_common[0][0]:
             info += f" HammerBot's favorite Gizmo pic! Shown {most_common[0][1]} times."
         elif gizmoResources[pic] == 1:
-            info += " First! ^_^"
+            info += " First time shown! ^_^"
         else:
             info += f" Shown {gizmoResources[pic]} times."
         await ctx.send(info)
@@ -59,22 +59,22 @@ class Random(commands.Cog):
     async def gizmo_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
             await ctx.send(
-                f"You can only view Gizmo once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+                f"Gizmo likes to hide, so you can only view him once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
 
     @commands.command(name="!tao", aliases=["!taø"])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def tao(self, ctx: commands.Context):
-        # num = random.randint(0, len(gizmoPics) - 1)
-        # info = f"Gizmo #{num + 1} of {len(gizmoPics)}"
-        pic = taoPics[0]
-        # await ctx.send(info)
+        num = random.randint(0, len(taoPics) - 1)
+        info = f"Tao #{num + 1} of {len(taoPics)}"
+        pic = taoPics[num]
+        await ctx.send(info)
         await ctx.send(pic)
 
     @tao.error
     async def tao_error(self, ctx, error):
         if isinstance(error, commands.CommandOnCooldown):
-            await ctx.send(f"You can only view Tao once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds.")
+            await ctx.send(f"Tao is shy, so you can only view him once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds.")
 
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
