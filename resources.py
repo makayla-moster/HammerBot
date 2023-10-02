@@ -18,3 +18,9 @@ try:
         gizmoResources = pickle.load(f)
 except FileNotFoundError:
     gizmoResources = Counter()
+
+try:
+    with open("taoResources", "rb") as f:
+        taoResources = pickle.load(f)
+except FileNotFoundError:
+    taoResources = Counter()

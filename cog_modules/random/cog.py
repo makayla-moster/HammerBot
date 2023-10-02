@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 
 from gizmopics import *
 from resources import gizmoResources
+from resources import taoResources
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
@@ -67,8 +68,18 @@ class Random(commands.Cog):
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def tao(self, ctx: commands.Context):
         num = random.randint(0, len(taoPics) - 1)
-        info = f"Tao #{num + 1} of {len(taoPics)}"
+        info = f"Tao #{num + 1} of {len(taoPics)}."
         pic = taoPics[num]
+        taoResources[pic] += 1
+        with open("taoResources", "wb") as f:
+            pickle.dump(taoResources, f)
+        most_common = taoResources.most_common(2)
+        if most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
+            info += f" HammerBot's favorite Tao pic! Shown {most_common[0][1]} times."
+        elif gizmoResources[pic] == 1:
+            info += " First time shown! ^_^"
+        else:
+            info += f" Shown {taoResources[pic]} times."
         await ctx.send(info)
         await ctx.send(pic)
 
