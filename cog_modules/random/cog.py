@@ -90,6 +90,19 @@ class Random(commands.Cog):
                 f"Tao is shy, so you can only view him once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
 
+    @commands.command(name="Gizmo or Tao?")
+    @commands.cooldown(1, 30, commands.BucketType.user)
+    async def tao(self, ctx: commands.Context):
+        gizmo_count = gizmoResources.total()
+        tao_count = taoResources.total()
+        if(gizmo_count > tao_count):
+            info = f"Tao is more elusive, but I still like him."
+        elif(gizmo_count < tao_count):
+            info = f"Gizmo is more elusive, but I still like him."
+        else:
+            info = f"I like Gizmo and Tao equally."
+        await ctx.send(info)
+
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
     # person who sent the message
