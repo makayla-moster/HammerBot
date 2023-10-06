@@ -92,8 +92,8 @@ class Random(commands.Cog):
     @commands.command(name="Gizmo or Tao?")
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo_or_tao(self, ctx: commands.Context):
-        gizmo_count = gizmoResources.total()
-        tao_count = taoResources.total()
+        gizmo_count = sum(gizmoResources.values())
+        tao_count = sum(taoResources.values())
         if gizmo_count > tao_count:
             info = f"Tao is more elusive, but I still like him."
         elif gizmo_count < tao_count:
