@@ -21,20 +21,13 @@ Specific features include:
 <!-- ## Python Packages & Software -->        
 ![Python Package](https://img.shields.io/badge/made%20with-python%203.9+-blue.svg?style=flat-square&logo=Python)
 
-HammerBot is built with [Disnake](https://github.com/DisnakeDev/disnake), an API wrapper for Discord.
+HammerBot is built with [Discord.py]((https://discordpy.readthedocs.io/en/stable/)), an API wrapper for Discord.
 
-Other packages/libraries used inclue:
+Other packages/libraries used include:
 - asyncio
 - aiohttp
-- poetry
 
 HammerBot currently has a very simple setup, where all features are split into their own cogs. 
-
-We currently have cogs for:  
-- Age of Empires 2 player info
-- Age of Empires 2 taunts
-- Error handling
-- Bot services (help and info commands)
 
 <!-- ## Contributing to HammerBot --> 
 ![](.github/images/Contributing_Header-02.png)
