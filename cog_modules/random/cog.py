@@ -89,7 +89,7 @@ class Random(commands.Cog):
                 f"Tao is shy, so you can only view him once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
 
-    @commands.command(name="Gizmo or Tao?")
+    @commands.command(name="Gizmo or Tao?", aliases=["Tao or Gizmo?"])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo_or_tao(self, ctx: commands.Context):
         gizmo_count = sum(gizmoResources.values())
