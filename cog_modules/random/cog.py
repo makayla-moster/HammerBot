@@ -10,8 +10,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from gizmopics import *
-from resources import gizmoResources
-from resources import taoResources
+from resources import gizmoResources, taoResources
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
@@ -95,9 +94,9 @@ class Random(commands.Cog):
     async def tao(self, ctx: commands.Context):
         gizmo_count = gizmoResources.total()
         tao_count = taoResources.total()
-        if(gizmo_count > tao_count):
+        if gizmo_count > tao_count:
             info = f"Tao is more elusive, but I still like him."
-        elif(gizmo_count < tao_count):
+        elif gizmo_count < tao_count:
             info = f"Gizmo is more elusive, but I still like him."
         else:
             info = f"I like Gizmo and Tao equally."
