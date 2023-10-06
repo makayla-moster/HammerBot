@@ -91,7 +91,7 @@ class Random(commands.Cog):
 
     @commands.command(name="Gizmo or Tao?")
     @commands.cooldown(1, 30, commands.BucketType.user)
-    async def tao(self, ctx: commands.Context):
+    async def taoVgizmo(self, ctx: commands.Context):
         gizmo_count = gizmoResources.total()
         tao_count = taoResources.total()
         if gizmo_count > tao_count:
