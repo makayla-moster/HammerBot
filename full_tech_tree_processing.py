@@ -43,6 +43,7 @@ localised_unit_building_name_lookup["Archery Range"] = "87"
 localised_unit_building_name_lookup["Blacksmith"] = "103"
 localised_unit_building_name_lookup["Monastery"] = "104"
 localised_unit_building_name_lookup["Condottiero"] = "882"
+localised_unit_building_name_lookup["Villager"] = "83"
 
 
 # This list comes from this java script file.
