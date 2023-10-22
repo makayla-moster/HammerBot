@@ -1,8 +1,14 @@
 import json
 
+# TODO: Make these JSONS connected directly to the source. 2023/10/21
+
+# This JSON is found here (maybe 2023/10/21)
+# https://github.com/SiegeEngineers/aoe2techtree/blob/master/data/data.json
 with open("full_tech_tree.json") as fp:
     techtree = json.load(fp)
 
+# This JSON is found here
+# https://github.com/SiegeEngineers/halfon/blob/master/data/units_buildings_techs.de.json
 with open("directory.json") as fp:
     directory = json.load(fp)
 
@@ -37,7 +43,11 @@ localised_unit_building_name_lookup["Archery Range"] = "87"
 localised_unit_building_name_lookup["Blacksmith"] = "103"
 localised_unit_building_name_lookup["Monastery"] = "104"
 localised_unit_building_name_lookup["Condottiero"] = "882"
+localised_unit_building_name_lookup["Villager"] = "83"
 
+
+# This list comes from this java script file.
+# https://github.com/SiegeEngineers/aoe2techtree/blob/master/js/techtree.js
 unitClasses = {
     0: "Unused",
     1: "Infantry",

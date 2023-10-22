@@ -1,5 +1,5 @@
 # Tech Tree
-#!/usr/bin/python
+# !/usr/bin/python
 # -*- coding: utf-8 -*-
 
 import csv
@@ -8,21 +8,28 @@ import json
 # import requests
 import sys
 
+# Note to self (2023/10/21). This file's job is to
+# create the "lookup" table for units/buildings/techs
+# for which civs get each of.
+
+
+# This JSON is found here (maybe 2023/10/21)
+# https://github.com/SiegeEngineers/aoe2techtree/blob/master/data/data.json
 with open("techtree.json") as fp:
     techtree = json.load(fp)
 
+# This JSON is found here
+# https://github.com/SiegeEngineers/halfon/blob/master/data/units_buildings_techs.de.json
 with open("directory.json") as fp:
     directory = json.load(fp)
 
 civs = list(techtree["civ_names"].keys())
 master_dict = {}
 
-
 unit_dict = {}
 building_dict = {}
 tech_dict = {}
 unique_dict = {}
-
 
 for c in civs:
     for x in techtree["techtrees"][c]["units"]:
@@ -53,14 +60,12 @@ for c in civs:
     name = directory["techs"][str(x)]["localised_name"]
     master_dict[name] = [c]
 
-
 for item in unit_dict.keys():
     master_dict[item] = []
 for item in building_dict.keys():
     master_dict[item] = []
 for item in tech_dict.keys():
     master_dict[item] = []
-
 
 for key in unit_dict:
     pay = unit_dict[key]

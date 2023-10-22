@@ -8,6 +8,10 @@ from fuzzywuzzy import fuzz
 
 from full_tech_tree_processing import *
 from techtree_descriptions import *
+
+# Dictionary of all techs, units, and buildings
+# as the keys with values equal to the civs
+# that get the key.
 from techTreeInfo import *
 
 
