@@ -604,7 +604,7 @@ techTreeDict = {
         "Vietnamese",
         "Vikings",
     ],
-    "Villager (Male)": [
+    "Villager": [
         "Aztecs",
         "Bengalis",
         "Berbers",
