@@ -18164,7 +18164,7 @@
                         "Class": 39
                     }
                 ],
-                "ChargeEvent": 0,
+                \"ChargeEvent": 0,
                 "ChargeType": 4,
                 "Cost": {
                     "Food": 70,
@@ -18203,7 +18203,7 @@
                         "Class": 3
                     },
                     {
-                        "Amount": 0,
+                       \= "Amount": 0,
                         "Class": 30
                     },
                     {

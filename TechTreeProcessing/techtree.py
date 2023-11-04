@@ -36,6 +36,9 @@ for c in civs:
         name = directory["units_buildings"][str(x)]["localised_name"]
         unit_dict[name] = x
 
+unit_dict["Villager"] = unit_dict["Villager (Male)"]
+del unit_dict["Villager (Male)"]
+
 for c in civs:
     for x in techtree["techtrees"][c]["buildings"]:
         name = directory["units_buildings"][str(x)]["localised_name"]
@@ -84,5 +87,7 @@ for key in tech_dict:
     for c in civs:
         if pay in techtree["techtrees"][c]["techs"]:
             master_dict[key].append(c)
+
+
 
 print(master_dict)
