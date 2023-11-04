@@ -18,6 +18,7 @@ from techTreeInfo import *
 with open("descriptions_cleaned.json") as fp:
     descriptions = json.load(fp)
 
+
 class StatCommands(commands.Cog):
     """Commands for stat commands."""
 

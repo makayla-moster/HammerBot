@@ -89,5 +89,4 @@ for key in tech_dict:
             master_dict[key].append(c)
 
 
-
 print(master_dict)
