@@ -14,6 +14,9 @@ from techtree_descriptions import *
 # that get the key.
 from techTreeInfo import *
 
+# Load the descriptions_cleaned.json file as descriptions
+with open("descriptions_cleaned.json") as fp:
+    descriptions = json.load(fp)
 
 class StatCommands(commands.Cog):
     """Commands for stat commands."""

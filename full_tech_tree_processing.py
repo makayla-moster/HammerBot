@@ -31,6 +31,11 @@ def create_localised_name_lookup(category_key):
 
 
 localised_unit_building_name_lookup = create_localised_name_lookup("units_buildings")
+
+# for item in localised_unit_building_name_lookup:
+#     print(item, localised_unit_building_name_lookup[item])
+
+
 localised_tech_name_lookup = create_localised_name_lookup("techs")
 
 

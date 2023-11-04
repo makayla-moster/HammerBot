@@ -370,4 +370,5 @@ descriptions = {
     "Elite Ratha": " Bengali unique chariot that can switch between melee and ranged attacks. Strong vs. infantry. Weak vs. Skirmishers and Camel Riders.Upgrades: attack, armor (Blacksmith); speed, hit points (Stable); creation speed (Castle); more resistant to Monks (Monastery). ‹attack› ‹armor› ‹piercearmor› ‹range›",
     "Gambesons": " Militia-line receive +1 pierce armor.",
     "Bogsveigar": " Archer-line and Longboats receive +1 attack.",
+
 }
