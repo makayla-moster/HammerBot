@@ -49,6 +49,9 @@ for c in civs:
         name = directory["techs"][str(x)]["localised_name"]
         tech_dict[name] = x
 
+castle_age_unique_techs = []
+imperial_age_unique_techs = []
+
 for c in civs:
     x = techtree["techtrees"][c]["unique"]["castleAgeUniqueUnit"]
     name = directory["units_buildings"][str(x)]["localised_name"]
@@ -59,9 +62,11 @@ for c in civs:
     x = techtree["techtrees"][c]["unique"]["castleAgeUniqueTech"]
     name = directory["techs"][str(x)]["localised_name"]
     master_dict[name] = [c]
+    castle_age_unique_techs.append(name)
     x = techtree["techtrees"][c]["unique"]["imperialAgeUniqueTech"]
     name = directory["techs"][str(x)]["localised_name"]
     master_dict[name] = [c]
+    imperial_age_unique_techs.append(name)
 
 for item in unit_dict.keys():
     master_dict[item] = []
@@ -88,6 +93,18 @@ for key in tech_dict:
         if pay in techtree["techtrees"][c]["techs"]:
             master_dict[key].append(c)
 
+# Make a json for Castle and Imperial Age unique techs
+castle_age_unique_techs.sort()
+imperial_age_unique_techs.sort()
 
-
+<<<<<<< Updated upstream
 print(master_dict)
+=======
+unique_techs = {}
+unique_techs["castle_age_unique_techs"] = castle_age_unique_techs
+unique_techs["imperial_age_unique_techs"] = imperial_age_unique_techs
+
+with open('unique_techs.json', 'w') as json_file:
+    json.dump(unique_techs, json_file)
+# print(master_dict)
+>>>>>>> Stashed changes
