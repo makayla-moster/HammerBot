@@ -97,9 +97,6 @@ for key in tech_dict:
 castle_age_unique_techs.sort()
 imperial_age_unique_techs.sort()
 
-<<<<<<< Updated upstream
-print(master_dict)
-=======
 unique_techs = {}
 unique_techs["castle_age_unique_techs"] = castle_age_unique_techs
 unique_techs["imperial_age_unique_techs"] = imperial_age_unique_techs
@@ -107,4 +104,3 @@ unique_techs["imperial_age_unique_techs"] = imperial_age_unique_techs
 with open('unique_techs.json', 'w') as json_file:
     json.dump(unique_techs, json_file)
 # print(master_dict)
->>>>>>> Stashed changes
