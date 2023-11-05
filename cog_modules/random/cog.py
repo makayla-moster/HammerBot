@@ -14,8 +14,8 @@ from resources import gizmoResources, taoResources
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
-botDMs = int(os.getenv("DMChannel"))
-botID = int(os.getenv("BOTID"))
+# botDMs = int(os.getenv("DMChannel"))
+# botID = int(os.getenv("BOTID"))
 
 
 class Random(commands.Cog):
@@ -105,16 +105,16 @@ class Random(commands.Cog):
     # Checks to see if someone DMs the bot
     # If so, it forwards the message to a specific channel and replies to the
     # person who sent the message
-    @commands.Cog.listener()
-    async def on_message(self, message):
-        if isinstance(message.channel, discord.DMChannel):  # if the message is a DM
-            channel = self.bot.get_channel(botDMs)  # get channel to forward message to
-            if message.author.id != botID:  # make sure we're not forwarding/sending messages when the bot messages
-                newMessage = discord.Embed(
-                    title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at
-                )
-                await channel.send(embed=newMessage)  # forwards message to channel
-            await self.bot.process_commands(message)
+    # @commands.Cog.listener()
+    # async def on_message(self, message):
+    #     if isinstance(message.channel, discord.DMChannel):  # if the message is a DM
+    #         channel = self.bot.get_channel(botDMs)  # get channel to forward message to
+    #         if message.author.id != botID:  # make sure we're not forwarding/sending messages when the bot messages
+    #             newMessage = discord.Embed(
+    #                 title=f"New bot DM from `{message.author}`", description=f"{message.content}", timestamp=message.created_at
+    #             )
+    #             await channel.send(embed=newMessage)  # forwards message to channel
+    #         await self.bot.process_commands(message)
 
 
 async def setup(bot: commands.Bot):

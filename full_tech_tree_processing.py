@@ -20,6 +20,7 @@ def create_localised_name_lookup(category_key):
     localised_name_lookup = {}
 
     for key, value in directory[category_key].items():
+        # print(key, value["localised_name"])
         if value["localised_name"] in localised_name_lookup:
             localised_name_lookup[value["localised_name"]] = str(
                 min(int(key), int(localised_name_lookup[value["localised_name"]]))
@@ -49,6 +50,8 @@ localised_unit_building_name_lookup["Blacksmith"] = "103"
 localised_unit_building_name_lookup["Monastery"] = "104"
 localised_unit_building_name_lookup["Condottiero"] = "882"
 localised_unit_building_name_lookup["Villager"] = "83"
+localised_unit_building_name_lookup["Gate"] = "487"
+localised_unit_building_name_lookup["Palisade Gate"] = "792"
 
 
 # This list comes from this java script file.
