@@ -18,6 +18,12 @@ from techTreeInfo import *
 with open("descriptions_cleaned.json") as fp:
     descriptions = json.load(fp)
 
+<<<<<<< Updated upstream
+=======
+# Load the unique_techs.json file as unique_techs
+with open("unique_techs.json") as fp:
+    unique_techs = json.load(fp)
+>>>>>>> Stashed changes
 
 class StatCommands(commands.Cog):
     """Commands for stat commands."""
@@ -83,9 +89,21 @@ class StatCommands(commands.Cog):
                 embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}s.", color=0xD5D341)
             else:
                 embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
-            embed.set_thumbnail(
-                url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
-            )
+
+            # Check to see if entity is a Castle Age Unique Tech
+            if input in unique_techs["castle_age_unique_techs"]:
+                embed.set_thumbnail(
+                    url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/unique_tech_1.png"
+                )
+            # Check to see if entity is a Castle Age Unique Tech
+            elif input in unique_techs["imperial_age_unique_techs"]:
+                embed.set_thumbnail(
+                    url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/unique_tech_2.png"
+                )
+            else:
+                embed.set_thumbnail(
+                    url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
+                )
             embed.add_field(name="Cost", value=costString2, inline=True)
 
             if entity == "techs":
@@ -171,9 +189,20 @@ class StatCommands(commands.Cog):
             else:
                 embed = discord.Embed(title=f"{input} Stats", description=f"Information about {input}.", color=0xD5D341)
 
-            embed.set_thumbnail(
-                url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
-            )
+            # Check to see if entity is a Castle Age Unique Tech
+            if input in unique_techs["castle_age_unique_techs"]:
+                embed.set_thumbnail(
+                    url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/unique_tech_1.png"
+                )
+            # Check to see if entity is a Castle Age Unique Tech
+            elif input in unique_techs["imperial_age_unique_techs"]:
+                embed.set_thumbnail(
+                    url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/unique_tech_2.png"
+                )
+            else:
+                embed.set_thumbnail(
+                    url=f"https://raw.githubusercontent.com/SiegeEngineers/aoe2techtree/master/img/{entityDirectory}/{unitBuildNum}.png"
+                )
             embed.add_field(name="Cost", value=costString2, inline=True)
 
             if entity == "techs":

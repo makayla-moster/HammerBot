@@ -21,6 +21,8 @@ def create_localised_name_lookup(category_key: str) -> dict[EntityId, str]:
 
 localised_unit_building_name_lookup = create_localised_name_lookup("units_buildings")
 
+print(localised_unit_building_name_lookup)
+
 # Hardcode a fix for Huskarl because it appears again at "759",
 # but "759" does not exist in the other json
 localised_unit_building_name_lookup["Huskarl"] = "41"
