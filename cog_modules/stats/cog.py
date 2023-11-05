@@ -18,12 +18,13 @@ from techTreeInfo import *
 with open("descriptions_cleaned.json") as fp:
     descriptions = json.load(fp)
 
-#<<<<<<< Updated upstream
-#=======
+# <<<<<<< Updated upstream
+# =======
 # Load the unique_techs.json file as unique_techs
 with open("unique_techs.json") as fp:
     unique_techs = json.load(fp)
-#>>>>>>> Stashed changes
+# >>>>>>> Stashed changes
+
 
 class StatCommands(commands.Cog):
     """Commands for stat commands."""
