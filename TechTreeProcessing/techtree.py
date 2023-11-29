@@ -101,6 +101,6 @@ unique_techs = {}
 unique_techs["castle_age_unique_techs"] = castle_age_unique_techs
 unique_techs["imperial_age_unique_techs"] = imperial_age_unique_techs
 
-with open('unique_techs.json', 'w') as json_file:
+with open("unique_techs.json", "w") as json_file:
     json.dump(unique_techs, json_file)
 # print(master_dict)
