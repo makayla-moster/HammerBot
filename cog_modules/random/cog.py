@@ -10,7 +10,7 @@ from discord.ext import commands
 from dotenv import load_dotenv
 
 from gizmopics import *
-from resources import gizmoResources, taoResources
+from resources import gizmoResources, taoResources, zookieResources
 
 load_dotenv()
 CATS = os.getenv("x-api-key")
