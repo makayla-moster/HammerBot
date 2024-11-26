@@ -89,6 +89,32 @@ class Random(commands.Cog):
                 f"Tao is shy, so you can only view him once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
             )
 
+    @commands.command(name="!zookie", aliases=["!zøøkie"])
+    @commands.cooldown(1, 30, commands.BucketType.user)
+    async def zookie(self, ctx: commands.Context):
+        num = random.randint(0, len(zookiePics) - 1)
+        info = f"Zookie #{num + 1} of {len(zookiePics)}."
+        pic = zookiePics[num]
+        zookieResources[pic] += 1
+        with open("zookieResources", "wb") as f:
+            pickle.dump(zookieResources, f)
+        most_common = zookieResources.most_common(2)
+        if most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
+            info += f" HammerBot's favorite Zookie pic! Shown {most_common[0][1]} times."
+        elif zookieResources[pic] == 1:
+            info += " First time shown! ^_^"
+        else:
+            info += f" Shown {zookieResources[pic]} times."
+        await ctx.send(info)
+        await ctx.send(pic)
+
+    @zookie.error
+    async def zookie_error(self, ctx, error):
+        if isinstance(error, commands.CommandOnCooldown):
+            await ctx.send(
+                f"Zookie likes to hide, so you can only view him once every 30 seconds. Try again in {round(error.retry_after, 2)} seconds."
+            )
+
     @commands.command(name="?gizmo", aliases=["?tao"])
     @commands.cooldown(1, 30, commands.BucketType.user)
     async def gizmo_or_tao(self, ctx: commands.Context):
