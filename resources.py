@@ -24,3 +24,9 @@ try:
         taoResources = pickle.load(f)
 except FileNotFoundError:
     taoResources = Counter()
+
+try:
+    with open("zookieResources", "rb") as f:
+        zookieResources = pickle.load(f)
+except FileNotFoundError:
+    zookieResources = Counter()
