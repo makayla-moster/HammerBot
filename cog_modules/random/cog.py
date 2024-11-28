@@ -47,7 +47,7 @@ class Random(commands.Cog):
         with open("gizmoResources", "wb") as f:
             pickle.dump(gizmoResources, f)
         most_common = gizmoResources.most_common(2)
-        if most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
+        if len(gizmoResources) >= 2 and most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
             info += f" HammerBot's favorite Gizmo pic! Shown {most_common[0][1]} times."
         elif gizmoResources[pic] == 1:
             info += " First time shown! ^_^"
@@ -73,7 +73,7 @@ class Random(commands.Cog):
         with open("taoResources", "wb") as f:
             pickle.dump(taoResources, f)
         most_common = taoResources.most_common(2)
-        if most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
+        if len(taoResources) >= 2 and most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
             info += f" HammerBot's favorite Tao pic! Shown {most_common[0][1]} times."
         elif taoResources[pic] == 1:
             info += " First time shown! ^_^"
@@ -99,7 +99,7 @@ class Random(commands.Cog):
         with open("zookieResources", "wb") as f:
             pickle.dump(zookieResources, f)
         most_common = zookieResources.most_common(2)
-        if most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
+        if len(zookieResources) >= 2 and most_common[0][1] != most_common[1][1] and pic == most_common[0][0]:
             info += f" HammerBot's favorite Zookie pic! Shown {most_common[0][1]} times."
         elif zookieResources[pic] == 1:
             info += " First time shown! ^_^"
